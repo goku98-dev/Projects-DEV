@@ -20,7 +20,7 @@ function [child] = Mutation_DeltaQ(child, IndicesInteractionProtein, NumInteract
         end
     end
     
-    % Now do mutation
+    % Do the mutation
     for i = 1:N
         
         % Skip proteins with no neighbors
