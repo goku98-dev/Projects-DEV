@@ -1,10 +1,10 @@
 function [child] = Mutation_DeltaQ(child, IndicesInteractionProtein, NumInteractionProtein, Pm, N, A)
 
-    % DeltaQ-Based Adaptive Mutation on Chromosome(i)
-    % Assumes child.CmplxID is already computed
+  
+    % Calculates total edges * 2 
     m = sum(sum(A));
     
-    % First, precompute current Cluster Volume and Degree
+    % Computes current Cluster Volume and Degree
     K = max(child.CmplxID);
     Cluster_k_Volume = zeros(1,K);
     Cluster_k_Degree = zeros(1,K);
@@ -56,13 +56,13 @@ function [child] = Mutation_DeltaQ(child, IndicesInteractionProtein, NumInteract
             end
         end
         
-        % If bestDeltaQ > 0 → perform mutation
+        % If bestDeltaQ > 0 then perform mutation
         if bestDeltaQ > 0
             
-            % Select neighbor in bestCluster
+            % Neighbors inside best Cluseter
             candidates = neighbors(neighborClusters == bestCluster);
             if isempty(candidates)
-                candidates = neighbors; % fallback
+                candidates = neighbors; 
             end
             
             % Mutate Chromosome(i)
