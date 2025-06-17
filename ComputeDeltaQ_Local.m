@@ -1,7 +1,7 @@
 function deltaQ = ComputeDeltaQ_Local(i, ownCluster, targetCluster, ...
     Cluster_k_Volume, Cluster_k_Degree, m, A, CmplxID, IndicesInteractionProtein, NumInteractionProtein)
 
-    % Compute DeltaQ if protein i moves from ownCluster → targetCluster
+    % Compute DeltaQ if protein i moves from ownCluster to targetCluster
     
     % Copy volumes and degrees
     V = Cluster_k_Volume;
@@ -11,7 +11,7 @@ function deltaQ = ComputeDeltaQ_Local(i, ownCluster, targetCluster, ...
     Q_before = (V(ownCluster)/m) - (D(ownCluster)/(2*m))^2 ...
              + (V(targetCluster)/m) - (D(targetCluster)/(2*m))^2;
     
-    % Now simulate move → update V and D
+    % Now simulate move >> update V and D
     
     % Degree of protein i
     d_i = sum(A(i,:));
