@@ -8,7 +8,7 @@
 % ---------------------------------------------------------------------------------------%
 clear;
 clc;
-NetworkNumber = 1; 
+NetworkNumber = input('\n Enter the network Number  \n 1: Yeast D1 \n 2: Yeast D2 \n 3: Collins PPI Network \n Network Number: ');; 
 if (NetworkNumber == 1)
     DatasetName = "Yeast-D1";
     load('DataSets/Protein/1-Protein-Yeast-D1-Files.mat');
@@ -17,11 +17,15 @@ elseif (NetworkNumber == 2)
     DatasetName = "Yeast-D2";
     load('DataSets/Protein/2-Protein-Yeast-D2-Files.mat');
     load('DataSets/Complex/Complex-D2-Files.mat');
+elseif (NetworkNumber == 3)
+    DatasetName = "Collins PPI Network";
+    load('DataSets/Protein/3-Protein-Collins-Files.mat');
+    load('DataSets/Complex/Complex-3-Collins-Files.mat');
 end
 MaxRuns = 10;
-MutationType = input('\n Enter type of mutation: \n 1: Canonical Mutation \n 2: Topological Mutation \n Mutation-Type: ');
+MutationType = input('\n Enter type of mutation: \n 1: Canonical Mutation \n 2: Topological Mutation \n 3: Delta Mutation \n Mutation-Type: ');
 
-if (MutationType == 1)
+if (MutationType == 1 || MutationType == 3)
     Pm = 0.1;
 elseif (MutationType == 2)
     Pm = 0.2;

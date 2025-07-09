@@ -1,5 +1,5 @@
 function [Population, FrequencyMatrix] = CreatePopulation(N, NumInteractionProtein, IndicesInteractionProtein, PopulationSize)
-FrequencyMatrix = zeros(990, 990);
+FrequencyMatrix = zeros(N, N);
 
 for IndividualCounter = 1 : PopulationSize
     for ProteinCounter = 1 : N

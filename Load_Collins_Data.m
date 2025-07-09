@@ -4,20 +4,34 @@ fid = fopen(filename);
 C = textscan(fid, '%s %s');  % Read two columns of strings
 fclose(fid);
 
+
+
 % Step 2: Combine all proteins from both columns
 allProteins = [C{1}; C{2}];
+
+
+
 
 % Step 3: Get unique protein names
 [uniqueProteins, ~, ic] = unique(allProteins);
 
+
+
+
 % Step 4: Assign ProteinLabels
 ProteinLabel = uniqueProteins;  % Cell array, index is ID, value is label
+
+
+
 
 % Step 5 (optional): Create map from label to ID
 ProteinIDMap = containers.Map(ProteinLabel, 1:length(ProteinLabel));
 
 ProteinIDTable = table(keys(ProteinIDMap)', cell2mat(values(ProteinIDMap))', ...
                        'VariableNames', {'ProteinLabel', 'ProteinID'});
+
+
+
 
 % Step 6: Convert original interactions to numeric ID pairs
 numPairs = length(C{1});
@@ -29,6 +43,9 @@ for i = 1:numPairs
 end
 
 ProteinLabel = ProteinLabel.';
+
+
+
 
 % Step 7: Count interactions per protein
 numProteins = length(ProteinLabel);  % total number of proteins
@@ -43,8 +60,14 @@ for i = 1:size(ProteinLabelPairs, 1)
     NumInteractionProtein(p2) = NumInteractionProtein(p2) + 1;
 end
 
+
+
+
 % Step 8: Get the max number of interactions
 MaxNumInteractionProtein = max(NumInteractionProtein);
+
+
+
 
 % Step 9: Construct IndicesInteractionProtein
 maxDegree = MaxNumInteractionProtein;
@@ -63,6 +86,9 @@ for i = 1:size(ProteinLabelPairs, 1)
     neighborIndex(p2) = neighborIndex(p2) + 1;
 end
 
+
+
+
 % Step 10: Create the adjacency matrix
 A = zeros(N, N);  % Initialize with zeros
 
@@ -74,6 +100,9 @@ for i = 1:size(ProteinLabelPairs, 1)
     A(p1, p2) = 1;
     A(p2, p1) = 1;  % Ensure it's symmetric (undirected)
 end
+
+
+
 
 % Step 11: Read the CYC2008.tab file
 filename = 'CYC2008.tab';
@@ -127,6 +156,28 @@ NumberOfProteinsInComplexes = sum(ComplexProteinLabel ~= 0, 2)';
 NumberOfKnownProteinsInComplexes = sum(ComplexProteinLabel > 0, 2)';
 
 OverlapComplexesFlag = 0 ; 
+
+
+
+
+% Step 12
+% Identify known proteins i.e. proteins which are present in both collins
+% and cyc 2008 . If a protein is present in collins and not in cyc 2008
+% mark it as -1 . 
+% Step: Initialize variable with all -1 (default: not present in any complex)
+KnownProteinsInCollins = -1 * ones(1, N);
+
+% Step: Find all valid (known) protein IDs in ComplexProteinIDMatrixCleaned
+validIDs = ComplexProteinLabel(ComplexProteinLabel > 0);
+uniqueValidIDs = unique(validIDs);
+
+% Set those protein ID positions to 0 (means "known in CYC2008")
+KnownProteinsInCollins(uniqueValidIDs) = 0;
+
+
+
+
+
 % Save if needed
 save('DataSets/Protein/3-Protein-Collins-Files.mat', ...
     'ProteinLabel',...
@@ -138,7 +189,7 @@ save('DataSets/Protein/3-Protein-Collins-Files.mat', ...
     'N',...
     'A',...
     'ProteinIDTable',...
-    'CollinsInteractionMatrix');
+    'KnownProteinsInCollins');
 
 
 save('DataSets/Complex/Complex-3-Collins-Files.mat','ComplexProteinLabelNames',...

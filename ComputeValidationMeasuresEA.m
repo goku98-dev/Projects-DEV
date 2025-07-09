@@ -31,6 +31,14 @@ if (NetworkNumber == 2)
     KnownProteinsInYeast = [];
     KnownProteinsInYeast = KnownProteins;
 end;
+if (NetworkNumber == 3)
+    %Load Golden True Complexes - Complex D1 and its information
+    load('DataSets/Complex/Complex-3-Collins-Files.mat','ComplexProteinLabel', 'NumberOfProteinsInComplexes', 'NumberOfKnownProteinsInComplexes', 'OverlapComplexesFlag');
+    CorrectPartitioning = [];
+    load('DataSets/Protein/3-Protein-Collins-Files.mat','ProteinLabel','ProteinLabelPairs','A','N','NumInteractionProtein','MaxNumInteractionProtein','IndicesInteractionProtein','KnownProteinsInCollins');
+    KnownProteinsInYeast = [];
+    KnownProteinsInYeast = KnownProteinsInCollins;
+end;
 
 
 
@@ -194,10 +202,10 @@ for RunNumber = 1 : MaxRuns
                 Protein_index = 0;
                 for Protein_i_index = 1 : length(Temp_PredictedClusterProteinLables)
                     Protein_i = Temp_PredictedClusterProteinLables(Protein_i_index);
-                    %if(KnownProteinsInYeast(Protein_i) ~= -1)
-                    Protein_index = Protein_index + 1;
-                    PredictedClusterProteinLables(Protein_index) = Protein_i;
-                    %end;
+                    if(KnownProteinsInYeast(Protein_i) ~= -1)
+                        Protein_index = Protein_index + 1;
+                        PredictedClusterProteinLables(Protein_index) = Protein_i;
+                    end;
                 end;
                 NumofPredictedClusterProteins(PredictedClusterCounter) = length(PredictedClusterProteinLables);
 
@@ -398,10 +406,10 @@ for RunNumber = 1 : MaxRuns
                 Protein_index = 0;
                 for Protein_i_index = 1 : length(Temp_PredictedClusterProteinLables)
                     Protein_i = Temp_PredictedClusterProteinLables(Protein_i_index);
-                    %if(KnownProteinsInYeast(Protein_i) ~= -1)
-                    Protein_index = Protein_index + 1;
-                    PredictedClusterProteinLables(Protein_index) = Protein_i;
-                    %end;
+                    if(KnownProteinsInYeast(Protein_i) ~= -1)
+                        Protein_index = Protein_index + 1;
+                        PredictedClusterProteinLables(Protein_index) = Protein_i;
+                    end;
                 end;
                 Protein_in = [];
                 Protein_out = [];
