@@ -16,6 +16,9 @@ ProteinLabel = uniqueProteins;  % Cell array, index is ID, value is label
 % Step 5 (optional): Create map from label to ID
 ProteinIDMap = containers.Map(ProteinLabel, 1:length(ProteinLabel));
 
+ProteinIDTable = table(keys(ProteinIDMap)', cell2mat(values(ProteinIDMap))', ...
+                       'VariableNames', {'ProteinLabel', 'ProteinID'});
+
 % Step 6: Convert original interactions to numeric ID pairs
 numPairs = length(C{1});
 ProteinLabelPairs = zeros(numPairs, 2);
@@ -72,6 +75,58 @@ for i = 1:size(ProteinLabelPairs, 1)
     A(p2, p1) = 1;  % Ensure it's symmetric (undirected)
 end
 
+% Step 11: Read the CYC2008.tab file
+filename = 'CYC2008.tab';
+fid = fopen(filename);
+lines = textscan(fid, '%s', 'Delimiter', '\n');  % read each line
+fclose(fid);
+lines = lines{1};  % cell array of lines
+
+% Step: Split each line into a list of protein labels
+numComplexes = length(lines);
+ComplexProteinLabel = cell(numComplexes, 1);
+maxLength = 0;
+
+% First, split each line and track max number of proteins
+for i = 1:numComplexes
+    ComplexProteinLabel{i} = strsplit(strtrim(lines{i}), '\t');
+    maxLength = max(maxLength, length(ComplexProteinLabel{i}));
+end
+
+% Step: Create padded matrix with empty strings
+ComplexProteinLabelNames = strings(numComplexes, maxLength);  % string matrix
+
+for i = 1:numComplexes
+    proteins = ComplexProteinLabel{i};
+    ComplexProteinLabelNames(i, 1:length(proteins)) = proteins;
+end
+
+
+[numComplexes, maxCols] = size(ComplexProteinLabelNames);
+ComplexProteinLabel = zeros(numComplexes, maxCols);  % default fill = 0
+
+for i = 1:numComplexes
+    for j = 1:maxCols
+        label = ComplexProteinLabelNames(i, j);
+        
+        if strlength(label) > 0
+            if isKey(ProteinIDMap, label)
+                ComplexProteinLabel(i, j) = ProteinIDMap(label);
+            else
+                ComplexProteinLabel(i, j) = -1;  % label exists but not found in map
+            end
+        end
+    end
+end
+
+
+% Count all non-zero entries row-wise (i.e., all actual proteins whether known or not)
+NumberOfProteinsInComplexes = sum(ComplexProteinLabel ~= 0, 2)';
+
+% Count only known proteins (i.e., IDs > 0)
+NumberOfKnownProteinsInComplexes = sum(ComplexProteinLabel > 0, 2)';
+
+OverlapComplexesFlag = 0 ; 
 % Save if needed
 save('DataSets/Protein/3-Protein-Collins-Files.mat', ...
     'ProteinLabel',...
@@ -81,4 +136,13 @@ save('DataSets/Protein/3-Protein-Collins-Files.mat', ...
     'NumInteractionProtein',...
     'IndicesInteractionProtein',...
     'N',...
-    'A');
+    'A',...
+    'ProteinIDTable',...
+    'CollinsInteractionMatrix');
+
+
+save('DataSets/Complex/Complex-3-Collins-Files.mat','ComplexProteinLabelNames',...
+    'ComplexProteinLabel',...
+    'NumberOfProteinsInComplexes',...
+    'NumberOfKnownProteinsInComplexes',...
+    'OverlapComplexesFlag');
