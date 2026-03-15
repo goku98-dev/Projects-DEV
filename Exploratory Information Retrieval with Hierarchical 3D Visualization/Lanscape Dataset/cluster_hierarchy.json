@@ -1,0 +1,34 @@
+[
+  {
+    "cluster_id": 1,
+    "parent_cluster": null,
+    "stability": 0.6914817268731113,
+    "lambda_birth": 1.9990695224519477,
+    "size": 1,
+    "children": []
+  },
+  {
+    "cluster_id": 2,
+    "parent_cluster": null,
+    "stability": 0.43569134407684557,
+    "lambda_birth": 2.708826673417204,
+    "size": 1,
+    "children": []
+  },
+  {
+    "cluster_id": 3,
+    "parent_cluster": null,
+    "stability": 0.3506926450625622,
+    "lambda_birth": 3.0925973555896222,
+    "size": 1,
+    "children": []
+  },
+  {
+    "cluster_id": 0,
+    "parent_cluster": null,
+    "stability": 0.5421513542782678,
+    "lambda_birth": 4.530979375015873,
+    "size": 1,
+    "children": []
+  }
+]
