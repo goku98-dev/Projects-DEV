@@ -23,16 +23,16 @@ The goal is to help businesses **identify profitable segments, optimize fleet st
 ## 🖥️ Dashboard Preview
 
 ### KPI Dashboard
-![KPI Dashboard](img/intro.png)
+<img src="img/intro.PNG" width="900">
 
 ### Profit Distribution Analysis
-![Profit Distribution](img/graph2.png)
+<img src="img/graph2.PNG" width="700">
 
 ### Revenue by Segment
-![Revenue by Segment](img/graph1.png)
+<img src="img/graph1.PNG" width="700">
 
 ### Vehicle Performance & ROI
-![Vehicle Performance](img/table1.png)
+<img src="img/table1.PNG" width="900">
 
 ---
 
