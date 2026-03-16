@@ -103,17 +103,17 @@ The clustered data is visualized using an interactive **3D hierarchical metaphor
 - **Orbit distance → Similarity relationships**
 
 <p align="center">
-  <img src="img/0.jpeg" width="45%">
-  <img src="img/1.jpeg" width="45%">
+  <img src="./img/0.jpeg" width="45%">
+  <img src="./img/1.jpeg" width="45%">
 </p>
 
 <p align="center">
-  <img src="img/2.jpeg" width="45%">
-  <img src="img/3.jpeg" width="45%">
+  <img src="./img/2.jpeg" width="45%">
+  <img src="./img/3.jpeg" width="45%">
 </p>
 
 <p align="center">
-  <img src="img/4.jpeg" width="45%">
+  <img src="./img/4.jpeg" width="45%">
 </p>
 Features:
 
