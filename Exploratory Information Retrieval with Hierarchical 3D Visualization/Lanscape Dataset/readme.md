@@ -102,6 +102,15 @@ The clustered data is visualized using an interactive **3D hierarchical metaphor
 - **Moons → Individual images**
 - **Orbit distance → Similarity relationships**
 
+<img src="img/0.png" width="800">
+
+<img src="img/1.png" width="800">
+
+<img src="img/2.png" width="800">
+
+<img src="img/3.png" width="800">
+
+<img src="img/4.png" width="800">
 Features:
 
 - Interactive exploration
