@@ -5,7 +5,7 @@
 This project focuses on detecting protein complexes in **Protein–Protein Interaction (PPI) networks** using an **Evolutionary Algorithm (EA)**. Protein complexes are groups of proteins that interact closely to perform biological functions, and identifying them is a key problem in bioinformatics.
 
 The implemented approach combines **Q-guided mutation strategies** and **frequency-matrix encoding/decoding** to improve the accuracy of complex detection.
-
+![PPI Evolutionary Algorithm Flowchart](https://raw.githubusercontent.com/goku98-dev/Projects-DEV/main/PPIComplexDetctionEA/img/PPIEA.png)
 ---
 
 ## 🚀 Features
