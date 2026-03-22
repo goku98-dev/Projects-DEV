@@ -1,5 +1,19 @@
 # 🌌 Exploratory Information Retrieval with Hierarchical 3D Visualization
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/goku98-dev/Projects-DEV/main/Exploratory%20Information%20Retrieval%20with%20Hierarchical%203D%20Visualization/img/0.jpeg" width="45%">
+  <img src="https://raw.githubusercontent.com/goku98-dev/Projects-DEV/main/Exploratory%20Information%20Retrieval%20with%20Hierarchical%203D%20Visualization/img/1.jpeg" width="45%">
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/goku98-dev/Projects-DEV/main/Exploratory%20Information%20Retrieval%20with%20Hierarchical%203D%20Visualization/img/2.jpeg" width="45%">
+  <img src="https://raw.githubusercontent.com/goku98-dev/Projects-DEV/main/Exploratory%20Information%20Retrieval%20with%20Hierarchical%203D%20Visualization/img/3.jpeg" width="45%">
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/goku98-dev/Projects-DEV/main/Exploratory%20Information%20Retrieval%20with%20Hierarchical%203D%20Visualization/img/4.jpeg" width="45%">
+</p>
+
 An advanced **machine learning and visualization pipeline** for exploring large image datasets through **deep feature extraction, dimensionality reduction, clustering, and immersive 3D visualization**.
 
 This project processes **10,000+ images**, extracts high-level semantic features using **ResNet50 CNN**, reduces feature dimensionality using **PCA and UMAP**, performs clustering with **HDBSCAN**, and visualizes relationships between images using a **hierarchical "Planets and Moons" metaphor in Unity 3D**.
@@ -102,19 +116,6 @@ The clustered data is visualized using an interactive **3D hierarchical metaphor
 - **Moons → Individual images**
 - **Orbit distance → Similarity relationships**
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/goku98-dev/Projects-DEV/main/Exploratory%20Information%20Retrieval%20with%20Hierarchical%203D%20Visualization/img/0.jpeg" width="45%">
-  <img src="https://raw.githubusercontent.com/goku98-dev/Projects-DEV/main/Exploratory%20Information%20Retrieval%20with%20Hierarchical%203D%20Visualization/img/1.jpeg" width="45%">
-</p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/goku98-dev/Projects-DEV/main/Exploratory%20Information%20Retrieval%20with%20Hierarchical%203D%20Visualization/img/2.jpeg" width="45%">
-  <img src="https://raw.githubusercontent.com/goku98-dev/Projects-DEV/main/Exploratory%20Information%20Retrieval%20with%20Hierarchical%203D%20Visualization/img/3.jpeg" width="45%">
-</p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/goku98-dev/Projects-DEV/main/Exploratory%20Information%20Retrieval%20with%20Hierarchical%203D%20Visualization/img/4.jpeg" width="45%">
-</p>
 Features:
 
 - Interactive exploration
