@@ -1,5 +1,5 @@
 # InvoiceLayoutLM: Layout-Aware Invoice Extraction
-
+![Diagram](https://raw.githubusercontent.com/goku98-dev/Projects-DEV/main/InvoiceLayoutLM%20Extractor/img/diagram.png)
 This project builds a synthetic invoice pipeline and fine-tunes LayoutLMv3 to extract invoice table information from PDF invoices. The current workflow supports:
 
 - synthetic invoice generation,
