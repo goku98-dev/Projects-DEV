@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: &#39;Courier New&#39;, Courier, monospace;
+            font-size: 9pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 30px; }
+        .invoice-title { font-size: 18pt; font-weight: bold; color: #4a4a4a; margin-bottom: 8px; }
+        .invoice-meta { text-align: right; }
+        .invoice-meta p { margin-bottom: 4px; }
+        
+
+        .addresses { margin-bottom: 30px; }
+        .address-block { margin-bottom: 15px; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 4px; font-size: 8pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        thead th { background-color: #4a4a4a; color: #ffffff; padding: 8px 10px; text-align: left; border: 1px solid #4a4a4a; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 6px 10px; border: 1px solid #4a4a4a; }
+        tbody td.num { text-align: right; }
+        
+        tbody tr:nth-child(even) { background-color: #f2f2f2; }
+        
+        
+.table-wrapper { margin-top: 0; }
+.table-wrapper table { width: 90%; }
+
+        .totals { border-top: 1px solid #4a4a4a; padding-top: 10px; }
+        .totals table { width: 100%; margin-bottom: 0; }
+        .totals td { padding: 4px 10px; border: none !important; }
+        .totals td:first-child { text-align: right; width: 80%; }
+        .totals td:last-child { text-align: right; width: 20%; }
+        .totals .total-row { font-weight: bold; font-size: 11pt; }
+        .totals .total-row td { border-top: 2px solid #4a4a4a !important; }
+        
+
+        .footer { margin-top: 40px; padding: 12px 15px; background-color: #f8f8f8; font-size: 8pt; color: #555; }
+        .footer .footer-title { font-weight: bold; margin-bottom: 5px; }
+        .footer p { margin-bottom: 3px; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div>
+            <div class="invoice-title">INVOICE</div>
+            <p>Roberts Inc</p>
+        </div>
+        <div class="invoice-meta">
+            <p><strong>Invoice #:</strong> INV-337946</p>
+            <p><strong>Date:</strong> 12/04/2025</p>
+            <p><strong>Due Date:</strong> 01/03/2026</p>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">Seller</div>
+            <p>Roberts Inc</p>
+            <p>269 Bell Isle, 59401 East Paul, United States</p>
+        </div>
+        <div class="address-block">
+            <div class="label">Buyer</div>
+            <p>Casey-Moore</p>
+            <p>7269 Samantha Crossroad, 99817 South Jamietown, United States</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th>Product</th>
+                
+                <th class="num">Qty</th>
+                
+                <th class="num">Line Total</th>
+                
+                <th class="num">Tax</th>
+                
+                <th class="num">Item</th>
+                
+                <th class="num">Price</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td>Disinfecting Wipes (75-pack)</td>
+                
+                <td class="num">22</td>
+                
+                <td class="num">1,424.28</td>
+                
+                <td class="num">10%</td>
+                
+                <td class="num">1</td>
+                
+                <td class="num">64.74</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>Document Scanner</td>
+                
+                <td class="num">36</td>
+                
+                <td class="num">15,123.24</td>
+                
+                <td class="num">10%</td>
+                
+                <td class="num">2</td>
+                
+                <td class="num">420.09</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>Label Maker Tape 12mm</td>
+                
+                <td class="num">33</td>
+                
+                <td class="num">2,670.03</td>
+                
+                <td class="num">6%</td>
+                
+                <td class="num">3</td>
+                
+                <td class="num">80.91</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>Sticky Notes Assorted</td>
+                
+                <td class="num">23</td>
+                
+                <td class="num">5,123.48</td>
+                
+                <td class="num">6%</td>
+                
+                <td class="num">4</td>
+                
+                <td class="num">222.76</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>Desk Lamp LED</td>
+                
+                <td class="num">27</td>
+                
+                <td class="num">8,431.29</td>
+                
+                <td class="num">6%</td>
+                
+                <td class="num">5</td>
+                
+                <td class="num">312.27</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <table>
+            <tr>
+                <td>Subtotal:</td>
+                <td>$ 32,772.32</td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td>$ 2,628.24</td>
+            </tr>
+            <tr class="total-row">
+                <td>Total:</td>
+                <td>$ 35,400.56</td>
+            </tr>
+        </table>
+    </div>
+        
+
+    <div class="footer">
+        <div class="footer-title">Payment Information</div>
+        <p>UBS</p>
+        <p>IBAN: US48 6952 5422 3843 4705</p>
+        <p>BIC: XJNIFRISGFI</p>
+        <p style="margin-top: 8px;">Net 14 days. 2% discount for payment within 7 days.</p>
+    </div>
+        
+</body>
+</html>

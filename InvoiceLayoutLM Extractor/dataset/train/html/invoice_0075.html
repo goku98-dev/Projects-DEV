@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: &#39;Courier New&#39;, Courier, monospace;
+            font-size: 12pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 30px; }
+        .invoice-title { font-size: 24pt; font-weight: bold; color: #1b4f72; margin-bottom: 8px; }
+        .invoice-meta { text-align: right; }
+        .invoice-meta p { margin-bottom: 4px; }
+        
+
+        .addresses { margin-bottom: 30px; }
+        .address-block { margin-bottom: 15px; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 4px; font-size: 11pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        thead th { background-color: #1b4f72; color: #ffffff; padding: 8px 10px; text-align: left; border: 1px solid #dddddd; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 6px 10px; border: 1px solid #dddddd; }
+        tbody td.num { text-align: right; }
+        
+        tbody tr:nth-child(even) { background-color: #f2f2f2; }
+        
+        
+.table-wrapper { margin-top: 0; }
+.table-wrapper table { width: 90%; }
+
+        .totals { border-top: 1px solid #dddddd; padding-top: 10px; }
+        .totals table { width: 100%; margin-bottom: 0; }
+        .totals td { padding: 4px 10px; border: none !important; }
+        .totals td:first-child { text-align: right; width: 80%; }
+        .totals td:last-child { text-align: right; width: 20%; }
+        .totals .total-row { font-weight: bold; font-size: 14pt; }
+        .totals .total-row td { border-top: 2px solid #1b4f72 !important; }
+        
+
+        .footer { margin-top: 40px; padding: 12px 15px; background-color: #f8f8f8; font-size: 11pt; color: #555; }
+        .footer .footer-title { font-weight: bold; margin-bottom: 5px; }
+        .footer p { margin-bottom: 3px; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div>
+            <div class="invoice-title">INVOICE</div>
+            <p>Wesack GmbH &amp; Co. OHG</p>
+        </div>
+        <div class="invoice-meta">
+            <p><strong>Invoice #:</strong> INV-133565</p>
+            <p><strong>Date:</strong> 17.11.2025</p>
+            <p><strong>Due Date:</strong> 17.12.2025</p>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">Seller</div>
+            <p>Wesack GmbH &amp; Co. OHG</p>
+            <p>Lena-Schmidtke-Ring 70, 83132 Regen, Germany</p>
+        </div>
+        <div class="address-block">
+            <div class="label">Buyer</div>
+            <p>Mohaupt AG</p>
+            <p>Torben-Winkler-Allee 25/61, 28784 Siegen, Germany</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th class="num">Stückpreis</th>
+                
+                <th class="num">Anzahl</th>
+                
+                <th class="num">Gesamtpreis</th>
+                
+                <th class="num">Lfd. Nr.</th>
+                
+                <th>Produkt</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td class="num">361,19</td>
+                
+                <td class="num">16</td>
+                
+                <td class="num">5.779,04</td>
+                
+                <td class="num">1</td>
+                
+                <td>Laptop Charger Universal 65W</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">118,71</td>
+                
+                <td class="num">7</td>
+                
+                <td class="num">830,97</td>
+                
+                <td class="num">2</td>
+                
+                <td>Desk Pad Leather</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">13,87</td>
+                
+                <td class="num">30</td>
+                
+                <td class="num">416,10</td>
+                
+                <td class="num">3</td>
+                
+                <td>Office Chair</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">76,82</td>
+                
+                <td class="num">35</td>
+                
+                <td class="num">2.688,70</td>
+                
+                <td class="num">4</td>
+                
+                <td>Laminating Pouches A4 (100-pack)</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">185,29</td>
+                
+                <td class="num">23</td>
+                
+                <td class="num">4.261,67</td>
+                
+                <td class="num">5</td>
+                
+                <td>External HDD 4TB</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">425,63</td>
+                
+                <td class="num">45</td>
+                
+                <td class="num">19.153,35</td>
+                
+                <td class="num">6</td>
+                
+                <td>Managed Firewall Service (annual)</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">450,20</td>
+                
+                <td class="num">21</td>
+                
+                <td class="num">9.454,20</td>
+                
+                <td class="num">7</td>
+                
+                <td>IT Support Service (1 hour)</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <table>
+            <tr>
+                <td>Subtotal:</td>
+                <td>42.584,03 EUR</td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td>5.327,07 EUR</td>
+            </tr>
+            <tr class="total-row">
+                <td>Total:</td>
+                <td>47.911,10 EUR</td>
+            </tr>
+        </table>
+    </div>
+        
+
+    <div class="footer">
+        <div class="footer-title">Payment Information</div>
+        <p>BNP Paribas</p>
+        <p>IBAN: DE21 9717 4116 4380 9605 5340 7327</p>
+        <p>BIC: NRCQATSP12H</p>
+        <p style="margin-top: 8px;">Please remit payment within the stated due date.</p>
+    </div>
+        
+</body>
+</html>

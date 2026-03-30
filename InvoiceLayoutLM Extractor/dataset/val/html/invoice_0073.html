@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: &#39;Courier New&#39;, Courier, monospace;
+            font-size: 12pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { text-align: right; margin-bottom: 30px; }
+        .invoice-title { font-size: 24pt; font-weight: bold; color: #0b5345; margin-bottom: 5px; }
+        .invoice-meta p { margin-bottom: 3px; }
+        .company-name { font-size: 14pt; margin-bottom: 10px; }
+        
+
+        .addresses { display: flex; justify-content: flex-end; margin-bottom: 30px; }
+        .address-block { width: 45%; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 6px; font-size: 11pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        .table-wrapper table { border: 2px solid #0b5345; }
+        thead th { padding: 10px; text-align: left; background-color: #0b5345; color: #ffffff; border-right: 1px solid rgba(255,255,255,0.2); }
+        thead th:last-child { border-right: none; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 8px 10px; border-right: 1px solid #eee; }
+        tbody td:last-child { border-right: none; }
+        tbody td.num { text-align: right; }
+        tbody tr:nth-child(even) { background-color: #f9f9f9; }
+        
+.table-wrapper { margin-top: 80px; }
+.table-wrapper table { width: 95%; }
+
+        .totals { border-top: 1px solid #0b5345; padding-top: 10px; }
+        .totals table { width: 100%; margin-bottom: 0; }
+        .totals td { padding: 4px 10px; border: none !important; }
+        .totals td:first-child { text-align: right; width: 80%; }
+        .totals td:last-child { text-align: right; width: 20%; }
+        .totals .total-row { font-weight: bold; font-size: 14pt; }
+        .totals .total-row td { border-top: 2px solid #0b5345 !important; }
+        
+
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="invoice-title">INVOICE</div>
+        <div class="company-name">Briand</div>
+        <div class="invoice-meta">
+            <p>Invoice No: INV-195316</p>
+            <p>Invoice Date: 24/03/2025</p>
+            <p>Payment Due: 07/04/2025</p>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">Invoice To</div>
+            <p>Leconte Chrétien S.A.R.L.</p>
+            <p>87, rue Stéphanie Lévêque</p>
+            <p>87762 Perret</p>
+            <p>France</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th>N° article</th>
+                
+                <th class="num">Tarif unitaire</th>
+                
+                <th class="num">#</th>
+                
+                <th class="num">Montant</th>
+                
+                <th class="num">TVA %</th>
+                
+                <th>Article</th>
+                
+                <th class="num">Nb</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td>3444.787</td>
+                
+                <td class="num">175.48</td>
+                
+                <td class="num">1</td>
+                
+                <td class="num">1,052.88</td>
+                
+                <td class="num">10%</td>
+                
+                <td>Desk Calendar 2026</td>
+                
+                <td class="num">6</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>778168</td>
+                
+                <td class="num">418.64</td>
+                
+                <td class="num">2</td>
+                
+                <td class="num">12,140.56</td>
+                
+                <td class="num">20%</td>
+                
+                <td>Laptop Charger Universal 65W</td>
+                
+                <td class="num">29</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>215778</td>
+                
+                <td class="num">92.86</td>
+                
+                <td class="num">3</td>
+                
+                <td class="num">3,528.68</td>
+                
+                <td class="num">10%</td>
+                
+                <td>Notebook A5 Ruled</td>
+                
+                <td class="num">38</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>ART-37153</td>
+                
+                <td class="num">10.16</td>
+                
+                <td class="num">4</td>
+                
+                <td class="num">294.64</td>
+                
+                <td class="num">0%</td>
+                
+                <td>Screen Cleaning Kit</td>
+                
+                <td class="num">29</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>486663</td>
+                
+                <td class="num">325.91</td>
+                
+                <td class="num">5</td>
+                
+                <td class="num">15,317.77</td>
+                
+                <td class="num">0%</td>
+                
+                <td>Scissors 8&#34; Stainless</td>
+                
+                <td class="num">47</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <table>
+            <tr>
+                <td>Subtotal:</td>
+                <td>32,334.53 EUR</td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td>2,886.27 EUR</td>
+            </tr>
+            <tr class="total-row">
+                <td>Total:</td>
+                <td>35,220.80 EUR</td>
+            </tr>
+        </table>
+    </div>
+        
+
+</body>
+</html>

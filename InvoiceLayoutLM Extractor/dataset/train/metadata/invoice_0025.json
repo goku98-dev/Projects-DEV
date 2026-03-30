@@ -1,0 +1,85 @@
+{
+  "invoice_id": "invoice_0025",
+  "locale": "de_CH",
+  "template": "layout_001.html",
+  "columns": [
+    {
+      "field": "tax_rate",
+      "label": "MwSt.",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "description",
+      "label": "Leistung",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "line_total",
+      "label": "Betrag",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "quantity",
+      "label": "Anzahl",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "unit_price",
+      "label": "Einzelpreis",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "position",
+      "label": "Nr.",
+      "entity_label": "position",
+      "format": "int"
+    }
+  ],
+  "line_items": [
+    {
+      "tax_rate": "0%",
+      "description": "Docking Station USB-C",
+      "line_total": "6'134.28",
+      "quantity": "17",
+      "unit_price": "360.84",
+      "position": "1"
+    },
+    {
+      "tax_rate": "0%",
+      "description": "Managed Firewall Service (annual)",
+      "line_total": "3'688.80",
+      "quantity": "30",
+      "unit_price": "122.96",
+      "position": "2"
+    },
+    {
+      "tax_rate": "8%",
+      "description": "Notebook A5 Ruled",
+      "line_total": "1'015.80",
+      "quantity": "4",
+      "unit_price": "253.95",
+      "position": "3"
+    },
+    {
+      "tax_rate": "8%",
+      "description": "Data Backup Service (monthly subscription)",
+      "line_total": "16'073.47",
+      "quantity": "49",
+      "unit_price": "328.03",
+      "position": "4"
+    },
+    {
+      "tax_rate": "8%",
+      "description": "Laptop Charger Universal 65W",
+      "line_total": "15'885.66",
+      "quantity": "42",
+      "unit_price": "378.23",
+      "position": "5"
+    }
+  ]
+}

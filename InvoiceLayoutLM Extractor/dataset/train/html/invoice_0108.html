@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: &#39;Trebuchet MS&#39;, sans-serif;
+            font-size: 10pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { text-align: center; margin-bottom: 30px; }
+        .invoice-title { font-size: 25.0pt; font-weight: bold; color: #4a4a4a; margin-bottom: 10px; }
+        .invoice-meta { margin-top: 10px; }
+        .invoice-meta span { margin: 0 15px; }
+        
+
+        .addresses { display: flex; justify-content: space-between; margin-bottom: 30px; gap: 20px; }
+        .address-block { width: 45%; border: 1px solid #4a4a4a; padding: 12px 15px; }
+        .address-block .label { font-weight: bold; color: #4a4a4a; margin-bottom: 8px; font-size: 10pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        thead th { padding: 8px 10px; text-align: left; border-bottom: 2px dotted #4a4a4a; color: #4a4a4a; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 7px 10px; border-bottom: 1px dotted #ccc; }
+        tbody td.num { text-align: right; }
+        
+.table-wrapper { margin-top: 0; }
+.table-wrapper table { width: 90%; }
+
+        .totals { text-align: right; margin-bottom: 20px; }
+        .totals .line { margin-bottom: 4px; }
+        .totals .total-line { font-weight: bold; font-size: 13pt; color: #4a4a4a; border-top: 2px solid #4a4a4a; padding-top: 6px; display: inline-block; }
+        
+
+        .footer { margin-top: 30px; font-size: 8pt; color: #999; text-align: center; }
+        .footer p { margin-bottom: 2px; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="invoice-title">INVOICE</div>
+        <p>Steuer Hoffmann KGaA</p>
+        <div class="invoice-meta">
+            <span><strong>Invoice #:</strong> INV-499669</span>
+            <span><strong>Date:</strong> 14.04.2024</span>
+            <span><strong>Due Date:</strong> 13.06.2024</span>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">Sender</div>
+            <p>Steuer Hoffmann KGaA</p>
+            <p>Bernhardine-Weinhold-Platz 7-9</p>
+            <p>16198 Recklinghausen</p>
+            <p>Germany</p>
+        </div>
+        <div class="address-block">
+            <div class="label">Recipient</div>
+            <p>Beier Hecker KG</p>
+            <p>Krausweg 72-47</p>
+            <p>94550 Kleve</p>
+            <p>Germany</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th class="num">Summe</th>
+                
+                <th>Position</th>
+                
+                <th class="num">Menge</th>
+                
+                <th>Teilenr.</th>
+                
+                <th class="num">Stückpreis</th>
+                
+                <th class="num">MwSt.</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td class="num">7 928,75</td>
+                
+                <td>Desk Calendar 2026</td>
+                
+                <td class="num">25</td>
+                
+                <td>744657</td>
+                
+                <td class="num">317,15</td>
+                
+                <td class="num">19%</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">341,46</td>
+                
+                <td>Filing Cabinet 3-Drawer</td>
+                
+                <td class="num">3</td>
+                
+                <td>722748</td>
+                
+                <td class="num">113,82</td>
+                
+                <td class="num">0%</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">3 710,96</td>
+                
+                <td>Data Backup Service (monthly subscription)</td>
+                
+                <td class="num">44</td>
+                
+                <td>C97404</td>
+                
+                <td class="num">84,34</td>
+                
+                <td class="num">7%</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">3 901,04</td>
+                
+                <td>UPS Battery Backup 1500VA</td>
+                
+                <td class="num">22</td>
+                
+                <td>ART-29738</td>
+                
+                <td class="num">177,32</td>
+                
+                <td class="num">7%</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">7 341,44</td>
+                
+                <td>Label Maker Tape 12mm</td>
+                
+                <td class="num">32</td>
+                
+                <td>B23881</td>
+                
+                <td class="num">229,42</td>
+                
+                <td class="num">19%</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <div class="line">Subtotal: € 23 223,65</div>
+        <div class="line">Tax: € 3 434,17</div>
+        <div class="total-line">Total: € 26 657,82</div>
+    </div>
+        
+
+    <div class="footer">
+        <p>Steuer Hoffmann KGaA | Bernhardine-Weinhold-Platz 7-9, 16198 Recklinghausen | Germany</p>
+        <p>HSBC | IBAN: DE17 3545 1503 1748 9172 4504</p>
+    </div>
+        
+</body>
+</html>

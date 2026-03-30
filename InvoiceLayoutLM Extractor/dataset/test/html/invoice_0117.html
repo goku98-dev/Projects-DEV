@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Tahoma, Geneva, sans-serif;
+            font-size: 12pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { background-color: #0b5345; color: #ffffff; padding: 20px 25px; margin: -20mm -20mm 30px -20mm; display: flex; justify-content: space-between; align-items: center; }
+        .invoice-title { font-size: 24pt; font-weight: bold; }
+        .invoice-meta { text-align: right; }
+        .invoice-meta p { margin-bottom: 4px; }
+        
+
+        .addresses { display: flex; justify-content: space-between; margin-bottom: 30px; }
+        .address-block { width: 45%; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 6px; font-size: 11pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        .table-wrapper table { border: 2px solid #0b5345; }
+        thead th { padding: 10px; text-align: left; background-color: #0b5345; color: #ffffff; border-right: 1px solid rgba(255,255,255,0.2); }
+        thead th:last-child { border-right: none; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 8px 10px; border-right: 1px solid #eee; }
+        tbody td:last-child { border-right: none; }
+        tbody td.num { text-align: right; }
+        tbody tr:nth-child(even) { background-color: #eef2f7; }
+        
+.table-wrapper { margin-top: 0; }
+.table-wrapper table { width: 95%; }
+
+        .totals { text-align: right; margin-bottom: 20px; }
+        .totals .line { margin-bottom: 4px; }
+        .totals .total-line { font-weight: bold; font-size: 15pt; color: #0b5345; border-top: 2px solid #0b5345; padding-top: 6px; display: inline-block; }
+        
+
+        .footer { margin-top: 40px; padding-top: 15px; border-top: 1px solid #ddd; font-size: 10pt; color: #666; }
+        .footer p { margin-bottom: 3px; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div>
+            <div class="invoice-title">INVOICE</div>
+            <p>Patel, Waters and Allan</p>
+        </div>
+        <div class="invoice-meta">
+            <p>Invoice #: INV-726526</p>
+            <p>Date: 16/11/2024</p>
+            <p>Due: 15/01/2025</p>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">Bill To</div>
+            <p>Harrison-Hunt</p>
+            <p>Studio 79l
+Moore Corners</p>
+            <p>KA7 8DP Port Owenport</p>
+            <p>United Kingdom</p>
+        </div>
+        <div class="address-block">
+            <div class="label">From</div>
+            <p>Patel, Waters and Allan</p>
+            <p>Studio 88
+Brooks Crossing</p>
+            <p>B0 1LH South Maxstad</p>
+            <p>United Kingdom</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th class="num">Ext. Price</th>
+                
+                <th>Details</th>
+                
+                <th>Part No.</th>
+                
+                <th class="num">Each</th>
+                
+                <th class="num">Line</th>
+                
+                <th class="num">Count</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td class="num">9,438.92</td>
+                
+                <td>External HDD 4TB</td>
+                
+                <td>ART-18164</td>
+                
+                <td class="num">325.48</td>
+                
+                <td class="num">1</td>
+                
+                <td class="num">29</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">686.40</td>
+                
+                <td>Office Equipment Installation Service</td>
+                
+                <td>C10457</td>
+                
+                <td class="num">14.30</td>
+                
+                <td class="num">2</td>
+                
+                <td class="num">48</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">15,354.36</td>
+                
+                <td>IT Support Service (1 hour)</td>
+                
+                <td>A17250</td>
+                
+                <td class="num">365.58</td>
+                
+                <td class="num">3</td>
+                
+                <td class="num">42</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">6,692.84</td>
+                
+                <td>Disinfecting Wipes (75-pack)</td>
+                
+                <td>M93189</td>
+                
+                <td class="num">152.11</td>
+                
+                <td class="num">4</td>
+                
+                <td class="num">44</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <div class="line">Subtotal: 32,172.52 GBP</div>
+        <div class="line">Tax: 3,405.51 GBP</div>
+        <div class="total-line">Total: 35,578.03 GBP</div>
+    </div>
+        
+
+    <div class="footer">
+        <p><strong>Payment Terms:</strong> Please remit payment within the stated due date.</p>
+        <p><strong>Bank:</strong> Credit Suisse | IBAN: GB13 9634 3560 3491 9929 2961 2315 | BIC: CNSQATX70HM</p>
+        <p>Thank you for your business.</p>
+    </div>
+        
+</body>
+</html>

@@ -1,0 +1,109 @@
+{
+  "invoice_id": "invoice_0006",
+  "locale": "en_GB",
+  "template": "layout_003.html",
+  "columns": [
+    {
+      "field": "article_number",
+      "label": "Item No.",
+      "entity_label": "article_number",
+      "format": "text"
+    },
+    {
+      "field": "unit_price",
+      "label": "Price",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "line_total",
+      "label": "Extended",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "tax_rate",
+      "label": "Tax %",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "description",
+      "label": "Service / Product",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "quantity",
+      "label": "Quantity",
+      "entity_label": "quantity",
+      "format": "int"
+    }
+  ],
+  "line_items": [
+    {
+      "article_number": "9602.166",
+      "unit_price": "99.97",
+      "line_total": "2,799.16",
+      "tax_rate": "0%",
+      "description": "Noise-Cancelling Headphones",
+      "quantity": "28"
+    },
+    {
+      "article_number": "ART-25971",
+      "unit_price": "475.16",
+      "line_total": "2,850.96",
+      "tax_rate": "0%",
+      "description": "Bluetooth Speaker Portable",
+      "quantity": "6"
+    },
+    {
+      "article_number": "584642",
+      "unit_price": "480.20",
+      "line_total": "6,722.80",
+      "tax_rate": "0%",
+      "description": "Microfiber Cloth Set (10-pack)",
+      "quantity": "14"
+    },
+    {
+      "article_number": "2563.486",
+      "unit_price": "366.44",
+      "line_total": "16,123.36",
+      "tax_rate": "20%",
+      "description": "Ergonomic Desk Chair",
+      "quantity": "44"
+    },
+    {
+      "article_number": "ART-21628",
+      "unit_price": "404.04",
+      "line_total": "13,737.36",
+      "tax_rate": "20%",
+      "description": "Laptop Charger Universal 65W",
+      "quantity": "34"
+    },
+    {
+      "article_number": "B43164",
+      "unit_price": "69.93",
+      "line_total": "3,216.78",
+      "tax_rate": "0%",
+      "description": "Room Divider Panel",
+      "quantity": "46"
+    },
+    {
+      "article_number": "ART-70849",
+      "unit_price": "347.46",
+      "line_total": "7,991.58",
+      "tax_rate": "5%",
+      "description": "Surge Protector 6-Outlet",
+      "quantity": "23"
+    },
+    {
+      "article_number": "290458",
+      "unit_price": "343.72",
+      "line_total": "7,218.12",
+      "tax_rate": "5%",
+      "description": "Printer Paper A4 (500 sheets)",
+      "quantity": "21"
+    }
+  ]
+}

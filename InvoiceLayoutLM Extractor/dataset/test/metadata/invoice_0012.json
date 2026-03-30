@@ -1,0 +1,123 @@
+{
+  "invoice_id": "invoice_0012",
+  "locale": "fr_FR",
+  "template": "layout_028.html",
+  "columns": [
+    {
+      "field": "position",
+      "label": "Réf.",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "unit_price",
+      "label": "Prix U.",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "description",
+      "label": "Produit",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "article_number",
+      "label": "Code article",
+      "entity_label": "article_number",
+      "format": "text"
+    },
+    {
+      "field": "quantity",
+      "label": "Qté",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "tax_rate",
+      "label": "TVA %",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "line_total",
+      "label": "Prix total",
+      "entity_label": "line_total",
+      "format": "currency"
+    }
+  ],
+  "line_items": [
+    {
+      "position": "1",
+      "unit_price": "267,37",
+      "description": "Ergonomic Mouse",
+      "article_number": "ART-76079",
+      "quantity": "1",
+      "tax_rate": "6%",
+      "line_total": "267,37"
+    },
+    {
+      "position": "2",
+      "unit_price": "169,37",
+      "description": "Footrest Ergonomic",
+      "article_number": "ART-95077",
+      "quantity": "24",
+      "tax_rate": "0%",
+      "line_total": "4.064,88"
+    },
+    {
+      "position": "3",
+      "unit_price": "463,12",
+      "description": "UPS Battery Backup 1500VA",
+      "article_number": "5286.734",
+      "quantity": "26",
+      "tax_rate": "20%",
+      "line_total": "12.041,12"
+    },
+    {
+      "position": "4",
+      "unit_price": "155,34",
+      "description": "Professional Monitor Calibration",
+      "article_number": "633362",
+      "quantity": "18",
+      "tax_rate": "0%",
+      "line_total": "2.796,12"
+    },
+    {
+      "position": "5",
+      "unit_price": "467,56",
+      "description": "NVMe SSD 2TB",
+      "article_number": "ART-19972",
+      "quantity": "3",
+      "tax_rate": "10%",
+      "line_total": "1.402,68"
+    },
+    {
+      "position": "6",
+      "unit_price": "143,97",
+      "description": "Managed Firewall Service (annual)",
+      "article_number": "990878",
+      "quantity": "44",
+      "tax_rate": "10%",
+      "line_total": "6.334,68"
+    },
+    {
+      "position": "7",
+      "unit_price": "422,19",
+      "description": "Monitor Arm Mount",
+      "article_number": "215157",
+      "quantity": "35",
+      "tax_rate": "0%",
+      "line_total": "14.776,65"
+    },
+    {
+      "position": "8",
+      "unit_price": "310,87",
+      "description": "Compressed Air Duster (6-pack)",
+      "article_number": "1016.164",
+      "quantity": "49",
+      "tax_rate": "0%",
+      "line_total": "15.232,63"
+    }
+  ]
+}

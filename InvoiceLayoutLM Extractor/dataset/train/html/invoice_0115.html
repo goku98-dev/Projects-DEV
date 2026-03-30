@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Tahoma, Geneva, sans-serif;
+            font-size: 10pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { background-color: #7e5109; color: #ffffff; padding: 20px 25px; margin: -20mm -20mm 30px -20mm; display: flex; justify-content: space-between; align-items: center; }
+        .invoice-title { font-size: 20pt; font-weight: bold; }
+        .invoice-meta { text-align: right; }
+        .invoice-meta p { margin-bottom: 4px; }
+        
+
+        .addresses { display: flex; justify-content: space-between; margin-bottom: 30px; }
+        .address-block { width: 45%; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 6px; font-size: 9pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        .table-wrapper table { border: 2px solid #7e5109; }
+        thead th { padding: 10px; text-align: left; background-color: #7e5109; color: #ffffff; border-right: 1px solid rgba(255,255,255,0.2); }
+        thead th:last-child { border-right: none; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 8px 10px; border-right: 1px solid #eee; }
+        tbody td:last-child { border-right: none; }
+        tbody td.num { text-align: right; }
+        tbody tr:nth-child(even) { background-color: #ffffff; }
+        
+.table-wrapper { margin-top: 0; }
+.table-wrapper table { width: 90%; }
+
+        .totals { width: 280px; margin-left: auto; }
+        .totals table { margin-bottom: 0; }
+        .totals td { padding: 4px 10px; border: none !important; }
+        .totals .total-row { font-weight: bold; font-size: 12pt; }
+        .totals .total-row td { border-top: 2px solid #7e5109 !important; }
+        
+
+        .footer { margin-top: 30px; padding-top: 10px; border-top: 1px solid #eee; font-size: 9pt; color: #666; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div>
+            <div class="invoice-title">INVOICE</div>
+            <p>Espinoza, Garcia and Riddle</p>
+        </div>
+        <div class="invoice-meta">
+            <p>Invoice #: INV-299960</p>
+            <p>Date: 08/18/2024</p>
+            <p>Due: 09/17/2024</p>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">From</div>
+            <p>Espinoza, Garcia and Riddle</p>
+            <p>120 Steven Forge</p>
+            <p>04654 Lake Jake</p>
+            <p>United States</p>
+        </div>
+        <div class="address-block">
+            <div class="label">Bill To</div>
+            <p>Ashley-Hernandez</p>
+            <p>3459 Webb Canyon Apt. 987</p>
+            <p>86804 North Sherri</p>
+            <p>United States</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th class="num">Count</th>
+                
+                <th>Catalog No.</th>
+                
+                <th class="num">Unit Price</th>
+                
+                <th class="num">GST %</th>
+                
+                <th class="num">Net Amount</th>
+                
+                <th>Details</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td class="num">14</td>
+                
+                <td>B77355</td>
+                
+                <td class="num">72.08</td>
+                
+                <td class="num">6%</td>
+                
+                <td class="num">1,009.12</td>
+                
+                <td>Printer Maintenance Contract (quarterly)</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">14</td>
+                
+                <td>656977</td>
+                
+                <td class="num">144.29</td>
+                
+                <td class="num">10%</td>
+                
+                <td class="num">2,020.06</td>
+                
+                <td>Desk Pad Leather</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">11</td>
+                
+                <td>8076.403</td>
+                
+                <td class="num">58.20</td>
+                
+                <td class="num">10%</td>
+                
+                <td class="num">640.20</td>
+                
+                <td>Cloud Storage Plan 1TB (yearly)</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">10</td>
+                
+                <td>2340.902</td>
+                
+                <td class="num">442.67</td>
+                
+                <td class="num">8%</td>
+                
+                <td class="num">4,426.70</td>
+                
+                <td>Noise-Cancelling Headphones</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">43</td>
+                
+                <td>ART-90460</td>
+                
+                <td class="num">335.87</td>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">14,442.41</td>
+                
+                <td>Office Chair</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">32</td>
+                
+                <td>333024</td>
+                
+                <td class="num">443.86</td>
+                
+                <td class="num">10%</td>
+                
+                <td class="num">14,203.52</td>
+                
+                <td>USB-C Hub</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">4</td>
+                
+                <td>P40113</td>
+                
+                <td class="num">283.50</td>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">1,134.00</td>
+                
+                <td>Clipboard A4</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <table>
+            <tr>
+                <td>Subtotal:</td>
+                <td class="num">$ 37,876.01</td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td class="num">$ 2,112.13</td>
+            </tr>
+            <tr class="total-row">
+                <td>Total:</td>
+                <td class="num">$ 39,988.14</td>
+            </tr>
+        </table>
+    </div>
+        
+
+    <div class="footer">
+        <p>Payment due upon receipt.</p>
+    </div>
+        
+</body>
+</html>

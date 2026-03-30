@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Tahoma, Geneva, sans-serif;
+            font-size: 9pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { margin: -20mm -20mm 30px -20mm; }
+        .header-top { background-color: #7e5109; color: #ffffff; padding: 15px 25px; }
+        .header-bottom { background-color: #f5f5f5; padding: 10px 25px; display: flex; justify-content: space-between; border-bottom: 1px solid #ddd; }
+        .invoice-title { font-size: 18pt; font-weight: bold; }
+        .invoice-meta span { margin-right: 20px; font-size: 8pt; }
+        
+
+        .addresses { display: flex; justify-content: space-between; margin-bottom: 30px; gap: 20px; }
+        .address-block { width: 45%; border: 1px solid #7e5109; padding: 12px 15px; }
+        .address-block .label { font-weight: bold; color: #7e5109; margin-bottom: 8px; font-size: 9pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        .table-wrapper table { border: 2px solid #7e5109; }
+        thead th { padding: 10px; text-align: left; background-color: #7e5109; color: #ffffff; border-right: 1px solid rgba(255,255,255,0.2); }
+        thead th:last-child { border-right: none; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 8px 10px; border-right: 1px solid #eee; }
+        tbody td:last-child { border-right: none; }
+        tbody td.num { text-align: right; }
+        tbody tr:nth-child(even) { background-color: #f9f9f9; }
+        
+.table-wrapper { margin-top: 80px; }
+.table-wrapper table { width: 100%; }
+
+        .totals { border-top: 1px solid #7e5109; padding-top: 10px; }
+        .totals table { width: 100%; margin-bottom: 0; }
+        .totals td { padding: 4px 10px; border: none !important; }
+        .totals td:first-child { text-align: right; width: 80%; }
+        .totals td:last-child { text-align: right; width: 20%; }
+        .totals .total-row { font-weight: bold; font-size: 11pt; }
+        .totals .total-row td { border-top: 2px solid #7e5109 !important; }
+        
+
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="header-top">
+            <div class="invoice-title">Kronberger &amp; Jung GmbH</div>
+        </div>
+        <div class="header-bottom">
+            <span>Invoice INV-727098</span>
+            <span>Date: 23.08.2025</span>
+            <span>Due: 22.10.2025</span>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">Sender</div>
+            <p>Kronberger &amp; Jung GmbH</p>
+            <p>Aichholzerstr. 054</p>
+            <p>7122 Mank</p>
+            <p>Austria</p>
+        </div>
+        <div class="address-block">
+            <div class="label">Recipient</div>
+            <p>Burtscher Schubert KG</p>
+            <p>Hospgasse 61</p>
+            <p>4198 Korneuburg</p>
+            <p>Austria</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th class="num">Steuersatz</th>
+                
+                <th class="num">Betrag</th>
+                
+                <th class="num">EP</th>
+                
+                <th class="num">Stück</th>
+                
+                <th>Artikel-Nr.</th>
+                
+                <th>Leistung</th>
+                
+                <th class="num">Lfd. Nr.</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td class="num">20%</td>
+                
+                <td class="num">639,00</td>
+                
+                <td class="num">159,75</td>
+                
+                <td class="num">4</td>
+                
+                <td>2474.495</td>
+                
+                <td>Thunderbolt Cable 1m</td>
+                
+                <td class="num">1</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">10%</td>
+                
+                <td class="num">963,04</td>
+                
+                <td class="num">37,04</td>
+                
+                <td class="num">26</td>
+                
+                <td>ART-69695</td>
+                
+                <td>Office Chair</td>
+                
+                <td class="num">2</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">20%</td>
+                
+                <td class="num">22 030,40</td>
+                
+                <td class="num">449,60</td>
+                
+                <td class="num">49</td>
+                
+                <td>221418</td>
+                
+                <td>Managed Firewall Service (annual)</td>
+                
+                <td class="num">3</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">10%</td>
+                
+                <td class="num">14 132,43</td>
+                
+                <td class="num">362,37</td>
+                
+                <td class="num">39</td>
+                
+                <td>375464</td>
+                
+                <td>Printer Maintenance Contract (quarterly)</td>
+                
+                <td class="num">4</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">10%</td>
+                
+                <td class="num">1 126,23</td>
+                
+                <td class="num">160,89</td>
+                
+                <td class="num">7</td>
+                
+                <td>7594.122</td>
+                
+                <td>Coat Rack</td>
+                
+                <td class="num">5</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <table>
+            <tr>
+                <td>Subtotal:</td>
+                <td>€ 38 891,10</td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td>€ 6 156,04</td>
+            </tr>
+            <tr class="total-row">
+                <td>Total:</td>
+                <td>€ 45 047,14</td>
+            </tr>
+        </table>
+    </div>
+        
+
+</body>
+</html>

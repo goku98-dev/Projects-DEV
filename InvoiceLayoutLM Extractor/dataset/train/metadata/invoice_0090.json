@@ -1,0 +1,81 @@
+{
+  "invoice_id": "invoice_0090",
+  "locale": "en_US",
+  "template": "layout_017.html",
+  "columns": [
+    {
+      "field": "description",
+      "label": "Product",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "quantity",
+      "label": "Qty.",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "article_number",
+      "label": "Article No.",
+      "entity_label": "article_number",
+      "format": "text"
+    },
+    {
+      "field": "line_total",
+      "label": "Extended",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "unit_price",
+      "label": "Each",
+      "entity_label": "unit_price",
+      "format": "currency"
+    }
+  ],
+  "line_items": [
+    {
+      "description": "Network Switch 8-Port",
+      "quantity": "24",
+      "article_number": "B53807",
+      "line_total": "3,148.32",
+      "unit_price": "131.18"
+    },
+    {
+      "description": "Office Chair",
+      "quantity": "18",
+      "article_number": "ART-40264",
+      "line_total": "7,373.52",
+      "unit_price": "409.64"
+    },
+    {
+      "description": "Label Maker Tape 12mm",
+      "quantity": "37",
+      "article_number": "622805",
+      "line_total": "8,079.69",
+      "unit_price": "218.37"
+    },
+    {
+      "description": "Webcam Light Ring",
+      "quantity": "36",
+      "article_number": "C87377",
+      "line_total": "5,372.64",
+      "unit_price": "149.24"
+    },
+    {
+      "description": "Cable Management Kit",
+      "quantity": "24",
+      "article_number": "1154.540",
+      "line_total": "11,036.88",
+      "unit_price": "459.87"
+    },
+    {
+      "description": "DisplayPort Cable 3m",
+      "quantity": "16",
+      "article_number": "M16964",
+      "line_total": "6,435.52",
+      "unit_price": "402.22"
+    }
+  ]
+}

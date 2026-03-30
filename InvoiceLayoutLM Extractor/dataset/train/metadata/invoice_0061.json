@@ -1,0 +1,109 @@
+{
+  "invoice_id": "invoice_0061",
+  "locale": "en_US",
+  "template": "layout_013.html",
+  "columns": [
+    {
+      "field": "article_number",
+      "label": "Part No.",
+      "entity_label": "article_number",
+      "format": "text"
+    },
+    {
+      "field": "line_total",
+      "label": "Net Amount",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "description",
+      "label": "Product",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "tax_rate",
+      "label": "Tax",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "unit_price",
+      "label": "Price",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "quantity",
+      "label": "Count",
+      "entity_label": "quantity",
+      "format": "int"
+    }
+  ],
+  "line_items": [
+    {
+      "article_number": "527386",
+      "line_total": "4,921.29",
+      "description": "Ergonomic Mouse",
+      "tax_rate": "8%",
+      "unit_price": "182.27",
+      "quantity": "27"
+    },
+    {
+      "article_number": "5794.430",
+      "line_total": "3,609.39",
+      "description": "HDMI Cable 2m",
+      "tax_rate": "10%",
+      "unit_price": "156.93",
+      "quantity": "23"
+    },
+    {
+      "article_number": "ART-46191",
+      "line_total": "7,944.32",
+      "description": "Network Switch 8-Port",
+      "tax_rate": "0%",
+      "unit_price": "496.52",
+      "quantity": "16"
+    },
+    {
+      "article_number": "350743",
+      "line_total": "2,807.20",
+      "description": "Notebook A5 Ruled",
+      "tax_rate": "10%",
+      "unit_price": "140.36",
+      "quantity": "20"
+    },
+    {
+      "article_number": "169968",
+      "line_total": "4,394.52",
+      "description": "Toner Cartridge Black",
+      "tax_rate": "10%",
+      "unit_price": "244.14",
+      "quantity": "18"
+    },
+    {
+      "article_number": "8763.621",
+      "line_total": "6,524.35",
+      "description": "Webcam HD",
+      "tax_rate": "10%",
+      "unit_price": "186.41",
+      "quantity": "35"
+    },
+    {
+      "article_number": "109064",
+      "line_total": "1,023.00",
+      "description": "Desk Lamp LED",
+      "tax_rate": "0%",
+      "unit_price": "204.60",
+      "quantity": "5"
+    },
+    {
+      "article_number": "490979",
+      "line_total": "6,863.92",
+      "description": "Docking Station USB-C",
+      "tax_rate": "6%",
+      "unit_price": "245.14",
+      "quantity": "28"
+    }
+  ]
+}

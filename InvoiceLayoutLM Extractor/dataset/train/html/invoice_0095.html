@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: &#39;Lucida Sans&#39;, &#39;Lucida Grande&#39;, sans-serif;
+            font-size: 12pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 30px; }
+        .invoice-title { font-size: 24pt; font-weight: bold; color: #0e6655; margin-bottom: 8px; }
+        .invoice-meta { text-align: right; }
+        .invoice-meta p { margin-bottom: 4px; }
+        
+
+        .addresses { margin-bottom: 30px; }
+        .address-block { margin-bottom: 15px; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 4px; font-size: 11pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        thead th { background-color: #0e6655; color: #ffffff; padding: 8px 10px; text-align: left; border: 1px solid #999999; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 6px 10px; border: 1px solid #999999; }
+        tbody td.num { text-align: right; }
+        
+        tbody tr:nth-child(even) { background-color: #f9f9f9; }
+        
+        
+.table-wrapper { margin-top: 0; }
+.table-wrapper table { width: 90%; }
+
+        .totals { border-top: 1px solid #999999; padding-top: 10px; }
+        .totals table { width: 100%; margin-bottom: 0; }
+        .totals td { padding: 4px 10px; border: none !important; }
+        .totals td:first-child { text-align: right; width: 80%; }
+        .totals td:last-child { text-align: right; width: 20%; }
+        .totals .total-row { font-weight: bold; font-size: 14pt; }
+        .totals .total-row td { border-top: 2px solid #0e6655 !important; }
+        
+
+        .footer { margin-top: 40px; padding: 12px 15px; background-color: #f8f8f8; font-size: 11pt; color: #555; }
+        .footer .footer-title { font-weight: bold; margin-bottom: 5px; }
+        .footer p { margin-bottom: 3px; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div>
+            <div class="invoice-title">INVOICE</div>
+            <p>Lebreton</p>
+        </div>
+        <div class="invoice-meta">
+            <p><strong>Invoice #:</strong> INV-339046</p>
+            <p><strong>Date:</strong> 15/03/2025</p>
+            <p><strong>Due Date:</strong> 14/04/2025</p>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">Seller</div>
+            <p>Lebreton</p>
+            <p>rue Isabelle Guilbert, 94634 Bouvier-sur-Martineau, France</p>
+        </div>
+        <div class="address-block">
+            <div class="label">Buyer</div>
+            <p>Masson SARL</p>
+            <p>8, rue Aimé Petit, 36469 Bertrand-sur-Blin, France</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th class="num">Taxe</th>
+                
+                <th class="num">Total</th>
+                
+                <th class="num">Prix U.</th>
+                
+                <th>Description</th>
+                
+                <th class="num">Ligne</th>
+                
+                <th class="num">Quantité</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">10,394.79</td>
+                
+                <td class="num">494.99</td>
+                
+                <td>Office Chair</td>
+                
+                <td class="num">1</td>
+                
+                <td class="num">21</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">22.38</td>
+                
+                <td class="num">3.73</td>
+                
+                <td>Screen Cleaning Kit</td>
+                
+                <td class="num">2</td>
+                
+                <td class="num">6</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">3,794.76</td>
+                
+                <td class="num">421.64</td>
+                
+                <td>Standing Desk</td>
+                
+                <td class="num">3</td>
+                
+                <td class="num">9</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">6%</td>
+                
+                <td class="num">12,048.00</td>
+                
+                <td class="num">401.60</td>
+                
+                <td>Managed Firewall Service (annual)</td>
+                
+                <td class="num">4</td>
+                
+                <td class="num">30</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">22,099.87</td>
+                
+                <td class="num">470.21</td>
+                
+                <td>Cloud Storage Plan 1TB (yearly)</td>
+                
+                <td class="num">5</td>
+                
+                <td class="num">47</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <table>
+            <tr>
+                <td>Subtotal:</td>
+                <td>48,359.80 EUR</td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td>662.64 EUR</td>
+            </tr>
+            <tr class="total-row">
+                <td>Total:</td>
+                <td>49,022.44 EUR</td>
+            </tr>
+        </table>
+    </div>
+        
+
+    <div class="footer">
+        <div class="footer-title">Payment Information</div>
+        <p>Postbank</p>
+        <p>IBAN: FR20 4244 2554 3325 6367 3376</p>
+        <p>BIC: CYZGDENVAOL</p>
+        <p style="margin-top: 8px;">Please transfer the total amount by the due date.</p>
+    </div>
+        
+</body>
+</html>

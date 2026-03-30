@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Tahoma, Geneva, sans-serif;
+            font-size: 11pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { margin: -20mm -20mm 30px -20mm; }
+        .header-top { background-color: #6c3483; color: #ffffff; padding: 15px 25px; }
+        .header-bottom { background-color: #f5f5f5; padding: 10px 25px; display: flex; justify-content: space-between; border-bottom: 1px solid #ddd; }
+        .invoice-title { font-size: 22pt; font-weight: bold; }
+        .invoice-meta span { margin-right: 20px; font-size: 10pt; }
+        
+
+        .addresses { display: flex; justify-content: space-between; margin-bottom: 30px; }
+        .address-block { width: 45%; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 6px; font-size: 10pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        thead th { padding: 10px; text-align: left; background-color: #6c3483; color: #ffffff; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 8px 10px; }
+        tbody td.num { text-align: right; }
+        tbody tr:nth-child(odd) { background-color: #ffffff; }
+        
+.table-wrapper { margin-top: 80px; }
+.table-wrapper table { width: 90%; }
+
+        .totals { text-align: right; margin-bottom: 20px; }
+        .totals .line { margin-bottom: 4px; }
+        .totals .total-line { font-weight: bold; font-size: 14pt; color: #6c3483; border-top: 2px solid #6c3483; padding-top: 6px; display: inline-block; }
+        
+
+        .footer { margin-top: 30px; padding-top: 10px; border-top: 1px solid #eee; font-size: 10pt; color: #666; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="header-top">
+            <div class="invoice-title">Becker OHG mbH</div>
+        </div>
+        <div class="header-bottom">
+            <span>Invoice INV-309739</span>
+            <span>Date: 12.04.2024</span>
+            <span>Due: 12.05.2024</span>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">From</div>
+            <p>Becker OHG mbH</p>
+            <p>Zobelweg 90-23</p>
+            <p>69107 Pirmasens</p>
+            <p>Germany</p>
+        </div>
+        <div class="address-block">
+            <div class="label">Bill To</div>
+            <p>Textor</p>
+            <p>Theresia-Scheel-Gasse 21/43</p>
+            <p>17076 Schwandorf</p>
+            <p>Germany</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th class="num">EP</th>
+                
+                <th class="num">Einheiten</th>
+                
+                <th class="num">MwSt. %</th>
+                
+                <th>Leistung</th>
+                
+                <th class="num">Betrag</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td class="num">275,11</td>
+                
+                <td class="num">16</td>
+                
+                <td class="num">7%</td>
+                
+                <td>Laminating Pouches A4 (100-pack)</td>
+                
+                <td class="num">4.401,76</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">326,44</td>
+                
+                <td class="num">29</td>
+                
+                <td class="num">7%</td>
+                
+                <td>Ballpoint Pens (12-pack)</td>
+                
+                <td class="num">9.466,76</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">96,32</td>
+                
+                <td class="num">6</td>
+                
+                <td class="num">0%</td>
+                
+                <td>Desk Calendar 2026</td>
+                
+                <td class="num">577,92</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">200,35</td>
+                
+                <td class="num">30</td>
+                
+                <td class="num">7%</td>
+                
+                <td>Filing Cabinet 3-Drawer</td>
+                
+                <td class="num">6.010,50</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <div class="line">Subtotal: 20.456,94 EUR</div>
+        <div class="line">Tax: 1.391,53 EUR</div>
+        <div class="total-line">Total: 21.848,47 EUR</div>
+    </div>
+        
+
+    <div class="footer">
+        <p>Payment due within 30 days. Late payments subject to 1.5% monthly interest.</p>
+    </div>
+        
+</body>
+</html>

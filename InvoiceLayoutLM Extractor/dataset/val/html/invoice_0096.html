@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: &#39;Palatino Linotype&#39;, &#39;Book Antiqua&#39;, Palatino, serif;
+            font-size: 11pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { text-align: right; margin-bottom: 30px; }
+        .invoice-title { font-size: 22pt; font-weight: bold; color: #0b5345; margin-bottom: 5px; }
+        .invoice-meta p { margin-bottom: 3px; }
+        .company-name { font-size: 13pt; margin-bottom: 10px; }
+        
+
+        .addresses { display: flex; justify-content: flex-end; margin-bottom: 30px; }
+        .address-block { width: 45%; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 6px; font-size: 10pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        .table-wrapper table { border: 2px solid #0b5345; }
+        thead th { padding: 10px; text-align: left; background-color: #0b5345; color: #ffffff; border-right: 1px solid rgba(255,255,255,0.2); }
+        thead th:last-child { border-right: none; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 8px 10px; border-right: 1px solid #eee; }
+        tbody td:last-child { border-right: none; }
+        tbody td.num { text-align: right; }
+        tbody tr:nth-child(even) { background-color: #eef2f7; }
+        
+.table-wrapper { margin-top: 80px; }
+.table-wrapper table { width: 95%; }
+
+        .totals { border-top: 1px solid #cccccc; padding-top: 10px; }
+        .totals table { width: 100%; margin-bottom: 0; }
+        .totals td { padding: 4px 10px; border: none !important; }
+        .totals td:first-child { text-align: right; width: 80%; }
+        .totals td:last-child { text-align: right; width: 20%; }
+        .totals .total-row { font-weight: bold; font-size: 13pt; }
+        .totals .total-row td { border-top: 2px solid #0b5345 !important; }
+        
+
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="invoice-title">INVOICE</div>
+        <div class="company-name">Pires SA</div>
+        <div class="invoice-meta">
+            <p>Invoice No: INV-795054</p>
+            <p>Invoice Date: 01/04/2025</p>
+            <p>Payment Due: 15/04/2025</p>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">Invoice To</div>
+            <p>Voisin</p>
+            <p>53, chemin de Couturier</p>
+            <p>33962 Adam-sur-Hoarau</p>
+            <p>France</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th>Description</th>
+                
+                <th class="num">PU HT</th>
+                
+                <th class="num">#</th>
+                
+                <th>Code article</th>
+                
+                <th class="num">Montant HT</th>
+                
+                <th class="num">Unités</th>
+                
+                <th class="num">Taxe</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td>Microfiber Cloth Set (10-pack)</td>
+                
+                <td class="num">174,46</td>
+                
+                <td class="num">1</td>
+                
+                <td>B48640</td>
+                
+                <td class="num">1.919,06</td>
+                
+                <td class="num">11</td>
+                
+                <td class="num">10%</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>Webcam HD</td>
+                
+                <td class="num">354,28</td>
+                
+                <td class="num">2</td>
+                
+                <td>516073</td>
+                
+                <td class="num">14.525,48</td>
+                
+                <td class="num">41</td>
+                
+                <td class="num">10%</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>Surge Protector 6-Outlet</td>
+                
+                <td class="num">443,99</td>
+                
+                <td class="num">3</td>
+                
+                <td>ART-20175</td>
+                
+                <td class="num">20.867,53</td>
+                
+                <td class="num">47</td>
+                
+                <td class="num">10%</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <table>
+            <tr>
+                <td>Subtotal:</td>
+                <td>37.312,07 EUR</td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td>3.731,21 EUR</td>
+            </tr>
+            <tr class="total-row">
+                <td>Total:</td>
+                <td>41.043,28 EUR</td>
+            </tr>
+        </table>
+    </div>
+        
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+{
+  "invoice_id": "invoice_0074",
+  "locale": "en_GB",
+  "template": "layout_018.html",
+  "columns": [
+    {
+      "field": "line_total",
+      "label": "Amount",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "quantity",
+      "label": "Units",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "position",
+      "label": "Pos.",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "unit_price",
+      "label": "Unit Price",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "article_number",
+      "label": "Item No.",
+      "entity_label": "article_number",
+      "format": "text"
+    },
+    {
+      "field": "tax_rate",
+      "label": "VAT",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "description",
+      "label": "Designation",
+      "entity_label": "item_description",
+      "format": "text"
+    }
+  ],
+  "line_items": [
+    {
+      "line_total": "539.04",
+      "quantity": "16",
+      "position": "1",
+      "unit_price": "33.69",
+      "article_number": "5457.146",
+      "tax_rate": "0%",
+      "description": "Data Backup Service (monthly subscription)"
+    },
+    {
+      "line_total": "3,161.30",
+      "quantity": "10",
+      "position": "2",
+      "unit_price": "316.13",
+      "article_number": "B44075",
+      "tax_rate": "0%",
+      "description": "Coat Rack"
+    },
+    {
+      "line_total": "10,304.00",
+      "quantity": "50",
+      "position": "3",
+      "unit_price": "206.08",
+      "article_number": "4196.339",
+      "tax_rate": "0%",
+      "description": "Bookshelf 5-Tier"
+    },
+    {
+      "line_total": "869.40",
+      "quantity": "15",
+      "position": "4",
+      "unit_price": "57.96",
+      "article_number": "8083.134",
+      "tax_rate": "0%",
+      "description": "Office Chair"
+    },
+    {
+      "line_total": "3,512.86",
+      "quantity": "26",
+      "position": "5",
+      "unit_price": "135.11",
+      "article_number": "ART-19163",
+      "tax_rate": "0%",
+      "description": "IT Support Service (1 hour)"
+    },
+    {
+      "line_total": "6,287.04",
+      "quantity": "16",
+      "position": "6",
+      "unit_price": "392.94",
+      "article_number": "7850.549",
+      "tax_rate": "20%",
+      "description": "Binder Clips Assorted (48-pack)"
+    }
+  ]
+}

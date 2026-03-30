@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: &#39;Lucida Sans&#39;, &#39;Lucida Grande&#39;, sans-serif;
+            font-size: 11pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { background-color: #2e4053; color: #ffffff; padding: 20px 25px; margin: -20mm -20mm 30px -20mm; display: flex; justify-content: space-between; align-items: center; }
+        .invoice-title { font-size: 22pt; font-weight: bold; }
+        .invoice-meta { text-align: right; }
+        .invoice-meta p { margin-bottom: 4px; }
+        
+
+        .addresses { display: flex; justify-content: space-between; margin-bottom: 30px; }
+        .address-block { width: 45%; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 6px; font-size: 10pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        .table-wrapper table { border: 2px solid #2e4053; }
+        thead th { padding: 10px; text-align: left; background-color: #2e4053; color: #ffffff; border-right: 1px solid rgba(255,255,255,0.2); }
+        thead th:last-child { border-right: none; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 8px 10px; border-right: 1px solid #eee; }
+        tbody td:last-child { border-right: none; }
+        tbody td.num { text-align: right; }
+        tbody tr:nth-child(even) { background-color: #f9f9f9; }
+        
+.table-wrapper { margin-top: 0; }
+.table-wrapper table { width: 90%; }
+
+        .totals { width: 280px; margin-left: auto; }
+        .totals table { margin-bottom: 0; }
+        .totals td { padding: 4px 10px; border: none !important; }
+        .totals .total-row { font-weight: bold; font-size: 13pt; }
+        .totals .total-row td { border-top: 2px solid #2e4053 !important; }
+        
+
+        .footer { margin-top: 30px; padding-top: 10px; border-top: 1px solid #eee; font-size: 10pt; color: #666; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div>
+            <div class="invoice-title">INVOICE</div>
+            <p>Thierry</p>
+        </div>
+        <div class="invoice-meta">
+            <p>Invoice #: INV-495912</p>
+            <p>Date: 09/01/2025</p>
+            <p>Due: 10/03/2025</p>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">From</div>
+            <p>Thierry</p>
+            <p>384, chemin Victor Allain</p>
+            <p>24761 LeclercBourg</p>
+            <p>France</p>
+        </div>
+        <div class="address-block">
+            <div class="label">Bill To</div>
+            <p>Guibert</p>
+            <p>788, rue Patrick Olivier</p>
+            <p>73285 Faure</p>
+            <p>France</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th>N° article</th>
+                
+                <th class="num">Taux TVA</th>
+                
+                <th>Prestation</th>
+                
+                <th class="num">Prix total</th>
+                
+                <th class="num">PU HT</th>
+                
+                <th class="num">Pos.</th>
+                
+                <th class="num">Nombre</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td>438857</td>
+                
+                <td class="num">6%</td>
+                
+                <td>Cloud Storage Plan 1TB (yearly)</td>
+                
+                <td class="num">6,241.62</td>
+                
+                <td class="num">297.22</td>
+                
+                <td class="num">1</td>
+                
+                <td class="num">21</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>484036</td>
+                
+                <td class="num">6%</td>
+                
+                <td>IT Support Service (1 hour)</td>
+                
+                <td class="num">8,787.42</td>
+                
+                <td class="num">325.46</td>
+                
+                <td class="num">2</td>
+                
+                <td class="num">27</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>6699.674</td>
+                
+                <td class="num">0%</td>
+                
+                <td>Laptop Charger Universal 65W</td>
+                
+                <td class="num">12,759.32</td>
+                
+                <td class="num">455.69</td>
+                
+                <td class="num">3</td>
+                
+                <td class="num">28</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>B53945</td>
+                
+                <td class="num">10%</td>
+                
+                <td>Document Scanner</td>
+                
+                <td class="num">18,388.80</td>
+                
+                <td class="num">383.10</td>
+                
+                <td class="num">4</td>
+                
+                <td class="num">48</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>212438</td>
+                
+                <td class="num">10%</td>
+                
+                <td>Highlighter Set (5 colors)</td>
+                
+                <td class="num">3,200.04</td>
+                
+                <td class="num">88.89</td>
+                
+                <td class="num">5</td>
+                
+                <td class="num">36</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>827521</td>
+                
+                <td class="num">6%</td>
+                
+                <td>Wireless Access Point</td>
+                
+                <td class="num">3,074.56</td>
+                
+                <td class="num">192.16</td>
+                
+                <td class="num">6</td>
+                
+                <td class="num">16</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <table>
+            <tr>
+                <td>Subtotal:</td>
+                <td class="num">52,451.76 EUR</td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td class="num">3,154.58 EUR</td>
+            </tr>
+            <tr class="total-row">
+                <td>Total:</td>
+                <td class="num">55,606.34 EUR</td>
+            </tr>
+        </table>
+    </div>
+        
+
+    <div class="footer">
+        <p>Please remit payment within the stated due date.</p>
+    </div>
+        
+</body>
+</html>

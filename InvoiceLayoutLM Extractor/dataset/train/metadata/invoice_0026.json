@@ -1,0 +1,74 @@
+{
+  "invoice_id": "invoice_0026",
+  "locale": "de_DE",
+  "template": "layout_018.html",
+  "columns": [
+    {
+      "field": "quantity",
+      "label": "Einheiten",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "description",
+      "label": "Bezeichnung",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "line_total",
+      "label": "Gesamtpreis",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "tax_rate",
+      "label": "Steuersatz",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "unit_price",
+      "label": "E-Preis",
+      "entity_label": "unit_price",
+      "format": "currency"
+    }
+  ],
+  "line_items": [
+    {
+      "quantity": "11",
+      "description": "Webcam Light Ring",
+      "line_total": "3.440,36",
+      "tax_rate": "0%",
+      "unit_price": "312,76"
+    },
+    {
+      "quantity": "19",
+      "description": "Disinfecting Wipes (75-pack)",
+      "line_total": "1.572,63",
+      "tax_rate": "7%",
+      "unit_price": "82,77"
+    },
+    {
+      "quantity": "37",
+      "description": "Stapler Heavy-Duty",
+      "line_total": "1.407,85",
+      "tax_rate": "0%",
+      "unit_price": "38,05"
+    },
+    {
+      "quantity": "29",
+      "description": "Clipboard A4",
+      "line_total": "7.700,08",
+      "tax_rate": "0%",
+      "unit_price": "265,52"
+    },
+    {
+      "quantity": "44",
+      "description": "External HDD 4TB",
+      "line_total": "10.736,88",
+      "tax_rate": "19%",
+      "unit_price": "244,02"
+    }
+  ]
+}

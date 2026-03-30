@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: &#39;Trebuchet MS&#39;, sans-serif;
+            font-size: 9pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { border-bottom: 2px solid #1a5276; padding-bottom: 15px; margin-bottom: 25px; display: flex; justify-content: space-between; align-items: flex-end; }
+        .invoice-title { font-size: 13.5pt; font-weight: bold; color: #1a5276; }
+        .invoice-meta { text-align: right; font-size: 8pt; }
+        .invoice-meta p { margin-bottom: 2px; }
+        
+
+        .addresses { margin-bottom: 30px; }
+        .address-block { margin-bottom: 15px; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 4px; font-size: 8pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        thead th { background-color: #1a5276; color: #ffffff; padding: 8px 10px; text-align: left; border: 1px solid #cccccc; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 6px 10px; border: 1px solid #cccccc; }
+        tbody td.num { text-align: right; }
+        
+        tbody tr:nth-child(even) { background-color: #f2f2f2; }
+        
+        
+.table-wrapper { margin-top: 80px; }
+.table-wrapper table { width: 100%; }
+
+        .totals { text-align: right; margin-bottom: 20px; }
+        .totals .line { margin-bottom: 4px; }
+        .totals .total-line { font-weight: bold; font-size: 12pt; color: #1a5276; border-top: 2px solid #1a5276; padding-top: 6px; display: inline-block; }
+        
+
+        .footer { margin-top: 40px; padding: 12px 15px; background-color: #f8f8f8; font-size: 8pt; color: #555; }
+        .footer .footer-title { font-weight: bold; margin-bottom: 5px; }
+        .footer p { margin-bottom: 3px; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="invoice-title">Muller</div>
+        <div class="invoice-meta">
+            <p>INV-641061</p>
+            <p>19/03/2025</p>
+            <p>Due: 18/05/2025</p>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">Seller</div>
+            <p>Muller</p>
+            <p>94, avenue Thérèse Devaux, 65479 Saint Astrid-la-Forêt, France</p>
+        </div>
+        <div class="address-block">
+            <div class="label">Buyer</div>
+            <p>Lemaître SA</p>
+            <p>2, rue Thibault, 97143 Moulin, France</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th class="num">Taux</th>
+                
+                <th>Produit</th>
+                
+                <th class="num">Prix total</th>
+                
+                <th class="num">No.</th>
+                
+                <th class="num">Qté.</th>
+                
+                <th class="num">Prix unitaire</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td class="num">0%</td>
+                
+                <td>Printer Maintenance Contract (quarterly)</td>
+                
+                <td class="num">15,740.20</td>
+                
+                <td class="num">1</td>
+                
+                <td class="num">35</td>
+                
+                <td class="num">449.72</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">10%</td>
+                
+                <td>Mouse Pad XL</td>
+                
+                <td class="num">13,350.69</td>
+                
+                <td class="num">2</td>
+                
+                <td class="num">27</td>
+                
+                <td class="num">494.47</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">10%</td>
+                
+                <td>Sticky Notes Assorted</td>
+                
+                <td class="num">12,898.71</td>
+                
+                <td class="num">3</td>
+                
+                <td class="num">43</td>
+                
+                <td class="num">299.97</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <div class="line">Subtotal: 41,989.60 EUR</div>
+        <div class="line">Tax: 2,624.94 EUR</div>
+        <div class="total-line">Total: 44,614.54 EUR</div>
+    </div>
+        
+
+    <div class="footer">
+        <div class="footer-title">Payment Information</div>
+        <p>Citibank</p>
+        <p>IBAN: FR55 5288 4823 7396 3638</p>
+        <p>BIC: YTIIGBZDB0I</p>
+        <p style="margin-top: 8px;">Payable within 60 days of invoice date.</p>
+    </div>
+        
+</body>
+</html>

@@ -1,0 +1,114 @@
+{
+  "invoice_id": "invoice_0039",
+  "locale": "en_GB",
+  "template": "layout_008.html",
+  "columns": [
+    {
+      "field": "quantity",
+      "label": "Count",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "description",
+      "label": "Item",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "article_number",
+      "label": "Art. No.",
+      "entity_label": "article_number",
+      "format": "text"
+    },
+    {
+      "field": "tax_rate",
+      "label": "VAT %",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "unit_price",
+      "label": "Price/Unit",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "line_total",
+      "label": "Ext. Price",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "position",
+      "label": "#",
+      "entity_label": "position",
+      "format": "int"
+    }
+  ],
+  "line_items": [
+    {
+      "quantity": "30",
+      "description": "Paper Shredder Cross-Cut",
+      "article_number": "C50373",
+      "tax_rate": "20%",
+      "unit_price": "382.22",
+      "line_total": "11,466.60",
+      "position": "1"
+    },
+    {
+      "quantity": "1",
+      "description": "Office Chair",
+      "article_number": "630776",
+      "tax_rate": "5%",
+      "unit_price": "248.15",
+      "line_total": "248.15",
+      "position": "2"
+    },
+    {
+      "quantity": "11",
+      "description": "RAM Module 16GB DDR5",
+      "article_number": "M94777",
+      "tax_rate": "5%",
+      "unit_price": "149.12",
+      "line_total": "1,640.32",
+      "position": "3"
+    },
+    {
+      "quantity": "3",
+      "description": "Ballpoint Pens (12-pack)",
+      "article_number": "P32476",
+      "tax_rate": "20%",
+      "unit_price": "196.87",
+      "line_total": "590.61",
+      "position": "4"
+    },
+    {
+      "quantity": "23",
+      "description": "Wireless Presenter",
+      "article_number": "ART-35322",
+      "tax_rate": "5%",
+      "unit_price": "188.60",
+      "line_total": "4,337.80",
+      "position": "5"
+    },
+    {
+      "quantity": "1",
+      "description": "Label Maker Tape 12mm",
+      "article_number": "B84998",
+      "tax_rate": "5%",
+      "unit_price": "185.73",
+      "line_total": "185.73",
+      "position": "6"
+    },
+    {
+      "quantity": "36",
+      "description": "Sticky Notes Assorted",
+      "article_number": "4923.334",
+      "tax_rate": "20%",
+      "unit_price": "127.20",
+      "line_total": "4,579.20",
+      "position": "7"
+    }
+  ]
+}

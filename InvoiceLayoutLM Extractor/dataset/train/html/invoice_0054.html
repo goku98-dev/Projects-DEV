@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: &#39;Lucida Sans&#39;, &#39;Lucida Grande&#39;, sans-serif;
+            font-size: 9pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { text-align: center; margin-bottom: 30px; }
+        .invoice-title { font-size: 22.5pt; font-weight: bold; color: #0e6655; margin-bottom: 10px; }
+        .invoice-meta { margin-top: 10px; }
+        .invoice-meta span { margin: 0 15px; }
+        
+
+        .addresses { display: flex; justify-content: space-between; margin-bottom: 30px; gap: 20px; }
+        .address-block { width: 45%; border: 1px solid #cccccc; padding: 12px 15px; }
+        .address-block .label { font-weight: bold; color: #0e6655; margin-bottom: 8px; font-size: 9pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        thead th { padding: 8px 10px; text-align: left; border-bottom: 2px dotted #0e6655; color: #0e6655; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 7px 10px; border-bottom: 1px dotted #ccc; }
+        tbody td.num { text-align: right; }
+        
+.table-wrapper { margin-top: 80px; }
+.table-wrapper table { width: 90%; }
+
+        .totals { width: 300px; margin-left: auto; border: 1px solid #cccccc; padding: 10px; }
+        .totals table { margin-bottom: 0; width: 100%; }
+        .totals td { padding: 4px 8px; border: none !important; }
+        .totals .total-row { font-weight: bold; font-size: 11pt; background-color: #0e6655; color: #ffffff; }
+        
+
+        .footer { margin-top: 40px; padding: 12px 15px; background-color: #f8f8f8; font-size: 8pt; color: #555; }
+        .footer .footer-title { font-weight: bold; margin-bottom: 5px; }
+        .footer p { margin-bottom: 3px; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="invoice-title">INVOICE</div>
+        <p>Guérin</p>
+        <div class="invoice-meta">
+            <span><strong>Invoice #:</strong> INV-548140</span>
+            <span><strong>Date:</strong> 13/03/2026</span>
+            <span><strong>Due Date:</strong> 12/05/2026</span>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">Sender</div>
+            <p>Guérin</p>
+            <p>18, avenue Adélaïde Peron</p>
+            <p>36576 Moreno-les-Bains</p>
+            <p>France</p>
+        </div>
+        <div class="address-block">
+            <div class="label">Recipient</div>
+            <p>Leclercq</p>
+            <p>chemin Perez</p>
+            <p>55823 Perrin</p>
+            <p>France</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th>Code produit</th>
+                
+                <th class="num">Qté.</th>
+                
+                <th class="num">Sous-total</th>
+                
+                <th class="num">Ligne</th>
+                
+                <th class="num">PU HT</th>
+                
+                <th>Produit</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td>ART-84115</td>
+                
+                <td class="num">23</td>
+                
+                <td class="num">8,441.00</td>
+                
+                <td class="num">1</td>
+                
+                <td class="num">367.00</td>
+                
+                <td>Monitor Arm Mount</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>8125.823</td>
+                
+                <td class="num">14</td>
+                
+                <td class="num">2,461.76</td>
+                
+                <td class="num">2</td>
+                
+                <td class="num">175.84</td>
+                
+                <td>Clipboard A4</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>ART-79595</td>
+                
+                <td class="num">2</td>
+                
+                <td class="num">521.88</td>
+                
+                <td class="num">3</td>
+                
+                <td class="num">260.94</td>
+                
+                <td>Binder Clips Assorted (48-pack)</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <table>
+            <tr>
+                <td>Subtotal:</td>
+                <td class="num">11,424.64 EUR</td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td class="num">1,963.08 EUR</td>
+            </tr>
+            <tr class="total-row">
+                <td>Total:</td>
+                <td class="num">13,387.72 EUR</td>
+            </tr>
+        </table>
+    </div>
+        
+
+    <div class="footer">
+        <div class="footer-title">Payment Information</div>
+        <p>DZ Bank</p>
+        <p>IBAN: FR64 2643 8682 2952 5502</p>
+        <p>BIC: DYTMUSRX070</p>
+        <p style="margin-top: 8px;">Please pay within 14 days of receipt.</p>
+    </div>
+        
+</body>
+</html>

@@ -1,0 +1,77 @@
+{
+  "invoice_id": "invoice_0082",
+  "locale": "de_CH",
+  "template": "layout_014.html",
+  "columns": [
+    {
+      "field": "line_total",
+      "label": "Betrag",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "description",
+      "label": "Position",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "unit_price",
+      "label": "E-Preis",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "tax_rate",
+      "label": "USt.",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "quantity",
+      "label": "Stk.",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "position",
+      "label": "Lfd. Nr.",
+      "entity_label": "position",
+      "format": "int"
+    }
+  ],
+  "line_items": [
+    {
+      "line_total": "5'270.65",
+      "description": "Ballpoint Pens (12-pack)",
+      "unit_price": "142.45",
+      "tax_rate": "8%",
+      "quantity": "37",
+      "position": "1"
+    },
+    {
+      "line_total": "10'464.39",
+      "description": "External SSD 1TB",
+      "unit_price": "387.57",
+      "tax_rate": "8%",
+      "quantity": "27",
+      "position": "2"
+    },
+    {
+      "line_total": "6'594.79",
+      "description": "Laptop Charger Universal 65W",
+      "unit_price": "286.73",
+      "tax_rate": "2%",
+      "quantity": "23",
+      "position": "3"
+    },
+    {
+      "line_total": "3'518.10",
+      "description": "Envelope C4 (50-pack)",
+      "unit_price": "130.30",
+      "tax_rate": "8%",
+      "quantity": "27",
+      "position": "4"
+    }
+  ]
+}

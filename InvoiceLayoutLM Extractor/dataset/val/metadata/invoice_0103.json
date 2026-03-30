@@ -1,0 +1,69 @@
+{
+  "invoice_id": "invoice_0103",
+  "locale": "de_DE",
+  "template": "layout_004.html",
+  "columns": [
+    {
+      "field": "unit_price",
+      "label": "EP",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "quantity",
+      "label": "Menge",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "position",
+      "label": "Pos.",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "tax_rate",
+      "label": "MwSt.-Satz",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "description",
+      "label": "Position",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "line_total",
+      "label": "Summe",
+      "entity_label": "line_total",
+      "format": "currency"
+    }
+  ],
+  "line_items": [
+    {
+      "unit_price": "111.23",
+      "quantity": "43",
+      "position": "1",
+      "tax_rate": "19%",
+      "description": "Filing Cabinet 3-Drawer",
+      "line_total": "4,782.89"
+    },
+    {
+      "unit_price": "432.52",
+      "quantity": "14",
+      "position": "2",
+      "tax_rate": "7%",
+      "description": "Graphics Card RTX 4060",
+      "line_total": "6,055.28"
+    },
+    {
+      "unit_price": "340.05",
+      "quantity": "48",
+      "position": "3",
+      "tax_rate": "7%",
+      "description": "Office Chair",
+      "line_total": "16,322.40"
+    }
+  ]
+}

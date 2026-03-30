@@ -1,0 +1,109 @@
+{
+  "invoice_id": "invoice_0116",
+  "locale": "fr_FR",
+  "template": "layout_004.html",
+  "columns": [
+    {
+      "field": "line_total",
+      "label": "Montant HT",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "tax_rate",
+      "label": "TVA %",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "unit_price",
+      "label": "Tarif unitaire",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "quantity",
+      "label": "Quantité",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "position",
+      "label": "N°",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "description",
+      "label": "Désignation",
+      "entity_label": "item_description",
+      "format": "text"
+    }
+  ],
+  "line_items": [
+    {
+      "line_total": "14.578,74",
+      "tax_rate": "10%",
+      "unit_price": "441,78",
+      "quantity": "33",
+      "position": "1",
+      "description": "Bookshelf 5-Tier"
+    },
+    {
+      "line_total": "7.436,70",
+      "tax_rate": "6%",
+      "unit_price": "247,89",
+      "quantity": "30",
+      "position": "2",
+      "description": "Highlighter Set (5 colors)"
+    },
+    {
+      "line_total": "921,96",
+      "tax_rate": "20%",
+      "unit_price": "35,46",
+      "quantity": "26",
+      "position": "3",
+      "description": "Desk Pad Leather"
+    },
+    {
+      "line_total": "4.105,92",
+      "tax_rate": "20%",
+      "unit_price": "195,52",
+      "quantity": "21",
+      "position": "4",
+      "description": "Conference Table"
+    },
+    {
+      "line_total": "2.369,95",
+      "tax_rate": "10%",
+      "unit_price": "76,45",
+      "quantity": "31",
+      "position": "5",
+      "description": "Data Backup Service (monthly subscription)"
+    },
+    {
+      "line_total": "3.976,83",
+      "tax_rate": "20%",
+      "unit_price": "361,53",
+      "quantity": "11",
+      "position": "6",
+      "description": "Laptop Charger Universal 65W"
+    },
+    {
+      "line_total": "1.943,36",
+      "tax_rate": "10%",
+      "unit_price": "242,92",
+      "quantity": "8",
+      "position": "7",
+      "description": "HDMI Cable 2m"
+    },
+    {
+      "line_total": "3.990,47",
+      "tax_rate": "10%",
+      "unit_price": "362,77",
+      "quantity": "11",
+      "position": "8",
+      "description": "Wireless Keyboard"
+    }
+  ]
+}

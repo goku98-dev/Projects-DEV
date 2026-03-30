@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: &#39;Courier New&#39;, Courier, monospace;
+            font-size: 12pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { text-align: center; margin-bottom: 30px; }
+        .invoice-title { font-size: 30.0pt; font-weight: bold; color: #4a4a4a; margin-bottom: 10px; }
+        .invoice-meta { margin-top: 10px; }
+        .invoice-meta span { margin: 0 15px; }
+        
+
+        .addresses { display: flex; justify-content: space-between; margin-bottom: 30px; gap: 20px; }
+        .address-block { width: 45%; border: 1px solid #999999; padding: 12px 15px; }
+        .address-block .label { font-weight: bold; color: #4a4a4a; margin-bottom: 8px; font-size: 12pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        thead th { padding: 8px 10px; text-align: left; border-bottom: 2px dotted #4a4a4a; color: #4a4a4a; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 7px 10px; border-bottom: 1px dotted #ccc; }
+        tbody td.num { text-align: right; }
+        
+.table-wrapper { margin-top: 80px; }
+.table-wrapper table { width: 90%; }
+
+        .totals { width: 300px; margin-left: auto; border: 1px solid #999999; padding: 10px; }
+        .totals table { margin-bottom: 0; width: 100%; }
+        .totals td { padding: 4px 8px; border: none !important; }
+        .totals .total-row { font-weight: bold; font-size: 14pt; background-color: #4a4a4a; color: #ffffff; }
+        
+
+        .footer { margin-top: 40px; padding: 12px 15px; background-color: #f8f8f8; font-size: 11pt; color: #555; }
+        .footer .footer-title { font-weight: bold; margin-bottom: 5px; }
+        .footer p { margin-bottom: 3px; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="invoice-title">INVOICE</div>
+        <p>Girschner Fliegner AG</p>
+        <div class="invoice-meta">
+            <span><strong>Invoice #:</strong> INV-616080</span>
+            <span><strong>Date:</strong> 05.04.2024</span>
+            <span><strong>Due Date:</strong> 04.06.2024</span>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">Sender</div>
+            <p>Girschner Fliegner AG</p>
+            <p>auch Schlauchinstraße 3/1</p>
+            <p>47912 Hagenow</p>
+            <p>Germany</p>
+        </div>
+        <div class="address-block">
+            <div class="label">Recipient</div>
+            <p>Radisch Dussen van AG</p>
+            <p>Friedrich-Wilhelm-Roskoth-Allee 3-8</p>
+            <p>24657 Steinfurt</p>
+            <p>Germany</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th class="num">Einheiten</th>
+                
+                <th>Bezeichnung</th>
+                
+                <th class="num">Gesamtpreis</th>
+                
+                <th class="num">Steuersatz</th>
+                
+                <th class="num">E-Preis</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td class="num">11</td>
+                
+                <td>Webcam Light Ring</td>
+                
+                <td class="num">3.440,36</td>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">312,76</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">19</td>
+                
+                <td>Disinfecting Wipes (75-pack)</td>
+                
+                <td class="num">1.572,63</td>
+                
+                <td class="num">7%</td>
+                
+                <td class="num">82,77</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">37</td>
+                
+                <td>Stapler Heavy-Duty</td>
+                
+                <td class="num">1.407,85</td>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">38,05</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">29</td>
+                
+                <td>Clipboard A4</td>
+                
+                <td class="num">7.700,08</td>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">265,52</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">44</td>
+                
+                <td>External HDD 4TB</td>
+                
+                <td class="num">10.736,88</td>
+                
+                <td class="num">19%</td>
+                
+                <td class="num">244,02</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <table>
+            <tr>
+                <td>Subtotal:</td>
+                <td class="num">24.857,80 €</td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td class="num">2.150,09 €</td>
+            </tr>
+            <tr class="total-row">
+                <td>Total:</td>
+                <td class="num">27.007,89 €</td>
+            </tr>
+        </table>
+    </div>
+        
+
+    <div class="footer">
+        <div class="footer-title">Payment Information</div>
+        <p>Zürcher Kantonalbank</p>
+        <p>IBAN: DE23 3851 5730 7866 6207 9037 9320</p>
+        <p>BIC: ZXNTUSCKZ7G</p>
+        <p style="margin-top: 8px;">Payment due within 30 days. Late payments subject to 1.5% monthly interest.</p>
+    </div>
+        
+</body>
+</html>

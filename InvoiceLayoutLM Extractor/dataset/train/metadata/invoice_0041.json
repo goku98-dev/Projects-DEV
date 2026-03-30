@@ -1,0 +1,85 @@
+{
+  "invoice_id": "invoice_0041",
+  "locale": "en_US",
+  "template": "layout_025.html",
+  "columns": [
+    {
+      "field": "tax_rate",
+      "label": "Tax %",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "description",
+      "label": "Designation",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "line_total",
+      "label": "Ext. Price",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "article_number",
+      "label": "SKU",
+      "entity_label": "article_number",
+      "format": "text"
+    },
+    {
+      "field": "unit_price",
+      "label": "Price/Unit",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "quantity",
+      "label": "Pcs",
+      "entity_label": "quantity",
+      "format": "int"
+    }
+  ],
+  "line_items": [
+    {
+      "tax_rate": "10%",
+      "description": "Binder Clips Assorted (48-pack)",
+      "line_total": "4,186.98",
+      "article_number": "ART-71745",
+      "unit_price": "232.61",
+      "quantity": "18"
+    },
+    {
+      "tax_rate": "8%",
+      "description": "Disinfecting Wipes (75-pack)",
+      "line_total": "3,422.79",
+      "article_number": "ART-63946",
+      "unit_price": "380.31",
+      "quantity": "9"
+    },
+    {
+      "tax_rate": "8%",
+      "description": "Stapler Heavy-Duty",
+      "line_total": "6,341.12",
+      "article_number": "319016",
+      "unit_price": "198.16",
+      "quantity": "32"
+    },
+    {
+      "tax_rate": "6%",
+      "description": "Cable Management Kit",
+      "line_total": "10,789.57",
+      "article_number": "199120",
+      "unit_price": "291.61",
+      "quantity": "37"
+    },
+    {
+      "tax_rate": "8%",
+      "description": "Laptop Stand",
+      "line_total": "8,342.10",
+      "article_number": "ART-66994",
+      "unit_price": "213.90",
+      "quantity": "39"
+    }
+  ]
+}

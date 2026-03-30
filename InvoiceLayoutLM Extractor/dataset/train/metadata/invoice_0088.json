@@ -1,0 +1,109 @@
+{
+  "invoice_id": "invoice_0088",
+  "locale": "de_CH",
+  "template": "layout_023.html",
+  "columns": [
+    {
+      "field": "position",
+      "label": "#",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "unit_price",
+      "label": "Netto-EP",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "quantity",
+      "label": "Anzahl",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "line_total",
+      "label": "Nettobetrag",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "description",
+      "label": "Beschreibung",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "tax_rate",
+      "label": "USt. %",
+      "entity_label": "tax",
+      "format": "percent"
+    }
+  ],
+  "line_items": [
+    {
+      "position": "1",
+      "unit_price": "284.32",
+      "quantity": "16",
+      "line_total": "4'549.12",
+      "description": "External SSD 1TB",
+      "tax_rate": "8%"
+    },
+    {
+      "position": "2",
+      "unit_price": "121.65",
+      "quantity": "9",
+      "line_total": "1'094.85",
+      "description": "External HDD 4TB",
+      "tax_rate": "0%"
+    },
+    {
+      "position": "3",
+      "unit_price": "174.29",
+      "quantity": "36",
+      "line_total": "6'274.44",
+      "description": "Standing Desk",
+      "tax_rate": "0%"
+    },
+    {
+      "position": "4",
+      "unit_price": "396.59",
+      "quantity": "30",
+      "line_total": "11'897.70",
+      "description": "RAM Module 16GB DDR5",
+      "tax_rate": "2%"
+    },
+    {
+      "position": "5",
+      "unit_price": "389.40",
+      "quantity": "24",
+      "line_total": "9'345.60",
+      "description": "Binder Clips Assorted (48-pack)",
+      "tax_rate": "2%"
+    },
+    {
+      "position": "6",
+      "unit_price": "283.91",
+      "quantity": "49",
+      "line_total": "13'911.59",
+      "description": "Room Divider Panel",
+      "tax_rate": "0%"
+    },
+    {
+      "position": "7",
+      "unit_price": "194.53",
+      "quantity": "5",
+      "line_total": "972.65",
+      "description": "Filing Cabinet 3-Drawer",
+      "tax_rate": "8%"
+    },
+    {
+      "position": "8",
+      "unit_price": "77.02",
+      "quantity": "40",
+      "line_total": "3'080.80",
+      "description": "Ergonomic Desk Chair",
+      "tax_rate": "2%"
+    }
+  ]
+}

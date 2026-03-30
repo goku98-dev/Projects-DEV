@@ -1,0 +1,67 @@
+{
+  "invoice_id": "invoice_0030",
+  "locale": "de_CH",
+  "template": "layout_021.html",
+  "columns": [
+    {
+      "field": "position",
+      "label": "#",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "description",
+      "label": "Artikel",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "line_total",
+      "label": "Gesamt",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "quantity",
+      "label": "Menge",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "unit_price",
+      "label": "Netto-EP",
+      "entity_label": "unit_price",
+      "format": "currency"
+    }
+  ],
+  "line_items": [
+    {
+      "position": "1",
+      "description": "Laptop Stand",
+      "line_total": "3'524.28",
+      "quantity": "43",
+      "unit_price": "81.96"
+    },
+    {
+      "position": "2",
+      "description": "Notebook A5 Ruled",
+      "line_total": "17'405.73",
+      "quantity": "41",
+      "unit_price": "424.53"
+    },
+    {
+      "position": "3",
+      "description": "Screen Privacy Filter 24\"",
+      "line_total": "8'614.08",
+      "quantity": "48",
+      "unit_price": "179.46"
+    },
+    {
+      "position": "4",
+      "description": "Toner Cartridge Black",
+      "line_total": "2'738.55",
+      "quantity": "15",
+      "unit_price": "182.57"
+    }
+  ]
+}

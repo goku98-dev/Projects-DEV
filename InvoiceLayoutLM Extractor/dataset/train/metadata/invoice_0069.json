@@ -1,0 +1,93 @@
+{
+  "invoice_id": "invoice_0069",
+  "locale": "en_US",
+  "template": "layout_005.html",
+  "columns": [
+    {
+      "field": "line_total",
+      "label": "Total",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "quantity",
+      "label": "Pcs",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "unit_price",
+      "label": "Unit Cost",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "tax_rate",
+      "label": "Tax",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "article_number",
+      "label": "SKU",
+      "entity_label": "article_number",
+      "format": "text"
+    },
+    {
+      "field": "description",
+      "label": "Item",
+      "entity_label": "item_description",
+      "format": "text"
+    }
+  ],
+  "line_items": [
+    {
+      "line_total": "17,000.90",
+      "quantity": "35",
+      "unit_price": "485.74",
+      "tax_rate": "0%",
+      "article_number": "C94772",
+      "description": "Stapler Heavy-Duty"
+    },
+    {
+      "line_total": "5,393.05",
+      "quantity": "13",
+      "unit_price": "414.85",
+      "tax_rate": "10%",
+      "article_number": "B87543",
+      "description": "Ergonomic Desk Chair"
+    },
+    {
+      "line_total": "466.96",
+      "quantity": "4",
+      "unit_price": "116.74",
+      "tax_rate": "6%",
+      "article_number": "677182",
+      "description": "Hand Sanitizer 500ml"
+    },
+    {
+      "line_total": "3,149.41",
+      "quantity": "11",
+      "unit_price": "286.31",
+      "tax_rate": "8%",
+      "article_number": "2663.108",
+      "description": "Whiteboard Marker Set"
+    },
+    {
+      "line_total": "10,104.50",
+      "quantity": "35",
+      "unit_price": "288.70",
+      "tax_rate": "8%",
+      "article_number": "3657.353",
+      "description": "Webcam HD"
+    },
+    {
+      "line_total": "2,773.36",
+      "quantity": "8",
+      "unit_price": "346.67",
+      "tax_rate": "8%",
+      "article_number": "5657.109",
+      "description": "Filing Cabinet 3-Drawer"
+    }
+  ]
+}

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, &#39;Times New Roman&#39;, serif;
+            font-size: 11pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { text-align: right; margin-bottom: 30px; }
+        .invoice-title { font-size: 22pt; font-weight: bold; color: #1a5276; margin-bottom: 5px; }
+        .invoice-meta p { margin-bottom: 3px; }
+        .company-name { font-size: 13pt; margin-bottom: 10px; }
+        
+
+        .addresses { display: flex; justify-content: flex-end; margin-bottom: 30px; }
+        .address-block { width: 45%; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 6px; font-size: 10pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        thead th { padding: 8px 10px; text-align: left; border-bottom: 2px solid #1a5276; color: #1a5276; font-weight: bold; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 8px 10px; border-bottom: 1px solid #e0e0e0; }
+        tbody td.num { text-align: right; }
+        
+.table-wrapper { margin-top: 40px; }
+.table-wrapper table { width: 100%; }
+
+        .totals { border-top: 1px solid #999999; padding-top: 10px; }
+        .totals table { width: 100%; margin-bottom: 0; }
+        .totals td { padding: 4px 10px; border: none !important; }
+        .totals td:first-child { text-align: right; width: 80%; }
+        .totals td:last-child { text-align: right; width: 20%; }
+        .totals .total-row { font-weight: bold; font-size: 13pt; }
+        .totals .total-row td { border-top: 2px solid #1a5276 !important; }
+        
+
+        .footer { margin-top: 30px; font-size: 9pt; color: #999; text-align: center; }
+        .footer p { margin-bottom: 2px; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="invoice-title">INVOICE</div>
+        <div class="company-name">Herzog &amp; Cie.</div>
+        <div class="invoice-meta">
+            <p>Invoice No: INV-960567</p>
+            <p>Invoice Date: 21.06.2025</p>
+            <p>Payment Due: 05.07.2025</p>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">Invoice To</div>
+            <p>Ziegler Thommen AG</p>
+            <p>Gigerstrasse 9</p>
+            <p>7469 Martigny</p>
+            <p>Switzerland</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th>Produkt</th>
+                
+                <th class="num">#</th>
+                
+                <th class="num">Nettobetrag</th>
+                
+                <th class="num">Menge</th>
+                
+                <th class="num">USt. %</th>
+                
+                <th class="num">EP</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td>Conference Table</td>
+                
+                <td class="num">1</td>
+                
+                <td class="num">14&#39;470.80</td>
+                
+                <td class="num">30</td>
+                
+                <td class="num">2%</td>
+                
+                <td class="num">482.36</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>Sticky Notes Assorted</td>
+                
+                <td class="num">2</td>
+                
+                <td class="num">4&#39;140.46</td>
+                
+                <td class="num">46</td>
+                
+                <td class="num">2%</td>
+                
+                <td class="num">90.01</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>Managed Firewall Service (annual)</td>
+                
+                <td class="num">3</td>
+                
+                <td class="num">7&#39;566.60</td>
+                
+                <td class="num">20</td>
+                
+                <td class="num">8%</td>
+                
+                <td class="num">378.33</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>Screen Privacy Filter 24&#34;</td>
+                
+                <td class="num">4</td>
+                
+                <td class="num">344.30</td>
+                
+                <td class="num">11</td>
+                
+                <td class="num">8%</td>
+                
+                <td class="num">31.30</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>Compressed Air Duster (6-pack)</td>
+                
+                <td class="num">5</td>
+                
+                <td class="num">4&#39;537.98</td>
+                
+                <td class="num">18</td>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">252.11</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <table>
+            <tr>
+                <td>Subtotal:</td>
+                <td>CHF 31&#39;060.14</td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td>CHF 1&#39;106.06</td>
+            </tr>
+            <tr class="total-row">
+                <td>Total:</td>
+                <td>CHF 32&#39;166.20</td>
+            </tr>
+        </table>
+    </div>
+        
+
+    <div class="footer">
+        <p>Herzog &amp; Cie. | Kochstrasse 57, 7601 Worb | Switzerland</p>
+        <p>Barclays | IBAN: CH68 5281 3376 5133 6994</p>
+    </div>
+        
+</body>
+</html>

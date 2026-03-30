@@ -1,0 +1,95 @@
+{
+  "invoice_id": "invoice_0097",
+  "locale": "de_DE",
+  "template": "layout_017.html",
+  "columns": [
+    {
+      "field": "quantity",
+      "label": "Stück",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "description",
+      "label": "Produkt",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "unit_price",
+      "label": "Stückpreis",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "line_total",
+      "label": "Gesamt",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "tax_rate",
+      "label": "Steuersatz",
+      "entity_label": "tax",
+      "format": "percent"
+    }
+  ],
+  "line_items": [
+    {
+      "quantity": "16",
+      "description": "Annual Software License Renewal",
+      "unit_price": "201.94",
+      "line_total": "3,231.04",
+      "tax_rate": "7%"
+    },
+    {
+      "quantity": "45",
+      "description": "RAM Module 16GB DDR5",
+      "unit_price": "66.65",
+      "line_total": "2,999.25",
+      "tax_rate": "19%"
+    },
+    {
+      "quantity": "41",
+      "description": "Desk Lamp LED",
+      "unit_price": "449.68",
+      "line_total": "18,436.88",
+      "tax_rate": "0%"
+    },
+    {
+      "quantity": "8",
+      "description": "Office Equipment Installation Service",
+      "unit_price": "320.14",
+      "line_total": "2,561.12",
+      "tax_rate": "7%"
+    },
+    {
+      "quantity": "43",
+      "description": "Data Backup Service (monthly subscription)",
+      "unit_price": "50.48",
+      "line_total": "2,170.64",
+      "tax_rate": "19%"
+    },
+    {
+      "quantity": "43",
+      "description": "Power Strip with USB",
+      "unit_price": "91.81",
+      "line_total": "3,947.83",
+      "tax_rate": "7%"
+    },
+    {
+      "quantity": "9",
+      "description": "Managed Firewall Service (annual)",
+      "unit_price": "282.58",
+      "line_total": "2,543.22",
+      "tax_rate": "0%"
+    },
+    {
+      "quantity": "18",
+      "description": "Noise-Cancelling Headphones",
+      "unit_price": "287.31",
+      "line_total": "5,171.58",
+      "tax_rate": "7%"
+    }
+  ]
+}

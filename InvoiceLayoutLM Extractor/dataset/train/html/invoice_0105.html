@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: &#39;Palatino Linotype&#39;, &#39;Book Antiqua&#39;, Palatino, serif;
+            font-size: 10pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { border-bottom: 2px solid #7b241c; padding-bottom: 15px; margin-bottom: 25px; display: flex; justify-content: space-between; align-items: flex-end; }
+        .invoice-title { font-size: 15.0pt; font-weight: bold; color: #7b241c; }
+        .invoice-meta { text-align: right; font-size: 9pt; }
+        .invoice-meta p { margin-bottom: 2px; }
+        
+
+        .addresses { display: flex; justify-content: space-between; margin-bottom: 30px; }
+        .address-block { width: 45%; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 6px; font-size: 9pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        thead th { background-color: #7b241c; color: #ffffff; padding: 8px 10px; text-align: left; border: 1px solid #dddddd; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 6px 10px; border: 1px solid #dddddd; }
+        tbody td.num { text-align: right; }
+        
+        tbody tr:nth-child(even) { background-color: #f2f2f2; }
+        
+        
+.table-wrapper { margin-top: 0; }
+.table-wrapper table { width: 95%; }
+
+        .totals { width: 300px; margin-left: auto; border: 1px solid #dddddd; padding: 10px; }
+        .totals table { margin-bottom: 0; width: 100%; }
+        .totals td { padding: 4px 8px; border: none !important; }
+        .totals .total-row { font-weight: bold; font-size: 12pt; background-color: #7b241c; color: #ffffff; }
+        
+
+        .footer { margin-top: 30px; padding-top: 10px; border-top: 1px solid #eee; font-size: 9pt; color: #666; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="invoice-title">Schneider Gasser AG</div>
+        <div class="invoice-meta">
+            <p>INV-548501</p>
+            <p>13.06.2025</p>
+            <p>Due: 12.08.2025</p>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">From</div>
+            <p>Schneider Gasser AG</p>
+            <p>Kunzstrasse 50</p>
+            <p>6695 Schaffhausen</p>
+            <p>Switzerland</p>
+        </div>
+        <div class="address-block">
+            <div class="label">Bill To</div>
+            <p>Schumacher AG</p>
+            <p>Toblerstrasse 7</p>
+            <p>3794 Dietikon</p>
+            <p>Switzerland</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th>Artikelnummer</th>
+                
+                <th class="num">EP</th>
+                
+                <th class="num">Gesamtpreis</th>
+                
+                <th class="num">Einheiten</th>
+                
+                <th class="num">Pos</th>
+                
+                <th>Bezeichnung</th>
+                
+                <th class="num">USt.</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td>ART-70817</td>
+                
+                <td class="num">307.47</td>
+                
+                <td class="num">15&#39;373.50</td>
+                
+                <td class="num">50</td>
+                
+                <td class="num">1</td>
+                
+                <td>Wireless Keyboard</td>
+                
+                <td class="num">2%</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>2743.535</td>
+                
+                <td class="num">267.80</td>
+                
+                <td class="num">6&#39;962.80</td>
+                
+                <td class="num">26</td>
+                
+                <td class="num">2</td>
+                
+                <td>Sticky Notes Assorted</td>
+                
+                <td class="num">8%</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>ART-21126</td>
+                
+                <td class="num">224.41</td>
+                
+                <td class="num">9&#39;874.04</td>
+                
+                <td class="num">44</td>
+                
+                <td class="num">3</td>
+                
+                <td>Laminating Pouches A4 (100-pack)</td>
+                
+                <td class="num">2%</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>A79389</td>
+                
+                <td class="num">263.71</td>
+                
+                <td class="num">10&#39;812.11</td>
+                
+                <td class="num">41</td>
+                
+                <td class="num">4</td>
+                
+                <td>Surge Protector 6-Outlet</td>
+                
+                <td class="num">0%</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>2959.339</td>
+                
+                <td class="num">29.41</td>
+                
+                <td class="num">352.92</td>
+                
+                <td class="num">12</td>
+                
+                <td class="num">5</td>
+                
+                <td>Label Maker Tape 12mm</td>
+                
+                <td class="num">8%</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>5658.372</td>
+                
+                <td class="num">13.29</td>
+                
+                <td class="num">146.19</td>
+                
+                <td class="num">11</td>
+                
+                <td class="num">6</td>
+                
+                <td>Desk Organizer</td>
+                
+                <td class="num">0%</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <table>
+            <tr>
+                <td>Subtotal:</td>
+                <td class="num">43&#39;521.56 CHF</td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td class="num">1&#39;223.77 CHF</td>
+            </tr>
+            <tr class="total-row">
+                <td>Total:</td>
+                <td class="num">44&#39;745.33 CHF</td>
+            </tr>
+        </table>
+    </div>
+        
+
+    <div class="footer">
+        <p>Net 14 days. 2% discount for payment within 7 days.</p>
+    </div>
+        
+</body>
+</html>

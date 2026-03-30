@@ -1,0 +1,74 @@
+{
+  "invoice_id": "invoice_0071",
+  "locale": "de_DE",
+  "template": "layout_014.html",
+  "columns": [
+    {
+      "field": "unit_price",
+      "label": "E-Preis",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "article_number",
+      "label": "Teilenr.",
+      "entity_label": "article_number",
+      "format": "text"
+    },
+    {
+      "field": "quantity",
+      "label": "Einheiten",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "line_total",
+      "label": "Nettobetrag",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "description",
+      "label": "Position",
+      "entity_label": "item_description",
+      "format": "text"
+    }
+  ],
+  "line_items": [
+    {
+      "unit_price": "324,60",
+      "article_number": "464430",
+      "quantity": "11",
+      "line_total": "3.570,60",
+      "description": "Cloud Storage Plan 1TB (yearly)"
+    },
+    {
+      "unit_price": "401,06",
+      "article_number": "7960.423",
+      "quantity": "1",
+      "line_total": "401,06",
+      "description": "Document Scanner"
+    },
+    {
+      "unit_price": "250,78",
+      "article_number": "ART-14691",
+      "quantity": "48",
+      "line_total": "12.037,44",
+      "description": "Footrest Ergonomic"
+    },
+    {
+      "unit_price": "229,07",
+      "article_number": "944037",
+      "quantity": "19",
+      "line_total": "4.352,33",
+      "description": "Power Strip with USB"
+    },
+    {
+      "unit_price": "67,75",
+      "article_number": "507569",
+      "quantity": "27",
+      "line_total": "1.829,25",
+      "description": "Hand Sanitizer 500ml"
+    }
+  ]
+}

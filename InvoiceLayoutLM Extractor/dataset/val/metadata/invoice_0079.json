@@ -1,0 +1,51 @@
+{
+  "invoice_id": "invoice_0079",
+  "locale": "de_DE",
+  "template": "layout_019.html",
+  "columns": [
+    {
+      "field": "quantity",
+      "label": "Stück",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "description",
+      "label": "Position",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "line_total",
+      "label": "Gesamtbetrag",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "unit_price",
+      "label": "Einzelpreis",
+      "entity_label": "unit_price",
+      "format": "currency"
+    }
+  ],
+  "line_items": [
+    {
+      "quantity": "17",
+      "description": "Toner Cartridge Black",
+      "line_total": "6 002,19",
+      "unit_price": "353,07"
+    },
+    {
+      "quantity": "35",
+      "description": "Desk Pad Leather",
+      "line_total": "11 299,75",
+      "unit_price": "322,85"
+    },
+    {
+      "quantity": "7",
+      "description": "Envelope C4 (50-pack)",
+      "line_total": "654,78",
+      "unit_price": "93,54"
+    }
+  ]
+}

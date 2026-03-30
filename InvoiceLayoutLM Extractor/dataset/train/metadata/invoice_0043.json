@@ -1,0 +1,85 @@
+{
+  "invoice_id": "invoice_0043",
+  "locale": "de_CH",
+  "template": "layout_022.html",
+  "columns": [
+    {
+      "field": "description",
+      "label": "Produkt",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "position",
+      "label": "#",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "line_total",
+      "label": "Nettobetrag",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "quantity",
+      "label": "Menge",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "tax_rate",
+      "label": "USt. %",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "unit_price",
+      "label": "EP",
+      "entity_label": "unit_price",
+      "format": "currency"
+    }
+  ],
+  "line_items": [
+    {
+      "description": "Conference Table",
+      "position": "1",
+      "line_total": "14'470.80",
+      "quantity": "30",
+      "tax_rate": "2%",
+      "unit_price": "482.36"
+    },
+    {
+      "description": "Sticky Notes Assorted",
+      "position": "2",
+      "line_total": "4'140.46",
+      "quantity": "46",
+      "tax_rate": "2%",
+      "unit_price": "90.01"
+    },
+    {
+      "description": "Managed Firewall Service (annual)",
+      "position": "3",
+      "line_total": "7'566.60",
+      "quantity": "20",
+      "tax_rate": "8%",
+      "unit_price": "378.33"
+    },
+    {
+      "description": "Screen Privacy Filter 24\"",
+      "position": "4",
+      "line_total": "344.30",
+      "quantity": "11",
+      "tax_rate": "8%",
+      "unit_price": "31.30"
+    },
+    {
+      "description": "Compressed Air Duster (6-pack)",
+      "position": "5",
+      "line_total": "4'537.98",
+      "quantity": "18",
+      "tax_rate": "0%",
+      "unit_price": "252.11"
+    }
+  ]
+}

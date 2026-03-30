@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: &#39;Trebuchet MS&#39;, sans-serif;
+            font-size: 12pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { border-bottom: 2px solid #6c3483; padding-bottom: 15px; margin-bottom: 25px; display: flex; justify-content: space-between; align-items: flex-end; }
+        .invoice-title { font-size: 18.0pt; font-weight: bold; color: #6c3483; }
+        .invoice-meta { text-align: right; font-size: 11pt; }
+        .invoice-meta p { margin-bottom: 2px; }
+        
+
+        .addresses { margin-bottom: 30px; }
+        .address-block { margin-bottom: 15px; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 4px; font-size: 11pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        thead th { background-color: #6c3483; color: #ffffff; padding: 8px 10px; text-align: left; border: 1px solid #cccccc; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 6px 10px; border: 1px solid #cccccc; }
+        tbody td.num { text-align: right; }
+        
+        
+.table-wrapper { margin-top: 80px; }
+.table-wrapper table { width: 100%; }
+
+        .totals { text-align: right; margin-bottom: 20px; }
+        .totals .line { margin-bottom: 4px; }
+        .totals .total-line { font-weight: bold; font-size: 15pt; color: #6c3483; border-top: 2px solid #6c3483; padding-top: 6px; display: inline-block; }
+        
+
+        .footer { margin-top: 40px; padding: 12px 15px; background-color: #f8f8f8; font-size: 11pt; color: #555; }
+        .footer .footer-title { font-weight: bold; margin-bottom: 5px; }
+        .footer p { margin-bottom: 3px; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="invoice-title">Marchand</div>
+        <div class="invoice-meta">
+            <p>INV-947479</p>
+            <p>22/01/2025</p>
+            <p>Due: 08/03/2025</p>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">Seller</div>
+            <p>Marchand</p>
+            <p>10, avenue de Cousin, 07622 Fischer, France</p>
+        </div>
+        <div class="address-block">
+            <div class="label">Buyer</div>
+            <p>Blanc SARL</p>
+            <p>83, chemin de Mallet, 45420 Jacob, France</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th class="num">Montant HT</th>
+                
+                <th class="num">PU HT</th>
+                
+                <th class="num">No.</th>
+                
+                <th>Libellé</th>
+                
+                <th>N° article</th>
+                
+                <th class="num">Quantité</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td class="num">1.281,56</td>
+                
+                <td class="num">27,86</td>
+                
+                <td class="num">1</td>
+                
+                <td>Bookshelf 5-Tier</td>
+                
+                <td>P40616</td>
+                
+                <td class="num">46</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">3.724,00</td>
+                
+                <td class="num">148,96</td>
+                
+                <td class="num">2</td>
+                
+                <td>Highlighter Set (5 colors)</td>
+                
+                <td>644167</td>
+                
+                <td class="num">25</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">10.625,31</td>
+                
+                <td class="num">393,53</td>
+                
+                <td class="num">3</td>
+                
+                <td>NVMe SSD 2TB</td>
+                
+                <td>313611</td>
+                
+                <td class="num">27</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">20.697,16</td>
+                
+                <td class="num">470,39</td>
+                
+                <td class="num">4</td>
+                
+                <td>Mouse Pad XL</td>
+                
+                <td>ART-12990</td>
+                
+                <td class="num">44</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <div class="line">Subtotal: 36.328,03 €</div>
+        <div class="line">Tax: 956,79 €</div>
+        <div class="total-line">Total: 37.284,82 €</div>
+    </div>
+        
+
+    <div class="footer">
+        <div class="footer-title">Payment Information</div>
+        <p>BNP Paribas</p>
+        <p>IBAN: FR17 6620 5309 2110 1994</p>
+        <p>BIC: YDOAGBCKHLE</p>
+        <p style="margin-top: 8px;">30 days net. Skonto 2% within 10 days.</p>
+    </div>
+        
+</body>
+</html>

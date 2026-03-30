@@ -1,0 +1,69 @@
+{
+  "invoice_id": "invoice_0107",
+  "locale": "fr_FR",
+  "template": "layout_009.html",
+  "columns": [
+    {
+      "field": "quantity",
+      "label": "Unités",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "unit_price",
+      "label": "Prix U.",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "line_total",
+      "label": "Sous-total",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "description",
+      "label": "Prestation",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "tax_rate",
+      "label": "Taux",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "position",
+      "label": "Pos.",
+      "entity_label": "position",
+      "format": "int"
+    }
+  ],
+  "line_items": [
+    {
+      "quantity": "25",
+      "unit_price": "94,58",
+      "line_total": "2 364,50",
+      "description": "Power Strip with USB",
+      "tax_rate": "0%",
+      "position": "1"
+    },
+    {
+      "quantity": "29",
+      "unit_price": "342,48",
+      "line_total": "9 931,92",
+      "description": "IT Support Service (1 hour)",
+      "tax_rate": "6%",
+      "position": "2"
+    },
+    {
+      "quantity": "27",
+      "unit_price": "305,53",
+      "line_total": "8 249,31",
+      "description": "Wireless Keyboard",
+      "tax_rate": "20%",
+      "position": "3"
+    }
+  ]
+}

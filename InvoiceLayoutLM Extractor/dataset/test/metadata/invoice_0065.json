@@ -1,0 +1,51 @@
+{
+  "invoice_id": "invoice_0065",
+  "locale": "de_DE",
+  "template": "layout_010.html",
+  "columns": [
+    {
+      "field": "line_total",
+      "label": "Gesamtpreis",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "quantity",
+      "label": "Einheiten",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "unit_price",
+      "label": "E-Preis",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "description",
+      "label": "Beschreibung",
+      "entity_label": "item_description",
+      "format": "text"
+    }
+  ],
+  "line_items": [
+    {
+      "line_total": "1 540,35",
+      "quantity": "15",
+      "unit_price": "102,69",
+      "description": "Monitor Arm Mount"
+    },
+    {
+      "line_total": "7 981,90",
+      "quantity": "38",
+      "unit_price": "210,05",
+      "description": "Webcam HD"
+    },
+    {
+      "line_total": "5 984,74",
+      "quantity": "43",
+      "unit_price": "139,18",
+      "description": "Room Divider Panel"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "invoice_id": "invoice_0023",
+  "locale": "fr_FR",
+  "template": "layout_018.html",
+  "columns": [
+    {
+      "field": "description",
+      "label": "Description",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "tax_rate",
+      "label": "Taux",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "line_total",
+      "label": "Montant HT",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "quantity",
+      "label": "Qté",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "unit_price",
+      "label": "Tarif unitaire",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "position",
+      "label": "No.",
+      "entity_label": "position",
+      "format": "int"
+    }
+  ],
+  "line_items": [
+    {
+      "description": "Graphics Card RTX 4060",
+      "tax_rate": "10%",
+      "line_total": "6,014.88",
+      "quantity": "18",
+      "unit_price": "334.16",
+      "position": "1"
+    },
+    {
+      "description": "Clipboard A4",
+      "tax_rate": "6%",
+      "line_total": "137.68",
+      "quantity": "8",
+      "unit_price": "17.21",
+      "position": "2"
+    },
+    {
+      "description": "Envelope C4 (50-pack)",
+      "tax_rate": "10%",
+      "line_total": "2,996.70",
+      "quantity": "7",
+      "unit_price": "428.10",
+      "position": "3"
+    },
+    {
+      "description": "Ballpoint Pens (12-pack)",
+      "tax_rate": "6%",
+      "line_total": "14,092.68",
+      "quantity": "38",
+      "unit_price": "370.86",
+      "position": "4"
+    },
+    {
+      "description": "Laptop Charger Universal 65W",
+      "tax_rate": "0%",
+      "line_total": "8,223.42",
+      "quantity": "23",
+      "unit_price": "357.54",
+      "position": "5"
+    },
+    {
+      "description": "Compressed Air Duster (6-pack)",
+      "tax_rate": "10%",
+      "line_total": "4,902.46",
+      "quantity": "34",
+      "unit_price": "144.19",
+      "position": "6"
+    },
+    {
+      "description": "Stapler Heavy-Duty",
+      "tax_rate": "20%",
+      "line_total": "6,960.23",
+      "quantity": "47",
+      "unit_price": "148.09",
+      "position": "7"
+    }
+  ]
+}

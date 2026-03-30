@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: &#39;Lucida Sans&#39;, &#39;Lucida Grande&#39;, sans-serif;
+            font-size: 10pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { margin: -20mm -20mm 30px -20mm; }
+        .header-top { background-color: #1a5276; color: #ffffff; padding: 15px 25px; }
+        .header-bottom { background-color: #f5f5f5; padding: 10px 25px; display: flex; justify-content: space-between; border-bottom: 1px solid #ddd; }
+        .invoice-title { font-size: 20pt; font-weight: bold; }
+        .invoice-meta span { margin-right: 20px; font-size: 9pt; }
+        
+
+        .addresses { display: flex; justify-content: space-between; margin-bottom: 30px; }
+        .address-block { width: 45%; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 6px; font-size: 9pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        thead th { padding: 8px 10px; text-align: left; border-bottom: 2px dotted #1a5276; color: #1a5276; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 7px 10px; border-bottom: 1px dotted #ccc; }
+        tbody td.num { text-align: right; }
+        
+.table-wrapper { margin-top: 80px; }
+.table-wrapper table { width: 100%; }
+
+        .totals { border-top: 1px solid #cccccc; padding-top: 10px; }
+        .totals table { width: 100%; margin-bottom: 0; }
+        .totals td { padding: 4px 10px; border: none !important; }
+        .totals td:first-child { text-align: right; width: 80%; }
+        .totals td:last-child { text-align: right; width: 20%; }
+        .totals .total-row { font-weight: bold; font-size: 12pt; }
+        .totals .total-row td { border-top: 2px solid #1a5276 !important; }
+        
+
+        .footer { margin-top: 40px; padding-top: 15px; border-top: 1px solid #ddd; font-size: 8pt; color: #666; }
+        .footer p { margin-bottom: 3px; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="header-top">
+            <div class="invoice-title">Baumgartner &amp; Söhne</div>
+        </div>
+        <div class="header-bottom">
+            <span>Invoice INV-704071</span>
+            <span>Date: 02.05.2025</span>
+            <span>Due: 01.06.2025</span>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">Bill To</div>
+            <p>Schoch Fuchs GmbH</p>
+            <p>Favrestrasse 17</p>
+            <p>9702 Lenzburg</p>
+            <p>Switzerland</p>
+        </div>
+        <div class="address-block">
+            <div class="label">From</div>
+            <p>Baumgartner &amp; Söhne</p>
+            <p>Zollingerstrasse 53</p>
+            <p>3380 Liestal</p>
+            <p>Switzerland</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th class="num">Nettobetrag</th>
+                
+                <th class="num">Anzahl</th>
+                
+                <th class="num">Einzelpreis</th>
+                
+                <th class="num">MwSt. %</th>
+                
+                <th class="num">#</th>
+                
+                <th>Produkt</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td class="num">2&#39;261.85</td>
+                
+                <td class="num">15</td>
+                
+                <td class="num">150.79</td>
+                
+                <td class="num">2%</td>
+                
+                <td class="num">1</td>
+                
+                <td>Managed Firewall Service (annual)</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">1&#39;077.56</td>
+                
+                <td class="num">11</td>
+                
+                <td class="num">97.96</td>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">2</td>
+                
+                <td>USB-C Hub</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">5&#39;369.58</td>
+                
+                <td class="num">18</td>
+                
+                <td class="num">298.31</td>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">3</td>
+                
+                <td>HDMI Cable 2m</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <table>
+            <tr>
+                <td>Subtotal:</td>
+                <td>8&#39;708.99 CHF</td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td>56.55 CHF</td>
+            </tr>
+            <tr class="total-row">
+                <td>Total:</td>
+                <td>8&#39;765.54 CHF</td>
+            </tr>
+        </table>
+    </div>
+        
+
+    <div class="footer">
+        <p><strong>Payment Terms:</strong> 30 days net. Skonto 2% within 10 days.</p>
+        <p><strong>Bank:</strong> Commerzbank AG | IBAN: CH90 5467 9232 8357 1592 | BIC: DYBTFRWAFUN</p>
+        <p>Thank you for your business.</p>
+    </div>
+        
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: &#39;Trebuchet MS&#39;, sans-serif;
+            font-size: 11pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { background-color: #0b5345; color: #ffffff; padding: 20px 25px; margin: -20mm -20mm 30px -20mm; display: flex; justify-content: space-between; align-items: center; }
+        .invoice-title { font-size: 22pt; font-weight: bold; }
+        .invoice-meta { text-align: right; }
+        .invoice-meta p { margin-bottom: 4px; }
+        
+
+        .addresses { display: flex; justify-content: space-between; margin-bottom: 30px; }
+        .address-block { width: 45%; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 6px; font-size: 10pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        .table-wrapper table { border: 2px solid #0b5345; }
+        thead th { padding: 10px; text-align: left; background-color: #0b5345; color: #ffffff; border-right: 1px solid rgba(255,255,255,0.2); }
+        thead th:last-child { border-right: none; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 8px 10px; border-right: 1px solid #eee; }
+        tbody td:last-child { border-right: none; }
+        tbody td.num { text-align: right; }
+        tbody tr:nth-child(even) { background-color: #f2f2f2; }
+        
+.table-wrapper { margin-top: 0; }
+.table-wrapper table { width: 95%; }
+
+        .totals { text-align: right; margin-bottom: 20px; }
+        .totals .line { margin-bottom: 4px; }
+        .totals .total-line { font-weight: bold; font-size: 14pt; color: #0b5345; border-top: 2px solid #0b5345; padding-top: 6px; display: inline-block; }
+        
+
+        .footer { margin-top: 40px; padding-top: 15px; border-top: 1px solid #ddd; font-size: 9pt; color: #666; }
+        .footer p { margin-bottom: 3px; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div>
+            <div class="invoice-title">INVOICE</div>
+            <p>Strohmayer Klotz KG</p>
+        </div>
+        <div class="invoice-meta">
+            <p>Invoice #: INV-818103</p>
+            <p>Date: 25.10.2025</p>
+            <p>Due: 09.12.2025</p>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">Bill To</div>
+            <p>Lintner GmbH</p>
+            <p>Alice-Windisch-Platz 4/1</p>
+            <p>6433 Innsbruck</p>
+            <p>Austria</p>
+        </div>
+        <div class="address-block">
+            <div class="label">From</div>
+            <p>Strohmayer Klotz KG</p>
+            <p>Franz-Wandl-Weg 55</p>
+            <p>7244 Mistelbach an der Zaya</p>
+            <p>Austria</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th>Artikel</th>
+                
+                <th class="num">Einzelpreis</th>
+                
+                <th class="num">Anz.</th>
+                
+                <th class="num">Nettobetrag</th>
+                
+                <th class="num">Pos.</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td>Laptop Stand</td>
+                
+                <td class="num">210.77</td>
+                
+                <td class="num">23</td>
+                
+                <td class="num">4,847.71</td>
+                
+                <td class="num">1</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>Data Backup Service (monthly subscription)</td>
+                
+                <td class="num">151.91</td>
+                
+                <td class="num">47</td>
+                
+                <td class="num">7,139.77</td>
+                
+                <td class="num">2</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>Graphics Card RTX 4060</td>
+                
+                <td class="num">196.89</td>
+                
+                <td class="num">30</td>
+                
+                <td class="num">5,906.70</td>
+                
+                <td class="num">3</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>Toner Cartridge Black</td>
+                
+                <td class="num">116.77</td>
+                
+                <td class="num">34</td>
+                
+                <td class="num">3,970.18</td>
+                
+                <td class="num">4</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>Desk Lamp LED</td>
+                
+                <td class="num">408.76</td>
+                
+                <td class="num">27</td>
+                
+                <td class="num">11,036.52</td>
+                
+                <td class="num">5</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <div class="line">Subtotal: 32,900.88 EUR</div>
+        <div class="line">Tax: 0.00 EUR</div>
+        <div class="total-line">Total: 32,900.88 EUR</div>
+    </div>
+        
+
+    <div class="footer">
+        <p><strong>Payment Terms:</strong> Net 30 days from invoice date.</p>
+        <p><strong>Bank:</strong> DZ Bank | IBAN: AT84 9777 6074 3047 5602 | BIC: DXQKFRUI0G8</p>
+        <p>Thank you for your business.</p>
+    </div>
+        
+</body>
+</html>

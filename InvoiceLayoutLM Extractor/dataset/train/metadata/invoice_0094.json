@@ -1,0 +1,96 @@
+{
+  "invoice_id": "invoice_0094",
+  "locale": "de_CH",
+  "template": "layout_025.html",
+  "columns": [
+    {
+      "field": "unit_price",
+      "label": "EP",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "description",
+      "label": "Position",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "position",
+      "label": "Nr.",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "article_number",
+      "label": "Art.-Nr.",
+      "entity_label": "article_number",
+      "format": "text"
+    },
+    {
+      "field": "tax_rate",
+      "label": "MwSt.",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "quantity",
+      "label": "Stk.",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "line_total",
+      "label": "Gesamtpreis",
+      "entity_label": "line_total",
+      "format": "currency"
+    }
+  ],
+  "line_items": [
+    {
+      "unit_price": "154.60",
+      "description": "Ethernet Cable 5m",
+      "position": "1",
+      "article_number": "ART-89301",
+      "tax_rate": "0%",
+      "quantity": "14",
+      "line_total": "2'164.40"
+    },
+    {
+      "unit_price": "150.14",
+      "description": "RAM Module 16GB DDR5",
+      "position": "2",
+      "article_number": "3736.363",
+      "tax_rate": "0%",
+      "quantity": "44",
+      "line_total": "6'606.16"
+    },
+    {
+      "unit_price": "499.51",
+      "description": "UPS Battery Backup 1500VA",
+      "position": "3",
+      "article_number": "C49702",
+      "tax_rate": "2%",
+      "quantity": "11",
+      "line_total": "5'494.61"
+    },
+    {
+      "unit_price": "477.53",
+      "description": "External SSD 1TB",
+      "position": "4",
+      "article_number": "ART-94552",
+      "tax_rate": "0%",
+      "quantity": "21",
+      "line_total": "10'028.13"
+    },
+    {
+      "unit_price": "414.00",
+      "description": "Screen Privacy Filter 24\"",
+      "position": "5",
+      "article_number": "C33275",
+      "tax_rate": "0%",
+      "quantity": "41",
+      "line_total": "16'974.00"
+    }
+  ]
+}

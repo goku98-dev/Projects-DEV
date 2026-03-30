@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, &#39;Times New Roman&#39;, serif;
+            font-size: 11pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { border-bottom: 2px solid #2874a6; padding-bottom: 15px; margin-bottom: 25px; display: flex; justify-content: space-between; align-items: flex-end; }
+        .invoice-title { font-size: 16.5pt; font-weight: bold; color: #2874a6; }
+        .invoice-meta { text-align: right; font-size: 10pt; }
+        .invoice-meta p { margin-bottom: 2px; }
+        
+
+        .addresses { display: flex; justify-content: space-between; margin-bottom: 30px; }
+        .address-block { width: 45%; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 6px; font-size: 10pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        thead th { background-color: #2874a6; color: #ffffff; padding: 8px 10px; text-align: left; border: 1px solid #dddddd; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 6px 10px; border: 1px solid #dddddd; }
+        tbody td.num { text-align: right; }
+        
+        tbody tr:nth-child(even) { background-color: #f2f2f2; }
+        
+        
+.table-wrapper { margin-top: 80px; }
+.table-wrapper table { width: 95%; }
+
+        .totals { text-align: right; margin-bottom: 20px; }
+        .totals .line { margin-bottom: 4px; }
+        .totals .total-line { font-weight: bold; font-size: 14pt; color: #2874a6; border-top: 2px solid #2874a6; padding-top: 6px; display: inline-block; }
+        
+
+        .footer { margin-top: 30px; padding-top: 10px; border-top: 1px solid #eee; font-size: 10pt; color: #666; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="invoice-title">Wood, Miah and Black</div>
+        <div class="invoice-meta">
+            <p>INV-557284</p>
+            <p>05/11/2024</p>
+            <p>Due: 04/01/2025</p>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">Bill To</div>
+            <p>Hughes Group</p>
+            <p>1 Russell Parkways</p>
+            <p>KA34 4BR Shawport</p>
+            <p>United Kingdom</p>
+        </div>
+        <div class="address-block">
+            <div class="label">From</div>
+            <p>Wood, Miah and Black</p>
+            <p>Flat 3
+Wright Loop</p>
+            <p>E7S 4YN Hallside</p>
+            <p>United Kingdom</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th class="num">Count</th>
+                
+                <th>Item</th>
+                
+                <th>Art. No.</th>
+                
+                <th class="num">VAT %</th>
+                
+                <th class="num">Price/Unit</th>
+                
+                <th class="num">Ext. Price</th>
+                
+                <th class="num">#</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td class="num">30</td>
+                
+                <td>Paper Shredder Cross-Cut</td>
+                
+                <td>C50373</td>
+                
+                <td class="num">20%</td>
+                
+                <td class="num">382.22</td>
+                
+                <td class="num">11,466.60</td>
+                
+                <td class="num">1</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">1</td>
+                
+                <td>Office Chair</td>
+                
+                <td>630776</td>
+                
+                <td class="num">5%</td>
+                
+                <td class="num">248.15</td>
+                
+                <td class="num">248.15</td>
+                
+                <td class="num">2</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">11</td>
+                
+                <td>RAM Module 16GB DDR5</td>
+                
+                <td>M94777</td>
+                
+                <td class="num">5%</td>
+                
+                <td class="num">149.12</td>
+                
+                <td class="num">1,640.32</td>
+                
+                <td class="num">3</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">3</td>
+                
+                <td>Ballpoint Pens (12-pack)</td>
+                
+                <td>P32476</td>
+                
+                <td class="num">20%</td>
+                
+                <td class="num">196.87</td>
+                
+                <td class="num">590.61</td>
+                
+                <td class="num">4</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">23</td>
+                
+                <td>Wireless Presenter</td>
+                
+                <td>ART-35322</td>
+                
+                <td class="num">5%</td>
+                
+                <td class="num">188.60</td>
+                
+                <td class="num">4,337.80</td>
+                
+                <td class="num">5</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">1</td>
+                
+                <td>Label Maker Tape 12mm</td>
+                
+                <td>B84998</td>
+                
+                <td class="num">5%</td>
+                
+                <td class="num">185.73</td>
+                
+                <td class="num">185.73</td>
+                
+                <td class="num">6</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">36</td>
+                
+                <td>Sticky Notes Assorted</td>
+                
+                <td>4923.334</td>
+                
+                <td class="num">20%</td>
+                
+                <td class="num">127.20</td>
+                
+                <td class="num">4,579.20</td>
+                
+                <td class="num">7</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <div class="line">Subtotal: 23,048.41 GBP</div>
+        <div class="line">Tax: 3,647.89 GBP</div>
+        <div class="total-line">Total: 26,696.30 GBP</div>
+    </div>
+        
+
+    <div class="footer">
+        <p>Please pay within 14 days of receipt.</p>
+    </div>
+        
+</body>
+</html>

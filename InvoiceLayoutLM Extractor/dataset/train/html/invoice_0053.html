@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: &#39;Lucida Sans&#39;, &#39;Lucida Grande&#39;, sans-serif;
+            font-size: 11pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { background-color: #1a5276; color: #ffffff; padding: 20px 25px; margin: -20mm -20mm 30px -20mm; display: flex; justify-content: space-between; align-items: center; }
+        .invoice-title { font-size: 22pt; font-weight: bold; }
+        .invoice-meta { text-align: right; }
+        .invoice-meta p { margin-bottom: 4px; }
+        
+
+        .addresses { display: flex; justify-content: space-between; margin-bottom: 30px; }
+        .address-block { width: 45%; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 6px; font-size: 10pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        thead th { background-color: #1a5276; color: #ffffff; padding: 8px 10px; text-align: left; border: 1px solid #1a5276; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 6px 10px; border: 1px solid #1a5276; }
+        tbody td.num { text-align: right; }
+        
+        tbody tr:nth-child(even) { background-color: #eef2f7; }
+        
+        
+.table-wrapper { margin-top: 0; }
+.table-wrapper table { width: 90%; }
+
+        .totals { border-top: 1px solid #1a5276; padding-top: 10px; }
+        .totals table { width: 100%; margin-bottom: 0; }
+        .totals td { padding: 4px 10px; border: none !important; }
+        .totals td:first-child { text-align: right; width: 80%; }
+        .totals td:last-child { text-align: right; width: 20%; }
+        .totals .total-row { font-weight: bold; font-size: 13pt; }
+        .totals .total-row td { border-top: 2px solid #1a5276 !important; }
+        
+
+        .footer { margin-top: 30px; font-size: 9pt; color: #999; text-align: center; }
+        .footer p { margin-bottom: 2px; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div>
+            <div class="invoice-title">INVOICE</div>
+            <p>Brown-Smith</p>
+        </div>
+        <div class="invoice-meta">
+            <p>Invoice #: INV-942808</p>
+            <p>Date: 07/30/2024</p>
+            <p>Due: 09/13/2024</p>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">From</div>
+            <p>Brown-Smith</p>
+            <p>0494 Alexandra Curve</p>
+            <p>54152 Leonardmouth</p>
+            <p>United States</p>
+        </div>
+        <div class="address-block">
+            <div class="label">Bill To</div>
+            <p>Wilson Ltd</p>
+            <p>518 Olson Route</p>
+            <p>66821 North Derrickside</p>
+            <p>United States</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th class="num">Net Amount</th>
+                
+                <th class="num">Unit Cost</th>
+                
+                <th class="num">Tax Rate</th>
+                
+                <th>Art. No.</th>
+                
+                <th class="num">Pcs</th>
+                
+                <th>Product</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td class="num">143.10</td>
+                
+                <td class="num">4.77</td>
+                
+                <td class="num">8%</td>
+                
+                <td>B61651</td>
+                
+                <td class="num">30</td>
+                
+                <td>Office Equipment Installation Service</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">2,658.96</td>
+                
+                <td class="num">98.48</td>
+                
+                <td class="num">6%</td>
+                
+                <td>M60609</td>
+                
+                <td class="num">27</td>
+                
+                <td>Disinfecting Wipes (75-pack)</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">10,826.05</td>
+                
+                <td class="num">264.05</td>
+                
+                <td class="num">0%</td>
+                
+                <td>772787</td>
+                
+                <td class="num">41</td>
+                
+                <td>External SSD 1TB</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <table>
+            <tr>
+                <td>Subtotal:</td>
+                <td>$ 13,628.11</td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td>$ 171.35</td>
+            </tr>
+            <tr class="total-row">
+                <td>Total:</td>
+                <td>$ 13,799.46</td>
+            </tr>
+        </table>
+    </div>
+        
+
+    <div class="footer">
+        <p>Brown-Smith | 0494 Alexandra Curve, 54152 Leonardmouth | United States</p>
+        <p>Bank of America | IBAN: US73 9497 9825 8089 5185 9070 4534</p>
+    </div>
+        
+</body>
+</html>

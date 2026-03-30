@@ -1,0 +1,85 @@
+{
+  "invoice_id": "invoice_0047",
+  "locale": "de_CH",
+  "template": "layout_010.html",
+  "columns": [
+    {
+      "field": "description",
+      "label": "Position",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "line_total",
+      "label": "Gesamtbetrag",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "article_number",
+      "label": "Produkt-Nr.",
+      "entity_label": "article_number",
+      "format": "text"
+    },
+    {
+      "field": "position",
+      "label": "Pos.",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "unit_price",
+      "label": "E-Preis",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "quantity",
+      "label": "Stück",
+      "entity_label": "quantity",
+      "format": "int"
+    }
+  ],
+  "line_items": [
+    {
+      "description": "DisplayPort Cable 3m",
+      "line_total": "9'465.30",
+      "article_number": "ART-55973",
+      "position": "1",
+      "unit_price": "242.70",
+      "quantity": "39"
+    },
+    {
+      "description": "HDMI Cable 2m",
+      "line_total": "2'218.44",
+      "article_number": "457468",
+      "position": "2",
+      "unit_price": "52.82",
+      "quantity": "42"
+    },
+    {
+      "description": "Monitor 27\"",
+      "line_total": "10'381.92",
+      "article_number": "B21371",
+      "position": "3",
+      "unit_price": "432.58",
+      "quantity": "24"
+    },
+    {
+      "description": "External HDD 4TB",
+      "line_total": "721.50",
+      "article_number": "8138.163",
+      "position": "4",
+      "unit_price": "72.15",
+      "quantity": "10"
+    },
+    {
+      "description": "Label Maker Tape 12mm",
+      "line_total": "10'028.19",
+      "article_number": "P50727",
+      "position": "5",
+      "unit_price": "323.49",
+      "quantity": "31"
+    }
+  ]
+}

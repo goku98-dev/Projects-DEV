@@ -1,0 +1,77 @@
+{
+  "invoice_id": "invoice_0072",
+  "locale": "de_CH",
+  "template": "layout_015.html",
+  "columns": [
+    {
+      "field": "line_total",
+      "label": "Gesamt",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "unit_price",
+      "label": "Einzelpreis",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "description",
+      "label": "Beschreibung",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "tax_rate",
+      "label": "USt. %",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "position",
+      "label": "Pos.",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "quantity",
+      "label": "Menge",
+      "entity_label": "quantity",
+      "format": "int"
+    }
+  ],
+  "line_items": [
+    {
+      "line_total": "8'519.94",
+      "unit_price": "387.27",
+      "description": "Coat Rack",
+      "tax_rate": "0%",
+      "position": "1",
+      "quantity": "22"
+    },
+    {
+      "line_total": "3'592.60",
+      "unit_price": "326.60",
+      "description": "Desk Lamp LED",
+      "tax_rate": "0%",
+      "position": "2",
+      "quantity": "11"
+    },
+    {
+      "line_total": "12'494.02",
+      "unit_price": "254.98",
+      "description": "Thunderbolt Cable 1m",
+      "tax_rate": "8%",
+      "position": "3",
+      "quantity": "49"
+    },
+    {
+      "line_total": "16'595.36",
+      "unit_price": "436.72",
+      "description": "IT Support Service (1 hour)",
+      "tax_rate": "2%",
+      "position": "4",
+      "quantity": "38"
+    }
+  ]
+}

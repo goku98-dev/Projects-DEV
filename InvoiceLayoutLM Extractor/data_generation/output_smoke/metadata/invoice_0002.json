@@ -1,0 +1,69 @@
+{
+  "invoice_id": "invoice_0002",
+  "locale": "de_DE",
+  "template": "layout_002.html",
+  "columns": [
+    {
+      "field": "article_number",
+      "label": "Artikelnummer",
+      "entity_label": "article_number",
+      "format": "text"
+    },
+    {
+      "field": "quantity",
+      "label": "Einheiten",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "unit_price",
+      "label": "E-Preis",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "line_total",
+      "label": "Gesamtpreis",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "description",
+      "label": "Artikel",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "position",
+      "label": "Lfd. Nr.",
+      "entity_label": "position",
+      "format": "int"
+    }
+  ],
+  "line_items": [
+    {
+      "article_number": "490133",
+      "quantity": "39",
+      "unit_price": "19,31",
+      "line_total": "753,09",
+      "description": "Screen Privacy Filter 24\"",
+      "position": "1"
+    },
+    {
+      "article_number": "6964.576",
+      "quantity": "33",
+      "unit_price": "135,22",
+      "line_total": "4 462,26",
+      "description": "Network Switch 8-Port",
+      "position": "2"
+    },
+    {
+      "article_number": "B27917",
+      "quantity": "36",
+      "unit_price": "89,95",
+      "line_total": "3 238,20",
+      "description": "Graphics Card RTX 4060",
+      "position": "3"
+    }
+  ]
+}

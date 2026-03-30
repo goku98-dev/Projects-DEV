@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Tahoma, Geneva, sans-serif;
+            font-size: 10pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { border-bottom: 2px solid #2c3e50; padding-bottom: 15px; margin-bottom: 25px; display: flex; justify-content: space-between; align-items: flex-end; }
+        .invoice-title { font-size: 15.0pt; font-weight: bold; color: #2c3e50; }
+        .invoice-meta { text-align: right; font-size: 9pt; }
+        .invoice-meta p { margin-bottom: 2px; }
+        
+
+        .addresses { margin-bottom: 30px; }
+        .address-block { margin-bottom: 15px; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 4px; font-size: 9pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        thead th { background-color: #2c3e50; color: #ffffff; padding: 8px 10px; text-align: left; border: 1px solid #2c3e50; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 6px 10px; border: 1px solid #2c3e50; }
+        tbody td.num { text-align: right; }
+        
+        tbody tr:nth-child(even) { background-color: #f2f2f2; }
+        
+        
+.table-wrapper { margin-top: 80px; }
+.table-wrapper table { width: 100%; }
+
+        .totals { text-align: right; margin-bottom: 20px; }
+        .totals .line { margin-bottom: 4px; }
+        .totals .total-line { font-weight: bold; font-size: 13pt; color: #2c3e50; border-top: 2px solid #2c3e50; padding-top: 6px; display: inline-block; }
+        
+
+        .footer { margin-top: 40px; padding: 12px 15px; background-color: #f8f8f8; font-size: 9pt; color: #555; }
+        .footer .footer-title { font-weight: bold; margin-bottom: 5px; }
+        .footer p { margin-bottom: 3px; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="invoice-title">Richard Vaillant et Fils</div>
+        <div class="invoice-meta">
+            <p>INV-968537</p>
+            <p>25/03/2025</p>
+            <p>Due: 24/04/2025</p>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">Seller</div>
+            <p>Richard Vaillant et Fils</p>
+            <p>279, chemin de Collin, 50717 Monnier, France</p>
+        </div>
+        <div class="address-block">
+            <div class="label">Buyer</div>
+            <p>Benoit S.A.</p>
+            <p>263, rue Benard, 70954 Bertin, France</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th class="num">% TVA</th>
+                
+                <th class="num">PU HT</th>
+                
+                <th class="num">Prix total</th>
+                
+                <th class="num">Unités</th>
+                
+                <th>Description</th>
+                
+                <th>Réf.</th>
+                
+                <th class="num">Ligne</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">177.74</td>
+                
+                <td class="num">3,377.06</td>
+                
+                <td class="num">19</td>
+                
+                <td>Room Divider Panel</td>
+                
+                <td>ART-38101</td>
+                
+                <td class="num">1</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">10%</td>
+                
+                <td class="num">450.64</td>
+                
+                <td class="num">5,858.32</td>
+                
+                <td class="num">13</td>
+                
+                <td>DisplayPort Cable 3m</td>
+                
+                <td>216343</td>
+                
+                <td class="num">2</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">338.32</td>
+                
+                <td class="num">1,353.28</td>
+                
+                <td class="num">4</td>
+                
+                <td>Sticky Notes Assorted</td>
+                
+                <td>ART-89409</td>
+                
+                <td class="num">3</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <div class="line">Subtotal: 10,588.66 EUR</div>
+        <div class="line">Tax: 585.83 EUR</div>
+        <div class="total-line">Total: 11,174.49 EUR</div>
+    </div>
+        
+
+    <div class="footer">
+        <div class="footer-title">Payment Information</div>
+        <p>UniCredit Bank</p>
+        <p>IBAN: FR14 9943 2763 9130 4548 4986</p>
+        <p>BIC: ZGOTGB0EZJQ</p>
+        <p style="margin-top: 8px;">Net 30 days from invoice date.</p>
+    </div>
+        
+</body>
+</html>

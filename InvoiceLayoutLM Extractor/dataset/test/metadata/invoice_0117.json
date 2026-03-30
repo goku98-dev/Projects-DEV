@@ -1,0 +1,77 @@
+{
+  "invoice_id": "invoice_0117",
+  "locale": "en_GB",
+  "template": "layout_003.html",
+  "columns": [
+    {
+      "field": "line_total",
+      "label": "Ext. Price",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "description",
+      "label": "Details",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "article_number",
+      "label": "Part No.",
+      "entity_label": "article_number",
+      "format": "text"
+    },
+    {
+      "field": "unit_price",
+      "label": "Each",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "position",
+      "label": "Line",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "quantity",
+      "label": "Count",
+      "entity_label": "quantity",
+      "format": "int"
+    }
+  ],
+  "line_items": [
+    {
+      "line_total": "9,438.92",
+      "description": "External HDD 4TB",
+      "article_number": "ART-18164",
+      "unit_price": "325.48",
+      "position": "1",
+      "quantity": "29"
+    },
+    {
+      "line_total": "686.40",
+      "description": "Office Equipment Installation Service",
+      "article_number": "C10457",
+      "unit_price": "14.30",
+      "position": "2",
+      "quantity": "48"
+    },
+    {
+      "line_total": "15,354.36",
+      "description": "IT Support Service (1 hour)",
+      "article_number": "A17250",
+      "unit_price": "365.58",
+      "position": "3",
+      "quantity": "42"
+    },
+    {
+      "line_total": "6,692.84",
+      "description": "Disinfecting Wipes (75-pack)",
+      "article_number": "M93189",
+      "unit_price": "152.11",
+      "position": "4",
+      "quantity": "44"
+    }
+  ]
+}

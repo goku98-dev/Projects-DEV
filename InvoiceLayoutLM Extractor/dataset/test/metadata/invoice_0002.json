@@ -1,0 +1,105 @@
+{
+  "invoice_id": "invoice_0002",
+  "locale": "fr_FR",
+  "template": "layout_005.html",
+  "columns": [
+    {
+      "field": "article_number",
+      "label": "N° article",
+      "entity_label": "article_number",
+      "format": "text"
+    },
+    {
+      "field": "tax_rate",
+      "label": "Taux TVA",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "description",
+      "label": "Prestation",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "line_total",
+      "label": "Prix total",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "unit_price",
+      "label": "PU HT",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "position",
+      "label": "Pos.",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "quantity",
+      "label": "Nombre",
+      "entity_label": "quantity",
+      "format": "int"
+    }
+  ],
+  "line_items": [
+    {
+      "article_number": "438857",
+      "tax_rate": "6%",
+      "description": "Cloud Storage Plan 1TB (yearly)",
+      "line_total": "6,241.62",
+      "unit_price": "297.22",
+      "position": "1",
+      "quantity": "21"
+    },
+    {
+      "article_number": "484036",
+      "tax_rate": "6%",
+      "description": "IT Support Service (1 hour)",
+      "line_total": "8,787.42",
+      "unit_price": "325.46",
+      "position": "2",
+      "quantity": "27"
+    },
+    {
+      "article_number": "6699.674",
+      "tax_rate": "0%",
+      "description": "Laptop Charger Universal 65W",
+      "line_total": "12,759.32",
+      "unit_price": "455.69",
+      "position": "3",
+      "quantity": "28"
+    },
+    {
+      "article_number": "B53945",
+      "tax_rate": "10%",
+      "description": "Document Scanner",
+      "line_total": "18,388.80",
+      "unit_price": "383.10",
+      "position": "4",
+      "quantity": "48"
+    },
+    {
+      "article_number": "212438",
+      "tax_rate": "10%",
+      "description": "Highlighter Set (5 colors)",
+      "line_total": "3,200.04",
+      "unit_price": "88.89",
+      "position": "5",
+      "quantity": "36"
+    },
+    {
+      "article_number": "827521",
+      "tax_rate": "6%",
+      "description": "Wireless Access Point",
+      "line_total": "3,074.56",
+      "unit_price": "192.16",
+      "position": "6",
+      "quantity": "16"
+    }
+  ]
+}

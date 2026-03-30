@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, &#39;Times New Roman&#39;, serif;
+            font-size: 11pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { background-color: #1b4f72; color: #ffffff; padding: 20px 25px; margin: -20mm -20mm 30px -20mm; display: flex; justify-content: space-between; align-items: center; }
+        .invoice-title { font-size: 22pt; font-weight: bold; }
+        .invoice-meta { text-align: right; }
+        .invoice-meta p { margin-bottom: 4px; }
+        
+
+        .addresses { display: flex; justify-content: flex-end; margin-bottom: 30px; }
+        .address-block { width: 45%; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 6px; font-size: 10pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        thead th { padding: 6px 10px; text-align: left; font-weight: normal; text-transform: uppercase; font-size: 9pt; color: #999; letter-spacing: 0.5px; border-bottom: 1px solid #ccc; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 8px 10px; }
+        tbody td.num { text-align: right; }
+        tbody tr:last-child td { border-bottom: 1px solid #ccc; }
+        
+.table-wrapper { margin-top: 40px; }
+.table-wrapper table { width: 90%; }
+
+        .totals { text-align: right; margin-bottom: 20px; }
+        .totals .line { margin-bottom: 4px; }
+        .totals .total-line { font-weight: bold; font-size: 14pt; color: #1b4f72; border-top: 2px solid #1b4f72; padding-top: 6px; display: inline-block; }
+        
+
+        .footer { margin-top: 40px; padding: 12px 15px; background-color: #f8f8f8; font-size: 10pt; color: #555; }
+        .footer .footer-title { font-weight: bold; margin-bottom: 5px; }
+        .footer p { margin-bottom: 3px; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div>
+            <div class="invoice-title">INVOICE</div>
+            <p>Löwer Hornig GmbH &amp; Co. KG</p>
+        </div>
+        <div class="invoice-meta">
+            <p>Invoice #: INV-584240</p>
+            <p>Date: 19.05.2024</p>
+            <p>Due: 18.07.2024</p>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">Invoice To</div>
+            <p>Niemeier Löchel GmbH</p>
+            <p>Jonas-Schäfer-Allee 5155</p>
+            <p>72278 Eichstätt</p>
+            <p>Germany</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th class="num">Summe</th>
+                
+                <th class="num">MwSt.</th>
+                
+                <th class="num">Stk.</th>
+                
+                <th>Artikel</th>
+                
+                <th class="num">Preis/Einheit</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td class="num">1,318.52</td>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">4</td>
+                
+                <td>Office Equipment Installation Service</td>
+                
+                <td class="num">329.63</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">4,217.40</td>
+                
+                <td class="num">7%</td>
+                
+                <td class="num">18</td>
+                
+                <td>Laptop Charger Universal 65W</td>
+                
+                <td class="num">234.30</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">6,616.62</td>
+                
+                <td class="num">19%</td>
+                
+                <td class="num">18</td>
+                
+                <td>HDMI Cable 2m</td>
+                
+                <td class="num">367.59</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">2,805.88</td>
+                
+                <td class="num">7%</td>
+                
+                <td class="num">14</td>
+                
+                <td>Compressed Air Duster (6-pack)</td>
+                
+                <td class="num">200.42</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">6,795.20</td>
+                
+                <td class="num">7%</td>
+                
+                <td class="num">32</td>
+                
+                <td>Annual Software License Renewal</td>
+                
+                <td class="num">212.35</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">1,483.80</td>
+                
+                <td class="num">7%</td>
+                
+                <td class="num">3</td>
+                
+                <td>Disinfecting Wipes (75-pack)</td>
+                
+                <td class="num">494.60</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <div class="line">Subtotal: 23,237.42 EUR</div>
+        <div class="line">Tax: 2,328.32 EUR</div>
+        <div class="total-line">Total: 25,565.74 EUR</div>
+    </div>
+        
+
+    <div class="footer">
+        <div class="footer-title">Payment Information</div>
+        <p>Crédit Agricole</p>
+        <p>IBAN: DE31 2895 8893 3639 3801 8375 9593</p>
+        <p>BIC: VZRSCHLBTK8</p>
+        <p style="margin-top: 8px;">Payable within 60 days of invoice date.</p>
+    </div>
+        
+</body>
+</html>

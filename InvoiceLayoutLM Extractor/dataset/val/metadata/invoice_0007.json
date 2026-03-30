@@ -1,0 +1,95 @@
+{
+  "invoice_id": "invoice_0007",
+  "locale": "fr_FR",
+  "template": "layout_027.html",
+  "columns": [
+    {
+      "field": "position",
+      "label": "Ligne",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "quantity",
+      "label": "Quantité",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "line_total",
+      "label": "Montant",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "description",
+      "label": "Libellé",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "unit_price",
+      "label": "Prix U.",
+      "entity_label": "unit_price",
+      "format": "currency"
+    }
+  ],
+  "line_items": [
+    {
+      "position": "1",
+      "quantity": "30",
+      "line_total": "8 075,40",
+      "description": "Scissors 8\" Stainless",
+      "unit_price": "269,18"
+    },
+    {
+      "position": "2",
+      "quantity": "28",
+      "line_total": "11 441,64",
+      "description": "Cloud Storage Plan 1TB (yearly)",
+      "unit_price": "408,63"
+    },
+    {
+      "position": "3",
+      "quantity": "3",
+      "line_total": "1 211,04",
+      "description": "Desk Organizer",
+      "unit_price": "403,68"
+    },
+    {
+      "position": "4",
+      "quantity": "24",
+      "line_total": "4 250,16",
+      "description": "Binder Clips Assorted (48-pack)",
+      "unit_price": "177,09"
+    },
+    {
+      "position": "5",
+      "quantity": "50",
+      "line_total": "21 910,00",
+      "description": "Whiteboard Marker Set",
+      "unit_price": "438,20"
+    },
+    {
+      "position": "6",
+      "quantity": "7",
+      "line_total": "822,36",
+      "description": "USB-C Hub",
+      "unit_price": "117,48"
+    },
+    {
+      "position": "7",
+      "quantity": "44",
+      "line_total": "9 421,28",
+      "description": "Webcam HD",
+      "unit_price": "214,12"
+    },
+    {
+      "position": "8",
+      "quantity": "12",
+      "line_total": "4 176,36",
+      "description": "Managed Firewall Service (annual)",
+      "unit_price": "348,03"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "invoice_id": "invoice_0073",
+  "locale": "fr_FR",
+  "template": "layout_012.html",
+  "columns": [
+    {
+      "field": "article_number",
+      "label": "N° article",
+      "entity_label": "article_number",
+      "format": "text"
+    },
+    {
+      "field": "unit_price",
+      "label": "Tarif unitaire",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "position",
+      "label": "#",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "line_total",
+      "label": "Montant",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "tax_rate",
+      "label": "TVA %",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "description",
+      "label": "Article",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "quantity",
+      "label": "Nb",
+      "entity_label": "quantity",
+      "format": "int"
+    }
+  ],
+  "line_items": [
+    {
+      "article_number": "3444.787",
+      "unit_price": "175.48",
+      "position": "1",
+      "line_total": "1,052.88",
+      "tax_rate": "10%",
+      "description": "Desk Calendar 2026",
+      "quantity": "6"
+    },
+    {
+      "article_number": "778168",
+      "unit_price": "418.64",
+      "position": "2",
+      "line_total": "12,140.56",
+      "tax_rate": "20%",
+      "description": "Laptop Charger Universal 65W",
+      "quantity": "29"
+    },
+    {
+      "article_number": "215778",
+      "unit_price": "92.86",
+      "position": "3",
+      "line_total": "3,528.68",
+      "tax_rate": "10%",
+      "description": "Notebook A5 Ruled",
+      "quantity": "38"
+    },
+    {
+      "article_number": "ART-37153",
+      "unit_price": "10.16",
+      "position": "4",
+      "line_total": "294.64",
+      "tax_rate": "0%",
+      "description": "Screen Cleaning Kit",
+      "quantity": "29"
+    },
+    {
+      "article_number": "486663",
+      "unit_price": "325.91",
+      "position": "5",
+      "line_total": "15,317.77",
+      "tax_rate": "0%",
+      "description": "Scissors 8\" Stainless",
+      "quantity": "47"
+    }
+  ]
+}

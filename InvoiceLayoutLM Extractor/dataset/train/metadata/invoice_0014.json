@@ -1,0 +1,85 @@
+{
+  "invoice_id": "invoice_0014",
+  "locale": "de_AT",
+  "template": "layout_016.html",
+  "columns": [
+    {
+      "field": "position",
+      "label": "#",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "tax_rate",
+      "label": "MwSt. %",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "line_total",
+      "label": "Betrag",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "quantity",
+      "label": "Anzahl",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "unit_price",
+      "label": "Einzelpreis",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "description",
+      "label": "Artikel",
+      "entity_label": "item_description",
+      "format": "text"
+    }
+  ],
+  "line_items": [
+    {
+      "position": "1",
+      "tax_rate": "20%",
+      "line_total": "10.387,03",
+      "quantity": "23",
+      "unit_price": "451,61",
+      "description": "Managed Firewall Service (annual)"
+    },
+    {
+      "position": "2",
+      "tax_rate": "20%",
+      "line_total": "1.003,20",
+      "quantity": "33",
+      "unit_price": "30,40",
+      "description": "Footrest Ergonomic"
+    },
+    {
+      "position": "3",
+      "tax_rate": "10%",
+      "line_total": "4.339,69",
+      "quantity": "31",
+      "unit_price": "139,99",
+      "description": "Conference Table"
+    },
+    {
+      "position": "4",
+      "tax_rate": "20%",
+      "line_total": "3.529,60",
+      "quantity": "32",
+      "unit_price": "110,30",
+      "description": "Laminating Pouches A4 (100-pack)"
+    },
+    {
+      "position": "5",
+      "tax_rate": "20%",
+      "line_total": "3.072,96",
+      "quantity": "8",
+      "unit_price": "384,12",
+      "description": "Toner Cartridge Black"
+    }
+  ]
+}

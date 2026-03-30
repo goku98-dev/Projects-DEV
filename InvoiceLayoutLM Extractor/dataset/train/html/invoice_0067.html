@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, Geneva, sans-serif;
+            font-size: 10pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { border-bottom: 2px solid #1c2833; padding-bottom: 15px; margin-bottom: 25px; display: flex; justify-content: space-between; align-items: flex-end; }
+        .invoice-title { font-size: 15.0pt; font-weight: bold; color: #1c2833; }
+        .invoice-meta { text-align: right; font-size: 9pt; }
+        .invoice-meta p { margin-bottom: 2px; }
+        
+
+        .addresses { display: flex; justify-content: space-between; margin-bottom: 30px; }
+        .address-block { width: 45%; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 6px; font-size: 9pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        thead th { background-color: #1c2833; color: #ffffff; padding: 8px 10px; text-align: left; border: 1px solid #cccccc; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 6px 10px; border: 1px solid #cccccc; }
+        tbody td.num { text-align: right; }
+        
+        tbody tr:nth-child(even) { background-color: #f9f9f9; }
+        
+        
+.table-wrapper { margin-top: 0; }
+.table-wrapper table { width: 95%; }
+
+        .totals { width: 300px; margin-left: auto; border: 1px solid #cccccc; padding: 10px; }
+        .totals table { margin-bottom: 0; width: 100%; }
+        .totals td { padding: 4px 8px; border: none !important; }
+        .totals .total-row { font-weight: bold; font-size: 12pt; background-color: #1c2833; color: #ffffff; }
+        
+
+        .footer { margin-top: 30px; padding-top: 10px; border-top: 1px solid #eee; font-size: 9pt; color: #666; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="invoice-title">Wegmann AG</div>
+        <div class="invoice-meta">
+            <p>INV-697397</p>
+            <p>22.04.2025</p>
+            <p>Due: 22.05.2025</p>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">From</div>
+            <p>Wegmann AG</p>
+            <p>Baderstrasse 9</p>
+            <p>8721 Wil</p>
+            <p>Switzerland</p>
+        </div>
+        <div class="address-block">
+            <div class="label">Bill To</div>
+            <p>Steffen Gross GmbH</p>
+            <p>Schärerstrasse 888</p>
+            <p>1132 Schwyz</p>
+            <p>Switzerland</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th>Art.-Nr.</th>
+                
+                <th class="num">Nettobetrag</th>
+                
+                <th class="num">Netto-EP</th>
+                
+                <th class="num">Einheiten</th>
+                
+                <th class="num">Nr.</th>
+                
+                <th class="num">MwSt. %</th>
+                
+                <th>Beschreibung</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td>ART-31723</td>
+                
+                <td class="num">12&#39;183.21</td>
+                
+                <td class="num">312.39</td>
+                
+                <td class="num">39</td>
+                
+                <td class="num">1</td>
+                
+                <td class="num">2%</td>
+                
+                <td>Document Scanner</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>ART-76859</td>
+                
+                <td class="num">8&#39;980.92</td>
+                
+                <td class="num">249.47</td>
+                
+                <td class="num">36</td>
+                
+                <td class="num">2</td>
+                
+                <td class="num">8%</td>
+                
+                <td>Power Strip with USB</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>3376.129</td>
+                
+                <td class="num">2&#39;016.84</td>
+                
+                <td class="num">48.02</td>
+                
+                <td class="num">42</td>
+                
+                <td class="num">3</td>
+                
+                <td class="num">0%</td>
+                
+                <td>Conference Table</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>3145.588</td>
+                
+                <td class="num">11&#39;022.72</td>
+                
+                <td class="num">229.64</td>
+                
+                <td class="num">48</td>
+                
+                <td class="num">4</td>
+                
+                <td class="num">2%</td>
+                
+                <td>Ergonomic Desk Chair</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>5166.474</td>
+                
+                <td class="num">1&#39;424.25</td>
+                
+                <td class="num">284.85</td>
+                
+                <td class="num">5</td>
+                
+                <td class="num">5</td>
+                
+                <td class="num">2%</td>
+                
+                <td>USB-C Hub</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>ART-16340</td>
+                
+                <td class="num">150.51</td>
+                
+                <td class="num">50.17</td>
+                
+                <td class="num">3</td>
+                
+                <td class="num">6</td>
+                
+                <td class="num">2%</td>
+                
+                <td>Disinfecting Wipes (75-pack)</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>966639</td>
+                
+                <td class="num">442.68</td>
+                
+                <td class="num">14.28</td>
+                
+                <td class="num">31</td>
+                
+                <td class="num">7</td>
+                
+                <td class="num">8%</td>
+                
+                <td>IT Support Service (1 hour)</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>5326.877</td>
+                
+                <td class="num">310.30</td>
+                
+                <td class="num">310.30</td>
+                
+                <td class="num">1</td>
+                
+                <td class="num">8</td>
+                
+                <td class="num">2%</td>
+                
+                <td>Mouse Pad XL</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <table>
+            <tr>
+                <td>Subtotal:</td>
+                <td class="num">36&#39;531.43 CHF</td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td class="num">1&#39;390.59 CHF</td>
+            </tr>
+            <tr class="total-row">
+                <td>Total:</td>
+                <td class="num">37&#39;922.02 CHF</td>
+            </tr>
+        </table>
+    </div>
+        
+
+    <div class="footer">
+        <p>Please remit payment within the stated due date.</p>
+    </div>
+        
+</body>
+</html>

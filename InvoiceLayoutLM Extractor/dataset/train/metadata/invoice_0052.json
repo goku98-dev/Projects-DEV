@@ -1,0 +1,109 @@
+{
+  "invoice_id": "invoice_0052",
+  "locale": "de_CH",
+  "template": "layout_026.html",
+  "columns": [
+    {
+      "field": "position",
+      "label": "Nr.",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "tax_rate",
+      "label": "MwSt.",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "description",
+      "label": "Artikel",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "unit_price",
+      "label": "Preis/Einheit",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "line_total",
+      "label": "Gesamt",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "quantity",
+      "label": "Menge",
+      "entity_label": "quantity",
+      "format": "int"
+    }
+  ],
+  "line_items": [
+    {
+      "position": "1",
+      "tax_rate": "2%",
+      "description": "Wireless Access Point",
+      "unit_price": "452.43",
+      "line_total": "4'976.73",
+      "quantity": "11"
+    },
+    {
+      "position": "2",
+      "tax_rate": "2%",
+      "description": "HDMI Cable 2m",
+      "unit_price": "94.71",
+      "line_total": "2'083.62",
+      "quantity": "22"
+    },
+    {
+      "position": "3",
+      "tax_rate": "0%",
+      "description": "External SSD 1TB",
+      "unit_price": "140.48",
+      "line_total": "2'247.68",
+      "quantity": "16"
+    },
+    {
+      "position": "4",
+      "tax_rate": "2%",
+      "description": "NVMe SSD 2TB",
+      "unit_price": "227.95",
+      "line_total": "3'875.15",
+      "quantity": "17"
+    },
+    {
+      "position": "5",
+      "tax_rate": "2%",
+      "description": "Managed Firewall Service (annual)",
+      "unit_price": "159.70",
+      "line_total": "7'985.00",
+      "quantity": "50"
+    },
+    {
+      "position": "6",
+      "tax_rate": "0%",
+      "description": "Desk Calendar 2026",
+      "unit_price": "146.94",
+      "line_total": "293.88",
+      "quantity": "2"
+    },
+    {
+      "position": "7",
+      "tax_rate": "2%",
+      "description": "Desk Organizer",
+      "unit_price": "45.27",
+      "line_total": "1'358.10",
+      "quantity": "30"
+    },
+    {
+      "position": "8",
+      "tax_rate": "0%",
+      "description": "Room Divider Panel",
+      "unit_price": "35.89",
+      "line_total": "179.45",
+      "quantity": "5"
+    }
+  ]
+}

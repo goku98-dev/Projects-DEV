@@ -1,0 +1,93 @@
+{
+  "invoice_id": "invoice_0028",
+  "locale": "fr_FR",
+  "template": "layout_026.html",
+  "columns": [
+    {
+      "field": "line_total",
+      "label": "Montant HT",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "description",
+      "label": "Description",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "quantity",
+      "label": "Qté",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "article_number",
+      "label": "Réf.",
+      "entity_label": "article_number",
+      "format": "text"
+    },
+    {
+      "field": "position",
+      "label": "No.",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "unit_price",
+      "label": "PU HT",
+      "entity_label": "unit_price",
+      "format": "currency"
+    }
+  ],
+  "line_items": [
+    {
+      "line_total": "19 932,88",
+      "description": "Conference Table",
+      "quantity": "44",
+      "article_number": "1258.215",
+      "position": "1",
+      "unit_price": "453,02"
+    },
+    {
+      "line_total": "22,64",
+      "description": "Bluetooth Speaker Portable",
+      "quantity": "1",
+      "article_number": "8388.685",
+      "position": "2",
+      "unit_price": "22,64"
+    },
+    {
+      "line_total": "186,84",
+      "description": "Binder Clips Assorted (48-pack)",
+      "quantity": "36",
+      "article_number": "C53075",
+      "position": "3",
+      "unit_price": "5,19"
+    },
+    {
+      "line_total": "2 643,60",
+      "description": "Compressed Air Duster (6-pack)",
+      "quantity": "20",
+      "article_number": "ART-63512",
+      "position": "4",
+      "unit_price": "132,18"
+    },
+    {
+      "line_total": "14 124,60",
+      "description": "Bookshelf 5-Tier",
+      "quantity": "36",
+      "article_number": "B10617",
+      "position": "5",
+      "unit_price": "392,35"
+    },
+    {
+      "line_total": "1 378,16",
+      "description": "Room Divider Panel",
+      "quantity": "7",
+      "article_number": "ART-84482",
+      "position": "6",
+      "unit_price": "196,88"
+    }
+  ]
+}

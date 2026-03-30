@@ -1,0 +1,5 @@
+.data_generation_venv/
+output/
+templates/
+__pycache__/
+*.pyc

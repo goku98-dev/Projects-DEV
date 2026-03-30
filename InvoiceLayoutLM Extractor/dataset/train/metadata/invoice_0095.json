@@ -1,0 +1,85 @@
+{
+  "invoice_id": "invoice_0095",
+  "locale": "fr_FR",
+  "template": "layout_011.html",
+  "columns": [
+    {
+      "field": "tax_rate",
+      "label": "Taxe",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "line_total",
+      "label": "Total",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "unit_price",
+      "label": "Prix U.",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "description",
+      "label": "Description",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "position",
+      "label": "Ligne",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "quantity",
+      "label": "Quantité",
+      "entity_label": "quantity",
+      "format": "int"
+    }
+  ],
+  "line_items": [
+    {
+      "tax_rate": "0%",
+      "line_total": "10,394.79",
+      "unit_price": "494.99",
+      "description": "Office Chair",
+      "position": "1",
+      "quantity": "21"
+    },
+    {
+      "tax_rate": "0%",
+      "line_total": "22.38",
+      "unit_price": "3.73",
+      "description": "Screen Cleaning Kit",
+      "position": "2",
+      "quantity": "6"
+    },
+    {
+      "tax_rate": "0%",
+      "line_total": "3,794.76",
+      "unit_price": "421.64",
+      "description": "Standing Desk",
+      "position": "3",
+      "quantity": "9"
+    },
+    {
+      "tax_rate": "6%",
+      "line_total": "12,048.00",
+      "unit_price": "401.60",
+      "description": "Managed Firewall Service (annual)",
+      "position": "4",
+      "quantity": "30"
+    },
+    {
+      "tax_rate": "0%",
+      "line_total": "22,099.87",
+      "unit_price": "470.21",
+      "description": "Cloud Storage Plan 1TB (yearly)",
+      "position": "5",
+      "quantity": "47"
+    }
+  ]
+}

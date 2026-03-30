@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: &#39;Trebuchet MS&#39;, sans-serif;
+            font-size: 11pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { background-color: #2c3e50; color: #ffffff; padding: 20px 25px; margin: -20mm -20mm 30px -20mm; display: flex; justify-content: space-between; align-items: center; }
+        .invoice-title { font-size: 22pt; font-weight: bold; }
+        .invoice-meta { text-align: right; }
+        .invoice-meta p { margin-bottom: 4px; }
+        
+
+        .addresses { display: flex; justify-content: flex-end; margin-bottom: 30px; }
+        .address-block { width: 45%; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 6px; font-size: 10pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        thead th { padding: 8px 10px; text-align: left; border-bottom: 2px solid #2c3e50; color: #2c3e50; font-weight: bold; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 8px 10px; border-bottom: 1px solid #e0e0e0; }
+        tbody td.num { text-align: right; }
+        
+.table-wrapper { margin-top: 40px; }
+.table-wrapper table { width: 90%; }
+
+        .totals { text-align: right; margin-bottom: 20px; }
+        .totals .line { margin-bottom: 4px; }
+        .totals .total-line { font-weight: bold; font-size: 14pt; color: #2c3e50; border-top: 2px solid #2c3e50; padding-top: 6px; display: inline-block; }
+        
+
+        .footer { margin-top: 30px; padding-top: 10px; border-top: 1px solid #eee; font-size: 10pt; color: #666; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div>
+            <div class="invoice-title">INVOICE</div>
+            <p>Hofmann GmbH</p>
+        </div>
+        <div class="invoice-meta">
+            <p>Invoice #: INV-494571</p>
+            <p>Date: 16.06.2024</p>
+            <p>Due: 15.08.2024</p>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">Invoice To</div>
+            <p>Junken KG</p>
+            <p>Siegmund-Hethur-Ring 60-96</p>
+            <p>01909 Herzberg</p>
+            <p>Germany</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th class="num">USt.</th>
+                
+                <th class="num">Gesamtpreis</th>
+                
+                <th>Artikel</th>
+                
+                <th class="num">EP</th>
+                
+                <th>Art.-Nr.</th>
+                
+                <th class="num">Einheiten</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td class="num">7%</td>
+                
+                <td class="num">3 631,68</td>
+                
+                <td>Compressed Air Duster (6-pack)</td>
+                
+                <td class="num">113,49</td>
+                
+                <td>ART-98830</td>
+                
+                <td class="num">32</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">7%</td>
+                
+                <td class="num">3 365,32</td>
+                
+                <td>Ergonomic Mouse</td>
+                
+                <td class="num">68,68</td>
+                
+                <td>M36955</td>
+                
+                <td class="num">49</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">19%</td>
+                
+                <td class="num">4 301,41</td>
+                
+                <td>Wireless Access Point</td>
+                
+                <td class="num">226,39</td>
+                
+                <td>6401.689</td>
+                
+                <td class="num">19</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">111,66</td>
+                
+                <td>Annual Software License Renewal</td>
+                
+                <td class="num">55,83</td>
+                
+                <td>ART-84219</td>
+                
+                <td class="num">2</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <div class="line">Subtotal: € 11 410,07</div>
+        <div class="line">Tax: € 1 307,06</div>
+        <div class="total-line">Total: € 12 717,13</div>
+    </div>
+        
+
+    <div class="footer">
+        <p>Net 30 days from invoice date.</p>
+    </div>
+        
+</body>
+</html>

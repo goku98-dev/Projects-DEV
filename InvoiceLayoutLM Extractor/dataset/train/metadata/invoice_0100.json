@@ -1,0 +1,95 @@
+{
+  "invoice_id": "invoice_0100",
+  "locale": "en_US",
+  "template": "layout_027.html",
+  "columns": [
+    {
+      "field": "tax_rate",
+      "label": "Tax Rate",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "line_total",
+      "label": "Line Total",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "quantity",
+      "label": "Pcs",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "unit_price",
+      "label": "Price",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "description",
+      "label": "Description",
+      "entity_label": "item_description",
+      "format": "text"
+    }
+  ],
+  "line_items": [
+    {
+      "tax_rate": "8%",
+      "line_total": "6,557.76",
+      "quantity": "24",
+      "unit_price": "273.24",
+      "description": "Ethernet Cable 5m"
+    },
+    {
+      "tax_rate": "10%",
+      "line_total": "2,757.57",
+      "quantity": "17",
+      "unit_price": "162.21",
+      "description": "Docking Station USB-C"
+    },
+    {
+      "tax_rate": "8%",
+      "line_total": "12,180.58",
+      "quantity": "29",
+      "unit_price": "420.02",
+      "description": "Envelope C4 (50-pack)"
+    },
+    {
+      "tax_rate": "10%",
+      "line_total": "2,229.85",
+      "quantity": "23",
+      "unit_price": "96.95",
+      "description": "Ergonomic Desk Chair"
+    },
+    {
+      "tax_rate": "0%",
+      "line_total": "14,910.00",
+      "quantity": "50",
+      "unit_price": "298.20",
+      "description": "Microfiber Cloth Set (10-pack)"
+    },
+    {
+      "tax_rate": "10%",
+      "line_total": "6,931.97",
+      "quantity": "23",
+      "unit_price": "301.39",
+      "description": "Sticky Notes Assorted"
+    },
+    {
+      "tax_rate": "0%",
+      "line_total": "3,594.00",
+      "quantity": "8",
+      "unit_price": "449.25",
+      "description": "UPS Battery Backup 1500VA"
+    },
+    {
+      "tax_rate": "0%",
+      "line_total": "6,934.40",
+      "quantity": "16",
+      "unit_price": "433.40",
+      "description": "Bookshelf 5-Tier"
+    }
+  ]
+}

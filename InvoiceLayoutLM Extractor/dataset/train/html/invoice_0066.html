@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 9pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 30px; }
+        .invoice-title { font-size: 18pt; font-weight: bold; color: #2874a6; margin-bottom: 8px; }
+        .invoice-meta { text-align: right; }
+        .invoice-meta p { margin-bottom: 4px; }
+        
+
+        .addresses { display: flex; justify-content: space-between; margin-bottom: 30px; gap: 20px; }
+        .address-block { width: 45%; border: 1px solid #999999; padding: 12px 15px; }
+        .address-block .label { font-weight: bold; color: #2874a6; margin-bottom: 8px; font-size: 9pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        thead th { background-color: #2874a6; color: #ffffff; padding: 8px 10px; text-align: left; border: 1px solid #999999; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 6px 10px; border: 1px solid #999999; }
+        tbody td.num { text-align: right; }
+        
+        
+.table-wrapper { margin-top: 40px; }
+.table-wrapper table { width: 100%; }
+
+        .totals { border-top: 1px solid #999999; padding-top: 10px; }
+        .totals table { width: 100%; margin-bottom: 0; }
+        .totals td { padding: 4px 10px; border: none !important; }
+        .totals td:first-child { text-align: right; width: 80%; }
+        .totals td:last-child { text-align: right; width: 20%; }
+        .totals .total-row { font-weight: bold; font-size: 11pt; }
+        .totals .total-row td { border-top: 2px solid #2874a6 !important; }
+        
+
+        .footer { margin-top: 40px; padding: 12px 15px; background-color: #f8f8f8; font-size: 8pt; color: #555; }
+        .footer .footer-title { font-weight: bold; margin-bottom: 5px; }
+        .footer p { margin-bottom: 3px; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div>
+            <div class="invoice-title">INVOICE</div>
+            <p>Jones, Scott and Hill</p>
+        </div>
+        <div class="invoice-meta">
+            <p><strong>Invoice #:</strong> INV-567867</p>
+            <p><strong>Date:</strong> 12/12/2024</p>
+            <p><strong>Due Date:</strong> 10/02/2025</p>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">Sender</div>
+            <p>Jones, Scott and Hill</p>
+            <p>Flat 8
+Martin Crossing</p>
+            <p>L61 4TT West Liamshire</p>
+            <p>United Kingdom</p>
+        </div>
+        <div class="address-block">
+            <div class="label">Recipient</div>
+            <p>Holmes-Brown</p>
+            <p>36 Jake Plains</p>
+            <p>NE7A 1YG New Elizabeth</p>
+            <p>United Kingdom</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th class="num">VAT</th>
+                
+                <th>Designation</th>
+                
+                <th class="num">Price/Unit</th>
+                
+                <th class="num">Net Amount</th>
+                
+                <th class="num">Count</th>
+                
+                <th>Part No.</th>
+                
+                <th class="num">#</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td class="num">20%</td>
+                
+                <td>IT Support Service (1 hour)</td>
+                
+                <td class="num">149.53</td>
+                
+                <td class="num">299.06</td>
+                
+                <td class="num">2</td>
+                
+                <td>A65044</td>
+                
+                <td class="num">1</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">5%</td>
+                
+                <td>Laminating Pouches A4 (100-pack)</td>
+                
+                <td class="num">223.69</td>
+                
+                <td class="num">10,960.81</td>
+                
+                <td class="num">49</td>
+                
+                <td>330253</td>
+                
+                <td class="num">2</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">0%</td>
+                
+                <td>Desk Pad Leather</td>
+                
+                <td class="num">42.58</td>
+                
+                <td class="num">468.38</td>
+                
+                <td class="num">11</td>
+                
+                <td>142113</td>
+                
+                <td class="num">3</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">5%</td>
+                
+                <td>Data Backup Service (monthly subscription)</td>
+                
+                <td class="num">289.43</td>
+                
+                <td class="num">1,736.58</td>
+                
+                <td class="num">6</td>
+                
+                <td>4042.607</td>
+                
+                <td class="num">4</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">0%</td>
+                
+                <td>Thunderbolt Cable 1m</td>
+                
+                <td class="num">447.92</td>
+                
+                <td class="num">5,822.96</td>
+                
+                <td class="num">13</td>
+                
+                <td>A24364</td>
+                
+                <td class="num">5</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">5%</td>
+                
+                <td>Docking Station USB-C</td>
+                
+                <td class="num">327.62</td>
+                
+                <td class="num">10,156.22</td>
+                
+                <td class="num">31</td>
+                
+                <td>3594.445</td>
+                
+                <td class="num">6</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">0%</td>
+                
+                <td>Cloud Storage Plan 1TB (yearly)</td>
+                
+                <td class="num">262.65</td>
+                
+                <td class="num">3,677.10</td>
+                
+                <td class="num">14</td>
+                
+                <td>914785</td>
+                
+                <td class="num">7</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">20%</td>
+                
+                <td>USB-C Hub</td>
+                
+                <td class="num">169.43</td>
+                
+                <td class="num">4,405.18</td>
+                
+                <td class="num">26</td>
+                
+                <td>ART-18511</td>
+                
+                <td class="num">8</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <table>
+            <tr>
+                <td>Subtotal:</td>
+                <td>37,526.29 GBP</td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td>2,083.53 GBP</td>
+            </tr>
+            <tr class="total-row">
+                <td>Total:</td>
+                <td>39,609.82 GBP</td>
+            </tr>
+        </table>
+    </div>
+        
+
+    <div class="footer">
+        <div class="footer-title">Payment Information</div>
+        <p>Crédit Agricole</p>
+        <p>IBAN: GB21 2669 9895 1295 9076 5269 8676</p>
+        <p>BIC: JOMADEMT9BF</p>
+        <p style="margin-top: 8px;">Net 14 days. 2% discount for payment within 7 days.</p>
+    </div>
+        
+</body>
+</html>

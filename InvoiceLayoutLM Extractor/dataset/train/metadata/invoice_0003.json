@@ -1,0 +1,69 @@
+{
+  "invoice_id": "invoice_0003",
+  "locale": "en_GB",
+  "template": "layout_024.html",
+  "columns": [
+    {
+      "field": "quantity",
+      "label": "Qty",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "tax_rate",
+      "label": "GST %",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "position",
+      "label": "Item",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "description",
+      "label": "Details",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "line_total",
+      "label": "Total",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "unit_price",
+      "label": "Each",
+      "entity_label": "unit_price",
+      "format": "currency"
+    }
+  ],
+  "line_items": [
+    {
+      "quantity": "12",
+      "tax_rate": "5%",
+      "position": "1",
+      "description": "Ergonomic Desk Chair",
+      "line_total": "1,830.60",
+      "unit_price": "152.55"
+    },
+    {
+      "quantity": "24",
+      "tax_rate": "0%",
+      "position": "2",
+      "description": "Surge Protector 6-Outlet",
+      "line_total": "4,428.00",
+      "unit_price": "184.50"
+    },
+    {
+      "quantity": "40",
+      "tax_rate": "0%",
+      "position": "3",
+      "description": "Conference Table",
+      "line_total": "14,110.80",
+      "unit_price": "352.77"
+    }
+  ]
+}

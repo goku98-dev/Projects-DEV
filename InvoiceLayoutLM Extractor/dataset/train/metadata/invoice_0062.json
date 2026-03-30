@@ -1,0 +1,69 @@
+{
+  "invoice_id": "invoice_0062",
+  "locale": "fr_FR",
+  "template": "layout_006.html",
+  "columns": [
+    {
+      "field": "tax_rate",
+      "label": "Taux",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "description",
+      "label": "Produit",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "line_total",
+      "label": "Prix total",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "position",
+      "label": "No.",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "quantity",
+      "label": "Qté.",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "unit_price",
+      "label": "Prix unitaire",
+      "entity_label": "unit_price",
+      "format": "currency"
+    }
+  ],
+  "line_items": [
+    {
+      "tax_rate": "0%",
+      "description": "Printer Maintenance Contract (quarterly)",
+      "line_total": "15,740.20",
+      "position": "1",
+      "quantity": "35",
+      "unit_price": "449.72"
+    },
+    {
+      "tax_rate": "10%",
+      "description": "Mouse Pad XL",
+      "line_total": "13,350.69",
+      "position": "2",
+      "quantity": "27",
+      "unit_price": "494.47"
+    },
+    {
+      "tax_rate": "10%",
+      "description": "Sticky Notes Assorted",
+      "line_total": "12,898.71",
+      "position": "3",
+      "quantity": "43",
+      "unit_price": "299.97"
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, &#39;Times New Roman&#39;, serif;
+            font-size: 10pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 30px; }
+        .invoice-title { font-size: 20pt; font-weight: bold; color: #7e5109; margin-bottom: 8px; }
+        .invoice-meta { text-align: right; }
+        .invoice-meta p { margin-bottom: 4px; }
+        
+
+        .addresses { display: flex; justify-content: space-between; margin-bottom: 30px; }
+        .address-block { width: 45%; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 6px; font-size: 9pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        thead th { padding: 8px 10px; text-align: left; border-bottom: 2px solid #7e5109; color: #7e5109; font-weight: bold; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 8px 10px; border-bottom: 1px solid #e0e0e0; }
+        tbody td.num { text-align: right; }
+        
+.table-wrapper { margin-top: 0; }
+.table-wrapper table { width: 100%; }
+
+        .totals { width: 280px; margin-left: auto; }
+        .totals table { margin-bottom: 0; }
+        .totals td { padding: 4px 10px; border: none !important; }
+        .totals .total-row { font-weight: bold; font-size: 12pt; }
+        .totals .total-row td { border-top: 2px solid #7e5109 !important; }
+        
+
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div>
+            <div class="invoice-title">INVOICE</div>
+            <p>Klein S.A.S.</p>
+        </div>
+        <div class="invoice-meta">
+            <p><strong>Invoice #:</strong> INV-213520</p>
+            <p><strong>Date:</strong> 20/03/2025</p>
+            <p><strong>Due Date:</strong> 03/04/2025</p>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">From</div>
+            <p>Klein S.A.S.</p>
+            <p>939, avenue Lemoine</p>
+            <p>14137 Sainte WilliamVille</p>
+            <p>France</p>
+        </div>
+        <div class="address-block">
+            <div class="label">Bill To</div>
+            <p>Besnard et Fils</p>
+            <p>999, rue Lemaître</p>
+            <p>53724 Sainte Stéphanenec</p>
+            <p>France</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th class="num">Unités</th>
+                
+                <th class="num">Prix U.</th>
+                
+                <th class="num">Sous-total</th>
+                
+                <th>Prestation</th>
+                
+                <th class="num">Taux</th>
+                
+                <th class="num">Pos.</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td class="num">25</td>
+                
+                <td class="num">94,58</td>
+                
+                <td class="num">2 364,50</td>
+                
+                <td>Power Strip with USB</td>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">1</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">29</td>
+                
+                <td class="num">342,48</td>
+                
+                <td class="num">9 931,92</td>
+                
+                <td>IT Support Service (1 hour)</td>
+                
+                <td class="num">6%</td>
+                
+                <td class="num">2</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">27</td>
+                
+                <td class="num">305,53</td>
+                
+                <td class="num">8 249,31</td>
+                
+                <td>Wireless Keyboard</td>
+                
+                <td class="num">20%</td>
+                
+                <td class="num">3</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <table>
+            <tr>
+                <td>Subtotal:</td>
+                <td class="num">€ 20 545,73</td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td class="num">€ 2 196,12</td>
+            </tr>
+            <tr class="total-row">
+                <td>Total:</td>
+                <td class="num">€ 22 741,85</td>
+            </tr>
+        </table>
+    </div>
+        
+
+</body>
+</html>

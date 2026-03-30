@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, Geneva, sans-serif;
+            font-size: 11pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { border-bottom: 2px solid #2e4053; padding-bottom: 15px; margin-bottom: 25px; display: flex; justify-content: space-between; align-items: flex-end; }
+        .invoice-title { font-size: 16.5pt; font-weight: bold; color: #2e4053; }
+        .invoice-meta { text-align: right; font-size: 10pt; }
+        .invoice-meta p { margin-bottom: 2px; }
+        
+
+        .addresses { display: flex; justify-content: space-between; margin-bottom: 30px; }
+        .address-block { width: 45%; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 6px; font-size: 10pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        .table-wrapper table { border: 2px solid #2e4053; }
+        thead th { padding: 10px; text-align: left; background-color: #2e4053; color: #ffffff; border-right: 1px solid rgba(255,255,255,0.2); }
+        thead th:last-child { border-right: none; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 8px 10px; border-right: 1px solid #eee; }
+        tbody td:last-child { border-right: none; }
+        tbody td.num { text-align: right; }
+        tbody tr:nth-child(even) { background-color: #ffffff; }
+        
+.table-wrapper { margin-top: 40px; }
+.table-wrapper table { width: 90%; }
+
+        .totals { border-top: 1px solid #cccccc; padding-top: 10px; }
+        .totals table { width: 100%; margin-bottom: 0; }
+        .totals td { padding: 4px 10px; border: none !important; }
+        .totals td:first-child { text-align: right; width: 80%; }
+        .totals td:last-child { text-align: right; width: 20%; }
+        .totals .total-row { font-weight: bold; font-size: 13pt; }
+        .totals .total-row td { border-top: 2px solid #2e4053 !important; }
+        
+
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="invoice-title">Mader Hollaus AG</div>
+        <div class="invoice-meta">
+            <p>INV-800972</p>
+            <p>24.08.2025</p>
+            <p>Due: 08.10.2025</p>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">From</div>
+            <p>Mader Hollaus AG</p>
+            <p>Fernando-Haiden-Ring 60</p>
+            <p>9740 Traun</p>
+            <p>Austria</p>
+        </div>
+        <div class="address-block">
+            <div class="label">Bill To</div>
+            <p>Franz &amp; Lassnig OG</p>
+            <p>Schusterweg 8/3</p>
+            <p>2646 Leibnitz</p>
+            <p>Austria</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th class="num">Stück</th>
+                
+                <th class="num">MwSt. %</th>
+                
+                <th class="num">Einzelpreis</th>
+                
+                <th class="num">Summe</th>
+                
+                <th>Artikel</th>
+                
+                <th class="num">Pos</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td class="num">48</td>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">209,78</td>
+                
+                <td class="num">10 069,44</td>
+                
+                <td>Office Chair</td>
+                
+                <td class="num">1</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">28</td>
+                
+                <td class="num">20%</td>
+                
+                <td class="num">318,26</td>
+                
+                <td class="num">8 911,28</td>
+                
+                <td>Cloud Storage Plan 1TB (yearly)</td>
+                
+                <td class="num">2</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">29</td>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">338,16</td>
+                
+                <td class="num">9 806,64</td>
+                
+                <td>Laptop Stand</td>
+                
+                <td class="num">3</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">45</td>
+                
+                <td class="num">20%</td>
+                
+                <td class="num">75,96</td>
+                
+                <td class="num">3 418,20</td>
+                
+                <td>RAM Module 16GB DDR5</td>
+                
+                <td class="num">4</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">32</td>
+                
+                <td class="num">20%</td>
+                
+                <td class="num">183,82</td>
+                
+                <td class="num">5 882,24</td>
+                
+                <td>Cable Management Kit</td>
+                
+                <td class="num">5</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">26</td>
+                
+                <td class="num">20%</td>
+                
+                <td class="num">497,38</td>
+                
+                <td class="num">12 931,88</td>
+                
+                <td>External SSD 1TB</td>
+                
+                <td class="num">6</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <table>
+            <tr>
+                <td>Subtotal:</td>
+                <td>€ 51 019,68</td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td>€ 6 228,73</td>
+            </tr>
+            <tr class="total-row">
+                <td>Total:</td>
+                <td>€ 57 248,41</td>
+            </tr>
+        </table>
+    </div>
+        
+
+</body>
+</html>

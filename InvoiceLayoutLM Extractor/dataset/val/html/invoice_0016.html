@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: &#39;Courier New&#39;, Courier, monospace;
+            font-size: 9pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { text-align: right; margin-bottom: 30px; }
+        .invoice-title { font-size: 18pt; font-weight: bold; color: #283747; margin-bottom: 5px; }
+        .invoice-meta p { margin-bottom: 3px; }
+        .company-name { font-size: 11pt; margin-bottom: 10px; }
+        
+
+        .addresses { display: flex; justify-content: flex-end; margin-bottom: 30px; }
+        .address-block { width: 45%; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 6px; font-size: 8pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        thead th { padding: 8px 10px; text-align: left; border-bottom: 2px solid #283747; color: #283747; font-weight: bold; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 8px 10px; border-bottom: 1px solid #e0e0e0; }
+        tbody td.num { text-align: right; }
+        
+.table-wrapper { margin-top: 40px; }
+.table-wrapper table { width: 100%; }
+
+        .totals { border-top: 1px solid #283747; padding-top: 10px; }
+        .totals table { width: 100%; margin-bottom: 0; }
+        .totals td { padding: 4px 10px; border: none !important; }
+        .totals td:first-child { text-align: right; width: 80%; }
+        .totals td:last-child { text-align: right; width: 20%; }
+        .totals .total-row { font-weight: bold; font-size: 11pt; }
+        .totals .total-row td { border-top: 2px solid #283747 !important; }
+        
+
+        .footer { margin-top: 30px; font-size: 7pt; color: #999; text-align: center; }
+        .footer p { margin-bottom: 2px; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="invoice-title">INVOICE</div>
+        <div class="company-name">Delannoy Hamon et Fils</div>
+        <div class="invoice-meta">
+            <p>Invoice No: INV-103921</p>
+            <p>Invoice Date: 02/03/2025</p>
+            <p>Payment Due: 16/03/2025</p>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">Invoice To</div>
+            <p>Leroux</p>
+            <p>5, avenue Julien</p>
+            <p>97232 Robinnec</p>
+            <p>France</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th class="num">Prix/unité</th>
+                
+                <th>Code produit</th>
+                
+                <th>Produit</th>
+                
+                <th class="num">Montant</th>
+                
+                <th class="num">#</th>
+                
+                <th class="num">Unités</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td class="num">455,55</td>
+                
+                <td>ART-60622</td>
+                
+                <td>Mouse Pad XL</td>
+                
+                <td class="num">1.822,20</td>
+                
+                <td class="num">1</td>
+                
+                <td class="num">4</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">135,90</td>
+                
+                <td>989544</td>
+                
+                <td>Professional Monitor Calibration</td>
+                
+                <td class="num">5.300,10</td>
+                
+                <td class="num">2</td>
+                
+                <td class="num">39</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">2,11</td>
+                
+                <td>6849.490</td>
+                
+                <td>Desk Calendar 2026</td>
+                
+                <td class="num">4,22</td>
+                
+                <td class="num">3</td>
+                
+                <td class="num">2</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">355,99</td>
+                
+                <td>321285</td>
+                
+                <td>Annual Software License Renewal</td>
+                
+                <td class="num">9.255,74</td>
+                
+                <td class="num">4</td>
+                
+                <td class="num">26</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">306,44</td>
+                
+                <td>C16122</td>
+                
+                <td>NVMe SSD 2TB</td>
+                
+                <td class="num">11.338,28</td>
+                
+                <td class="num">5</td>
+                
+                <td class="num">37</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">456,03</td>
+                
+                <td>ART-45723</td>
+                
+                <td>Disinfecting Wipes (75-pack)</td>
+                
+                <td class="num">9.576,63</td>
+                
+                <td class="num">6</td>
+                
+                <td class="num">21</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">306,43</td>
+                
+                <td>ART-82827</td>
+                
+                <td>Docking Station USB-C</td>
+                
+                <td class="num">3.983,59</td>
+                
+                <td class="num">7</td>
+                
+                <td class="num">13</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <table>
+            <tr>
+                <td>Subtotal:</td>
+                <td>41.280,76 €</td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td>5.577,19 €</td>
+            </tr>
+            <tr class="total-row">
+                <td>Total:</td>
+                <td>46.857,95 €</td>
+            </tr>
+        </table>
+    </div>
+        
+
+    <div class="footer">
+        <p>Delannoy Hamon et Fils | 58, boulevard de Lacroix, 20986 Saint Alice | France</p>
+        <p>ING-DiBa | IBAN: FR89 5254 5329 7082 6740 1067 2681</p>
+    </div>
+        
+</body>
+</html>

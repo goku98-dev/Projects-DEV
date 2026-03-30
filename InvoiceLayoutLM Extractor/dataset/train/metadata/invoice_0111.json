@@ -1,0 +1,81 @@
+{
+  "invoice_id": "invoice_0111",
+  "locale": "de_DE",
+  "template": "layout_026.html",
+  "columns": [
+    {
+      "field": "line_total",
+      "label": "Summe",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "tax_rate",
+      "label": "MwSt.",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "quantity",
+      "label": "Stk.",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "description",
+      "label": "Artikel",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "unit_price",
+      "label": "Preis/Einheit",
+      "entity_label": "unit_price",
+      "format": "currency"
+    }
+  ],
+  "line_items": [
+    {
+      "line_total": "1,318.52",
+      "tax_rate": "0%",
+      "quantity": "4",
+      "description": "Office Equipment Installation Service",
+      "unit_price": "329.63"
+    },
+    {
+      "line_total": "4,217.40",
+      "tax_rate": "7%",
+      "quantity": "18",
+      "description": "Laptop Charger Universal 65W",
+      "unit_price": "234.30"
+    },
+    {
+      "line_total": "6,616.62",
+      "tax_rate": "19%",
+      "quantity": "18",
+      "description": "HDMI Cable 2m",
+      "unit_price": "367.59"
+    },
+    {
+      "line_total": "2,805.88",
+      "tax_rate": "7%",
+      "quantity": "14",
+      "description": "Compressed Air Duster (6-pack)",
+      "unit_price": "200.42"
+    },
+    {
+      "line_total": "6,795.20",
+      "tax_rate": "7%",
+      "quantity": "32",
+      "description": "Annual Software License Renewal",
+      "unit_price": "212.35"
+    },
+    {
+      "line_total": "1,483.80",
+      "tax_rate": "7%",
+      "quantity": "3",
+      "description": "Disinfecting Wipes (75-pack)",
+      "unit_price": "494.60"
+    }
+  ]
+}

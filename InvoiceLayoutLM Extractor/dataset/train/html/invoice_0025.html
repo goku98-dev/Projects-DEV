@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: &#39;Trebuchet MS&#39;, sans-serif;
+            font-size: 11pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { margin: -20mm -20mm 30px -20mm; }
+        .header-top { background-color: #6c3483; color: #ffffff; padding: 15px 25px; }
+        .header-bottom { background-color: #f5f5f5; padding: 10px 25px; display: flex; justify-content: space-between; border-bottom: 1px solid #ddd; }
+        .invoice-title { font-size: 22pt; font-weight: bold; }
+        .invoice-meta span { margin-right: 20px; font-size: 10pt; }
+        
+
+        .addresses { display: flex; justify-content: space-between; margin-bottom: 30px; gap: 20px; }
+        .address-block { width: 45%; border: 1px solid #cccccc; padding: 12px 15px; }
+        .address-block .label { font-weight: bold; color: #6c3483; margin-bottom: 8px; font-size: 11pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        .table-wrapper table { border: 2px solid #6c3483; }
+        thead th { padding: 10px; text-align: left; background-color: #6c3483; color: #ffffff; border-right: 1px solid rgba(255,255,255,0.2); }
+        thead th:last-child { border-right: none; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 8px 10px; border-right: 1px solid #eee; }
+        tbody td:last-child { border-right: none; }
+        tbody td.num { text-align: right; }
+        tbody tr:nth-child(even) { background-color: #f2f2f2; }
+        
+.table-wrapper { margin-top: 80px; }
+.table-wrapper table { width: 100%; }
+
+        .totals { border-top: 1px solid #cccccc; padding-top: 10px; }
+        .totals table { width: 100%; margin-bottom: 0; }
+        .totals td { padding: 4px 10px; border: none !important; }
+        .totals td:first-child { text-align: right; width: 80%; }
+        .totals td:last-child { text-align: right; width: 20%; }
+        .totals .total-row { font-weight: bold; font-size: 13pt; }
+        .totals .total-row td { border-top: 2px solid #6c3483 !important; }
+        
+
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="header-top">
+            <div class="invoice-title">Jost Egger AG</div>
+        </div>
+        <div class="header-bottom">
+            <span>Invoice INV-643252</span>
+            <span>Date: 23.11.2025</span>
+            <span>Due: 22.01.2026</span>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">Sender</div>
+            <p>Jost Egger AG</p>
+            <p>Schärerstrasse 444</p>
+            <p>4008 Küssnacht</p>
+            <p>Switzerland</p>
+        </div>
+        <div class="address-block">
+            <div class="label">Recipient</div>
+            <p>Hodel GmbH</p>
+            <p>Schneiderstrasse 5</p>
+            <p>2557 Crans-Montana</p>
+            <p>Switzerland</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th class="num">MwSt.</th>
+                
+                <th>Leistung</th>
+                
+                <th class="num">Betrag</th>
+                
+                <th class="num">Anzahl</th>
+                
+                <th class="num">Einzelpreis</th>
+                
+                <th class="num">Nr.</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td class="num">0%</td>
+                
+                <td>Docking Station USB-C</td>
+                
+                <td class="num">6&#39;134.28</td>
+                
+                <td class="num">17</td>
+                
+                <td class="num">360.84</td>
+                
+                <td class="num">1</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">0%</td>
+                
+                <td>Managed Firewall Service (annual)</td>
+                
+                <td class="num">3&#39;688.80</td>
+                
+                <td class="num">30</td>
+                
+                <td class="num">122.96</td>
+                
+                <td class="num">2</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">8%</td>
+                
+                <td>Notebook A5 Ruled</td>
+                
+                <td class="num">1&#39;015.80</td>
+                
+                <td class="num">4</td>
+                
+                <td class="num">253.95</td>
+                
+                <td class="num">3</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">8%</td>
+                
+                <td>Data Backup Service (monthly subscription)</td>
+                
+                <td class="num">16&#39;073.47</td>
+                
+                <td class="num">49</td>
+                
+                <td class="num">328.03</td>
+                
+                <td class="num">4</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">8%</td>
+                
+                <td>Laptop Charger Universal 65W</td>
+                
+                <td class="num">15&#39;885.66</td>
+                
+                <td class="num">42</td>
+                
+                <td class="num">378.23</td>
+                
+                <td class="num">5</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <table>
+            <tr>
+                <td>Subtotal:</td>
+                <td>42&#39;798.01 CHF</td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td>2&#39;670.97 CHF</td>
+            </tr>
+            <tr class="total-row">
+                <td>Total:</td>
+                <td>45&#39;468.98 CHF</td>
+            </tr>
+        </table>
+    </div>
+        
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+{
+  "invoice_id": "invoice_0096",
+  "locale": "fr_FR",
+  "template": "layout_012.html",
+  "columns": [
+    {
+      "field": "description",
+      "label": "Description",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "unit_price",
+      "label": "PU HT",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "position",
+      "label": "#",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "article_number",
+      "label": "Code article",
+      "entity_label": "article_number",
+      "format": "text"
+    },
+    {
+      "field": "line_total",
+      "label": "Montant HT",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "quantity",
+      "label": "Unités",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "tax_rate",
+      "label": "Taxe",
+      "entity_label": "tax",
+      "format": "percent"
+    }
+  ],
+  "line_items": [
+    {
+      "description": "Microfiber Cloth Set (10-pack)",
+      "unit_price": "174,46",
+      "position": "1",
+      "article_number": "B48640",
+      "line_total": "1.919,06",
+      "quantity": "11",
+      "tax_rate": "10%"
+    },
+    {
+      "description": "Webcam HD",
+      "unit_price": "354,28",
+      "position": "2",
+      "article_number": "516073",
+      "line_total": "14.525,48",
+      "quantity": "41",
+      "tax_rate": "10%"
+    },
+    {
+      "description": "Surge Protector 6-Outlet",
+      "unit_price": "443,99",
+      "position": "3",
+      "article_number": "ART-20175",
+      "line_total": "20.867,53",
+      "quantity": "47",
+      "tax_rate": "10%"
+    }
+  ]
+}

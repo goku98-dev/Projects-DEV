@@ -1,0 +1,114 @@
+{
+  "invoice_id": "invoice_0055",
+  "locale": "en_GB",
+  "template": "layout_019.html",
+  "columns": [
+    {
+      "field": "tax_rate",
+      "label": "GST %",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "article_number",
+      "label": "Product No.",
+      "entity_label": "article_number",
+      "format": "text"
+    },
+    {
+      "field": "quantity",
+      "label": "Qty.",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "unit_price",
+      "label": "Price/Unit",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "line_total",
+      "label": "Line Total",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "position",
+      "label": "#",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "description",
+      "label": "Service / Product",
+      "entity_label": "item_description",
+      "format": "text"
+    }
+  ],
+  "line_items": [
+    {
+      "tax_rate": "5%",
+      "article_number": "5822.380",
+      "quantity": "33",
+      "unit_price": "369.17",
+      "line_total": "12,182.61",
+      "position": "1",
+      "description": "Mouse Pad XL"
+    },
+    {
+      "tax_rate": "5%",
+      "article_number": "8335.232",
+      "quantity": "37",
+      "unit_price": "45.79",
+      "line_total": "1,694.23",
+      "position": "2",
+      "description": "Label Maker Tape 12mm"
+    },
+    {
+      "tax_rate": "5%",
+      "article_number": "ART-52728",
+      "quantity": "14",
+      "unit_price": "106.81",
+      "line_total": "1,495.34",
+      "position": "3",
+      "description": "Wireless Keyboard"
+    },
+    {
+      "tax_rate": "20%",
+      "article_number": "M36192",
+      "quantity": "43",
+      "unit_price": "340.33",
+      "line_total": "14,634.19",
+      "position": "4",
+      "description": "Printer Maintenance Contract (quarterly)"
+    },
+    {
+      "tax_rate": "20%",
+      "article_number": "5674.443",
+      "quantity": "44",
+      "unit_price": "290.03",
+      "line_total": "12,761.32",
+      "position": "5",
+      "description": "Ergonomic Desk Chair"
+    },
+    {
+      "tax_rate": "0%",
+      "article_number": "556218",
+      "quantity": "28",
+      "unit_price": "35.79",
+      "line_total": "1,002.12",
+      "position": "6",
+      "description": "External SSD 1TB"
+    },
+    {
+      "tax_rate": "0%",
+      "article_number": "7309.833",
+      "quantity": "16",
+      "unit_price": "324.93",
+      "line_total": "5,198.88",
+      "position": "7",
+      "description": "Notebook A5 Ruled"
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: &#39;Palatino Linotype&#39;, &#39;Book Antiqua&#39;, Palatino, serif;
+            font-size: 11pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { background-color: #1b4f72; color: #ffffff; padding: 20px 25px; margin: -20mm -20mm 30px -20mm; display: flex; justify-content: space-between; align-items: center; }
+        .invoice-title { font-size: 22pt; font-weight: bold; }
+        .invoice-meta { text-align: right; }
+        .invoice-meta p { margin-bottom: 4px; }
+        
+
+        .addresses { display: flex; justify-content: space-between; margin-bottom: 30px; }
+        .address-block { width: 45%; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 6px; font-size: 10pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        thead th { background-color: #1b4f72; color: #ffffff; padding: 8px 10px; text-align: left; border: 1px solid #cccccc; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 6px 10px; border: 1px solid #cccccc; }
+        tbody td.num { text-align: right; }
+        
+        tbody tr:nth-child(even) { background-color: #eef2f7; }
+        
+        
+.table-wrapper { margin-top: 0; }
+.table-wrapper table { width: 90%; }
+
+        .totals { border-top: 1px solid #cccccc; padding-top: 10px; }
+        .totals table { width: 100%; margin-bottom: 0; }
+        .totals td { padding: 4px 10px; border: none !important; }
+        .totals td:first-child { text-align: right; width: 80%; }
+        .totals td:last-child { text-align: right; width: 20%; }
+        .totals .total-row { font-weight: bold; font-size: 13pt; }
+        .totals .total-row td { border-top: 2px solid #1b4f72 !important; }
+        
+
+        .footer { margin-top: 30px; font-size: 9pt; color: #999; text-align: center; }
+        .footer p { margin-bottom: 2px; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div>
+            <div class="invoice-title">INVOICE</div>
+            <p>Foster, Moore and Jones</p>
+        </div>
+        <div class="invoice-meta">
+            <p>Invoice #: INV-208177</p>
+            <p>Date: 09/03/2024</p>
+            <p>Due: 10/18/2024</p>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">From</div>
+            <p>Foster, Moore and Jones</p>
+            <p>403 Hill Extensions Apt. 430</p>
+            <p>22104 Laurenborough</p>
+            <p>United States</p>
+        </div>
+        <div class="address-block">
+            <div class="label">Bill To</div>
+            <p>Roberts-Dillon</p>
+            <p>95683 John Harbors Apt. 840</p>
+            <p>67134 Ashleyport</p>
+            <p>United States</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th>Description</th>
+                
+                <th class="num">Qty</th>
+                
+                <th class="num">Line Total</th>
+                
+                <th class="num">Unit Price</th>
+                
+                <th class="num">Tax Rate</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td>Coat Rack</td>
+                
+                <td class="num">26</td>
+                
+                <td class="num">7,159.88</td>
+                
+                <td class="num">275.38</td>
+                
+                <td class="num">8%</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>Laptop Stand</td>
+                
+                <td class="num">7</td>
+                
+                <td class="num">923.79</td>
+                
+                <td class="num">131.97</td>
+                
+                <td class="num">0%</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>Ergonomic Desk Chair</td>
+                
+                <td class="num">19</td>
+                
+                <td class="num">5,966.95</td>
+                
+                <td class="num">314.05</td>
+                
+                <td class="num">8%</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <table>
+            <tr>
+                <td>Subtotal:</td>
+                <td>14,050.62 USD</td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td>1,082.96 USD</td>
+            </tr>
+            <tr class="total-row">
+                <td>Total:</td>
+                <td>15,133.58 USD</td>
+            </tr>
+        </table>
+    </div>
+        
+
+    <div class="footer">
+        <p>Foster, Moore and Jones | 403 Hill Extensions Apt. 430, 22104 Laurenborough | United States</p>
+        <p>BNP Paribas | IBAN: US83 6107 9329 4196 7782 7942 5721</p>
+    </div>
+        
+</body>
+</html>

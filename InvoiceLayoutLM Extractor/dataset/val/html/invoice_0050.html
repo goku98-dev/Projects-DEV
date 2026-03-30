@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: &#39;Courier New&#39;, Courier, monospace;
+            font-size: 10pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { margin: -20mm -20mm 30px -20mm; }
+        .header-top { background-color: #6e2c00; color: #ffffff; padding: 15px 25px; }
+        .header-bottom { background-color: #f5f5f5; padding: 10px 25px; display: flex; justify-content: space-between; border-bottom: 1px solid #ddd; }
+        .invoice-title { font-size: 20pt; font-weight: bold; }
+        .invoice-meta span { margin-right: 20px; font-size: 9pt; }
+        
+
+        .addresses { display: flex; justify-content: space-between; margin-bottom: 30px; }
+        .address-block { width: 45%; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 6px; font-size: 9pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        thead th { padding: 8px 10px; text-align: left; border-bottom: 2px dotted #6e2c00; color: #6e2c00; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 7px 10px; border-bottom: 1px dotted #ccc; }
+        tbody td.num { text-align: right; }
+        
+.table-wrapper { margin-top: 80px; }
+.table-wrapper table { width: 100%; }
+
+        .totals { border-top: 1px solid #999999; padding-top: 10px; }
+        .totals table { width: 100%; margin-bottom: 0; }
+        .totals td { padding: 4px 10px; border: none !important; }
+        .totals td:first-child { text-align: right; width: 80%; }
+        .totals td:last-child { text-align: right; width: 20%; }
+        .totals .total-row { font-weight: bold; font-size: 12pt; }
+        .totals .total-row td { border-top: 2px solid #6e2c00 !important; }
+        
+
+        .footer { margin-top: 40px; padding-top: 15px; border-top: 1px solid #ddd; font-size: 8pt; color: #666; }
+        .footer p { margin-bottom: 3px; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="header-top">
+            <div class="invoice-title">Fröhlich KG</div>
+        </div>
+        <div class="header-bottom">
+            <span>Invoice INV-400613</span>
+            <span>Date: 14.04.2024</span>
+            <span>Due: 29.05.2024</span>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">Bill To</div>
+            <p>Aumann Hartung GmbH</p>
+            <p>Mahmoud-Wilmsen-Gasse 92/25</p>
+            <p>02247 Deggendorf</p>
+            <p>Germany</p>
+        </div>
+        <div class="address-block">
+            <div class="label">From</div>
+            <p>Fröhlich KG</p>
+            <p>Hüseyin-Zirme-Gasse 27-30</p>
+            <p>80957 Reutlingen</p>
+            <p>Germany</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th class="num">Gesamt</th>
+                
+                <th class="num">Anzahl</th>
+                
+                <th class="num">USt.</th>
+                
+                <th>Position</th>
+                
+                <th class="num">Einzelpreis</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td class="num">141,66</td>
+                
+                <td class="num">3</td>
+                
+                <td class="num">0%</td>
+                
+                <td>Bluetooth Speaker Portable</td>
+                
+                <td class="num">47,22</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">5.715,20</td>
+                
+                <td class="num">32</td>
+                
+                <td class="num">0%</td>
+                
+                <td>Standing Desk</td>
+                
+                <td class="num">178,60</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">6.884,40</td>
+                
+                <td class="num">24</td>
+                
+                <td class="num">19%</td>
+                
+                <td>Highlighter Set (5 colors)</td>
+                
+                <td class="num">286,85</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">3.628,53</td>
+                
+                <td class="num">9</td>
+                
+                <td class="num">7%</td>
+                
+                <td>Correction Tape 6-pack</td>
+                
+                <td class="num">403,17</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <table>
+            <tr>
+                <td>Subtotal:</td>
+                <td>16.369,79 €</td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td>1.562,04 €</td>
+            </tr>
+            <tr class="total-row">
+                <td>Total:</td>
+                <td>17.931,83 €</td>
+            </tr>
+        </table>
+    </div>
+        
+
+    <div class="footer">
+        <p><strong>Payment Terms:</strong> Net 14 days. 2% discount for payment within 7 days.</p>
+        <p><strong>Bank:</strong> BNP Paribas | IBAN: DE68 1601 4444 7561 2168 7224 | BIC: OFJVATPM81A</p>
+        <p>Thank you for your business.</p>
+    </div>
+        
+</body>
+</html>

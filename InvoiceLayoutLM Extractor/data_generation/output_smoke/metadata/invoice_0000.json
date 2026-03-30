@@ -1,0 +1,78 @@
+{
+  "invoice_id": "invoice_0000",
+  "locale": "fr_FR",
+  "template": "layout_003.html",
+  "columns": [
+    {
+      "field": "unit_price",
+      "label": "Tarif unitaire",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "line_total",
+      "label": "Montant",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "quantity",
+      "label": "Qté.",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "article_number",
+      "label": "N° article",
+      "entity_label": "article_number",
+      "format": "text"
+    },
+    {
+      "field": "tax_rate",
+      "label": "Taux TVA",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "description",
+      "label": "Prestation",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "position",
+      "label": "Réf.",
+      "entity_label": "position",
+      "format": "int"
+    }
+  ],
+  "line_items": [
+    {
+      "unit_price": "179,99",
+      "line_total": "5 579,69",
+      "quantity": "31",
+      "article_number": "B22429",
+      "tax_rate": "6%",
+      "description": "Compressed Air Duster (6-pack)",
+      "position": "1"
+    },
+    {
+      "unit_price": "491,42",
+      "line_total": "17 199,70",
+      "quantity": "35",
+      "article_number": "446236",
+      "tax_rate": "6%",
+      "description": "Laminating Pouches A4 (100-pack)",
+      "position": "2"
+    },
+    {
+      "unit_price": "51,70",
+      "line_total": "1 861,20",
+      "quantity": "36",
+      "article_number": "P68024",
+      "tax_rate": "20%",
+      "description": "Laptop Charger Universal 65W",
+      "position": "3"
+    }
+  ]
+}

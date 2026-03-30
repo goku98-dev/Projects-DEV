@@ -1,0 +1,85 @@
+{
+  "invoice_id": "invoice_0034",
+  "locale": "de_AT",
+  "template": "layout_006.html",
+  "columns": [
+    {
+      "field": "article_number",
+      "label": "Teilenr.",
+      "entity_label": "article_number",
+      "format": "text"
+    },
+    {
+      "field": "quantity",
+      "label": "Stück",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "unit_price",
+      "label": "E-Preis",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "line_total",
+      "label": "Nettobetrag",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "description",
+      "label": "Bezeichnung",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "position",
+      "label": "Pos",
+      "entity_label": "position",
+      "format": "int"
+    }
+  ],
+  "line_items": [
+    {
+      "article_number": "6666.346",
+      "quantity": "22",
+      "unit_price": "117,96",
+      "line_total": "2.595,12",
+      "description": "RAM Module 16GB DDR5",
+      "position": "1"
+    },
+    {
+      "article_number": "B48858",
+      "quantity": "20",
+      "unit_price": "426,83",
+      "line_total": "8.536,60",
+      "description": "Notebook A5 Ruled",
+      "position": "2"
+    },
+    {
+      "article_number": "A71229",
+      "quantity": "9",
+      "unit_price": "387,00",
+      "line_total": "3.483,00",
+      "description": "USB-C Hub",
+      "position": "3"
+    },
+    {
+      "article_number": "ART-34918",
+      "quantity": "27",
+      "unit_price": "247,16",
+      "line_total": "6.673,32",
+      "description": "Mechanical Keyboard RGB",
+      "position": "4"
+    },
+    {
+      "article_number": "612172",
+      "quantity": "19",
+      "unit_price": "316,21",
+      "line_total": "6.007,99",
+      "description": "Screen Cleaning Kit",
+      "position": "5"
+    }
+  ]
+}

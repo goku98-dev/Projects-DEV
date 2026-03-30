@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: &#39;Trebuchet MS&#39;, sans-serif;
+            font-size: 12pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { text-align: center; margin-bottom: 30px; }
+        .invoice-title { font-size: 30.0pt; font-weight: bold; color: #6c3483; margin-bottom: 10px; }
+        .invoice-meta { margin-top: 10px; }
+        .invoice-meta span { margin: 0 15px; }
+        
+
+        .addresses { display: flex; justify-content: space-between; margin-bottom: 30px; gap: 20px; }
+        .address-block { width: 45%; border: 1px solid #999999; padding: 12px 15px; }
+        .address-block .label { font-weight: bold; color: #6c3483; margin-bottom: 8px; font-size: 12pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        thead th { padding: 8px 10px; text-align: left; border-bottom: 2px dotted #6c3483; color: #6c3483; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 7px 10px; border-bottom: 1px dotted #ccc; }
+        tbody td.num { text-align: right; }
+        
+.table-wrapper { margin-top: 80px; }
+.table-wrapper table { width: 90%; }
+
+        .totals { width: 300px; margin-left: auto; border: 1px solid #999999; padding: 10px; }
+        .totals table { margin-bottom: 0; width: 100%; }
+        .totals td { padding: 4px 8px; border: none !important; }
+        .totals .total-row { font-weight: bold; font-size: 14pt; background-color: #6c3483; color: #ffffff; }
+        
+
+        .footer { margin-top: 40px; padding: 12px 15px; background-color: #f8f8f8; font-size: 11pt; color: #555; }
+        .footer .footer-title { font-weight: bold; margin-bottom: 5px; }
+        .footer p { margin-bottom: 3px; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="invoice-title">INVOICE</div>
+        <p>Roussel</p>
+        <div class="invoice-meta">
+            <span><strong>Invoice #:</strong> INV-440145</span>
+            <span><strong>Date:</strong> 08/01/2025</span>
+            <span><strong>Due Date:</strong> 22/02/2025</span>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">Sender</div>
+            <p>Roussel</p>
+            <p>avenue Torres</p>
+            <p>38602 Navarro-sur-Le Roux</p>
+            <p>France</p>
+        </div>
+        <div class="address-block">
+            <div class="label">Recipient</div>
+            <p>Royer</p>
+            <p>5, rue Arnaud</p>
+            <p>65413 Perrin</p>
+            <p>France</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th>Description</th>
+                
+                <th class="num">Taux</th>
+                
+                <th class="num">Montant HT</th>
+                
+                <th class="num">Qté</th>
+                
+                <th class="num">Tarif unitaire</th>
+                
+                <th class="num">No.</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td>Graphics Card RTX 4060</td>
+                
+                <td class="num">10%</td>
+                
+                <td class="num">6,014.88</td>
+                
+                <td class="num">18</td>
+                
+                <td class="num">334.16</td>
+                
+                <td class="num">1</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>Clipboard A4</td>
+                
+                <td class="num">6%</td>
+                
+                <td class="num">137.68</td>
+                
+                <td class="num">8</td>
+                
+                <td class="num">17.21</td>
+                
+                <td class="num">2</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>Envelope C4 (50-pack)</td>
+                
+                <td class="num">10%</td>
+                
+                <td class="num">2,996.70</td>
+                
+                <td class="num">7</td>
+                
+                <td class="num">428.10</td>
+                
+                <td class="num">3</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>Ballpoint Pens (12-pack)</td>
+                
+                <td class="num">6%</td>
+                
+                <td class="num">14,092.68</td>
+                
+                <td class="num">38</td>
+                
+                <td class="num">370.86</td>
+                
+                <td class="num">4</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>Laptop Charger Universal 65W</td>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">8,223.42</td>
+                
+                <td class="num">23</td>
+                
+                <td class="num">357.54</td>
+                
+                <td class="num">5</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>Compressed Air Duster (6-pack)</td>
+                
+                <td class="num">10%</td>
+                
+                <td class="num">4,902.46</td>
+                
+                <td class="num">34</td>
+                
+                <td class="num">144.19</td>
+                
+                <td class="num">6</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>Stapler Heavy-Duty</td>
+                
+                <td class="num">20%</td>
+                
+                <td class="num">6,960.23</td>
+                
+                <td class="num">47</td>
+                
+                <td class="num">148.09</td>
+                
+                <td class="num">7</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <table>
+            <tr>
+                <td>Subtotal:</td>
+                <td class="num">43,328.05 EUR</td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td class="num">3,566.13 EUR</td>
+            </tr>
+            <tr class="total-row">
+                <td>Total:</td>
+                <td class="num">46,894.18 EUR</td>
+            </tr>
+        </table>
+    </div>
+        
+
+    <div class="footer">
+        <div class="footer-title">Payment Information</div>
+        <p>Raiffeisen Schweiz</p>
+        <p>IBAN: FR81 7739 6448 6680 7302 2155 8065</p>
+        <p>BIC: CQPTCHA5SEU</p>
+        <p style="margin-top: 8px;">Payment due upon receipt.</p>
+    </div>
+        
+</body>
+</html>

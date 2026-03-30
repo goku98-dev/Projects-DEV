@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, Geneva, sans-serif;
+            font-size: 12pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { text-align: center; margin-bottom: 30px; }
+        .invoice-title { font-size: 30.0pt; font-weight: bold; color: #2e4053; margin-bottom: 10px; }
+        .invoice-meta { margin-top: 10px; }
+        .invoice-meta span { margin: 0 15px; }
+        
+
+        .addresses { display: flex; justify-content: space-between; margin-bottom: 30px; }
+        .address-block { width: 45%; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 6px; font-size: 11pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        .table-wrapper table { border: 2px solid #2e4053; }
+        thead th { padding: 10px; text-align: left; background-color: #2e4053; color: #ffffff; border-right: 1px solid rgba(255,255,255,0.2); }
+        thead th:last-child { border-right: none; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 8px 10px; border-right: 1px solid #eee; }
+        tbody td:last-child { border-right: none; }
+        tbody td.num { text-align: right; }
+        tbody tr:nth-child(even) { background-color: #f9f9f9; }
+        
+.table-wrapper { margin-top: 80px; }
+.table-wrapper table { width: 95%; }
+
+        .totals { width: 300px; margin-left: auto; border: 1px solid #999999; padding: 10px; }
+        .totals table { margin-bottom: 0; width: 100%; }
+        .totals td { padding: 4px 8px; border: none !important; }
+        .totals .total-row { font-weight: bold; font-size: 14pt; background-color: #2e4053; color: #ffffff; }
+        
+
+        .footer { margin-top: 30px; font-size: 10pt; color: #999; text-align: center; }
+        .footer p { margin-bottom: 2px; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="invoice-title">INVOICE</div>
+        <p>Hofer AG</p>
+        <div class="invoice-meta">
+            <span><strong>Invoice #:</strong> INV-920693</span>
+            <span><strong>Date:</strong> 28.10.2025</span>
+            <span><strong>Due Date:</strong> 27.11.2025</span>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">Bill To</div>
+            <p>Schlatter AG</p>
+            <p>Roosstrasse 72</p>
+            <p>3677 Köniz</p>
+            <p>Switzerland</p>
+        </div>
+        <div class="address-block">
+            <div class="label">From</div>
+            <p>Hofer AG</p>
+            <p>Gfellerstrasse 44</p>
+            <p>2910 Schlieren</p>
+            <p>Switzerland</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th class="num">EP</th>
+                
+                <th>Position</th>
+                
+                <th class="num">Nr.</th>
+                
+                <th>Art.-Nr.</th>
+                
+                <th class="num">MwSt.</th>
+                
+                <th class="num">Stk.</th>
+                
+                <th class="num">Gesamtpreis</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td class="num">154.60</td>
+                
+                <td>Ethernet Cable 5m</td>
+                
+                <td class="num">1</td>
+                
+                <td>ART-89301</td>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">14</td>
+                
+                <td class="num">2&#39;164.40</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">150.14</td>
+                
+                <td>RAM Module 16GB DDR5</td>
+                
+                <td class="num">2</td>
+                
+                <td>3736.363</td>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">44</td>
+                
+                <td class="num">6&#39;606.16</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">499.51</td>
+                
+                <td>UPS Battery Backup 1500VA</td>
+                
+                <td class="num">3</td>
+                
+                <td>C49702</td>
+                
+                <td class="num">2%</td>
+                
+                <td class="num">11</td>
+                
+                <td class="num">5&#39;494.61</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">477.53</td>
+                
+                <td>External SSD 1TB</td>
+                
+                <td class="num">4</td>
+                
+                <td>ART-94552</td>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">21</td>
+                
+                <td class="num">10&#39;028.13</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">414.00</td>
+                
+                <td>Screen Privacy Filter 24&#34;</td>
+                
+                <td class="num">5</td>
+                
+                <td>C33275</td>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">41</td>
+                
+                <td class="num">16&#39;974.00</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <table>
+            <tr>
+                <td>Subtotal:</td>
+                <td class="num">41&#39;267.30 CHF</td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td class="num">137.37 CHF</td>
+            </tr>
+            <tr class="total-row">
+                <td>Total:</td>
+                <td class="num">41&#39;404.67 CHF</td>
+            </tr>
+        </table>
+    </div>
+        
+
+    <div class="footer">
+        <p>Hofer AG | Gfellerstrasse 44, 2910 Schlieren | Switzerland</p>
+        <p>Lloyds Bank | IBAN: CH78 7175 3089 8601 7816 9655</p>
+    </div>
+        
+</body>
+</html>

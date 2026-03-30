@@ -1,0 +1,101 @@
+{
+  "invoice_id": "invoice_0016",
+  "locale": "fr_FR",
+  "template": "layout_022.html",
+  "columns": [
+    {
+      "field": "unit_price",
+      "label": "Prix/unité",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "article_number",
+      "label": "Code produit",
+      "entity_label": "article_number",
+      "format": "text"
+    },
+    {
+      "field": "description",
+      "label": "Produit",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "line_total",
+      "label": "Montant",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "position",
+      "label": "#",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "quantity",
+      "label": "Unités",
+      "entity_label": "quantity",
+      "format": "int"
+    }
+  ],
+  "line_items": [
+    {
+      "unit_price": "455,55",
+      "article_number": "ART-60622",
+      "description": "Mouse Pad XL",
+      "line_total": "1.822,20",
+      "position": "1",
+      "quantity": "4"
+    },
+    {
+      "unit_price": "135,90",
+      "article_number": "989544",
+      "description": "Professional Monitor Calibration",
+      "line_total": "5.300,10",
+      "position": "2",
+      "quantity": "39"
+    },
+    {
+      "unit_price": "2,11",
+      "article_number": "6849.490",
+      "description": "Desk Calendar 2026",
+      "line_total": "4,22",
+      "position": "3",
+      "quantity": "2"
+    },
+    {
+      "unit_price": "355,99",
+      "article_number": "321285",
+      "description": "Annual Software License Renewal",
+      "line_total": "9.255,74",
+      "position": "4",
+      "quantity": "26"
+    },
+    {
+      "unit_price": "306,44",
+      "article_number": "C16122",
+      "description": "NVMe SSD 2TB",
+      "line_total": "11.338,28",
+      "position": "5",
+      "quantity": "37"
+    },
+    {
+      "unit_price": "456,03",
+      "article_number": "ART-45723",
+      "description": "Disinfecting Wipes (75-pack)",
+      "line_total": "9.576,63",
+      "position": "6",
+      "quantity": "21"
+    },
+    {
+      "unit_price": "306,43",
+      "article_number": "ART-82827",
+      "description": "Docking Station USB-C",
+      "line_total": "3.983,59",
+      "position": "7",
+      "quantity": "13"
+    }
+  ]
+}

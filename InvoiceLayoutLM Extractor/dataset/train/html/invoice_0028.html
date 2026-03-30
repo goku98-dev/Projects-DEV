@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, Geneva, sans-serif;
+            font-size: 12pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { background-color: #2874a6; color: #ffffff; padding: 20px 25px; margin: -20mm -20mm 30px -20mm; display: flex; justify-content: space-between; align-items: center; }
+        .invoice-title { font-size: 24pt; font-weight: bold; }
+        .invoice-meta { text-align: right; }
+        .invoice-meta p { margin-bottom: 4px; }
+        
+
+        .addresses { display: flex; justify-content: flex-end; margin-bottom: 30px; }
+        .address-block { width: 45%; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 6px; font-size: 11pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        thead th { padding: 6px 10px; text-align: left; font-weight: normal; text-transform: uppercase; font-size: 10pt; color: #999; letter-spacing: 0.5px; border-bottom: 1px solid #ccc; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 8px 10px; }
+        tbody td.num { text-align: right; }
+        tbody tr:last-child td { border-bottom: 1px solid #ccc; }
+        
+.table-wrapper { margin-top: 40px; }
+.table-wrapper table { width: 90%; }
+
+        .totals { text-align: right; margin-bottom: 20px; }
+        .totals .line { margin-bottom: 4px; }
+        .totals .total-line { font-weight: bold; font-size: 15pt; color: #2874a6; border-top: 2px solid #2874a6; padding-top: 6px; display: inline-block; }
+        
+
+        .footer { margin-top: 40px; padding: 12px 15px; background-color: #f8f8f8; font-size: 11pt; color: #555; }
+        .footer .footer-title { font-weight: bold; margin-bottom: 5px; }
+        .footer p { margin-bottom: 3px; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div>
+            <div class="invoice-title">INVOICE</div>
+            <p>Rossi</p>
+        </div>
+        <div class="invoice-meta">
+            <p>Invoice #: INV-194835</p>
+            <p>Date: 09/03/2025</p>
+            <p>Due: 23/03/2025</p>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">Invoice To</div>
+            <p>Poirier Durand SA</p>
+            <p>4, rue Benoit</p>
+            <p>57685 Dumas</p>
+            <p>France</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th class="num">Montant HT</th>
+                
+                <th>Description</th>
+                
+                <th class="num">Qté</th>
+                
+                <th>Réf.</th>
+                
+                <th class="num">No.</th>
+                
+                <th class="num">PU HT</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td class="num">19 932,88</td>
+                
+                <td>Conference Table</td>
+                
+                <td class="num">44</td>
+                
+                <td>1258.215</td>
+                
+                <td class="num">1</td>
+                
+                <td class="num">453,02</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">22,64</td>
+                
+                <td>Bluetooth Speaker Portable</td>
+                
+                <td class="num">1</td>
+                
+                <td>8388.685</td>
+                
+                <td class="num">2</td>
+                
+                <td class="num">22,64</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">186,84</td>
+                
+                <td>Binder Clips Assorted (48-pack)</td>
+                
+                <td class="num">36</td>
+                
+                <td>C53075</td>
+                
+                <td class="num">3</td>
+                
+                <td class="num">5,19</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">2 643,60</td>
+                
+                <td>Compressed Air Duster (6-pack)</td>
+                
+                <td class="num">20</td>
+                
+                <td>ART-63512</td>
+                
+                <td class="num">4</td>
+                
+                <td class="num">132,18</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">14 124,60</td>
+                
+                <td>Bookshelf 5-Tier</td>
+                
+                <td class="num">36</td>
+                
+                <td>B10617</td>
+                
+                <td class="num">5</td>
+                
+                <td class="num">392,35</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">1 378,16</td>
+                
+                <td>Room Divider Panel</td>
+                
+                <td class="num">7</td>
+                
+                <td>ART-84482</td>
+                
+                <td class="num">6</td>
+                
+                <td class="num">196,88</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <div class="line">Subtotal: € 38 288,72</div>
+        <div class="line">Tax: € 3 941,16</div>
+        <div class="total-line">Total: € 42 229,88</div>
+    </div>
+        
+
+    <div class="footer">
+        <div class="footer-title">Payment Information</div>
+        <p>ING-DiBa</p>
+        <p>IBAN: FR25 1731 5884 9145 1088 9789</p>
+        <p>BIC: LDPLFRCXQRR</p>
+        <p style="margin-top: 8px;">Please transfer the total amount by the due date.</p>
+    </div>
+        
+</body>
+</html>

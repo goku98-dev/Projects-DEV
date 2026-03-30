@@ -1,0 +1,78 @@
+{
+  "invoice_id": "invoice_0104",
+  "locale": "de_AT",
+  "template": "layout_024.html",
+  "columns": [
+    {
+      "field": "article_number",
+      "label": "Artikel-Nr.",
+      "entity_label": "article_number",
+      "format": "text"
+    },
+    {
+      "field": "position",
+      "label": "#",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "tax_rate",
+      "label": "MwSt.",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "quantity",
+      "label": "Anzahl",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "line_total",
+      "label": "Gesamtbetrag",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "unit_price",
+      "label": "Stückpreis",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "description",
+      "label": "Leistung",
+      "entity_label": "item_description",
+      "format": "text"
+    }
+  ],
+  "line_items": [
+    {
+      "article_number": "5181.839",
+      "position": "1",
+      "tax_rate": "10%",
+      "quantity": "8",
+      "line_total": "1,524.24",
+      "unit_price": "190.53",
+      "description": "Data Backup Service (monthly subscription)"
+    },
+    {
+      "article_number": "ART-42813",
+      "position": "2",
+      "tax_rate": "10%",
+      "quantity": "49",
+      "line_total": "24,328.01",
+      "unit_price": "496.49",
+      "description": "USB-C Hub"
+    },
+    {
+      "article_number": "ART-30925",
+      "position": "3",
+      "tax_rate": "0%",
+      "quantity": "22",
+      "line_total": "6,799.10",
+      "unit_price": "309.05",
+      "description": "UPS Battery Backup 1500VA"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "invoice_id": "invoice_0054",
+  "locale": "fr_FR",
+  "template": "layout_018.html",
+  "columns": [
+    {
+      "field": "article_number",
+      "label": "Code produit",
+      "entity_label": "article_number",
+      "format": "text"
+    },
+    {
+      "field": "quantity",
+      "label": "Qté.",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "line_total",
+      "label": "Sous-total",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "position",
+      "label": "Ligne",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "unit_price",
+      "label": "PU HT",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "description",
+      "label": "Produit",
+      "entity_label": "item_description",
+      "format": "text"
+    }
+  ],
+  "line_items": [
+    {
+      "article_number": "ART-84115",
+      "quantity": "23",
+      "line_total": "8,441.00",
+      "position": "1",
+      "unit_price": "367.00",
+      "description": "Monitor Arm Mount"
+    },
+    {
+      "article_number": "8125.823",
+      "quantity": "14",
+      "line_total": "2,461.76",
+      "position": "2",
+      "unit_price": "175.84",
+      "description": "Clipboard A4"
+    },
+    {
+      "article_number": "ART-79595",
+      "quantity": "2",
+      "line_total": "521.88",
+      "position": "3",
+      "unit_price": "260.94",
+      "description": "Binder Clips Assorted (48-pack)"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "invoice_id": "invoice_0020",
+  "locale": "de_DE",
+  "template": "layout_008.html",
+  "columns": [
+    {
+      "field": "quantity",
+      "label": "Anz.",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "description",
+      "label": "Leistung",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "position",
+      "label": "Pos.",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "line_total",
+      "label": "Betrag",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "unit_price",
+      "label": "Einzelpreis",
+      "entity_label": "unit_price",
+      "format": "currency"
+    }
+  ],
+  "line_items": [
+    {
+      "quantity": "17",
+      "description": "Coat Rack",
+      "position": "1",
+      "line_total": "7,955.15",
+      "unit_price": "467.95"
+    },
+    {
+      "quantity": "17",
+      "description": "USB-C Hub",
+      "position": "2",
+      "line_total": "1,235.90",
+      "unit_price": "72.70"
+    },
+    {
+      "quantity": "21",
+      "description": "Scissors 8\" Stainless",
+      "position": "3",
+      "line_total": "8,183.49",
+      "unit_price": "389.69"
+    },
+    {
+      "quantity": "12",
+      "description": "Ergonomic Mouse",
+      "position": "4",
+      "line_total": "4,418.28",
+      "unit_price": "368.19"
+    },
+    {
+      "quantity": "43",
+      "description": "Network Switch 8-Port",
+      "position": "5",
+      "line_total": "15,692.85",
+      "unit_price": "364.95"
+    },
+    {
+      "quantity": "24",
+      "description": "Conference Table",
+      "position": "6",
+      "line_total": "7,059.36",
+      "unit_price": "294.14"
+    },
+    {
+      "quantity": "26",
+      "description": "Label Maker Tape 12mm",
+      "position": "7",
+      "line_total": "8,553.22",
+      "unit_price": "328.97"
+    },
+    {
+      "quantity": "26",
+      "description": "Webcam HD",
+      "position": "8",
+      "line_total": "590.72",
+      "unit_price": "22.72"
+    }
+  ]
+}

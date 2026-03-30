@@ -1,0 +1,85 @@
+{
+  "invoice_id": "invoice_0033",
+  "locale": "de_AT",
+  "template": "layout_020.html",
+  "columns": [
+    {
+      "field": "description",
+      "label": "Artikel",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "unit_price",
+      "label": "Preis/Einheit",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "quantity",
+      "label": "Anzahl",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "line_total",
+      "label": "Gesamtpreis",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "position",
+      "label": "Pos.",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "article_number",
+      "label": "Teilenr.",
+      "entity_label": "article_number",
+      "format": "text"
+    }
+  ],
+  "line_items": [
+    {
+      "description": "Monitor 27\"",
+      "unit_price": "293,03",
+      "quantity": "50",
+      "line_total": "14.651,50",
+      "position": "1",
+      "article_number": "ART-59289"
+    },
+    {
+      "description": "Webcam HD",
+      "unit_price": "288,59",
+      "quantity": "19",
+      "line_total": "5.483,21",
+      "position": "2",
+      "article_number": "ART-82152"
+    },
+    {
+      "description": "Cable Management Kit",
+      "unit_price": "302,03",
+      "quantity": "28",
+      "line_total": "8.456,84",
+      "position": "3",
+      "article_number": "104779"
+    },
+    {
+      "description": "Filing Cabinet 3-Drawer",
+      "unit_price": "389,67",
+      "quantity": "21",
+      "line_total": "8.183,07",
+      "position": "4",
+      "article_number": "769316"
+    },
+    {
+      "description": "Hand Sanitizer 500ml",
+      "unit_price": "100,06",
+      "quantity": "37",
+      "line_total": "3.702,22",
+      "position": "5",
+      "article_number": "892711"
+    }
+  ]
+}

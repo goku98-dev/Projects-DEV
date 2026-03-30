@@ -1,0 +1,77 @@
+{
+  "invoice_id": "invoice_0042",
+  "locale": "de_DE",
+  "template": "layout_016.html",
+  "columns": [
+    {
+      "field": "unit_price",
+      "label": "E-Preis",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "tax_rate",
+      "label": "MwSt.-Satz",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "line_total",
+      "label": "Nettobetrag",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "description",
+      "label": "Leistung",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "quantity",
+      "label": "Anzahl",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "article_number",
+      "label": "Artikelnummer",
+      "entity_label": "article_number",
+      "format": "text"
+    }
+  ],
+  "line_items": [
+    {
+      "unit_price": "284.85",
+      "tax_rate": "0%",
+      "line_total": "13,672.80",
+      "description": "Annual Software License Renewal",
+      "quantity": "48",
+      "article_number": "6069.489"
+    },
+    {
+      "unit_price": "22.44",
+      "tax_rate": "0%",
+      "line_total": "875.16",
+      "description": "Noise-Cancelling Headphones",
+      "quantity": "39",
+      "article_number": "B46803"
+    },
+    {
+      "unit_price": "100.63",
+      "tax_rate": "7%",
+      "line_total": "1,308.19",
+      "description": "Ethernet Cable 5m",
+      "quantity": "13",
+      "article_number": "B76971"
+    },
+    {
+      "unit_price": "354.19",
+      "tax_rate": "19%",
+      "line_total": "10,979.89",
+      "description": "Toner Cartridge Black",
+      "quantity": "31",
+      "article_number": "5204.771"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "invoice_id": "invoice_0022",
+  "locale": "de_CH",
+  "template": "layout_008.html",
+  "columns": [
+    {
+      "field": "quantity",
+      "label": "Einheiten",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "position",
+      "label": "#",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "description",
+      "label": "Position",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "tax_rate",
+      "label": "MwSt. %",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "line_total",
+      "label": "Gesamt",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "unit_price",
+      "label": "Preis/Einheit",
+      "entity_label": "unit_price",
+      "format": "currency"
+    }
+  ],
+  "line_items": [
+    {
+      "quantity": "25",
+      "position": "1",
+      "description": "Printer Maintenance Contract (quarterly)",
+      "tax_rate": "2%",
+      "line_total": "420.75",
+      "unit_price": "16.83"
+    },
+    {
+      "quantity": "22",
+      "position": "2",
+      "description": "Room Divider Panel",
+      "tax_rate": "2%",
+      "line_total": "8'281.24",
+      "unit_price": "376.42"
+    },
+    {
+      "quantity": "26",
+      "position": "3",
+      "description": "Scissors 8\" Stainless",
+      "tax_rate": "2%",
+      "line_total": "4'347.46",
+      "unit_price": "167.21"
+    },
+    {
+      "quantity": "6",
+      "position": "4",
+      "description": "Docking Station USB-C",
+      "tax_rate": "2%",
+      "line_total": "1'356.18",
+      "unit_price": "226.03"
+    }
+  ]
+}

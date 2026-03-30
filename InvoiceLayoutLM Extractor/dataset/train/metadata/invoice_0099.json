@@ -1,0 +1,78 @@
+{
+  "invoice_id": "invoice_0099",
+  "locale": "en_GB",
+  "template": "layout_029.html",
+  "columns": [
+    {
+      "field": "description",
+      "label": "Designation",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "position",
+      "label": "Item",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "unit_price",
+      "label": "Price",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "quantity",
+      "label": "Qty.",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "line_total",
+      "label": "Total",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "article_number",
+      "label": "Product No.",
+      "entity_label": "article_number",
+      "format": "text"
+    },
+    {
+      "field": "tax_rate",
+      "label": "VAT",
+      "entity_label": "tax",
+      "format": "percent"
+    }
+  ],
+  "line_items": [
+    {
+      "description": "External HDD 4TB",
+      "position": "1",
+      "unit_price": "418.95",
+      "quantity": "37",
+      "line_total": "15,501.15",
+      "article_number": "ART-76053",
+      "tax_rate": "0%"
+    },
+    {
+      "description": "Ergonomic Mouse",
+      "position": "2",
+      "unit_price": "449.33",
+      "quantity": "24",
+      "line_total": "10,783.92",
+      "article_number": "A43570",
+      "tax_rate": "0%"
+    },
+    {
+      "description": "Cloud Storage Plan 1TB (yearly)",
+      "position": "3",
+      "unit_price": "215.64",
+      "quantity": "2",
+      "line_total": "431.28",
+      "article_number": "101531",
+      "tax_rate": "0%"
+    }
+  ]
+}

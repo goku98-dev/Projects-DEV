@@ -1,0 +1,85 @@
+{
+  "invoice_id": "invoice_0029",
+  "locale": "de_CH",
+  "template": "layout_020.html",
+  "columns": [
+    {
+      "field": "position",
+      "label": "Pos",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "tax_rate",
+      "label": "Steuersatz",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "description",
+      "label": "Bezeichnung",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "quantity",
+      "label": "Anz.",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "line_total",
+      "label": "Betrag",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "unit_price",
+      "label": "E-Preis",
+      "entity_label": "unit_price",
+      "format": "currency"
+    }
+  ],
+  "line_items": [
+    {
+      "position": "1",
+      "tax_rate": "2%",
+      "description": "Office Equipment Installation Service",
+      "quantity": "41",
+      "line_total": "233.29",
+      "unit_price": "5.69"
+    },
+    {
+      "position": "2",
+      "tax_rate": "2%",
+      "description": "Scissors 8\" Stainless",
+      "quantity": "47",
+      "line_total": "19'660.10",
+      "unit_price": "418.30"
+    },
+    {
+      "position": "3",
+      "tax_rate": "2%",
+      "description": "Ethernet Cable 5m",
+      "quantity": "37",
+      "line_total": "3'169.05",
+      "unit_price": "85.65"
+    },
+    {
+      "position": "4",
+      "tax_rate": "8%",
+      "description": "DisplayPort Cable 3m",
+      "quantity": "25",
+      "line_total": "314.50",
+      "unit_price": "12.58"
+    },
+    {
+      "position": "5",
+      "tax_rate": "0%",
+      "description": "Room Divider Panel",
+      "quantity": "44",
+      "line_total": "9'256.72",
+      "unit_price": "210.38"
+    }
+  ]
+}

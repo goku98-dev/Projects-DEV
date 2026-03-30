@@ -1,0 +1,77 @@
+{
+  "invoice_id": "invoice_0060",
+  "locale": "fr_FR",
+  "template": "layout_012.html",
+  "columns": [
+    {
+      "field": "article_number",
+      "label": "Code article",
+      "entity_label": "article_number",
+      "format": "text"
+    },
+    {
+      "field": "line_total",
+      "label": "Total HT",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "description",
+      "label": "Article",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "unit_price",
+      "label": "Prix/unité",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "quantity",
+      "label": "Nb",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "position",
+      "label": "Réf.",
+      "entity_label": "position",
+      "format": "int"
+    }
+  ],
+  "line_items": [
+    {
+      "article_number": "A13468",
+      "line_total": "4,327.19",
+      "description": "Ergonomic Mouse",
+      "unit_price": "88.31",
+      "quantity": "49",
+      "position": "1"
+    },
+    {
+      "article_number": "4158.829",
+      "line_total": "4,680.64",
+      "description": "Hand Sanitizer 500ml",
+      "unit_price": "146.27",
+      "quantity": "32",
+      "position": "2"
+    },
+    {
+      "article_number": "ART-44549",
+      "line_total": "6,525.12",
+      "description": "Laptop Charger Universal 65W",
+      "unit_price": "466.08",
+      "quantity": "14",
+      "position": "3"
+    },
+    {
+      "article_number": "ART-70056",
+      "line_total": "21,719.82",
+      "description": "External HDD 4TB",
+      "unit_price": "472.17",
+      "quantity": "46",
+      "position": "4"
+    }
+  ]
+}

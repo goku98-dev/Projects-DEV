@@ -1,0 +1,105 @@
+{
+  "invoice_id": "invoice_0083",
+  "locale": "de_CH",
+  "template": "layout_020.html",
+  "columns": [
+    {
+      "field": "line_total",
+      "label": "Summe",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "position",
+      "label": "Pos",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "unit_price",
+      "label": "Stückpreis",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "article_number",
+      "label": "Artikel-Nr.",
+      "entity_label": "article_number",
+      "format": "text"
+    },
+    {
+      "field": "quantity",
+      "label": "Anz.",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "tax_rate",
+      "label": "MwSt.-Satz",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "description",
+      "label": "Bezeichnung",
+      "entity_label": "item_description",
+      "format": "text"
+    }
+  ],
+  "line_items": [
+    {
+      "line_total": "514.44",
+      "position": "1",
+      "unit_price": "85.74",
+      "article_number": "297698",
+      "quantity": "6",
+      "tax_rate": "2%",
+      "description": "Envelope C4 (50-pack)"
+    },
+    {
+      "line_total": "8'688.72",
+      "position": "2",
+      "unit_price": "362.03",
+      "article_number": "7358.583",
+      "quantity": "24",
+      "tax_rate": "0%",
+      "description": "Bookshelf 5-Tier"
+    },
+    {
+      "line_total": "2'038.10",
+      "position": "3",
+      "unit_price": "203.81",
+      "article_number": "ART-83536",
+      "quantity": "10",
+      "tax_rate": "8%",
+      "description": "Monitor Arm Mount"
+    },
+    {
+      "line_total": "256.80",
+      "position": "4",
+      "unit_price": "32.10",
+      "article_number": "7936.974",
+      "quantity": "8",
+      "tax_rate": "2%",
+      "description": "Wireless Keyboard"
+    },
+    {
+      "line_total": "5'245.50",
+      "position": "5",
+      "unit_price": "201.75",
+      "article_number": "A83824",
+      "quantity": "26",
+      "tax_rate": "2%",
+      "description": "Ballpoint Pens (12-pack)"
+    },
+    {
+      "line_total": "6'709.64",
+      "position": "6",
+      "unit_price": "479.26",
+      "article_number": "677210",
+      "quantity": "14",
+      "tax_rate": "2%",
+      "description": "Desk Organizer"
+    }
+  ]
+}

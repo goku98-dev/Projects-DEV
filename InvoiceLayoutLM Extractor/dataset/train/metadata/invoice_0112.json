@@ -1,0 +1,95 @@
+{
+  "invoice_id": "invoice_0112",
+  "locale": "en_US",
+  "template": "layout_017.html",
+  "columns": [
+    {
+      "field": "line_total",
+      "label": "Ext. Price",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "unit_price",
+      "label": "Each",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "description",
+      "label": "Designation",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "quantity",
+      "label": "Count",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "tax_rate",
+      "label": "GST %",
+      "entity_label": "tax",
+      "format": "percent"
+    }
+  ],
+  "line_items": [
+    {
+      "line_total": "2,026.80",
+      "unit_price": "50.67",
+      "description": "Conference Table",
+      "quantity": "40",
+      "tax_rate": "0%"
+    },
+    {
+      "line_total": "4,765.70",
+      "unit_price": "476.57",
+      "description": "Laptop Stand",
+      "quantity": "10",
+      "tax_rate": "8%"
+    },
+    {
+      "line_total": "14,507.61",
+      "unit_price": "371.99",
+      "description": "Monitor 27\"",
+      "quantity": "39",
+      "tax_rate": "6%"
+    },
+    {
+      "line_total": "12,488.32",
+      "unit_price": "390.26",
+      "description": "Managed Firewall Service (annual)",
+      "quantity": "32",
+      "tax_rate": "0%"
+    },
+    {
+      "line_total": "3,398.64",
+      "unit_price": "69.36",
+      "description": "Screen Privacy Filter 24\"",
+      "quantity": "49",
+      "tax_rate": "8%"
+    },
+    {
+      "line_total": "4,726.48",
+      "unit_price": "429.68",
+      "description": "Correction Tape 6-pack",
+      "quantity": "11",
+      "tax_rate": "6%"
+    },
+    {
+      "line_total": "4,385.70",
+      "unit_price": "487.30",
+      "description": "Laminating Pouches A4 (100-pack)",
+      "quantity": "9",
+      "tax_rate": "8%"
+    },
+    {
+      "line_total": "4,178.40",
+      "unit_price": "278.56",
+      "description": "Filing Cabinet 3-Drawer",
+      "quantity": "15",
+      "tax_rate": "10%"
+    }
+  ]
+}

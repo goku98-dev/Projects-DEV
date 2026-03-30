@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, &#39;Times New Roman&#39;, serif;
+            font-size: 10pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { background-color: #2e4053; color: #ffffff; padding: 20px 25px; margin: -20mm -20mm 30px -20mm; display: flex; justify-content: space-between; align-items: center; }
+        .invoice-title { font-size: 20pt; font-weight: bold; }
+        .invoice-meta { text-align: right; }
+        .invoice-meta p { margin-bottom: 4px; }
+        
+
+        .addresses { display: flex; justify-content: space-between; margin-bottom: 30px; }
+        .address-block { width: 45%; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 6px; font-size: 9pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        .table-wrapper table { border: 2px solid #2e4053; }
+        thead th { padding: 10px; text-align: left; background-color: #2e4053; color: #ffffff; border-right: 1px solid rgba(255,255,255,0.2); }
+        thead th:last-child { border-right: none; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 8px 10px; border-right: 1px solid #eee; }
+        tbody td:last-child { border-right: none; }
+        tbody td.num { text-align: right; }
+        tbody tr:nth-child(even) { background-color: #eef2f7; }
+        
+.table-wrapper { margin-top: 0; }
+.table-wrapper table { width: 90%; }
+
+        .totals { width: 280px; margin-left: auto; }
+        .totals table { margin-bottom: 0; }
+        .totals td { padding: 4px 10px; border: none !important; }
+        .totals .total-row { font-weight: bold; font-size: 12pt; }
+        .totals .total-row td { border-top: 2px solid #2e4053 !important; }
+        
+
+        .footer { margin-top: 30px; padding-top: 10px; border-top: 1px solid #eee; font-size: 9pt; color: #666; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div>
+            <div class="invoice-title">INVOICE</div>
+            <p>Zehnder Stucki &amp; Cie.</p>
+        </div>
+        <div class="invoice-meta">
+            <p>Invoice #: INV-877820</p>
+            <p>Date: 13.06.2025</p>
+            <p>Due: 28.07.2025</p>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">From</div>
+            <p>Zehnder Stucki &amp; Cie.</p>
+            <p>Wirzstrasse 3</p>
+            <p>8368 Oberwil</p>
+            <p>Switzerland</p>
+        </div>
+        <div class="address-block">
+            <div class="label">Bill To</div>
+            <p>Scherrer GmbH</p>
+            <p>Langstrasse 36</p>
+            <p>8220 Dübendorf</p>
+            <p>Switzerland</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th class="num">Menge</th>
+                
+                <th class="num">Pos</th>
+                
+                <th>Art.-Nr.</th>
+                
+                <th class="num">Stückpreis</th>
+                
+                <th class="num">MwSt.-Satz</th>
+                
+                <th>Position</th>
+                
+                <th class="num">Gesamtbetrag</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td class="num">31</td>
+                
+                <td class="num">1</td>
+                
+                <td>2670.687</td>
+                
+                <td class="num">434.42</td>
+                
+                <td class="num">2%</td>
+                
+                <td>IT Support Service (1 hour)</td>
+                
+                <td class="num">13&#39;467.02</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">27</td>
+                
+                <td class="num">2</td>
+                
+                <td>2178.242</td>
+                
+                <td class="num">140.82</td>
+                
+                <td class="num">2%</td>
+                
+                <td>Conference Table</td>
+                
+                <td class="num">3&#39;802.14</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">9</td>
+                
+                <td class="num">3</td>
+                
+                <td>4530.269</td>
+                
+                <td class="num">2.38</td>
+                
+                <td class="num">0%</td>
+                
+                <td>Clipboard A4</td>
+                
+                <td class="num">21.42</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">35</td>
+                
+                <td class="num">4</td>
+                
+                <td>ART-36840</td>
+                
+                <td class="num">438.25</td>
+                
+                <td class="num">8%</td>
+                
+                <td>UPS Battery Backup 1500VA</td>
+                
+                <td class="num">15&#39;338.75</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">24</td>
+                
+                <td class="num">5</td>
+                
+                <td>ART-44578</td>
+                
+                <td class="num">208.33</td>
+                
+                <td class="num">0%</td>
+                
+                <td>Desk Organizer</td>
+                
+                <td class="num">4&#39;999.92</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">39</td>
+                
+                <td class="num">6</td>
+                
+                <td>C73012</td>
+                
+                <td class="num">339.45</td>
+                
+                <td class="num">2%</td>
+                
+                <td>Document Scanner</td>
+                
+                <td class="num">13&#39;238.55</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">12</td>
+                
+                <td class="num">7</td>
+                
+                <td>985921</td>
+                
+                <td class="num">241.39</td>
+                
+                <td class="num">8%</td>
+                
+                <td>Wireless Keyboard</td>
+                
+                <td class="num">2&#39;896.68</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">2</td>
+                
+                <td class="num">8</td>
+                
+                <td>7166.692</td>
+                
+                <td class="num">275.21</td>
+                
+                <td class="num">2%</td>
+                
+                <td>Toner Cartridge Black</td>
+                
+                <td class="num">550.42</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <table>
+            <tr>
+                <td>Subtotal:</td>
+                <td class="num">CHF 54&#39;314.90</td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td class="num">CHF 2&#39;253.52</td>
+            </tr>
+            <tr class="total-row">
+                <td>Total:</td>
+                <td class="num">CHF 56&#39;568.42</td>
+            </tr>
+        </table>
+    </div>
+        
+
+    <div class="footer">
+        <p>Please transfer the total amount by the due date.</p>
+    </div>
+        
+</body>
+</html>

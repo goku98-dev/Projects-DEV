@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, &#39;Times New Roman&#39;, serif;
+            font-size: 10pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 30px; }
+        .invoice-title { font-size: 20pt; font-weight: bold; color: #0e6655; margin-bottom: 8px; }
+        .invoice-meta { text-align: right; }
+        .invoice-meta p { margin-bottom: 4px; }
+        
+
+        .addresses { display: flex; justify-content: space-between; margin-bottom: 30px; }
+        .address-block { width: 45%; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 6px; font-size: 9pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        thead th { padding: 8px 10px; text-align: left; border-bottom: 2px solid #0e6655; color: #0e6655; font-weight: bold; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 8px 10px; border-bottom: 1px solid #e0e0e0; }
+        tbody td.num { text-align: right; }
+        
+.table-wrapper { margin-top: 0; }
+.table-wrapper table { width: 100%; }
+
+        .totals { width: 280px; margin-left: auto; }
+        .totals table { margin-bottom: 0; }
+        .totals td { padding: 4px 10px; border: none !important; }
+        .totals .total-row { font-weight: bold; font-size: 12pt; }
+        .totals .total-row td { border-top: 2px solid #0e6655 !important; }
+        
+
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div>
+            <div class="invoice-title">INVOICE</div>
+            <p>Perkins, Miller and Moore</p>
+        </div>
+        <div class="invoice-meta">
+            <p><strong>Invoice #:</strong> INV-866990</p>
+            <p><strong>Date:</strong> 19/10/2024</p>
+            <p><strong>Due Date:</strong> 03/12/2024</p>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">From</div>
+            <p>Perkins, Miller and Moore</p>
+            <p>7 Leah Walk</p>
+            <p>L48 6XU Whitetown</p>
+            <p>United Kingdom</p>
+        </div>
+        <div class="address-block">
+            <div class="label">Bill To</div>
+            <p>Pearce-Ward</p>
+            <p>054 Marilyn Road</p>
+            <p>L2 2DS North Dawnland</p>
+            <p>United Kingdom</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th class="num">Pcs</th>
+                
+                <th class="num">Amount</th>
+                
+                <th class="num">Tax</th>
+                
+                <th class="num">Each</th>
+                
+                <th>Service / Product</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td class="num">14</td>
+                
+                <td class="num">2,047.64</td>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">146.26</td>
+                
+                <td>Compressed Air Duster (6-pack)</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">28</td>
+                
+                <td class="num">11,611.32</td>
+                
+                <td class="num">20%</td>
+                
+                <td class="num">414.69</td>
+                
+                <td>Webcam Light Ring</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">32</td>
+                
+                <td class="num">15,679.36</td>
+                
+                <td class="num">20%</td>
+                
+                <td class="num">489.98</td>
+                
+                <td>Microfiber Cloth Set (10-pack)</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">23</td>
+                
+                <td class="num">4,004.30</td>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">174.10</td>
+                
+                <td>DisplayPort Cable 3m</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">35</td>
+                
+                <td class="num">401.80</td>
+                
+                <td class="num">5%</td>
+                
+                <td class="num">11.48</td>
+                
+                <td>Thunderbolt Cable 1m</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">4</td>
+                
+                <td class="num">1,191.12</td>
+                
+                <td class="num">20%</td>
+                
+                <td class="num">297.78</td>
+                
+                <td>Conference Table</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">4</td>
+                
+                <td class="num">65.80</td>
+                
+                <td class="num">5%</td>
+                
+                <td class="num">16.45</td>
+                
+                <td>Ergonomic Mouse</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <table>
+            <tr>
+                <td>Subtotal:</td>
+                <td class="num">£ 35,001.34</td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td class="num">£ 5,719.73</td>
+            </tr>
+            <tr class="total-row">
+                <td>Total:</td>
+                <td class="num">£ 40,721.07</td>
+            </tr>
+        </table>
+    </div>
+        
+
+</body>
+</html>

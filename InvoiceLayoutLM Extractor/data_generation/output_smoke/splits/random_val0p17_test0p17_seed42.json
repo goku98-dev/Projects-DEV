@@ -1,0 +1,18 @@
+{
+  "strategy": "random",
+  "seed": 42,
+  "val_size": 0.17,
+  "test_size": 0.17,
+  "train_ids": [
+    "invoice_0002",
+    "invoice_0004",
+    "invoice_0000",
+    "invoice_0005"
+  ],
+  "val_ids": [
+    "invoice_0001"
+  ],
+  "test_ids": [
+    "invoice_0003"
+  ]
+}

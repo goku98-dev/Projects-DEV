@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, &#39;Times New Roman&#39;, serif;
+            font-size: 9pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { border-bottom: 2px solid #1c2833; padding-bottom: 15px; margin-bottom: 25px; display: flex; justify-content: space-between; align-items: flex-end; }
+        .invoice-title { font-size: 13.5pt; font-weight: bold; color: #1c2833; }
+        .invoice-meta { text-align: right; font-size: 8pt; }
+        .invoice-meta p { margin-bottom: 2px; }
+        
+
+        .addresses { display: flex; justify-content: space-between; margin-bottom: 30px; }
+        .address-block { width: 45%; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 6px; font-size: 8pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        .table-wrapper table { border: 2px solid #1c2833; }
+        thead th { padding: 10px; text-align: left; background-color: #1c2833; color: #ffffff; border-right: 1px solid rgba(255,255,255,0.2); }
+        thead th:last-child { border-right: none; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 8px 10px; border-right: 1px solid #eee; }
+        tbody td:last-child { border-right: none; }
+        tbody td.num { text-align: right; }
+        tbody tr:nth-child(even) { background-color: #eef2f7; }
+        
+.table-wrapper { margin-top: 40px; }
+.table-wrapper table { width: 90%; }
+
+        .totals { border-top: 1px solid #dddddd; padding-top: 10px; }
+        .totals table { width: 100%; margin-bottom: 0; }
+        .totals td { padding: 4px 10px; border: none !important; }
+        .totals td:first-child { text-align: right; width: 80%; }
+        .totals td:last-child { text-align: right; width: 20%; }
+        .totals .total-row { font-weight: bold; font-size: 11pt; }
+        .totals .total-row td { border-top: 2px solid #1c2833 !important; }
+        
+
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="invoice-title">Simon &amp; Haindl GmbH</div>
+        <div class="invoice-meta">
+            <p>INV-442969</p>
+            <p>17.07.2025</p>
+            <p>Due: 31.08.2025</p>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">From</div>
+            <p>Simon &amp; Haindl GmbH</p>
+            <p>Sam-Jenewein-Gasse 6/1</p>
+            <p>8971 Lilienfeld</p>
+            <p>Austria</p>
+        </div>
+        <div class="address-block">
+            <div class="label">Bill To</div>
+            <p>Zöchling Ullmann AG</p>
+            <p>Badergasse 879</p>
+            <p>1384 Straßburg</p>
+            <p>Austria</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th class="num">Menge</th>
+                
+                <th class="num">Gesamt</th>
+                
+                <th class="num">Nr.</th>
+                
+                <th>Artikel</th>
+                
+                <th>Artikelnummer</th>
+                
+                <th class="num">Netto-EP</th>
+                
+                <th class="num">MwSt. %</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td class="num">5</td>
+                
+                <td class="num">327,75</td>
+                
+                <td class="num">1</td>
+                
+                <td>Webcam HD</td>
+                
+                <td>304338</td>
+                
+                <td class="num">65,55</td>
+                
+                <td class="num">10%</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">2</td>
+                
+                <td class="num">107,54</td>
+                
+                <td class="num">2</td>
+                
+                <td>Laptop Stand</td>
+                
+                <td>8266.728</td>
+                
+                <td class="num">53,77</td>
+                
+                <td class="num">0%</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">43</td>
+                
+                <td class="num">11.489,17</td>
+                
+                <td class="num">3</td>
+                
+                <td>Docking Station USB-C</td>
+                
+                <td>345234</td>
+                
+                <td class="num">267,19</td>
+                
+                <td class="num">0%</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">47</td>
+                
+                <td class="num">4.542,55</td>
+                
+                <td class="num">4</td>
+                
+                <td>Surge Protector 6-Outlet</td>
+                
+                <td>264092</td>
+                
+                <td class="num">96,65</td>
+                
+                <td class="num">10%</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">5</td>
+                
+                <td class="num">1.179,10</td>
+                
+                <td class="num">5</td>
+                
+                <td>Monitor Arm Mount</td>
+                
+                <td>ART-27106</td>
+                
+                <td class="num">235,82</td>
+                
+                <td class="num">0%</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">47</td>
+                
+                <td class="num">4.515,76</td>
+                
+                <td class="num">6</td>
+                
+                <td>Envelope C4 (50-pack)</td>
+                
+                <td>558826</td>
+                
+                <td class="num">96,08</td>
+                
+                <td class="num">0%</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">11</td>
+                
+                <td class="num">1.856,36</td>
+                
+                <td class="num">7</td>
+                
+                <td>Laminating Pouches A4 (100-pack)</td>
+                
+                <td>ART-35086</td>
+                
+                <td class="num">168,76</td>
+                
+                <td class="num">0%</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <table>
+            <tr>
+                <td>Subtotal:</td>
+                <td>24.018,23 €</td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td>487,03 €</td>
+            </tr>
+            <tr class="total-row">
+                <td>Total:</td>
+                <td>24.505,26 €</td>
+            </tr>
+        </table>
+    </div>
+        
+
+</body>
+</html>

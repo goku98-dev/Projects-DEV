@@ -1,0 +1,69 @@
+{
+  "invoice_id": "invoice_0001",
+  "locale": "de_CH",
+  "template": "layout_024.html",
+  "columns": [
+    {
+      "field": "line_total",
+      "label": "Nettobetrag",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "quantity",
+      "label": "Anzahl",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "unit_price",
+      "label": "Einzelpreis",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "tax_rate",
+      "label": "MwSt. %",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "position",
+      "label": "#",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "description",
+      "label": "Produkt",
+      "entity_label": "item_description",
+      "format": "text"
+    }
+  ],
+  "line_items": [
+    {
+      "line_total": "2'261.85",
+      "quantity": "15",
+      "unit_price": "150.79",
+      "tax_rate": "2%",
+      "position": "1",
+      "description": "Managed Firewall Service (annual)"
+    },
+    {
+      "line_total": "1'077.56",
+      "quantity": "11",
+      "unit_price": "97.96",
+      "tax_rate": "0%",
+      "position": "2",
+      "description": "USB-C Hub"
+    },
+    {
+      "line_total": "5'369.58",
+      "quantity": "18",
+      "unit_price": "298.31",
+      "tax_rate": "0%",
+      "position": "3",
+      "description": "HDMI Cable 2m"
+    }
+  ]
+}

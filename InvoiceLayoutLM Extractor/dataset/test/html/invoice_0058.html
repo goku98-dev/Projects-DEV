@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: &#39;Trebuchet MS&#39;, sans-serif;
+            font-size: 11pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { margin: -20mm -20mm 30px -20mm; }
+        .header-top { background-color: #283747; color: #ffffff; padding: 15px 25px; }
+        .header-bottom { background-color: #f5f5f5; padding: 10px 25px; display: flex; justify-content: space-between; border-bottom: 1px solid #ddd; }
+        .invoice-title { font-size: 22pt; font-weight: bold; }
+        .invoice-meta span { margin-right: 20px; font-size: 10pt; }
+        
+
+        .addresses { display: flex; justify-content: space-between; margin-bottom: 30px; }
+        .address-block { width: 45%; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 6px; font-size: 10pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        thead th { padding: 10px; text-align: left; background-color: #283747; color: #ffffff; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 8px 10px; }
+        tbody td.num { text-align: right; }
+        tbody tr:nth-child(odd) { background-color: #eef2f7; }
+        
+.table-wrapper { margin-top: 80px; }
+.table-wrapper table { width: 90%; }
+
+        .totals { text-align: right; margin-bottom: 20px; }
+        .totals .line { margin-bottom: 4px; }
+        .totals .total-line { font-weight: bold; font-size: 14pt; color: #283747; border-top: 2px solid #283747; padding-top: 6px; display: inline-block; }
+        
+
+        .footer { margin-top: 30px; padding-top: 10px; border-top: 1px solid #eee; font-size: 10pt; color: #666; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="header-top">
+            <div class="invoice-title">Mitschke</div>
+        </div>
+        <div class="header-bottom">
+            <span>Invoice INV-396910</span>
+            <span>Date: 12.05.2024</span>
+            <span>Due: 26.06.2024</span>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">From</div>
+            <p>Mitschke</p>
+            <p>Donata-Baum-Gasse 3/3</p>
+            <p>02264 Stadtsteinach</p>
+            <p>Germany</p>
+        </div>
+        <div class="address-block">
+            <div class="label">Bill To</div>
+            <p>Berger Peukert GmbH &amp; Co. KGaA</p>
+            <p>Marie-Louise-Liebelt-Ring 92/99</p>
+            <p>58355 Kusel</p>
+            <p>Germany</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th class="num">Einzelpreis</th>
+                
+                <th class="num">MwSt. %</th>
+                
+                <th>Beschreibung</th>
+                
+                <th class="num">Gesamt</th>
+                
+                <th class="num">Stk.</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td class="num">308.22</td>
+                
+                <td class="num">19%</td>
+                
+                <td>Mechanical Keyboard RGB</td>
+                
+                <td class="num">12,945.24</td>
+                
+                <td class="num">42</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">423.46</td>
+                
+                <td class="num">0%</td>
+                
+                <td>Conference Table</td>
+                
+                <td class="num">9,316.12</td>
+                
+                <td class="num">22</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">79.92</td>
+                
+                <td class="num">19%</td>
+                
+                <td>Bookshelf 5-Tier</td>
+                
+                <td class="num">879.12</td>
+                
+                <td class="num">11</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">132.11</td>
+                
+                <td class="num">0%</td>
+                
+                <td>Laptop Charger Universal 65W</td>
+                
+                <td class="num">3,434.86</td>
+                
+                <td class="num">26</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">237.88</td>
+                
+                <td class="num">0%</td>
+                
+                <td>HDMI Cable 2m</td>
+                
+                <td class="num">7,850.04</td>
+                
+                <td class="num">33</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">146.77</td>
+                
+                <td class="num">0%</td>
+                
+                <td>Noise-Cancelling Headphones</td>
+                
+                <td class="num">3,962.79</td>
+                
+                <td class="num">27</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">262.07</td>
+                
+                <td class="num">7%</td>
+                
+                <td>Wireless Keyboard</td>
+                
+                <td class="num">10,482.80</td>
+                
+                <td class="num">40</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <div class="line">Subtotal: 48,870.97 EUR</div>
+        <div class="line">Tax: 3,360.43 EUR</div>
+        <div class="total-line">Total: 52,231.40 EUR</div>
+    </div>
+        
+
+    <div class="footer">
+        <p>Please pay within 14 days of receipt.</p>
+    </div>
+        
+</body>
+</html>

@@ -1,0 +1,69 @@
+{
+  "invoice_id": "invoice_0031",
+  "locale": "de_CH",
+  "template": "layout_022.html",
+  "columns": [
+    {
+      "field": "quantity",
+      "label": "Stück",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "tax_rate",
+      "label": "USt.",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "line_total",
+      "label": "Summe",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "unit_price",
+      "label": "Netto-EP",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "position",
+      "label": "#",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "description",
+      "label": "Beschreibung",
+      "entity_label": "item_description",
+      "format": "text"
+    }
+  ],
+  "line_items": [
+    {
+      "quantity": "35",
+      "tax_rate": "0%",
+      "line_total": "8'351.70",
+      "unit_price": "238.62",
+      "position": "1",
+      "description": "Data Backup Service (monthly subscription)"
+    },
+    {
+      "quantity": "19",
+      "tax_rate": "0%",
+      "line_total": "1'632.86",
+      "unit_price": "85.94",
+      "position": "2",
+      "description": "Correction Tape 6-pack"
+    },
+    {
+      "quantity": "6",
+      "tax_rate": "8%",
+      "line_total": "2'281.38",
+      "unit_price": "380.23",
+      "position": "3",
+      "description": "Footrest Ergonomic"
+    }
+  ]
+}

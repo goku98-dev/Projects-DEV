@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: &#39;Palatino Linotype&#39;, &#39;Book Antiqua&#39;, Palatino, serif;
+            font-size: 9pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { margin: -20mm -20mm 30px -20mm; }
+        .header-top { background-color: #1c2833; color: #ffffff; padding: 15px 25px; }
+        .header-bottom { background-color: #f5f5f5; padding: 10px 25px; display: flex; justify-content: space-between; border-bottom: 1px solid #ddd; }
+        .invoice-title { font-size: 18pt; font-weight: bold; }
+        .invoice-meta span { margin-right: 20px; font-size: 8pt; }
+        
+
+        .addresses { display: flex; justify-content: space-between; margin-bottom: 30px; }
+        .address-block { width: 45%; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 6px; font-size: 8pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        thead th { padding: 8px 10px; text-align: left; border-bottom: 2px dotted #1c2833; color: #1c2833; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 7px 10px; border-bottom: 1px dotted #ccc; }
+        tbody td.num { text-align: right; }
+        
+.table-wrapper { margin-top: 80px; }
+.table-wrapper table { width: 100%; }
+
+        .totals { border-top: 1px solid #dddddd; padding-top: 10px; }
+        .totals table { width: 100%; margin-bottom: 0; }
+        .totals td { padding: 4px 10px; border: none !important; }
+        .totals td:first-child { text-align: right; width: 80%; }
+        .totals td:last-child { text-align: right; width: 20%; }
+        .totals .total-row { font-weight: bold; font-size: 11pt; }
+        .totals .total-row td { border-top: 2px solid #1c2833 !important; }
+        
+
+        .footer { margin-top: 40px; padding-top: 15px; border-top: 1px solid #ddd; font-size: 7pt; color: #666; }
+        .footer p { margin-bottom: 3px; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="header-top">
+            <div class="invoice-title">King, Green and Armstrong</div>
+        </div>
+        <div class="header-bottom">
+            <span>Invoice INV-422070</span>
+            <span>Date: 17/12/2025</span>
+            <span>Due: 31/12/2025</span>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">Bill To</div>
+            <p>Fletcher-Hewitt</p>
+            <p>08 Wood Glens</p>
+            <p>WD2M 1NZ South Kirstyhaven</p>
+            <p>United Kingdom</p>
+        </div>
+        <div class="address-block">
+            <div class="label">From</div>
+            <p>King, Green and Armstrong</p>
+            <p>Flat 05
+Edward Hollow</p>
+            <p>L9 2TD Evansstad</p>
+            <p>United Kingdom</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th class="num">Qty</th>
+                
+                <th class="num">GST %</th>
+                
+                <th class="num">Item</th>
+                
+                <th>Details</th>
+                
+                <th class="num">Total</th>
+                
+                <th class="num">Each</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td class="num">12</td>
+                
+                <td class="num">5%</td>
+                
+                <td class="num">1</td>
+                
+                <td>Ergonomic Desk Chair</td>
+                
+                <td class="num">1,830.60</td>
+                
+                <td class="num">152.55</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">24</td>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">2</td>
+                
+                <td>Surge Protector 6-Outlet</td>
+                
+                <td class="num">4,428.00</td>
+                
+                <td class="num">184.50</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">40</td>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">3</td>
+                
+                <td>Conference Table</td>
+                
+                <td class="num">14,110.80</td>
+                
+                <td class="num">352.77</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <table>
+            <tr>
+                <td>Subtotal:</td>
+                <td>20,369.40 GBP</td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td>91.53 GBP</td>
+            </tr>
+            <tr class="total-row">
+                <td>Total:</td>
+                <td>20,460.93 GBP</td>
+            </tr>
+        </table>
+    </div>
+        
+
+    <div class="footer">
+        <p><strong>Payment Terms:</strong> Payment due upon receipt.</p>
+        <p><strong>Bank:</strong> NatWest | IBAN: GB14 6279 2566 5195 1686 8530 9572 | BIC: SDTGGB2VEAA</p>
+        <p>Thank you for your business.</p>
+    </div>
+        
+</body>
+</html>

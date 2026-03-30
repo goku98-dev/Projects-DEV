@@ -1,0 +1,60 @@
+{
+  "invoice_id": "invoice_0004",
+  "locale": "en_US",
+  "template": "layout_000.html",
+  "columns": [
+    {
+      "field": "description",
+      "label": "Description",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "quantity",
+      "label": "Qty",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "line_total",
+      "label": "Line Total",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "unit_price",
+      "label": "Unit Price",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "tax_rate",
+      "label": "Tax Rate",
+      "entity_label": "tax",
+      "format": "percent"
+    }
+  ],
+  "line_items": [
+    {
+      "description": "Coat Rack",
+      "quantity": "26",
+      "line_total": "7,159.88",
+      "unit_price": "275.38",
+      "tax_rate": "8%"
+    },
+    {
+      "description": "Laptop Stand",
+      "quantity": "7",
+      "line_total": "923.79",
+      "unit_price": "131.97",
+      "tax_rate": "0%"
+    },
+    {
+      "description": "Ergonomic Desk Chair",
+      "quantity": "19",
+      "line_total": "5,966.95",
+      "unit_price": "314.05",
+      "tax_rate": "8%"
+    }
+  ]
+}

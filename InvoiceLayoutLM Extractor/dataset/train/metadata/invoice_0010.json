@@ -1,0 +1,77 @@
+{
+  "invoice_id": "invoice_0010",
+  "locale": "de_AT",
+  "template": "layout_017.html",
+  "columns": [
+    {
+      "field": "unit_price",
+      "label": "EP",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "line_total",
+      "label": "Gesamt",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "description",
+      "label": "Beschreibung",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "quantity",
+      "label": "Stk.",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "tax_rate",
+      "label": "Steuersatz",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "position",
+      "label": "Lfd. Nr.",
+      "entity_label": "position",
+      "format": "int"
+    }
+  ],
+  "line_items": [
+    {
+      "unit_price": "314,37",
+      "line_total": "10.374,21",
+      "description": "Cloud Storage Plan 1TB (yearly)",
+      "quantity": "33",
+      "tax_rate": "10%",
+      "position": "1"
+    },
+    {
+      "unit_price": "140,02",
+      "line_total": "140,02",
+      "description": "Stapler Heavy-Duty",
+      "quantity": "1",
+      "tax_rate": "0%",
+      "position": "2"
+    },
+    {
+      "unit_price": "370,10",
+      "line_total": "18.134,90",
+      "description": "Laptop Charger Universal 65W",
+      "quantity": "49",
+      "tax_rate": "0%",
+      "position": "3"
+    },
+    {
+      "unit_price": "451,94",
+      "line_total": "19.433,42",
+      "description": "Office Equipment Installation Service",
+      "quantity": "43",
+      "tax_rate": "0%",
+      "position": "4"
+    }
+  ]
+}

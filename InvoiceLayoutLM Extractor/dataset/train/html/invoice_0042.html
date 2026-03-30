@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: &#39;Lucida Sans&#39;, &#39;Lucida Grande&#39;, sans-serif;
+            font-size: 10pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { margin: -20mm -20mm 30px -20mm; }
+        .header-top { background-color: #1b4f72; color: #ffffff; padding: 15px 25px; }
+        .header-bottom { background-color: #f5f5f5; padding: 10px 25px; display: flex; justify-content: space-between; border-bottom: 1px solid #ddd; }
+        .invoice-title { font-size: 20pt; font-weight: bold; }
+        .invoice-meta span { margin-right: 20px; font-size: 9pt; }
+        
+
+        .addresses { display: flex; justify-content: space-between; margin-bottom: 30px; gap: 20px; }
+        .address-block { width: 45%; border: 1px solid #cccccc; padding: 12px 15px; }
+        .address-block .label { font-weight: bold; color: #1b4f72; margin-bottom: 8px; font-size: 10pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        thead th { background-color: #1b4f72; color: #ffffff; padding: 8px 10px; text-align: left; border: 1px solid #cccccc; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 6px 10px; border: 1px solid #cccccc; }
+        tbody td.num { text-align: right; }
+        
+        
+.table-wrapper { margin-top: 80px; }
+.table-wrapper table { width: 100%; }
+
+        .totals { text-align: right; margin-bottom: 20px; }
+        .totals .line { margin-bottom: 4px; }
+        .totals .total-line { font-weight: bold; font-size: 13pt; color: #1b4f72; border-top: 2px solid #1b4f72; padding-top: 6px; display: inline-block; }
+        
+
+        .footer { margin-top: 30px; padding-top: 10px; border-top: 1px solid #eee; font-size: 9pt; color: #666; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="header-top">
+            <div class="invoice-title">Reising GmbH &amp; Co. KG</div>
+        </div>
+        <div class="header-bottom">
+            <span>Invoice INV-413508</span>
+            <span>Date: 20.03.2024</span>
+            <span>Due: 04.05.2024</span>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">Sender</div>
+            <p>Reising GmbH &amp; Co. KG</p>
+            <p>Gerald-Koch II-Allee 2/6</p>
+            <p>40390 Konstanz</p>
+            <p>Germany</p>
+        </div>
+        <div class="address-block">
+            <div class="label">Recipient</div>
+            <p>Krebs GbR</p>
+            <p>Minna-Holt-Platz 4/4</p>
+            <p>19387 Husum</p>
+            <p>Germany</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th class="num">E-Preis</th>
+                
+                <th class="num">MwSt.-Satz</th>
+                
+                <th class="num">Nettobetrag</th>
+                
+                <th>Leistung</th>
+                
+                <th class="num">Anzahl</th>
+                
+                <th>Artikelnummer</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td class="num">284.85</td>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">13,672.80</td>
+                
+                <td>Annual Software License Renewal</td>
+                
+                <td class="num">48</td>
+                
+                <td>6069.489</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">22.44</td>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">875.16</td>
+                
+                <td>Noise-Cancelling Headphones</td>
+                
+                <td class="num">39</td>
+                
+                <td>B46803</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">100.63</td>
+                
+                <td class="num">7%</td>
+                
+                <td class="num">1,308.19</td>
+                
+                <td>Ethernet Cable 5m</td>
+                
+                <td class="num">13</td>
+                
+                <td>B76971</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">354.19</td>
+                
+                <td class="num">19%</td>
+                
+                <td class="num">10,979.89</td>
+                
+                <td>Toner Cartridge Black</td>
+                
+                <td class="num">31</td>
+                
+                <td>5204.771</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <div class="line">Subtotal: 26,836.04 EUR</div>
+        <div class="line">Tax: 2,177.75 EUR</div>
+        <div class="total-line">Total: 29,013.79 EUR</div>
+    </div>
+        
+
+    <div class="footer">
+        <p>30 days net. Skonto 2% within 10 days.</p>
+    </div>
+        
+</body>
+</html>

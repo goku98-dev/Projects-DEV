@@ -1,0 +1,42 @@
+# Apptainer definition file for the data_generation pipeline.
+#
+# Build (requires Apptainer, run from the data_generation/ folder):
+#   apptainer build data_gen.sif data_gen.def
+#   apptainer build --fakeroot data_gen.sif data_gen.def   # if not root
+#
+# Run on cluster:
+#   apptainer run --bind /cluster/data:/data data_gen.sif generate.py -n 1000 -o /data
+#   apptainer run --bind /cluster/data:/data data_gen.sif annotate.py -o /data
+#   apptainer run --bind /cluster/data:/data data_gen.sif visualize_annotations.py -o /data
+
+Bootstrap: docker
+From: python:3.13-slim-bookworm
+
+%labels
+    Description Data generation + annotation pipeline for HCNLP-Project
+
+%files
+    ./* app/
+
+%environment
+    export PLAYWRIGHT_BROWSERS_PATH=/opt/playwright-browsers
+    export PYTHONUNBUFFERED=1
+    export PYTHONPATH=/app
+
+%post
+    cd /app
+    pip install --no-cache-dir -r requirements.txt
+
+    # Install Chromium to a fixed system path so it is accessible regardless
+    # of which user Apptainer maps into the container at runtime
+    PLAYWRIGHT_BROWSERS_PATH=/opt/playwright-browsers \
+        playwright install chromium --with-deps
+    chmod -R 755 /opt/playwright-browsers
+
+    # Pre-generate layout templates so no re-generation is needed at runtime
+    python template_generator.py
+
+%runscript
+    # Default entrypoint: pass script name + arguments directly
+    # e.g.: apptainer run data_gen.sif generate.py -n 500 -o /data
+    cd /app && exec python "$@"

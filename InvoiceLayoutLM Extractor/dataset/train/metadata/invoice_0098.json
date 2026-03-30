@@ -1,0 +1,123 @@
+{
+  "invoice_id": "invoice_0098",
+  "locale": "de_CH",
+  "template": "layout_004.html",
+  "columns": [
+    {
+      "field": "unit_price",
+      "label": "EP",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "quantity",
+      "label": "Stk.",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "article_number",
+      "label": "Artikelnummer",
+      "entity_label": "article_number",
+      "format": "text"
+    },
+    {
+      "field": "tax_rate",
+      "label": "USt. %",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "line_total",
+      "label": "Gesamtbetrag",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "position",
+      "label": "Pos.",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "description",
+      "label": "Produkt",
+      "entity_label": "item_description",
+      "format": "text"
+    }
+  ],
+  "line_items": [
+    {
+      "unit_price": "496.58",
+      "quantity": "20",
+      "article_number": "777065",
+      "tax_rate": "0%",
+      "line_total": "9'931.60",
+      "position": "1",
+      "description": "Laminating Pouches A4 (100-pack)"
+    },
+    {
+      "unit_price": "109.77",
+      "quantity": "38",
+      "article_number": "4892.169",
+      "tax_rate": "8%",
+      "line_total": "4'171.26",
+      "position": "2",
+      "description": "Conference Table"
+    },
+    {
+      "unit_price": "470.62",
+      "quantity": "14",
+      "article_number": "2156.490",
+      "tax_rate": "0%",
+      "line_total": "6'588.68",
+      "position": "3",
+      "description": "Laptop Charger Universal 65W"
+    },
+    {
+      "unit_price": "56.15",
+      "quantity": "22",
+      "article_number": "2976.359",
+      "tax_rate": "8%",
+      "line_total": "1'235.30",
+      "position": "4",
+      "description": "Mouse Pad XL"
+    },
+    {
+      "unit_price": "50.31",
+      "quantity": "29",
+      "article_number": "A46194",
+      "tax_rate": "0%",
+      "line_total": "1'458.99",
+      "position": "5",
+      "description": "Monitor 27\""
+    },
+    {
+      "unit_price": "408.62",
+      "quantity": "35",
+      "article_number": "6622.124",
+      "tax_rate": "8%",
+      "line_total": "14'301.70",
+      "position": "6",
+      "description": "Disinfecting Wipes (75-pack)"
+    },
+    {
+      "unit_price": "206.38",
+      "quantity": "8",
+      "article_number": "834395",
+      "tax_rate": "2%",
+      "line_total": "1'651.04",
+      "position": "7",
+      "description": "UPS Battery Backup 1500VA"
+    },
+    {
+      "unit_price": "319.47",
+      "quantity": "20",
+      "article_number": "B71337",
+      "tax_rate": "2%",
+      "line_total": "6'389.40",
+      "position": "8",
+      "description": "Office Chair"
+    }
+  ]
+}

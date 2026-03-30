@@ -1,0 +1,93 @@
+{
+  "invoice_id": "invoice_0027",
+  "locale": "de_CH",
+  "template": "layout_010.html",
+  "columns": [
+    {
+      "field": "description",
+      "label": "Leistung",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "tax_rate",
+      "label": "MwSt.",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "unit_price",
+      "label": "Preis/Einheit",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "quantity",
+      "label": "Stück",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "position",
+      "label": "Lfd. Nr.",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "line_total",
+      "label": "Gesamt",
+      "entity_label": "line_total",
+      "format": "currency"
+    }
+  ],
+  "line_items": [
+    {
+      "description": "Mouse Pad XL",
+      "tax_rate": "0%",
+      "unit_price": "323.32",
+      "quantity": "18",
+      "position": "1",
+      "line_total": "5'819.76"
+    },
+    {
+      "description": "Laptop Charger Universal 65W",
+      "tax_rate": "8%",
+      "unit_price": "499.00",
+      "quantity": "32",
+      "position": "2",
+      "line_total": "15'968.00"
+    },
+    {
+      "description": "Printer Paper A4 (500 sheets)",
+      "tax_rate": "0%",
+      "unit_price": "418.30",
+      "quantity": "25",
+      "position": "3",
+      "line_total": "10'457.50"
+    },
+    {
+      "description": "Graphics Card RTX 4060",
+      "tax_rate": "2%",
+      "unit_price": "207.09",
+      "quantity": "50",
+      "position": "4",
+      "line_total": "10'354.50"
+    },
+    {
+      "description": "Mechanical Keyboard RGB",
+      "tax_rate": "8%",
+      "unit_price": "294.46",
+      "quantity": "50",
+      "position": "5",
+      "line_total": "14'723.00"
+    },
+    {
+      "description": "Printer Maintenance Contract (quarterly)",
+      "tax_rate": "8%",
+      "unit_price": "254.25",
+      "quantity": "25",
+      "position": "6",
+      "line_total": "6'356.25"
+    }
+  ]
+}

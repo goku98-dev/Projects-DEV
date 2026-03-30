@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: &#39;Trebuchet MS&#39;, sans-serif;
+            font-size: 10pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { text-align: right; margin-bottom: 30px; }
+        .invoice-title { font-size: 20pt; font-weight: bold; color: #6c3483; margin-bottom: 5px; }
+        .invoice-meta p { margin-bottom: 3px; }
+        .company-name { font-size: 12pt; margin-bottom: 10px; }
+        
+
+        .addresses { display: flex; justify-content: space-between; margin-bottom: 30px; }
+        .address-block { width: 45%; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 6px; font-size: 9pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        .table-wrapper table { border: 2px solid #6c3483; }
+        thead th { padding: 10px; text-align: left; background-color: #6c3483; color: #ffffff; border-right: 1px solid rgba(255,255,255,0.2); }
+        thead th:last-child { border-right: none; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 8px 10px; border-right: 1px solid #eee; }
+        tbody td:last-child { border-right: none; }
+        tbody td.num { text-align: right; }
+        tbody tr:nth-child(even) { background-color: #eef2f7; }
+        
+.table-wrapper { margin-top: 80px; }
+.table-wrapper table { width: 90%; }
+
+        .totals { width: 300px; margin-left: auto; border: 1px solid #6c3483; padding: 10px; }
+        .totals table { margin-bottom: 0; width: 100%; }
+        .totals td { padding: 4px 8px; border: none !important; }
+        .totals .total-row { font-weight: bold; font-size: 12pt; background-color: #6c3483; color: #ffffff; }
+        
+
+        .footer { margin-top: 40px; padding-top: 15px; border-top: 1px solid #ddd; font-size: 8pt; color: #666; }
+        .footer p { margin-bottom: 3px; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="invoice-title">INVOICE</div>
+        <div class="company-name">Adolph GmbH</div>
+        <div class="invoice-meta">
+            <p>Invoice No: INV-672899</p>
+            <p>Invoice Date: 14.04.2024</p>
+            <p>Payment Due: 14.05.2024</p>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">Bill To</div>
+            <p>Kambs</p>
+            <p>Petros-Walter-Ring 68/81</p>
+            <p>84364 Wetzlar</p>
+            <p>Germany</p>
+        </div>
+        <div class="address-block">
+            <div class="label">From</div>
+            <p>Adolph GmbH</p>
+            <p>Thorsten-Heser-Allee 5752</p>
+            <p>38774 Gelnhausen</p>
+            <p>Germany</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th class="num">Stück</th>
+                
+                <th>Position</th>
+                
+                <th class="num">Gesamtbetrag</th>
+                
+                <th class="num">Einzelpreis</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td class="num">17</td>
+                
+                <td>Toner Cartridge Black</td>
+                
+                <td class="num">6 002,19</td>
+                
+                <td class="num">353,07</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">35</td>
+                
+                <td>Desk Pad Leather</td>
+                
+                <td class="num">11 299,75</td>
+                
+                <td class="num">322,85</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">7</td>
+                
+                <td>Envelope C4 (50-pack)</td>
+                
+                <td class="num">654,78</td>
+                
+                <td class="num">93,54</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <table>
+            <tr>
+                <td>Subtotal:</td>
+                <td class="num">€ 17 956,72</td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td class="num">€ 544,56</td>
+            </tr>
+            <tr class="total-row">
+                <td>Total:</td>
+                <td class="num">€ 18 501,28</td>
+            </tr>
+        </table>
+    </div>
+        
+
+    <div class="footer">
+        <p><strong>Payment Terms:</strong> Please remit payment within the stated due date.</p>
+        <p><strong>Bank:</strong> Barclays | IBAN: DE21 9038 6336 2318 5755 6373 4792 | BIC: HSMNATYJNX4</p>
+        <p>Thank you for your business.</p>
+    </div>
+        
+</body>
+</html>

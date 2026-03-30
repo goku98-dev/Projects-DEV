@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 11pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { margin: -20mm -20mm 30px -20mm; }
+        .header-top { background-color: #2e4053; color: #ffffff; padding: 15px 25px; }
+        .header-bottom { background-color: #f5f5f5; padding: 10px 25px; display: flex; justify-content: space-between; border-bottom: 1px solid #ddd; }
+        .invoice-title { font-size: 22pt; font-weight: bold; }
+        .invoice-meta span { margin-right: 20px; font-size: 10pt; }
+        
+
+        .addresses { display: flex; justify-content: flex-end; margin-bottom: 30px; }
+        .address-block { width: 45%; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 6px; font-size: 10pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        thead th { padding: 6px 10px; text-align: left; font-weight: normal; text-transform: uppercase; font-size: 9pt; color: #999; letter-spacing: 0.5px; border-bottom: 1px solid #ccc; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 8px 10px; }
+        tbody td.num { text-align: right; }
+        tbody tr:last-child td { border-bottom: 1px solid #ccc; }
+        
+.table-wrapper { margin-top: 0; }
+.table-wrapper table { width: 100%; }
+
+        .totals { width: 300px; margin-left: auto; border: 1px solid #2e4053; padding: 10px; }
+        .totals table { margin-bottom: 0; width: 100%; }
+        .totals td { padding: 4px 8px; border: none !important; }
+        .totals .total-row { font-weight: bold; font-size: 13pt; background-color: #2e4053; color: #ffffff; }
+        
+
+        .footer { margin-top: 40px; padding: 12px 15px; background-color: #f8f8f8; font-size: 10pt; color: #555; }
+        .footer .footer-title { font-weight: bold; margin-bottom: 5px; }
+        .footer p { margin-bottom: 3px; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="header-top">
+            <div class="invoice-title">Pärtzelt GbR</div>
+        </div>
+        <div class="header-bottom">
+            <span>Invoice INV-439080</span>
+            <span>Date: 02.04.2024</span>
+            <span>Due: 17.05.2024</span>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">Invoice To</div>
+            <p>Graf</p>
+            <p>Mohammed-Kusch-Allee 7</p>
+            <p>46171 Uelzen</p>
+            <p>Germany</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th class="num">Gesamtpreis</th>
+                
+                <th class="num">Einheiten</th>
+                
+                <th class="num">E-Preis</th>
+                
+                <th>Beschreibung</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td class="num">1 540,35</td>
+                
+                <td class="num">15</td>
+                
+                <td class="num">102,69</td>
+                
+                <td>Monitor Arm Mount</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">7 981,90</td>
+                
+                <td class="num">38</td>
+                
+                <td class="num">210,05</td>
+                
+                <td>Webcam HD</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">5 984,74</td>
+                
+                <td class="num">43</td>
+                
+                <td class="num">139,18</td>
+                
+                <td>Room Divider Panel</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <table>
+            <tr>
+                <td>Subtotal:</td>
+                <td class="num">€ 15 506,99</td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td class="num">€ 0,00</td>
+            </tr>
+            <tr class="total-row">
+                <td>Total:</td>
+                <td class="num">€ 15 506,99</td>
+            </tr>
+        </table>
+    </div>
+        
+
+    <div class="footer">
+        <div class="footer-title">Payment Information</div>
+        <p>Bank of America</p>
+        <p>IBAN: DE12 3999 6231 1989 6196 7451 3269</p>
+        <p>BIC: NCPEGBHQFC4</p>
+        <p style="margin-top: 8px;">Payment due upon receipt.</p>
+    </div>
+        
+</body>
+</html>

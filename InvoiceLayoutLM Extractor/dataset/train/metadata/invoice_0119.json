@@ -1,0 +1,109 @@
+{
+  "invoice_id": "invoice_0119",
+  "locale": "de_DE",
+  "template": "layout_021.html",
+  "columns": [
+    {
+      "field": "tax_rate",
+      "label": "USt.",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "quantity",
+      "label": "Einheiten",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "unit_price",
+      "label": "Stückpreis",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "line_total",
+      "label": "Betrag",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "description",
+      "label": "Bezeichnung",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "article_number",
+      "label": "Artikelnummer",
+      "entity_label": "article_number",
+      "format": "text"
+    }
+  ],
+  "line_items": [
+    {
+      "tax_rate": "19%",
+      "quantity": "26",
+      "unit_price": "346,02",
+      "line_total": "8 996,52",
+      "description": "Thunderbolt Cable 1m",
+      "article_number": "7133.383"
+    },
+    {
+      "tax_rate": "19%",
+      "quantity": "5",
+      "unit_price": "259,02",
+      "line_total": "1 295,10",
+      "description": "Screen Privacy Filter 24\"",
+      "article_number": "ART-41357"
+    },
+    {
+      "tax_rate": "19%",
+      "quantity": "3",
+      "unit_price": "285,83",
+      "line_total": "857,49",
+      "description": "Correction Tape 6-pack",
+      "article_number": "ART-23581"
+    },
+    {
+      "tax_rate": "19%",
+      "quantity": "10",
+      "unit_price": "284,23",
+      "line_total": "2 842,30",
+      "description": "Bookshelf 5-Tier",
+      "article_number": "B49571"
+    },
+    {
+      "tax_rate": "19%",
+      "quantity": "40",
+      "unit_price": "451,13",
+      "line_total": "18 045,20",
+      "description": "Mechanical Keyboard RGB",
+      "article_number": "P40022"
+    },
+    {
+      "tax_rate": "7%",
+      "quantity": "16",
+      "unit_price": "192,35",
+      "line_total": "3 077,60",
+      "description": "External HDD 4TB",
+      "article_number": "ART-75198"
+    },
+    {
+      "tax_rate": "0%",
+      "quantity": "46",
+      "unit_price": "396,90",
+      "line_total": "18 257,40",
+      "description": "Cable Management Kit",
+      "article_number": "P65401"
+    },
+    {
+      "tax_rate": "19%",
+      "quantity": "33",
+      "unit_price": "318,92",
+      "line_total": "10 524,36",
+      "description": "Toner Cartridge Black",
+      "article_number": "ART-57867"
+    }
+  ]
+}

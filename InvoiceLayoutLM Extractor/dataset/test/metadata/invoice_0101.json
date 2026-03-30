@@ -1,0 +1,78 @@
+{
+  "invoice_id": "invoice_0101",
+  "locale": "de_AT",
+  "template": "layout_016.html",
+  "columns": [
+    {
+      "field": "line_total",
+      "label": "Summe",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "unit_price",
+      "label": "EP",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "position",
+      "label": "Pos.",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "quantity",
+      "label": "Stück",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "description",
+      "label": "Produkt",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "tax_rate",
+      "label": "USt.",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "article_number",
+      "label": "Art.-Nr.",
+      "entity_label": "article_number",
+      "format": "text"
+    }
+  ],
+  "line_items": [
+    {
+      "line_total": "5,260.92",
+      "unit_price": "438.41",
+      "position": "1",
+      "quantity": "12",
+      "description": "Binder Clips Assorted (48-pack)",
+      "tax_rate": "20%",
+      "article_number": "3028.888"
+    },
+    {
+      "line_total": "14,447.62",
+      "unit_price": "424.93",
+      "position": "2",
+      "quantity": "34",
+      "description": "Mouse Pad XL",
+      "tax_rate": "20%",
+      "article_number": "ART-31115"
+    },
+    {
+      "line_total": "6,542.46",
+      "unit_price": "344.34",
+      "position": "3",
+      "quantity": "19",
+      "description": "Standing Desk",
+      "tax_rate": "10%",
+      "article_number": "ART-72938"
+    }
+  ]
+}

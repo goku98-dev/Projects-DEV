@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: &#39;Trebuchet MS&#39;, sans-serif;
+            font-size: 11pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { background-color: #7b241c; color: #ffffff; padding: 20px 25px; margin: -20mm -20mm 30px -20mm; display: flex; justify-content: space-between; align-items: center; }
+        .invoice-title { font-size: 22pt; font-weight: bold; }
+        .invoice-meta { text-align: right; }
+        .invoice-meta p { margin-bottom: 4px; }
+        
+
+        .addresses { display: flex; justify-content: space-between; margin-bottom: 30px; }
+        .address-block { width: 45%; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 6px; font-size: 10pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        thead th { background-color: #7b241c; color: #ffffff; padding: 8px 10px; text-align: left; border: 1px solid #cccccc; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 6px 10px; border: 1px solid #cccccc; }
+        tbody td.num { text-align: right; }
+        
+        tbody tr:nth-child(even) { background-color: #f9f9f9; }
+        
+        
+.table-wrapper { margin-top: 0; }
+.table-wrapper table { width: 90%; }
+
+        .totals { border-top: 1px solid #cccccc; padding-top: 10px; }
+        .totals table { width: 100%; margin-bottom: 0; }
+        .totals td { padding: 4px 10px; border: none !important; }
+        .totals td:first-child { text-align: right; width: 80%; }
+        .totals td:last-child { text-align: right; width: 20%; }
+        .totals .total-row { font-weight: bold; font-size: 13pt; }
+        .totals .total-row td { border-top: 2px solid #7b241c !important; }
+        
+
+        .footer { margin-top: 30px; font-size: 9pt; color: #999; text-align: center; }
+        .footer p { margin-bottom: 2px; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div>
+            <div class="invoice-title">INVOICE</div>
+            <p>Reinhardt</p>
+        </div>
+        <div class="invoice-meta">
+            <p>Invoice #: INV-922032</p>
+            <p>Date: 16.06.2024</p>
+            <p>Due: 15.08.2024</p>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">From</div>
+            <p>Reinhardt</p>
+            <p>Gabriela-Henk-Platz 5-1</p>
+            <p>35577 Konstanz</p>
+            <p>Germany</p>
+        </div>
+        <div class="address-block">
+            <div class="label">Bill To</div>
+            <p>Eigenwillig KG</p>
+            <p>Claudio-Dowerg-Ring 8660</p>
+            <p>46569 Helmstedt</p>
+            <p>Germany</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th class="num">USt.</th>
+                
+                <th>Art.-Nr.</th>
+                
+                <th class="num">E-Preis</th>
+                
+                <th class="num">Gesamt</th>
+                
+                <th>Leistung</th>
+                
+                <th class="num">Einheiten</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td class="num">0%</td>
+                
+                <td>6505.468</td>
+                
+                <td class="num">445,95</td>
+                
+                <td class="num">11.148,75</td>
+                
+                <td>Label Maker Tape 12mm</td>
+                
+                <td class="num">25</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">0%</td>
+                
+                <td>ART-19447</td>
+                
+                <td class="num">19,22</td>
+                
+                <td class="num">672,70</td>
+                
+                <td>Thunderbolt Cable 1m</td>
+                
+                <td class="num">35</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">7%</td>
+                
+                <td>ART-42846</td>
+                
+                <td class="num">310,08</td>
+                
+                <td class="num">9.612,48</td>
+                
+                <td>Bookshelf 5-Tier</td>
+                
+                <td class="num">31</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">19%</td>
+                
+                <td>9084.426</td>
+                
+                <td class="num">391,65</td>
+                
+                <td class="num">10.182,90</td>
+                
+                <td>Mechanical Keyboard RGB</td>
+                
+                <td class="num">26</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <table>
+            <tr>
+                <td>Subtotal:</td>
+                <td>31.616,83 €</td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td>2.607,62 €</td>
+            </tr>
+            <tr class="total-row">
+                <td>Total:</td>
+                <td>34.224,45 €</td>
+            </tr>
+        </table>
+    </div>
+        
+
+    <div class="footer">
+        <p>Reinhardt | Gabriela-Henk-Platz 5-1, 35577 Konstanz | Germany</p>
+        <p>Credit Suisse | IBAN: DE80 3544 5693 1587 2311 2438</p>
+    </div>
+        
+</body>
+</html>

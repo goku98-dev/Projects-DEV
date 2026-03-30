@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: {{ style.font_family }};
+            font-size: {{ style.font_size_pt }}pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { text-align: center; margin-bottom: 30px; }
+        .invoice-title { font-size: {{ style.font_size_pt * 2.5 }}pt; font-weight: bold; color: {{ style.header_bg_color }}; margin-bottom: 10px; }
+        .invoice-meta { margin-top: 10px; }
+        .invoice-meta span { margin: 0 15px; }
+        
+
+        .addresses { display: flex; justify-content: space-between; margin-bottom: 30px; gap: 20px; }
+        .address-block { width: 45%; border: 1px solid {{ style.border_color }}; padding: 12px 15px; }
+        .address-block .label { font-weight: bold; color: {{ style.header_bg_color }}; margin-bottom: 8px; font-size: {{ style.font_size_pt }}pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        thead th { padding: 8px 10px; text-align: left; border-bottom: 2px dotted {{ style.header_bg_color }}; color: {{ style.header_bg_color }}; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 7px 10px; border-bottom: 1px dotted #ccc; }
+        tbody td.num { text-align: right; }
+        
+.table-wrapper { margin-top: 80px; }
+.table-wrapper table { width: 90%; }
+
+        .totals { width: 300px; margin-left: auto; border: 1px solid {{ style.border_color }}; padding: 10px; }
+        .totals table { margin-bottom: 0; width: 100%; }
+        .totals td { padding: 4px 8px; border: none !important; }
+        .totals .total-row { font-weight: bold; font-size: {{ style.font_size_pt + 2 }}pt; background-color: {{ style.header_bg_color }}; color: {{ style.header_text_color }}; }
+        
+
+        .footer { margin-top: 40px; padding: 12px 15px; background-color: #f8f8f8; font-size: {{ style.font_size_pt - 1 }}pt; color: #555; }
+        .footer .footer-title { font-weight: bold; margin-bottom: 5px; }
+        .footer p { margin-bottom: 3px; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="invoice-title">INVOICE</div>
+        <p>{{ invoice.seller.name }}</p>
+        <div class="invoice-meta">
+            <span><strong>Invoice #:</strong> {{ invoice.invoice_number }}</span>
+            <span><strong>Date:</strong> {{ invoice.invoice_date }}</span>
+            <span><strong>Due Date:</strong> {{ invoice.due_date }}</span>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">Sender</div>
+            <p>{{ invoice.seller.name }}</p>
+            <p>{{ invoice.seller.street }}</p>
+            <p>{{ invoice.seller.postal_code }} {{ invoice.seller.city }}</p>
+            <p>{{ invoice.seller.country }}</p>
+        </div>
+        <div class="address-block">
+            <div class="label">Recipient</div>
+            <p>{{ invoice.buyer.name }}</p>
+            <p>{{ invoice.buyer.street }}</p>
+            <p>{{ invoice.buyer.postal_code }} {{ invoice.buyer.city }}</p>
+            <p>{{ invoice.buyer.country }}</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                {% for col in columns %}
+                <th{% if col.align == "right" %} class="num"{% endif %}>{{ col.label }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in invoice.line_items %}
+            <tr>
+                {% for col in columns %}
+                <td{% if col.align == "right" %} class="num"{% endif %}>{{ item | attr(col.field) | format_value(col.format) }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <table>
+            <tr>
+                <td>Subtotal:</td>
+                <td class="num">{{ invoice.subtotal | format_currency }}</td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td class="num">{{ invoice.total_tax | format_currency }}</td>
+            </tr>
+            <tr class="total-row">
+                <td>Total:</td>
+                <td class="num">{{ invoice.total | format_currency }}</td>
+            </tr>
+        </table>
+    </div>
+        
+
+    <div class="footer">
+        <div class="footer-title">Payment Information</div>
+        <p>{{ invoice.payment_info.bank_name }}</p>
+        <p>IBAN: {{ invoice.payment_info.iban }}</p>
+        <p>BIC: {{ invoice.payment_info.bic }}</p>
+        <p style="margin-top: 8px;">{{ invoice.payment_info.payment_terms }}</p>
+    </div>
+        
+</body>
+</html>

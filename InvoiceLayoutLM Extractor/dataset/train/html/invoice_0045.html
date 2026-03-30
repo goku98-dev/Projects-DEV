@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { background-color: #0e6655; color: #ffffff; padding: 20px 25px; margin: -20mm -20mm 30px -20mm; display: flex; justify-content: space-between; align-items: center; }
+        .invoice-title { font-size: 24pt; font-weight: bold; }
+        .invoice-meta { text-align: right; }
+        .invoice-meta p { margin-bottom: 4px; }
+        
+
+        .addresses { display: flex; justify-content: space-between; margin-bottom: 30px; }
+        .address-block { width: 45%; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 6px; font-size: 11pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        .table-wrapper table { border: 2px solid #0e6655; }
+        thead th { padding: 10px; text-align: left; background-color: #0e6655; color: #ffffff; border-right: 1px solid rgba(255,255,255,0.2); }
+        thead th:last-child { border-right: none; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 8px 10px; border-right: 1px solid #eee; }
+        tbody td:last-child { border-right: none; }
+        tbody td.num { text-align: right; }
+        tbody tr:nth-child(even) { background-color: #f9f9f9; }
+        
+.table-wrapper { margin-top: 0; }
+.table-wrapper table { width: 90%; }
+
+        .totals { width: 280px; margin-left: auto; }
+        .totals table { margin-bottom: 0; }
+        .totals td { padding: 4px 10px; border: none !important; }
+        .totals .total-row { font-weight: bold; font-size: 14pt; }
+        .totals .total-row td { border-top: 2px solid #0e6655 !important; }
+        
+
+        .footer { margin-top: 30px; padding-top: 10px; border-top: 1px solid #eee; font-size: 11pt; color: #666; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div>
+            <div class="invoice-title">INVOICE</div>
+            <p>Stückler &amp; Schubert e.V.</p>
+        </div>
+        <div class="invoice-meta">
+            <p>Invoice #: INV-117888</p>
+            <p>Date: 16.10.2025</p>
+            <p>Due: 30.10.2025</p>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">From</div>
+            <p>Stückler &amp; Schubert e.V.</p>
+            <p>Hörlgasse 84</p>
+            <p>9429 Leibnitz</p>
+            <p>Austria</p>
+        </div>
+        <div class="address-block">
+            <div class="label">Bill To</div>
+            <p>Hufnagl &amp; Brunner KG</p>
+            <p>Justus-Staudacher-Ring 64</p>
+            <p>5223 Grieskirchen</p>
+            <p>Austria</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th>Artikel</th>
+                
+                <th class="num">Betrag</th>
+                
+                <th class="num">Einzelpreis</th>
+                
+                <th>Produkt-Nr.</th>
+                
+                <th class="num">MwSt.-Satz</th>
+                
+                <th class="num">Nr.</th>
+                
+                <th class="num">Stück</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td>Screen Privacy Filter 24&#34;</td>
+                
+                <td class="num">5 910,77</td>
+                
+                <td class="num">256,99</td>
+                
+                <td>ART-89503</td>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">1</td>
+                
+                <td class="num">23</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>Monitor Arm Mount</td>
+                
+                <td class="num">2 706,34</td>
+                
+                <td class="num">386,62</td>
+                
+                <td>8154.403</td>
+                
+                <td class="num">10%</td>
+                
+                <td class="num">2</td>
+                
+                <td class="num">7</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>Noise-Cancelling Headphones</td>
+                
+                <td class="num">5 489,33</td>
+                
+                <td class="num">499,03</td>
+                
+                <td>777856</td>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">3</td>
+                
+                <td class="num">11</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>Annual Software License Renewal</td>
+                
+                <td class="num">5 207,41</td>
+                
+                <td class="num">127,01</td>
+                
+                <td>ART-26542</td>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">4</td>
+                
+                <td class="num">41</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>Professional Monitor Calibration</td>
+                
+                <td class="num">110,70</td>
+                
+                <td class="num">4,10</td>
+                
+                <td>5729.706</td>
+                
+                <td class="num">20%</td>
+                
+                <td class="num">5</td>
+                
+                <td class="num">27</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>Data Backup Service (monthly subscription)</td>
+                
+                <td class="num">6 069,45</td>
+                
+                <td class="num">141,15</td>
+                
+                <td>P80256</td>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">6</td>
+                
+                <td class="num">43</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>Ballpoint Pens (12-pack)</td>
+                
+                <td class="num">17 743,09</td>
+                
+                <td class="num">412,63</td>
+                
+                <td>B35591</td>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">7</td>
+                
+                <td class="num">43</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <table>
+            <tr>
+                <td>Subtotal:</td>
+                <td class="num">€ 43 237,09</td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td class="num">€ 292,77</td>
+            </tr>
+            <tr class="total-row">
+                <td>Total:</td>
+                <td class="num">€ 43 529,86</td>
+            </tr>
+        </table>
+    </div>
+        
+
+    <div class="footer">
+        <p>Please pay within 14 days of receipt.</p>
+    </div>
+        
+</body>
+</html>

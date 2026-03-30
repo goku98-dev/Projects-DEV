@@ -1,0 +1,96 @@
+{
+  "invoice_id": "invoice_0004",
+  "locale": "de_CH",
+  "template": "layout_002.html",
+  "columns": [
+    {
+      "field": "position",
+      "label": "Lfd. Nr.",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "unit_price",
+      "label": "Netto-EP",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "description",
+      "label": "Produkt",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "tax_rate",
+      "label": "Steuersatz",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "quantity",
+      "label": "Stück",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "line_total",
+      "label": "Betrag",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "article_number",
+      "label": "Artikelnummer",
+      "entity_label": "article_number",
+      "format": "text"
+    }
+  ],
+  "line_items": [
+    {
+      "position": "1",
+      "unit_price": "477.48",
+      "description": "Office Equipment Installation Service",
+      "tax_rate": "0%",
+      "quantity": "33",
+      "line_total": "15'756.84",
+      "article_number": "4218.189"
+    },
+    {
+      "position": "2",
+      "unit_price": "450.21",
+      "description": "Network Switch 8-Port",
+      "tax_rate": "2%",
+      "quantity": "46",
+      "line_total": "20'709.66",
+      "article_number": "7982.717"
+    },
+    {
+      "position": "3",
+      "unit_price": "204.47",
+      "description": "Whiteboard Marker Set",
+      "tax_rate": "0%",
+      "quantity": "21",
+      "line_total": "4'293.87",
+      "article_number": "P79355"
+    },
+    {
+      "position": "4",
+      "unit_price": "12.26",
+      "description": "Printer Paper A4 (500 sheets)",
+      "tax_rate": "2%",
+      "quantity": "4",
+      "line_total": "49.04",
+      "article_number": "ART-18920"
+    },
+    {
+      "position": "5",
+      "unit_price": "209.79",
+      "description": "Laptop Charger Universal 65W",
+      "tax_rate": "2%",
+      "quantity": "25",
+      "line_total": "5'244.75",
+      "article_number": "7225.167"
+    }
+  ]
+}

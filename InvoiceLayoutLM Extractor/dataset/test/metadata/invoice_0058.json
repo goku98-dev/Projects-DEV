@@ -1,0 +1,88 @@
+{
+  "invoice_id": "invoice_0058",
+  "locale": "de_DE",
+  "template": "layout_002.html",
+  "columns": [
+    {
+      "field": "unit_price",
+      "label": "Einzelpreis",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "tax_rate",
+      "label": "MwSt. %",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "description",
+      "label": "Beschreibung",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "line_total",
+      "label": "Gesamt",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "quantity",
+      "label": "Stk.",
+      "entity_label": "quantity",
+      "format": "int"
+    }
+  ],
+  "line_items": [
+    {
+      "unit_price": "308.22",
+      "tax_rate": "19%",
+      "description": "Mechanical Keyboard RGB",
+      "line_total": "12,945.24",
+      "quantity": "42"
+    },
+    {
+      "unit_price": "423.46",
+      "tax_rate": "0%",
+      "description": "Conference Table",
+      "line_total": "9,316.12",
+      "quantity": "22"
+    },
+    {
+      "unit_price": "79.92",
+      "tax_rate": "19%",
+      "description": "Bookshelf 5-Tier",
+      "line_total": "879.12",
+      "quantity": "11"
+    },
+    {
+      "unit_price": "132.11",
+      "tax_rate": "0%",
+      "description": "Laptop Charger Universal 65W",
+      "line_total": "3,434.86",
+      "quantity": "26"
+    },
+    {
+      "unit_price": "237.88",
+      "tax_rate": "0%",
+      "description": "HDMI Cable 2m",
+      "line_total": "7,850.04",
+      "quantity": "33"
+    },
+    {
+      "unit_price": "146.77",
+      "tax_rate": "0%",
+      "description": "Noise-Cancelling Headphones",
+      "line_total": "3,962.79",
+      "quantity": "27"
+    },
+    {
+      "unit_price": "262.07",
+      "tax_rate": "7%",
+      "description": "Wireless Keyboard",
+      "line_total": "10,482.80",
+      "quantity": "40"
+    }
+  ]
+}

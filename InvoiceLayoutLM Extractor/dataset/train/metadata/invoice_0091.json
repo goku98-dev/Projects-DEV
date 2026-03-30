@@ -1,0 +1,85 @@
+{
+  "invoice_id": "invoice_0091",
+  "locale": "en_GB",
+  "template": "layout_029.html",
+  "columns": [
+    {
+      "field": "unit_price",
+      "label": "Unit Cost",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "description",
+      "label": "Details",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "position",
+      "label": "Item",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "tax_rate",
+      "label": "GST %",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "line_total",
+      "label": "Total",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "quantity",
+      "label": "Pcs",
+      "entity_label": "quantity",
+      "format": "int"
+    }
+  ],
+  "line_items": [
+    {
+      "unit_price": "192.45",
+      "description": "Office Equipment Installation Service",
+      "position": "1",
+      "tax_rate": "20%",
+      "line_total": "1,539.60",
+      "quantity": "8"
+    },
+    {
+      "unit_price": "368.48",
+      "description": "Thunderbolt Cable 1m",
+      "position": "2",
+      "tax_rate": "5%",
+      "line_total": "1,473.92",
+      "quantity": "4"
+    },
+    {
+      "unit_price": "363.38",
+      "description": "UPS Battery Backup 1500VA",
+      "position": "3",
+      "tax_rate": "20%",
+      "line_total": "4,723.94",
+      "quantity": "13"
+    },
+    {
+      "unit_price": "282.50",
+      "description": "Printer Paper A4 (500 sheets)",
+      "position": "4",
+      "tax_rate": "5%",
+      "line_total": "4,237.50",
+      "quantity": "15"
+    },
+    {
+      "unit_price": "64.79",
+      "description": "Mechanical Keyboard RGB",
+      "position": "5",
+      "tax_rate": "0%",
+      "line_total": "1,231.01",
+      "quantity": "19"
+    }
+  ]
+}

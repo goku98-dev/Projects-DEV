@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: &#39;Lucida Sans&#39;, &#39;Lucida Grande&#39;, sans-serif;
+            font-size: 9pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { text-align: center; margin-bottom: 30px; }
+        .invoice-title { font-size: 22.5pt; font-weight: bold; color: #1a5276; margin-bottom: 10px; }
+        .invoice-meta { margin-top: 10px; }
+        .invoice-meta span { margin: 0 15px; }
+        
+
+        .addresses { display: flex; justify-content: space-between; margin-bottom: 30px; gap: 20px; }
+        .address-block { width: 45%; border: 1px solid #dddddd; padding: 12px 15px; }
+        .address-block .label { font-weight: bold; color: #1a5276; margin-bottom: 8px; font-size: 9pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        thead th { padding: 8px 10px; text-align: left; border-bottom: 2px dotted #1a5276; color: #1a5276; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 7px 10px; border-bottom: 1px dotted #ccc; }
+        tbody td.num { text-align: right; }
+        
+.table-wrapper { margin-top: 0; }
+.table-wrapper table { width: 90%; }
+
+        .totals { text-align: right; margin-bottom: 20px; }
+        .totals .line { margin-bottom: 4px; }
+        .totals .total-line { font-weight: bold; font-size: 12pt; color: #1a5276; border-top: 2px solid #1a5276; padding-top: 6px; display: inline-block; }
+        
+
+        .footer { margin-top: 30px; font-size: 7pt; color: #999; text-align: center; }
+        .footer p { margin-bottom: 2px; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="invoice-title">INVOICE</div>
+        <p>Hess GmbH</p>
+        <div class="invoice-meta">
+            <span><strong>Invoice #:</strong> INV-406176</span>
+            <span><strong>Date:</strong> 10.07.2025</span>
+            <span><strong>Due Date:</strong> 24.08.2025</span>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">Sender</div>
+            <p>Hess GmbH</p>
+            <p>Wegmannstrasse 35</p>
+            <p>4355 Naters</p>
+            <p>Switzerland</p>
+        </div>
+        <div class="address-block">
+            <div class="label">Recipient</div>
+            <p>Baumann Lang AG</p>
+            <p>Hofstetterstrasse 24</p>
+            <p>5432 Wettingen</p>
+            <p>Switzerland</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th class="num">#</th>
+                
+                <th>Artikel</th>
+                
+                <th class="num">Gesamt</th>
+                
+                <th class="num">Menge</th>
+                
+                <th class="num">Netto-EP</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td class="num">1</td>
+                
+                <td>Laptop Stand</td>
+                
+                <td class="num">3&#39;524.28</td>
+                
+                <td class="num">43</td>
+                
+                <td class="num">81.96</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">2</td>
+                
+                <td>Notebook A5 Ruled</td>
+                
+                <td class="num">17&#39;405.73</td>
+                
+                <td class="num">41</td>
+                
+                <td class="num">424.53</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">3</td>
+                
+                <td>Screen Privacy Filter 24&#34;</td>
+                
+                <td class="num">8&#39;614.08</td>
+                
+                <td class="num">48</td>
+                
+                <td class="num">179.46</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">4</td>
+                
+                <td>Toner Cartridge Black</td>
+                
+                <td class="num">2&#39;738.55</td>
+                
+                <td class="num">15</td>
+                
+                <td class="num">182.57</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <div class="line">Subtotal: CHF 32&#39;282.64</div>
+        <div class="line">Tax: CHF 789.07</div>
+        <div class="total-line">Total: CHF 33&#39;071.71</div>
+    </div>
+        
+
+    <div class="footer">
+        <p>Hess GmbH | Wegmannstrasse 35, 4355 Naters | Switzerland</p>
+        <p>Citibank | IBAN: CH94 6689 5561 2887 8048 5309</p>
+    </div>
+        
+</body>
+</html>

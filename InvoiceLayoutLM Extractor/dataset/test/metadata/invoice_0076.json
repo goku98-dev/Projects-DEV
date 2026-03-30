@@ -1,0 +1,105 @@
+{
+  "invoice_id": "invoice_0076",
+  "locale": "de_AT",
+  "template": "layout_020.html",
+  "columns": [
+    {
+      "field": "tax_rate",
+      "label": "USt.",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "position",
+      "label": "Lfd. Nr.",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "description",
+      "label": "Position",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "quantity",
+      "label": "Einheiten",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "article_number",
+      "label": "Artikelnummer",
+      "entity_label": "article_number",
+      "format": "text"
+    },
+    {
+      "field": "line_total",
+      "label": "Gesamtpreis",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "unit_price",
+      "label": "Netto-EP",
+      "entity_label": "unit_price",
+      "format": "currency"
+    }
+  ],
+  "line_items": [
+    {
+      "tax_rate": "10%",
+      "position": "1",
+      "description": "Office Chair",
+      "quantity": "42",
+      "article_number": "8621.826",
+      "line_total": "14 691,18",
+      "unit_price": "349,79"
+    },
+    {
+      "tax_rate": "10%",
+      "position": "2",
+      "description": "Ballpoint Pens (12-pack)",
+      "quantity": "29",
+      "article_number": "B91282",
+      "line_total": "10 700,71",
+      "unit_price": "368,99"
+    },
+    {
+      "tax_rate": "10%",
+      "position": "3",
+      "description": "Thunderbolt Cable 1m",
+      "quantity": "8",
+      "article_number": "B67203",
+      "line_total": "2 067,92",
+      "unit_price": "258,49"
+    },
+    {
+      "tax_rate": "20%",
+      "position": "4",
+      "description": "Notebook A5 Ruled",
+      "quantity": "18",
+      "article_number": "247628",
+      "line_total": "7 582,32",
+      "unit_price": "421,24"
+    },
+    {
+      "tax_rate": "0%",
+      "position": "5",
+      "description": "Compressed Air Duster (6-pack)",
+      "quantity": "19",
+      "article_number": "B12774",
+      "line_total": "4 396,41",
+      "unit_price": "231,39"
+    },
+    {
+      "tax_rate": "10%",
+      "position": "6",
+      "description": "External SSD 1TB",
+      "quantity": "12",
+      "article_number": "639279",
+      "line_total": "2 379,72",
+      "unit_price": "198,31"
+    }
+  ]
+}

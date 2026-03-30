@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: &#39;Courier New&#39;, Courier, monospace;
+            font-size: 11pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { background-color: #4a4a4a; color: #ffffff; padding: 20px 25px; margin: -20mm -20mm 30px -20mm; display: flex; justify-content: space-between; align-items: center; }
+        .invoice-title { font-size: 22pt; font-weight: bold; }
+        .invoice-meta { text-align: right; }
+        .invoice-meta p { margin-bottom: 4px; }
+        
+
+        .addresses { display: flex; justify-content: flex-end; margin-bottom: 30px; }
+        .address-block { width: 45%; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 6px; font-size: 10pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        thead th { padding: 8px 10px; text-align: left; border-bottom: 2px solid #4a4a4a; color: #4a4a4a; font-weight: bold; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 8px 10px; border-bottom: 1px solid #e0e0e0; }
+        tbody td.num { text-align: right; }
+        
+.table-wrapper { margin-top: 40px; }
+.table-wrapper table { width: 90%; }
+
+        .totals { text-align: right; margin-bottom: 20px; }
+        .totals .line { margin-bottom: 4px; }
+        .totals .total-line { font-weight: bold; font-size: 14pt; color: #4a4a4a; border-top: 2px solid #4a4a4a; padding-top: 6px; display: inline-block; }
+        
+
+        .footer { margin-top: 30px; padding-top: 10px; border-top: 1px solid #eee; font-size: 10pt; color: #666; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div>
+            <div class="invoice-title">INVOICE</div>
+            <p>Stalder &amp; Co.</p>
+        </div>
+        <div class="invoice-meta">
+            <p>Invoice #: INV-721345</p>
+            <p>Date: 21.06.2025</p>
+            <p>Due: 21.07.2025</p>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">Invoice To</div>
+            <p>Beck &amp; Partner</p>
+            <p>Schärstrasse 1</p>
+            <p>4091 Kloten</p>
+            <p>Switzerland</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th class="num">EP</th>
+                
+                <th class="num">Stk.</th>
+                
+                <th>Artikelnummer</th>
+                
+                <th class="num">USt. %</th>
+                
+                <th class="num">Gesamtbetrag</th>
+                
+                <th class="num">Pos.</th>
+                
+                <th>Produkt</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td class="num">496.58</td>
+                
+                <td class="num">20</td>
+                
+                <td>777065</td>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">9&#39;931.60</td>
+                
+                <td class="num">1</td>
+                
+                <td>Laminating Pouches A4 (100-pack)</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">109.77</td>
+                
+                <td class="num">38</td>
+                
+                <td>4892.169</td>
+                
+                <td class="num">8%</td>
+                
+                <td class="num">4&#39;171.26</td>
+                
+                <td class="num">2</td>
+                
+                <td>Conference Table</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">470.62</td>
+                
+                <td class="num">14</td>
+                
+                <td>2156.490</td>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">6&#39;588.68</td>
+                
+                <td class="num">3</td>
+                
+                <td>Laptop Charger Universal 65W</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">56.15</td>
+                
+                <td class="num">22</td>
+                
+                <td>2976.359</td>
+                
+                <td class="num">8%</td>
+                
+                <td class="num">1&#39;235.30</td>
+                
+                <td class="num">4</td>
+                
+                <td>Mouse Pad XL</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">50.31</td>
+                
+                <td class="num">29</td>
+                
+                <td>A46194</td>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">1&#39;458.99</td>
+                
+                <td class="num">5</td>
+                
+                <td>Monitor 27&#34;</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">408.62</td>
+                
+                <td class="num">35</td>
+                
+                <td>6622.124</td>
+                
+                <td class="num">8%</td>
+                
+                <td class="num">14&#39;301.70</td>
+                
+                <td class="num">6</td>
+                
+                <td>Disinfecting Wipes (75-pack)</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">206.38</td>
+                
+                <td class="num">8</td>
+                
+                <td>834395</td>
+                
+                <td class="num">2%</td>
+                
+                <td class="num">1&#39;651.04</td>
+                
+                <td class="num">7</td>
+                
+                <td>UPS Battery Backup 1500VA</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">319.47</td>
+                
+                <td class="num">20</td>
+                
+                <td>B71337</td>
+                
+                <td class="num">2%</td>
+                
+                <td class="num">6&#39;389.40</td>
+                
+                <td class="num">8</td>
+                
+                <td>Office Chair</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <div class="line">Subtotal: CHF 45&#39;727.97</div>
+        <div class="line">Tax: CHF 1&#39;797.39</div>
+        <div class="total-line">Total: CHF 47&#39;525.36</div>
+    </div>
+        
+
+    <div class="footer">
+        <p>30 days net. Skonto 2% within 10 days.</p>
+    </div>
+        
+</body>
+</html>

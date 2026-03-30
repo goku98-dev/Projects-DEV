@@ -1,0 +1,105 @@
+{
+  "invoice_id": "invoice_0057",
+  "locale": "fr_FR",
+  "template": "layout_012.html",
+  "columns": [
+    {
+      "field": "tax_rate",
+      "label": "Taux",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "quantity",
+      "label": "Nb",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "unit_price",
+      "label": "PU HT",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "position",
+      "label": "Pos.",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "description",
+      "label": "Description",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "line_total",
+      "label": "Montant",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "article_number",
+      "label": "Code produit",
+      "entity_label": "article_number",
+      "format": "text"
+    }
+  ],
+  "line_items": [
+    {
+      "tax_rate": "0%",
+      "quantity": "33",
+      "unit_price": "332,03",
+      "position": "1",
+      "description": "Docking Station USB-C",
+      "line_total": "10.956,99",
+      "article_number": "1796.269"
+    },
+    {
+      "tax_rate": "10%",
+      "quantity": "1",
+      "unit_price": "303,71",
+      "position": "2",
+      "description": "Office Equipment Installation Service",
+      "line_total": "303,71",
+      "article_number": "ART-66113"
+    },
+    {
+      "tax_rate": "20%",
+      "quantity": "36",
+      "unit_price": "417,26",
+      "position": "3",
+      "description": "HDMI Cable 2m",
+      "line_total": "15.021,36",
+      "article_number": "8417.378"
+    },
+    {
+      "tax_rate": "6%",
+      "quantity": "10",
+      "unit_price": "124,75",
+      "position": "4",
+      "description": "Monitor 27\"",
+      "line_total": "1.247,50",
+      "article_number": "3096.764"
+    },
+    {
+      "tax_rate": "20%",
+      "quantity": "8",
+      "unit_price": "119,08",
+      "position": "5",
+      "description": "Monitor Arm Mount",
+      "line_total": "952,64",
+      "article_number": "916351"
+    },
+    {
+      "tax_rate": "0%",
+      "quantity": "6",
+      "unit_price": "255,29",
+      "position": "6",
+      "description": "Webcam Light Ring",
+      "line_total": "1.531,74",
+      "article_number": "2793.102"
+    }
+  ]
+}

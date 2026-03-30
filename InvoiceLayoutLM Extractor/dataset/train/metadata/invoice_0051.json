@@ -1,0 +1,78 @@
+{
+  "invoice_id": "invoice_0051",
+  "locale": "fr_FR",
+  "template": "layout_006.html",
+  "columns": [
+    {
+      "field": "tax_rate",
+      "label": "% TVA",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "unit_price",
+      "label": "PU HT",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "line_total",
+      "label": "Prix total",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "quantity",
+      "label": "Unités",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "description",
+      "label": "Description",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "article_number",
+      "label": "Réf.",
+      "entity_label": "article_number",
+      "format": "text"
+    },
+    {
+      "field": "position",
+      "label": "Ligne",
+      "entity_label": "position",
+      "format": "int"
+    }
+  ],
+  "line_items": [
+    {
+      "tax_rate": "0%",
+      "unit_price": "177.74",
+      "line_total": "3,377.06",
+      "quantity": "19",
+      "description": "Room Divider Panel",
+      "article_number": "ART-38101",
+      "position": "1"
+    },
+    {
+      "tax_rate": "10%",
+      "unit_price": "450.64",
+      "line_total": "5,858.32",
+      "quantity": "13",
+      "description": "DisplayPort Cable 3m",
+      "article_number": "216343",
+      "position": "2"
+    },
+    {
+      "tax_rate": "0%",
+      "unit_price": "338.32",
+      "line_total": "1,353.28",
+      "quantity": "4",
+      "description": "Sticky Notes Assorted",
+      "article_number": "ART-89409",
+      "position": "3"
+    }
+  ]
+}

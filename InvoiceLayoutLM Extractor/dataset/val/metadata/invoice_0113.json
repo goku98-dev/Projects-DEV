@@ -1,0 +1,69 @@
+{
+  "invoice_id": "invoice_0113",
+  "locale": "fr_FR",
+  "template": "layout_028.html",
+  "columns": [
+    {
+      "field": "article_number",
+      "label": "Réf. article",
+      "entity_label": "article_number",
+      "format": "text"
+    },
+    {
+      "field": "quantity",
+      "label": "Qté.",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "description",
+      "label": "Prestation",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "line_total",
+      "label": "Prix total",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "position",
+      "label": "N°",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "unit_price",
+      "label": "Tarif unitaire",
+      "entity_label": "unit_price",
+      "format": "currency"
+    }
+  ],
+  "line_items": [
+    {
+      "article_number": "984318",
+      "quantity": "3",
+      "description": "Highlighter Set (5 colors)",
+      "line_total": "720,51",
+      "position": "1",
+      "unit_price": "240,17"
+    },
+    {
+      "article_number": "5375.272",
+      "quantity": "39",
+      "description": "Binder Clips Assorted (48-pack)",
+      "line_total": "13.464,36",
+      "position": "2",
+      "unit_price": "345,24"
+    },
+    {
+      "article_number": "505378",
+      "quantity": "47",
+      "description": "Laptop Stand",
+      "line_total": "18.606,83",
+      "position": "3",
+      "unit_price": "395,89"
+    }
+  ]
+}

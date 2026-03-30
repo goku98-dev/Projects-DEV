@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: &#39;Trebuchet MS&#39;, sans-serif;
+            font-size: 12pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { text-align: right; margin-bottom: 30px; }
+        .invoice-title { font-size: 24pt; font-weight: bold; color: #1b4f72; margin-bottom: 5px; }
+        .invoice-meta p { margin-bottom: 3px; }
+        .company-name { font-size: 14pt; margin-bottom: 10px; }
+        
+
+        .addresses { display: flex; justify-content: space-between; margin-bottom: 30px; }
+        .address-block { width: 45%; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 6px; font-size: 11pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        .table-wrapper table { border: 2px solid #1b4f72; }
+        thead th { padding: 10px; text-align: left; background-color: #1b4f72; color: #ffffff; border-right: 1px solid rgba(255,255,255,0.2); }
+        thead th:last-child { border-right: none; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 8px 10px; border-right: 1px solid #eee; }
+        tbody td:last-child { border-right: none; }
+        tbody td.num { text-align: right; }
+        tbody tr:nth-child(even) { background-color: #f2f2f2; }
+        
+.table-wrapper { margin-top: 40px; }
+.table-wrapper table { width: 95%; }
+
+        .totals { width: 300px; margin-left: auto; border: 1px solid #999999; padding: 10px; }
+        .totals table { margin-bottom: 0; width: 100%; }
+        .totals td { padding: 4px 8px; border: none !important; }
+        .totals .total-row { font-weight: bold; font-size: 14pt; background-color: #1b4f72; color: #ffffff; }
+        
+
+        .footer { margin-top: 40px; padding-top: 15px; border-top: 1px solid #ddd; font-size: 10pt; color: #666; }
+        .footer p { margin-bottom: 3px; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="invoice-title">INVOICE</div>
+        <div class="company-name">Zöhrer &amp; Probst OG</div>
+        <div class="invoice-meta">
+            <p>Invoice No: INV-568429</p>
+            <p>Invoice Date: 18.09.2025</p>
+            <p>Payment Due: 17.11.2025</p>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">From</div>
+            <p>Zöhrer &amp; Probst OG</p>
+            <p>Horngasse 756</p>
+            <p>3819 Ebenfurth</p>
+            <p>Austria</p>
+        </div>
+        <div class="address-block">
+            <div class="label">Bill To</div>
+            <p>Gartner &amp; Rupp AG</p>
+            <p>Constanze-Sorger-Platz 79</p>
+            <p>4779 Gänserndorf</p>
+            <p>Austria</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th class="num">Nettobetrag</th>
+                
+                <th class="num">Lfd. Nr.</th>
+                
+                <th>Position</th>
+                
+                <th class="num">MwSt. %</th>
+                
+                <th class="num">Anz.</th>
+                
+                <th>Artikel-Nr.</th>
+                
+                <th class="num">EP</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td class="num">3,773.20</td>
+                
+                <td class="num">1</td>
+                
+                <td>External HDD 4TB</td>
+                
+                <td class="num">20%</td>
+                
+                <td class="num">8</td>
+                
+                <td>ART-23401</td>
+                
+                <td class="num">471.65</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">7,243.75</td>
+                
+                <td class="num">2</td>
+                
+                <td>Room Divider Panel</td>
+                
+                <td class="num">20%</td>
+                
+                <td class="num">19</td>
+                
+                <td>8183.744</td>
+                
+                <td class="num">381.25</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">9,571.80</td>
+                
+                <td class="num">3</td>
+                
+                <td>Desk Organizer</td>
+                
+                <td class="num">20%</td>
+                
+                <td class="num">30</td>
+                
+                <td>M85490</td>
+                
+                <td class="num">319.06</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">2,367.93</td>
+                
+                <td class="num">4</td>
+                
+                <td>Envelope C4 (50-pack)</td>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">17</td>
+                
+                <td>ART-21307</td>
+                
+                <td class="num">139.29</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">2,507.18</td>
+                
+                <td class="num">5</td>
+                
+                <td>Mouse Pad XL</td>
+                
+                <td class="num">20%</td>
+                
+                <td class="num">13</td>
+                
+                <td>521746</td>
+                
+                <td class="num">192.86</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">15,711.36</td>
+                
+                <td class="num">6</td>
+                
+                <td>Stapler Heavy-Duty</td>
+                
+                <td class="num">10%</td>
+                
+                <td class="num">42</td>
+                
+                <td>B66946</td>
+                
+                <td class="num">374.08</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">19,699.11</td>
+                
+                <td class="num">7</td>
+                
+                <td>Conference Table</td>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">47</td>
+                
+                <td>A63276</td>
+                
+                <td class="num">419.13</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <table>
+            <tr>
+                <td>Subtotal:</td>
+                <td class="num">60,874.33 EUR</td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td class="num">6,190.33 EUR</td>
+            </tr>
+            <tr class="total-row">
+                <td>Total:</td>
+                <td class="num">67,064.66 EUR</td>
+            </tr>
+        </table>
+    </div>
+        
+
+    <div class="footer">
+        <p><strong>Payment Terms:</strong> Net 30 days from invoice date.</p>
+        <p><strong>Bank:</strong> Zürcher Kantonalbank | IBAN: AT78 3499 3294 7746 9766 9854 | BIC: XSNPATFHIBT</p>
+        <p>Thank you for your business.</p>
+    </div>
+        
+</body>
+</html>

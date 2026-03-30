@@ -1,0 +1,69 @@
+{
+  "invoice_id": "invoice_0040",
+  "locale": "de_CH",
+  "template": "layout_029.html",
+  "columns": [
+    {
+      "field": "unit_price",
+      "label": "Einzelpreis",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "quantity",
+      "label": "Menge",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "line_total",
+      "label": "Betrag",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "position",
+      "label": "Pos",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "article_number",
+      "label": "Artikelnummer",
+      "entity_label": "article_number",
+      "format": "text"
+    },
+    {
+      "field": "description",
+      "label": "Produkt",
+      "entity_label": "item_description",
+      "format": "text"
+    }
+  ],
+  "line_items": [
+    {
+      "unit_price": "213.76",
+      "quantity": "42",
+      "line_total": "8'977.92",
+      "position": "1",
+      "article_number": "ART-24957",
+      "description": "Ballpoint Pens (12-pack)"
+    },
+    {
+      "unit_price": "394.33",
+      "quantity": "20",
+      "line_total": "7'886.60",
+      "position": "2",
+      "article_number": "945467",
+      "description": "Ergonomic Desk Chair"
+    },
+    {
+      "unit_price": "62.01",
+      "quantity": "40",
+      "line_total": "2'480.40",
+      "position": "3",
+      "article_number": "1805.929",
+      "description": "Wireless Keyboard"
+    }
+  ]
+}

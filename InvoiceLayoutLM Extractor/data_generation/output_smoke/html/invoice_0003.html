@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 11pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { background-color: #2874a6; color: #ffffff; padding: 20px 25px; margin: -20mm -20mm 30px -20mm; display: flex; justify-content: space-between; align-items: center; }
+        .invoice-title { font-size: 22pt; font-weight: bold; }
+        .invoice-meta { text-align: right; }
+        .invoice-meta p { margin-bottom: 4px; }
+        
+
+        .addresses { display: flex; justify-content: flex-end; margin-bottom: 30px; }
+        .address-block { width: 45%; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 6px; font-size: 10pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        thead th { padding: 8px 10px; text-align: left; border-bottom: 2px solid #2874a6; color: #2874a6; font-weight: bold; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 8px 10px; border-bottom: 1px solid #e0e0e0; }
+        tbody td.num { text-align: right; }
+        
+.table-wrapper { margin-top: 40px; }
+.table-wrapper table { width: 90%; }
+
+        .totals { text-align: right; margin-bottom: 20px; }
+        .totals .line { margin-bottom: 4px; }
+        .totals .total-line { font-weight: bold; font-size: 14pt; color: #2874a6; border-top: 2px solid #2874a6; padding-top: 6px; display: inline-block; }
+        
+
+        .footer { margin-top: 30px; padding-top: 10px; border-top: 1px solid #eee; font-size: 10pt; color: #666; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div>
+            <div class="invoice-title">INVOICE</div>
+            <p>Wood PLC</p>
+        </div>
+        <div class="invoice-meta">
+            <p>Invoice #: INV-670665</p>
+            <p>Date: 09/04/2024</p>
+            <p>Due: 10/04/2024</p>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">Invoice To</div>
+            <p>Fowler-Hernandez</p>
+            <p>601 Katherine Ramp</p>
+            <p>62465 West Kimberlyview</p>
+            <p>United States</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th>Item</th>
+                
+                <th class="num">VAT</th>
+                
+                <th>Article No.</th>
+                
+                <th class="num">Each</th>
+                
+                <th class="num">Pcs</th>
+                
+                <th class="num">Net Amount</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td>Laptop Stand</td>
+                
+                <td class="num">10%</td>
+                
+                <td>8804.506</td>
+                
+                <td class="num">97.08</td>
+                
+                <td class="num">15</td>
+                
+                <td class="num">1,456.20</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>Standing Desk</td>
+                
+                <td class="num">0%</td>
+                
+                <td>ART-98003</td>
+                
+                <td class="num">195.88</td>
+                
+                <td class="num">34</td>
+                
+                <td class="num">6,659.92</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>Desk Calendar 2026</td>
+                
+                <td class="num">10%</td>
+                
+                <td>M68277</td>
+                
+                <td class="num">237.17</td>
+                
+                <td class="num">18</td>
+                
+                <td class="num">4,269.06</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>Wireless Access Point</td>
+                
+                <td class="num">10%</td>
+                
+                <td>P92136</td>
+                
+                <td class="num">19.39</td>
+                
+                <td class="num">7</td>
+                
+                <td class="num">135.73</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>Data Backup Service (monthly subscription)</td>
+                
+                <td class="num">10%</td>
+                
+                <td>6749.646</td>
+                
+                <td class="num">254.36</td>
+                
+                <td class="num">27</td>
+                
+                <td class="num">6,867.72</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <div class="line">Subtotal: 19,388.63 USD</div>
+        <div class="line">Tax: 1,272.87 USD</div>
+        <div class="total-line">Total: 20,661.50 USD</div>
+    </div>
+        
+
+    <div class="footer">
+        <p>Please remit payment within the stated due date.</p>
+    </div>
+        
+</body>
+</html>

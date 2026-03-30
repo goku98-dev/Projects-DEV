@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: &#39;Lucida Sans&#39;, &#39;Lucida Grande&#39;, sans-serif;
+            font-size: 9pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { background-color: #6e2c00; color: #ffffff; padding: 20px 25px; margin: -20mm -20mm 30px -20mm; display: flex; justify-content: space-between; align-items: center; }
+        .invoice-title { font-size: 18pt; font-weight: bold; }
+        .invoice-meta { text-align: right; }
+        .invoice-meta p { margin-bottom: 4px; }
+        
+
+        .addresses { display: flex; justify-content: flex-end; margin-bottom: 30px; }
+        .address-block { width: 45%; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 6px; font-size: 8pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        thead th { padding: 6px 10px; text-align: left; font-weight: normal; text-transform: uppercase; font-size: 7pt; color: #999; letter-spacing: 0.5px; border-bottom: 1px solid #ccc; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 8px 10px; }
+        tbody td.num { text-align: right; }
+        tbody tr:last-child td { border-bottom: 1px solid #ccc; }
+        
+.table-wrapper { margin-top: 40px; }
+.table-wrapper table { width: 90%; }
+
+        .totals { text-align: right; margin-bottom: 20px; }
+        .totals .line { margin-bottom: 4px; }
+        .totals .total-line { font-weight: bold; font-size: 12pt; color: #6e2c00; border-top: 2px solid #6e2c00; padding-top: 6px; display: inline-block; }
+        
+
+        .footer { margin-top: 40px; padding: 12px 15px; background-color: #f8f8f8; font-size: 8pt; color: #555; }
+        .footer .footer-title { font-weight: bold; margin-bottom: 5px; }
+        .footer p { margin-bottom: 3px; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div>
+            <div class="invoice-title">INVOICE</div>
+            <p>Patel Ltd</p>
+        </div>
+        <div class="invoice-meta">
+            <p>Invoice #: INV-707569</p>
+            <p>Date: 25/10/2024</p>
+            <p>Due: 08/11/2024</p>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">Invoice To</div>
+            <p>Williams, Davies and Jennings</p>
+            <p>Flat 8
+James Squares</p>
+            <p>N8J 1SZ East Danielleside</p>
+            <p>United Kingdom</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th>Details</th>
+                
+                <th class="num">Tax</th>
+                
+                <th class="num">Price</th>
+                
+                <th class="num">Count</th>
+                
+                <th>Art. No.</th>
+                
+                <th class="num">Ext. Price</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td>RAM Module 16GB DDR5</td>
+                
+                <td class="num">5%</td>
+                
+                <td class="num">278.30</td>
+                
+                <td class="num">41</td>
+                
+                <td>219692</td>
+                
+                <td class="num">11,410.30</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>Wireless Presenter</td>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">341.22</td>
+                
+                <td class="num">10</td>
+                
+                <td>ART-64617</td>
+                
+                <td class="num">3,412.20</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>UPS Battery Backup 1500VA</td>
+                
+                <td class="num">5%</td>
+                
+                <td class="num">461.82</td>
+                
+                <td class="num">16</td>
+                
+                <td>9346.715</td>
+                
+                <td class="num">7,389.12</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>Bluetooth Speaker Portable</td>
+                
+                <td class="num">5%</td>
+                
+                <td class="num">209.90</td>
+                
+                <td class="num">8</td>
+                
+                <td>ART-88818</td>
+                
+                <td class="num">1,679.20</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>Printer Paper A4 (500 sheets)</td>
+                
+                <td class="num">20%</td>
+                
+                <td class="num">138.26</td>
+                
+                <td class="num">36</td>
+                
+                <td>C69170</td>
+                
+                <td class="num">4,977.36</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <div class="line">Subtotal: £ 28,868.18</div>
+        <div class="line">Tax: £ 2,019.40</div>
+        <div class="total-line">Total: £ 30,887.58</div>
+    </div>
+        
+
+    <div class="footer">
+        <div class="footer-title">Payment Information</div>
+        <p>UBS</p>
+        <p>IBAN: GB99 6334 5115 8592 2841 3590 2189</p>
+        <p>BIC: OTOWDE1VR9F</p>
+        <p style="margin-top: 8px;">30 days net. Skonto 2% within 10 days.</p>
+    </div>
+        
+</body>
+</html>

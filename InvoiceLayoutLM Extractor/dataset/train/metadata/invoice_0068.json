@@ -1,0 +1,114 @@
+{
+  "invoice_id": "invoice_0068",
+  "locale": "de_AT",
+  "template": "layout_028.html",
+  "columns": [
+    {
+      "field": "line_total",
+      "label": "Nettobetrag",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "position",
+      "label": "Lfd. Nr.",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "description",
+      "label": "Position",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "tax_rate",
+      "label": "MwSt. %",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "quantity",
+      "label": "Anz.",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "article_number",
+      "label": "Artikel-Nr.",
+      "entity_label": "article_number",
+      "format": "text"
+    },
+    {
+      "field": "unit_price",
+      "label": "EP",
+      "entity_label": "unit_price",
+      "format": "currency"
+    }
+  ],
+  "line_items": [
+    {
+      "line_total": "3,773.20",
+      "position": "1",
+      "description": "External HDD 4TB",
+      "tax_rate": "20%",
+      "quantity": "8",
+      "article_number": "ART-23401",
+      "unit_price": "471.65"
+    },
+    {
+      "line_total": "7,243.75",
+      "position": "2",
+      "description": "Room Divider Panel",
+      "tax_rate": "20%",
+      "quantity": "19",
+      "article_number": "8183.744",
+      "unit_price": "381.25"
+    },
+    {
+      "line_total": "9,571.80",
+      "position": "3",
+      "description": "Desk Organizer",
+      "tax_rate": "20%",
+      "quantity": "30",
+      "article_number": "M85490",
+      "unit_price": "319.06"
+    },
+    {
+      "line_total": "2,367.93",
+      "position": "4",
+      "description": "Envelope C4 (50-pack)",
+      "tax_rate": "0%",
+      "quantity": "17",
+      "article_number": "ART-21307",
+      "unit_price": "139.29"
+    },
+    {
+      "line_total": "2,507.18",
+      "position": "5",
+      "description": "Mouse Pad XL",
+      "tax_rate": "20%",
+      "quantity": "13",
+      "article_number": "521746",
+      "unit_price": "192.86"
+    },
+    {
+      "line_total": "15,711.36",
+      "position": "6",
+      "description": "Stapler Heavy-Duty",
+      "tax_rate": "10%",
+      "quantity": "42",
+      "article_number": "B66946",
+      "unit_price": "374.08"
+    },
+    {
+      "line_total": "19,699.11",
+      "position": "7",
+      "description": "Conference Table",
+      "tax_rate": "0%",
+      "quantity": "47",
+      "article_number": "A63276",
+      "unit_price": "419.13"
+    }
+  ]
+}

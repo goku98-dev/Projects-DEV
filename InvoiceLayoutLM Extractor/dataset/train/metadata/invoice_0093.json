@@ -1,0 +1,96 @@
+{
+  "invoice_id": "invoice_0093",
+  "locale": "de_AT",
+  "template": "layout_001.html",
+  "columns": [
+    {
+      "field": "tax_rate",
+      "label": "Steuersatz",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "line_total",
+      "label": "Betrag",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "unit_price",
+      "label": "EP",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "quantity",
+      "label": "Stück",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "article_number",
+      "label": "Artikel-Nr.",
+      "entity_label": "article_number",
+      "format": "text"
+    },
+    {
+      "field": "description",
+      "label": "Leistung",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "position",
+      "label": "Lfd. Nr.",
+      "entity_label": "position",
+      "format": "int"
+    }
+  ],
+  "line_items": [
+    {
+      "tax_rate": "20%",
+      "line_total": "639,00",
+      "unit_price": "159,75",
+      "quantity": "4",
+      "article_number": "2474.495",
+      "description": "Thunderbolt Cable 1m",
+      "position": "1"
+    },
+    {
+      "tax_rate": "10%",
+      "line_total": "963,04",
+      "unit_price": "37,04",
+      "quantity": "26",
+      "article_number": "ART-69695",
+      "description": "Office Chair",
+      "position": "2"
+    },
+    {
+      "tax_rate": "20%",
+      "line_total": "22 030,40",
+      "unit_price": "449,60",
+      "quantity": "49",
+      "article_number": "221418",
+      "description": "Managed Firewall Service (annual)",
+      "position": "3"
+    },
+    {
+      "tax_rate": "10%",
+      "line_total": "14 132,43",
+      "unit_price": "362,37",
+      "quantity": "39",
+      "article_number": "375464",
+      "description": "Printer Maintenance Contract (quarterly)",
+      "position": "4"
+    },
+    {
+      "tax_rate": "10%",
+      "line_total": "1 126,23",
+      "unit_price": "160,89",
+      "quantity": "7",
+      "article_number": "7594.122",
+      "description": "Coat Rack",
+      "position": "5"
+    }
+  ]
+}

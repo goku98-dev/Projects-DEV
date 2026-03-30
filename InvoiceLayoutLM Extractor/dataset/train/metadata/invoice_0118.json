@@ -1,0 +1,101 @@
+{
+  "invoice_id": "invoice_0118",
+  "locale": "de_DE",
+  "template": "layout_014.html",
+  "columns": [
+    {
+      "field": "tax_rate",
+      "label": "USt. %",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "line_total",
+      "label": "Gesamt",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "quantity",
+      "label": "Stk.",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "article_number",
+      "label": "Bestellnr.",
+      "entity_label": "article_number",
+      "format": "text"
+    },
+    {
+      "field": "unit_price",
+      "label": "Einzelpreis",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "description",
+      "label": "Leistung",
+      "entity_label": "item_description",
+      "format": "text"
+    }
+  ],
+  "line_items": [
+    {
+      "tax_rate": "19%",
+      "line_total": "10,099.80",
+      "quantity": "45",
+      "article_number": "A62106",
+      "unit_price": "224.44",
+      "description": "Webcam HD"
+    },
+    {
+      "tax_rate": "7%",
+      "line_total": "4,110.54",
+      "quantity": "21",
+      "article_number": "8972.453",
+      "unit_price": "195.74",
+      "description": "Managed Firewall Service (annual)"
+    },
+    {
+      "tax_rate": "19%",
+      "line_total": "1,542.72",
+      "quantity": "8",
+      "article_number": "P45673",
+      "unit_price": "192.84",
+      "description": "Monitor Arm Mount"
+    },
+    {
+      "tax_rate": "0%",
+      "line_total": "6,940.85",
+      "quantity": "35",
+      "article_number": "1128.389",
+      "unit_price": "198.31",
+      "description": "Label Maker Tape 12mm"
+    },
+    {
+      "tax_rate": "0%",
+      "line_total": "14,012.00",
+      "quantity": "31",
+      "article_number": "6514.673",
+      "unit_price": "452.00",
+      "description": "Mouse Pad XL"
+    },
+    {
+      "tax_rate": "0%",
+      "line_total": "9,962.68",
+      "quantity": "26",
+      "article_number": "B86818",
+      "unit_price": "383.18",
+      "description": "Laptop Stand"
+    },
+    {
+      "tax_rate": "0%",
+      "line_total": "217.88",
+      "quantity": "2",
+      "article_number": "798785",
+      "unit_price": "108.94",
+      "description": "Binder Clips Assorted (48-pack)"
+    }
+  ]
+}

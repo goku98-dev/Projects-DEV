@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: &#39;Courier New&#39;, Courier, monospace;
+            font-size: 11pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { text-align: right; margin-bottom: 30px; }
+        .invoice-title { font-size: 22pt; font-weight: bold; color: #4a235a; margin-bottom: 5px; }
+        .invoice-meta p { margin-bottom: 3px; }
+        .company-name { font-size: 13pt; margin-bottom: 10px; }
+        
+
+        .addresses { display: flex; justify-content: space-between; margin-bottom: 30px; }
+        .address-block { width: 45%; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 6px; font-size: 10pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        .table-wrapper table { border: 2px solid #4a235a; }
+        thead th { padding: 10px; text-align: left; background-color: #4a235a; color: #ffffff; border-right: 1px solid rgba(255,255,255,0.2); }
+        thead th:last-child { border-right: none; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 8px 10px; border-right: 1px solid #eee; }
+        tbody td:last-child { border-right: none; }
+        tbody td.num { text-align: right; }
+        tbody tr:nth-child(even) { background-color: #f2f2f2; }
+        
+.table-wrapper { margin-top: 40px; }
+.table-wrapper table { width: 95%; }
+
+        .totals { width: 300px; margin-left: auto; border: 1px solid #cccccc; padding: 10px; }
+        .totals table { margin-bottom: 0; width: 100%; }
+        .totals td { padding: 4px 8px; border: none !important; }
+        .totals .total-row { font-weight: bold; font-size: 13pt; background-color: #4a235a; color: #ffffff; }
+        
+
+        .footer { margin-top: 40px; padding-top: 15px; border-top: 1px solid #ddd; font-size: 9pt; color: #666; }
+        .footer p { margin-bottom: 3px; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="invoice-title">INVOICE</div>
+        <div class="company-name">Dupré</div>
+        <div class="invoice-meta">
+            <p>Invoice No: INV-993229</p>
+            <p>Invoice Date: 06/02/2025</p>
+            <p>Payment Due: 07/04/2025</p>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">From</div>
+            <p>Dupré</p>
+            <p>58, rue Menard</p>
+            <p>71353 Charpentier</p>
+            <p>France</p>
+        </div>
+        <div class="address-block">
+            <div class="label">Bill To</div>
+            <p>Vallée SA</p>
+            <p>78, rue Gilles Ferrand</p>
+            <p>09764 Sainte Yves-sur-Mer</p>
+            <p>France</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th class="num">Réf.</th>
+                
+                <th class="num">Prix U.</th>
+                
+                <th>Produit</th>
+                
+                <th>Code article</th>
+                
+                <th class="num">Qté</th>
+                
+                <th class="num">TVA %</th>
+                
+                <th class="num">Prix total</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td class="num">1</td>
+                
+                <td class="num">267,37</td>
+                
+                <td>Ergonomic Mouse</td>
+                
+                <td>ART-76079</td>
+                
+                <td class="num">1</td>
+                
+                <td class="num">6%</td>
+                
+                <td class="num">267,37</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">2</td>
+                
+                <td class="num">169,37</td>
+                
+                <td>Footrest Ergonomic</td>
+                
+                <td>ART-95077</td>
+                
+                <td class="num">24</td>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">4.064,88</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">3</td>
+                
+                <td class="num">463,12</td>
+                
+                <td>UPS Battery Backup 1500VA</td>
+                
+                <td>5286.734</td>
+                
+                <td class="num">26</td>
+                
+                <td class="num">20%</td>
+                
+                <td class="num">12.041,12</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">4</td>
+                
+                <td class="num">155,34</td>
+                
+                <td>Professional Monitor Calibration</td>
+                
+                <td>633362</td>
+                
+                <td class="num">18</td>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">2.796,12</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">5</td>
+                
+                <td class="num">467,56</td>
+                
+                <td>NVMe SSD 2TB</td>
+                
+                <td>ART-19972</td>
+                
+                <td class="num">3</td>
+                
+                <td class="num">10%</td>
+                
+                <td class="num">1.402,68</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">6</td>
+                
+                <td class="num">143,97</td>
+                
+                <td>Managed Firewall Service (annual)</td>
+                
+                <td>990878</td>
+                
+                <td class="num">44</td>
+                
+                <td class="num">10%</td>
+                
+                <td class="num">6.334,68</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">7</td>
+                
+                <td class="num">422,19</td>
+                
+                <td>Monitor Arm Mount</td>
+                
+                <td>215157</td>
+                
+                <td class="num">35</td>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">14.776,65</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">8</td>
+                
+                <td class="num">310,87</td>
+                
+                <td>Compressed Air Duster (6-pack)</td>
+                
+                <td>1016.164</td>
+                
+                <td class="num">49</td>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">15.232,63</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <table>
+            <tr>
+                <td>Subtotal:</td>
+                <td class="num">56.916,13 €</td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td class="num">3.196,67 €</td>
+            </tr>
+            <tr class="total-row">
+                <td>Total:</td>
+                <td class="num">60.112,80 €</td>
+            </tr>
+        </table>
+    </div>
+        
+
+    <div class="footer">
+        <p><strong>Payment Terms:</strong> Net 14 days. 2% discount for payment within 7 days.</p>
+        <p><strong>Bank:</strong> Bank of America | IBAN: FR74 6286 4608 2168 4742 4544 | BIC: QZOGDE7RV9D</p>
+        <p>Thank you for your business.</p>
+    </div>
+        
+</body>
+</html>

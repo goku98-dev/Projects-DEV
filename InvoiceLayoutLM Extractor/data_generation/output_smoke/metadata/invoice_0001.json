@@ -1,0 +1,85 @@
+{
+  "invoice_id": "invoice_0001",
+  "locale": "en_US",
+  "template": "layout_001.html",
+  "columns": [
+    {
+      "field": "unit_price",
+      "label": "Price/Unit",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "tax_rate",
+      "label": "GST %",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "article_number",
+      "label": "Item No.",
+      "entity_label": "article_number",
+      "format": "text"
+    },
+    {
+      "field": "line_total",
+      "label": "Amount",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "description",
+      "label": "Description",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "quantity",
+      "label": "Units",
+      "entity_label": "quantity",
+      "format": "int"
+    }
+  ],
+  "line_items": [
+    {
+      "unit_price": "15.63",
+      "tax_rate": "10%",
+      "article_number": "1034.812",
+      "line_total": "500.16",
+      "description": "Correction Tape 6-pack",
+      "quantity": "32"
+    },
+    {
+      "unit_price": "472.72",
+      "tax_rate": "8%",
+      "article_number": "1365.126",
+      "line_total": "17,963.36",
+      "description": "Desk Calendar 2026",
+      "quantity": "38"
+    },
+    {
+      "unit_price": "363.34",
+      "tax_rate": "6%",
+      "article_number": "9123.666",
+      "line_total": "10,173.52",
+      "description": "Notebook A5 Ruled",
+      "quantity": "28"
+    },
+    {
+      "unit_price": "230.61",
+      "tax_rate": "8%",
+      "article_number": "7818.957",
+      "line_total": "11,299.89",
+      "description": "Docking Station USB-C",
+      "quantity": "49"
+    },
+    {
+      "unit_price": "496.28",
+      "tax_rate": "8%",
+      "article_number": "6450.838",
+      "line_total": "20,347.48",
+      "description": "Desk Pad Leather",
+      "quantity": "41"
+    }
+  ]
+}

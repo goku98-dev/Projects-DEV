@@ -1,0 +1,85 @@
+{
+  "invoice_id": "invoice_0032",
+  "locale": "en_US",
+  "template": "layout_011.html",
+  "columns": [
+    {
+      "field": "description",
+      "label": "Product",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "quantity",
+      "label": "Qty",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "line_total",
+      "label": "Line Total",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "tax_rate",
+      "label": "Tax",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "position",
+      "label": "Item",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "unit_price",
+      "label": "Price",
+      "entity_label": "unit_price",
+      "format": "currency"
+    }
+  ],
+  "line_items": [
+    {
+      "description": "Disinfecting Wipes (75-pack)",
+      "quantity": "22",
+      "line_total": "1,424.28",
+      "tax_rate": "10%",
+      "position": "1",
+      "unit_price": "64.74"
+    },
+    {
+      "description": "Document Scanner",
+      "quantity": "36",
+      "line_total": "15,123.24",
+      "tax_rate": "10%",
+      "position": "2",
+      "unit_price": "420.09"
+    },
+    {
+      "description": "Label Maker Tape 12mm",
+      "quantity": "33",
+      "line_total": "2,670.03",
+      "tax_rate": "6%",
+      "position": "3",
+      "unit_price": "80.91"
+    },
+    {
+      "description": "Sticky Notes Assorted",
+      "quantity": "23",
+      "line_total": "5,123.48",
+      "tax_rate": "6%",
+      "position": "4",
+      "unit_price": "222.76"
+    },
+    {
+      "description": "Desk Lamp LED",
+      "quantity": "27",
+      "line_total": "8,431.29",
+      "tax_rate": "6%",
+      "position": "5",
+      "unit_price": "312.27"
+    }
+  ]
+}

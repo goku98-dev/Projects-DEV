@@ -1,0 +1,123 @@
+{
+  "invoice_id": "invoice_0087",
+  "locale": "de_AT",
+  "template": "layout_027.html",
+  "columns": [
+    {
+      "field": "unit_price",
+      "label": "Stückpreis",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "line_total",
+      "label": "Gesamtbetrag",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "description",
+      "label": "Beschreibung",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "article_number",
+      "label": "Produkt-Nr.",
+      "entity_label": "article_number",
+      "format": "text"
+    },
+    {
+      "field": "tax_rate",
+      "label": "USt.",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "quantity",
+      "label": "Menge",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "position",
+      "label": "Nr.",
+      "entity_label": "position",
+      "format": "int"
+    }
+  ],
+  "line_items": [
+    {
+      "unit_price": "368,93",
+      "line_total": "1.844,65",
+      "description": "Cloud Storage Plan 1TB (yearly)",
+      "article_number": "ART-92547",
+      "tax_rate": "0%",
+      "quantity": "5",
+      "position": "1"
+    },
+    {
+      "unit_price": "229,11",
+      "line_total": "11.455,50",
+      "description": "Webcam HD",
+      "article_number": "834544",
+      "tax_rate": "10%",
+      "quantity": "50",
+      "position": "2"
+    },
+    {
+      "unit_price": "214,94",
+      "line_total": "10.102,18",
+      "description": "Annual Software License Renewal",
+      "article_number": "4022.115",
+      "tax_rate": "0%",
+      "quantity": "47",
+      "position": "3"
+    },
+    {
+      "unit_price": "225,31",
+      "line_total": "5.407,44",
+      "description": "Binder Clips Assorted (48-pack)",
+      "article_number": "A82486",
+      "tax_rate": "20%",
+      "quantity": "24",
+      "position": "4"
+    },
+    {
+      "unit_price": "5,71",
+      "line_total": "251,24",
+      "description": "Printer Maintenance Contract (quarterly)",
+      "article_number": "941784",
+      "tax_rate": "20%",
+      "quantity": "44",
+      "position": "5"
+    },
+    {
+      "unit_price": "412,30",
+      "line_total": "6.596,80",
+      "description": "Whiteboard Marker Set",
+      "article_number": "ART-68830",
+      "tax_rate": "10%",
+      "quantity": "16",
+      "position": "6"
+    },
+    {
+      "unit_price": "41,44",
+      "line_total": "1.947,68",
+      "description": "IT Support Service (1 hour)",
+      "article_number": "ART-57396",
+      "tax_rate": "0%",
+      "quantity": "47",
+      "position": "7"
+    },
+    {
+      "unit_price": "324,75",
+      "line_total": "16.237,50",
+      "description": "NVMe SSD 2TB",
+      "article_number": "6289.582",
+      "tax_rate": "20%",
+      "quantity": "50",
+      "position": "8"
+    }
+  ]
+}

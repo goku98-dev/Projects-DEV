@@ -1,0 +1,60 @@
+{
+  "invoice_id": "invoice_0114",
+  "locale": "en_US",
+  "template": "layout_001.html",
+  "columns": [
+    {
+      "field": "line_total",
+      "label": "Amount",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "unit_price",
+      "label": "Unit Price",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "tax_rate",
+      "label": "VAT %",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "quantity",
+      "label": "Quantity",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "description",
+      "label": "Description",
+      "entity_label": "item_description",
+      "format": "text"
+    }
+  ],
+  "line_items": [
+    {
+      "line_total": "3,082.20",
+      "unit_price": "308.22",
+      "tax_rate": "6%",
+      "quantity": "10",
+      "description": "Toner Cartridge Black"
+    },
+    {
+      "line_total": "2,499.30",
+      "unit_price": "166.62",
+      "tax_rate": "8%",
+      "quantity": "15",
+      "description": "Wireless Keyboard"
+    },
+    {
+      "line_total": "7,366.44",
+      "unit_price": "433.32",
+      "tax_rate": "0%",
+      "quantity": "17",
+      "description": "Network Switch 8-Port"
+    }
+  ]
+}

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, Geneva, sans-serif;
+            font-size: 9pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { text-align: center; margin-bottom: 30px; }
+        .invoice-title { font-size: 22.5pt; font-weight: bold; color: #7b241c; margin-bottom: 10px; }
+        .invoice-meta { margin-top: 10px; }
+        .invoice-meta span { margin: 0 15px; }
+        
+
+        .addresses { display: flex; justify-content: space-between; margin-bottom: 30px; }
+        .address-block { width: 45%; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 6px; font-size: 8pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        thead th { background-color: #7b241c; color: #ffffff; padding: 8px 10px; text-align: left; border: 1px solid #999999; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 6px 10px; border: 1px solid #999999; }
+        tbody td.num { text-align: right; }
+        
+        tbody tr:nth-child(even) { background-color: #f2f2f2; }
+        
+        
+.table-wrapper { margin-top: 40px; }
+.table-wrapper table { width: 95%; }
+
+        .totals { width: 300px; margin-left: auto; border: 1px solid #999999; padding: 10px; }
+        .totals table { margin-bottom: 0; width: 100%; }
+        .totals td { padding: 4px 8px; border: none !important; }
+        .totals .total-row { font-weight: bold; font-size: 11pt; background-color: #7b241c; color: #ffffff; }
+        
+
+        .footer { margin-top: 30px; padding-top: 10px; border-top: 1px solid #eee; font-size: 8pt; color: #666; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="invoice-title">INVOICE</div>
+        <p>Bender-Navarro</p>
+        <div class="invoice-meta">
+            <span><strong>Invoice #:</strong> INV-785608</span>
+            <span><strong>Date:</strong> 08/05/2024</span>
+            <span><strong>Due Date:</strong> 09/19/2024</span>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">Bill To</div>
+            <p>Henderson-Boone</p>
+            <p>363 Breanna Run Suite 142</p>
+            <p>73866 Lake Sharon</p>
+            <p>United States</p>
+        </div>
+        <div class="address-block">
+            <div class="label">From</div>
+            <p>Bender-Navarro</p>
+            <p>2244 Smith Ridge Suite 995</p>
+            <p>64866 Debramouth</p>
+            <p>United States</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th class="num">Price</th>
+                
+                <th>Details</th>
+                
+                <th class="num">Amount</th>
+                
+                <th class="num">Tax</th>
+                
+                <th class="num">Units</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td class="num">399.33</td>
+                
+                <td>HDMI Cable 2m</td>
+                
+                <td class="num">15,573.87</td>
+                
+                <td class="num">8%</td>
+                
+                <td class="num">39</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">126.09</td>
+                
+                <td>DisplayPort Cable 3m</td>
+                
+                <td class="num">6,052.32</td>
+                
+                <td class="num">6%</td>
+                
+                <td class="num">48</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">468.10</td>
+                
+                <td>Network Switch 8-Port</td>
+                
+                <td class="num">22,000.70</td>
+                
+                <td class="num">8%</td>
+                
+                <td class="num">47</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">152.27</td>
+                
+                <td>Paper Shredder Cross-Cut</td>
+                
+                <td class="num">6,547.61</td>
+                
+                <td class="num">10%</td>
+                
+                <td class="num">43</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">335.74</td>
+                
+                <td>Office Chair</td>
+                
+                <td class="num">1,342.96</td>
+                
+                <td class="num">10%</td>
+                
+                <td class="num">4</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">162.98</td>
+                
+                <td>Scissors 8&#34; Stainless</td>
+                
+                <td class="num">2,933.64</td>
+                
+                <td class="num">6%</td>
+                
+                <td class="num">18</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <table>
+            <tr>
+                <td>Subtotal:</td>
+                <td class="num">54,451.10 USD</td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td class="num">4,428.12 USD</td>
+            </tr>
+            <tr class="total-row">
+                <td>Total:</td>
+                <td class="num">58,879.22 USD</td>
+            </tr>
+        </table>
+    </div>
+        
+
+    <div class="footer">
+        <p>Immediate payment required.</p>
+    </div>
+        
+</body>
+</html>

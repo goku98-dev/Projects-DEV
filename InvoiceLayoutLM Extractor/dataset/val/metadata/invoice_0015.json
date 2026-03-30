@@ -1,0 +1,109 @@
+{
+  "invoice_id": "invoice_0015",
+  "locale": "de_AT",
+  "template": "layout_002.html",
+  "columns": [
+    {
+      "field": "unit_price",
+      "label": "Stückpreis",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "position",
+      "label": "Lfd. Nr.",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "tax_rate",
+      "label": "Steuersatz",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "quantity",
+      "label": "Anzahl",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "description",
+      "label": "Leistung",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "line_total",
+      "label": "Gesamt",
+      "entity_label": "line_total",
+      "format": "currency"
+    }
+  ],
+  "line_items": [
+    {
+      "unit_price": "9.35",
+      "position": "1",
+      "tax_rate": "10%",
+      "quantity": "38",
+      "description": "Docking Station USB-C",
+      "line_total": "355.30"
+    },
+    {
+      "unit_price": "336.09",
+      "position": "2",
+      "tax_rate": "10%",
+      "quantity": "16",
+      "description": "Annual Software License Renewal",
+      "line_total": "5,377.44"
+    },
+    {
+      "unit_price": "214.01",
+      "position": "3",
+      "tax_rate": "10%",
+      "quantity": "11",
+      "description": "Laptop Charger Universal 65W",
+      "line_total": "2,354.11"
+    },
+    {
+      "unit_price": "208.37",
+      "position": "4",
+      "tax_rate": "20%",
+      "quantity": "7",
+      "description": "Printer Maintenance Contract (quarterly)",
+      "line_total": "1,458.59"
+    },
+    {
+      "unit_price": "269.53",
+      "position": "5",
+      "tax_rate": "10%",
+      "quantity": "6",
+      "description": "External SSD 1TB",
+      "line_total": "1,617.18"
+    },
+    {
+      "unit_price": "134.17",
+      "position": "6",
+      "tax_rate": "10%",
+      "quantity": "21",
+      "description": "Filing Cabinet 3-Drawer",
+      "line_total": "2,817.57"
+    },
+    {
+      "unit_price": "239.44",
+      "position": "7",
+      "tax_rate": "10%",
+      "quantity": "28",
+      "description": "Surge Protector 6-Outlet",
+      "line_total": "6,704.32"
+    },
+    {
+      "unit_price": "3.13",
+      "position": "8",
+      "tax_rate": "20%",
+      "quantity": "4",
+      "description": "Correction Tape 6-pack",
+      "line_total": "12.52"
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, &#39;Times New Roman&#39;, serif;
+            font-size: 11pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { margin: -20mm -20mm 30px -20mm; }
+        .header-top { background-color: #1b4f72; color: #ffffff; padding: 15px 25px; }
+        .header-bottom { background-color: #f5f5f5; padding: 10px 25px; display: flex; justify-content: space-between; border-bottom: 1px solid #ddd; }
+        .invoice-title { font-size: 22pt; font-weight: bold; }
+        .invoice-meta span { margin-right: 20px; font-size: 10pt; }
+        
+
+        .addresses { display: flex; justify-content: space-between; margin-bottom: 30px; gap: 20px; }
+        .address-block { width: 45%; border: 1px solid #999999; padding: 12px 15px; }
+        .address-block .label { font-weight: bold; color: #1b4f72; margin-bottom: 8px; font-size: 11pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        .table-wrapper table { border: 2px solid #1b4f72; }
+        thead th { padding: 10px; text-align: left; background-color: #1b4f72; color: #ffffff; border-right: 1px solid rgba(255,255,255,0.2); }
+        thead th:last-child { border-right: none; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 8px 10px; border-right: 1px solid #eee; }
+        tbody td:last-child { border-right: none; }
+        tbody td.num { text-align: right; }
+        tbody tr:nth-child(even) { background-color: #f2f2f2; }
+        
+.table-wrapper { margin-top: 80px; }
+.table-wrapper table { width: 100%; }
+
+        .totals { border-top: 1px solid #999999; padding-top: 10px; }
+        .totals table { width: 100%; margin-bottom: 0; }
+        .totals td { padding: 4px 10px; border: none !important; }
+        .totals td:first-child { text-align: right; width: 80%; }
+        .totals td:last-child { text-align: right; width: 20%; }
+        .totals .total-row { font-weight: bold; font-size: 13pt; }
+        .totals .total-row td { border-top: 2px solid #1b4f72 !important; }
+        
+
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="header-top">
+            <div class="invoice-title">Johnson and Sons</div>
+        </div>
+        <div class="header-bottom">
+            <span>Invoice INV-813742</span>
+            <span>Date: 09/15/2024</span>
+            <span>Due: 09/29/2024</span>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">Sender</div>
+            <p>Johnson and Sons</p>
+            <p>1429 Jeremy Meadows</p>
+            <p>01318 Jorgeside</p>
+            <p>United States</p>
+        </div>
+        <div class="address-block">
+            <div class="label">Recipient</div>
+            <p>Beltran, Bates and Turner</p>
+            <p>18415 Sullivan Road</p>
+            <p>51248 Robertmouth</p>
+            <p>United States</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th class="num">Amount</th>
+                
+                <th class="num">Unit Price</th>
+                
+                <th class="num">VAT %</th>
+                
+                <th class="num">Quantity</th>
+                
+                <th>Description</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td class="num">3,082.20</td>
+                
+                <td class="num">308.22</td>
+                
+                <td class="num">6%</td>
+                
+                <td class="num">10</td>
+                
+                <td>Toner Cartridge Black</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">2,499.30</td>
+                
+                <td class="num">166.62</td>
+                
+                <td class="num">8%</td>
+                
+                <td class="num">15</td>
+                
+                <td>Wireless Keyboard</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">7,366.44</td>
+                
+                <td class="num">433.32</td>
+                
+                <td class="num">0%</td>
+                
+                <td class="num">17</td>
+                
+                <td>Network Switch 8-Port</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <table>
+            <tr>
+                <td>Subtotal:</td>
+                <td>12,947.94 USD</td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td>391.12 USD</td>
+            </tr>
+            <tr class="total-row">
+                <td>Total:</td>
+                <td>13,339.06 USD</td>
+            </tr>
+        </table>
+    </div>
+        
+
+</body>
+</html>

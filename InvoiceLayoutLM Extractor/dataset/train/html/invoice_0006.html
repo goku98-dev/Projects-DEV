@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: &#39;Trebuchet MS&#39;, sans-serif;
+            font-size: 10pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { background-color: #6e2c00; color: #ffffff; padding: 20px 25px; margin: -20mm -20mm 30px -20mm; display: flex; justify-content: space-between; align-items: center; }
+        .invoice-title { font-size: 20pt; font-weight: bold; }
+        .invoice-meta { text-align: right; }
+        .invoice-meta p { margin-bottom: 4px; }
+        
+
+        .addresses { display: flex; justify-content: space-between; margin-bottom: 30px; }
+        .address-block { width: 45%; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 6px; font-size: 9pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        .table-wrapper table { border: 2px solid #6e2c00; }
+        thead th { padding: 10px; text-align: left; background-color: #6e2c00; color: #ffffff; border-right: 1px solid rgba(255,255,255,0.2); }
+        thead th:last-child { border-right: none; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 8px 10px; border-right: 1px solid #eee; }
+        tbody td:last-child { border-right: none; }
+        tbody td.num { text-align: right; }
+        tbody tr:nth-child(even) { background-color: #eef2f7; }
+        
+.table-wrapper { margin-top: 0; }
+.table-wrapper table { width: 95%; }
+
+        .totals { text-align: right; margin-bottom: 20px; }
+        .totals .line { margin-bottom: 4px; }
+        .totals .total-line { font-weight: bold; font-size: 13pt; color: #6e2c00; border-top: 2px solid #6e2c00; padding-top: 6px; display: inline-block; }
+        
+
+        .footer { margin-top: 40px; padding-top: 15px; border-top: 1px solid #ddd; font-size: 8pt; color: #666; }
+        .footer p { margin-bottom: 3px; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div>
+            <div class="invoice-title">INVOICE</div>
+            <p>Lucas, Jones and Brooks</p>
+        </div>
+        <div class="invoice-meta">
+            <p>Invoice #: INV-107625</p>
+            <p>Date: 17/10/2024</p>
+            <p>Due: 31/10/2024</p>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">Bill To</div>
+            <p>Barton Inc</p>
+            <p>9 Angela Mills</p>
+            <p>M7 5TY Port Gavinmouth</p>
+            <p>United Kingdom</p>
+        </div>
+        <div class="address-block">
+            <div class="label">From</div>
+            <p>Lucas, Jones and Brooks</p>
+            <p>04 Abbie Street</p>
+            <p>E23 0HX Brandonchester</p>
+            <p>United Kingdom</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th>Item No.</th>
+                
+                <th class="num">Price</th>
+                
+                <th class="num">Extended</th>
+                
+                <th class="num">Tax %</th>
+                
+                <th>Service / Product</th>
+                
+                <th class="num">Quantity</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td>9602.166</td>
+                
+                <td class="num">99.97</td>
+                
+                <td class="num">2,799.16</td>
+                
+                <td class="num">0%</td>
+                
+                <td>Noise-Cancelling Headphones</td>
+                
+                <td class="num">28</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>ART-25971</td>
+                
+                <td class="num">475.16</td>
+                
+                <td class="num">2,850.96</td>
+                
+                <td class="num">0%</td>
+                
+                <td>Bluetooth Speaker Portable</td>
+                
+                <td class="num">6</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>584642</td>
+                
+                <td class="num">480.20</td>
+                
+                <td class="num">6,722.80</td>
+                
+                <td class="num">0%</td>
+                
+                <td>Microfiber Cloth Set (10-pack)</td>
+                
+                <td class="num">14</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>2563.486</td>
+                
+                <td class="num">366.44</td>
+                
+                <td class="num">16,123.36</td>
+                
+                <td class="num">20%</td>
+                
+                <td>Ergonomic Desk Chair</td>
+                
+                <td class="num">44</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>ART-21628</td>
+                
+                <td class="num">404.04</td>
+                
+                <td class="num">13,737.36</td>
+                
+                <td class="num">20%</td>
+                
+                <td>Laptop Charger Universal 65W</td>
+                
+                <td class="num">34</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>B43164</td>
+                
+                <td class="num">69.93</td>
+                
+                <td class="num">3,216.78</td>
+                
+                <td class="num">0%</td>
+                
+                <td>Room Divider Panel</td>
+                
+                <td class="num">46</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>ART-70849</td>
+                
+                <td class="num">347.46</td>
+                
+                <td class="num">7,991.58</td>
+                
+                <td class="num">5%</td>
+                
+                <td>Surge Protector 6-Outlet</td>
+                
+                <td class="num">23</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>290458</td>
+                
+                <td class="num">343.72</td>
+                
+                <td class="num">7,218.12</td>
+                
+                <td class="num">5%</td>
+                
+                <td>Printer Paper A4 (500 sheets)</td>
+                
+                <td class="num">21</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <div class="line">Subtotal: £ 60,660.12</div>
+        <div class="line">Tax: £ 6,732.63</div>
+        <div class="total-line">Total: £ 67,392.75</div>
+    </div>
+        
+
+    <div class="footer">
+        <p><strong>Payment Terms:</strong> Please pay within 14 days of receipt.</p>
+        <p><strong>Bank:</strong> BNP Paribas | IBAN: GB94 3718 3305 4319 8655 1623 | BIC: BHGNCHTTKI4</p>
+        <p>Thank you for your business.</p>
+    </div>
+        
+</body>
+</html>

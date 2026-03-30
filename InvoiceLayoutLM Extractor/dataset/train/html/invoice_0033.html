@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: &#39;Palatino Linotype&#39;, &#39;Book Antiqua&#39;, Palatino, serif;
+            font-size: 9pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { text-align: center; margin-bottom: 30px; }
+        .invoice-title { font-size: 22.5pt; font-weight: bold; color: #283747; margin-bottom: 10px; }
+        .invoice-meta { margin-top: 10px; }
+        .invoice-meta span { margin: 0 15px; }
+        
+
+        .addresses { display: flex; justify-content: space-between; margin-bottom: 30px; }
+        .address-block { width: 45%; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 6px; font-size: 8pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        thead th { background-color: #283747; color: #ffffff; padding: 8px 10px; text-align: left; border: 1px solid #283747; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 6px 10px; border: 1px solid #283747; }
+        tbody td.num { text-align: right; }
+        
+        
+.table-wrapper { margin-top: 40px; }
+.table-wrapper table { width: 90%; }
+
+        .totals { text-align: right; margin-bottom: 20px; }
+        .totals .line { margin-bottom: 4px; }
+        .totals .total-line { font-weight: bold; font-size: 12pt; color: #283747; border-top: 2px solid #283747; padding-top: 6px; display: inline-block; }
+        
+
+        .footer { margin-top: 30px; padding-top: 10px; border-top: 1px solid #eee; font-size: 8pt; color: #666; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="invoice-title">INVOICE</div>
+        <p>Glaser Heissenberger AG</p>
+        <div class="invoice-meta">
+            <span><strong>Invoice #:</strong> INV-361141</span>
+            <span><strong>Date:</strong> 07.10.2025</span>
+            <span><strong>Due Date:</strong> 06.11.2025</span>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">Bill To</div>
+            <p>Schütz KG</p>
+            <p>Rosalie-Schüller-Straße 80</p>
+            <p>1433 Stadtschlaining</p>
+            <p>Austria</p>
+        </div>
+        <div class="address-block">
+            <div class="label">From</div>
+            <p>Glaser Heissenberger AG</p>
+            <p>Beckerweg 66</p>
+            <p>1496 Maissau</p>
+            <p>Austria</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th>Artikel</th>
+                
+                <th class="num">Preis/Einheit</th>
+                
+                <th class="num">Anzahl</th>
+                
+                <th class="num">Gesamtpreis</th>
+                
+                <th class="num">Pos.</th>
+                
+                <th>Teilenr.</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td>Monitor 27&#34;</td>
+                
+                <td class="num">293,03</td>
+                
+                <td class="num">50</td>
+                
+                <td class="num">14.651,50</td>
+                
+                <td class="num">1</td>
+                
+                <td>ART-59289</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>Webcam HD</td>
+                
+                <td class="num">288,59</td>
+                
+                <td class="num">19</td>
+                
+                <td class="num">5.483,21</td>
+                
+                <td class="num">2</td>
+                
+                <td>ART-82152</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>Cable Management Kit</td>
+                
+                <td class="num">302,03</td>
+                
+                <td class="num">28</td>
+                
+                <td class="num">8.456,84</td>
+                
+                <td class="num">3</td>
+                
+                <td>104779</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>Filing Cabinet 3-Drawer</td>
+                
+                <td class="num">389,67</td>
+                
+                <td class="num">21</td>
+                
+                <td class="num">8.183,07</td>
+                
+                <td class="num">4</td>
+                
+                <td>769316</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>Hand Sanitizer 500ml</td>
+                
+                <td class="num">100,06</td>
+                
+                <td class="num">37</td>
+                
+                <td class="num">3.702,22</td>
+                
+                <td class="num">5</td>
+                
+                <td>892711</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <div class="line">Subtotal: 40.476,84 €</div>
+        <div class="line">Tax: 5.334,73 €</div>
+        <div class="total-line">Total: 45.811,57 €</div>
+    </div>
+        
+
+    <div class="footer">
+        <p>Payment due upon receipt.</p>
+    </div>
+        
+</body>
+</html>

@@ -1,0 +1,81 @@
+{
+  "invoice_id": "invoice_0081",
+  "locale": "en_US",
+  "template": "layout_013.html",
+  "columns": [
+    {
+      "field": "unit_price",
+      "label": "Price",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "description",
+      "label": "Details",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "line_total",
+      "label": "Amount",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "tax_rate",
+      "label": "Tax",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "quantity",
+      "label": "Units",
+      "entity_label": "quantity",
+      "format": "int"
+    }
+  ],
+  "line_items": [
+    {
+      "unit_price": "399.33",
+      "description": "HDMI Cable 2m",
+      "line_total": "15,573.87",
+      "tax_rate": "8%",
+      "quantity": "39"
+    },
+    {
+      "unit_price": "126.09",
+      "description": "DisplayPort Cable 3m",
+      "line_total": "6,052.32",
+      "tax_rate": "6%",
+      "quantity": "48"
+    },
+    {
+      "unit_price": "468.10",
+      "description": "Network Switch 8-Port",
+      "line_total": "22,000.70",
+      "tax_rate": "8%",
+      "quantity": "47"
+    },
+    {
+      "unit_price": "152.27",
+      "description": "Paper Shredder Cross-Cut",
+      "line_total": "6,547.61",
+      "tax_rate": "10%",
+      "quantity": "43"
+    },
+    {
+      "unit_price": "335.74",
+      "description": "Office Chair",
+      "line_total": "1,342.96",
+      "tax_rate": "10%",
+      "quantity": "4"
+    },
+    {
+      "unit_price": "162.98",
+      "description": "Scissors 8\" Stainless",
+      "line_total": "2,933.64",
+      "tax_rate": "6%",
+      "quantity": "18"
+    }
+  ]
+}

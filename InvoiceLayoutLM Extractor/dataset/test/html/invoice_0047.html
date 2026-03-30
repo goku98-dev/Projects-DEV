@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Tahoma, Geneva, sans-serif;
+            font-size: 9pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { margin: -20mm -20mm 30px -20mm; }
+        .header-top { background-color: #1c2833; color: #ffffff; padding: 15px 25px; }
+        .header-bottom { background-color: #f5f5f5; padding: 10px 25px; display: flex; justify-content: space-between; border-bottom: 1px solid #ddd; }
+        .invoice-title { font-size: 18pt; font-weight: bold; }
+        .invoice-meta span { margin-right: 20px; font-size: 8pt; }
+        
+
+        .addresses { display: flex; justify-content: flex-end; margin-bottom: 30px; }
+        .address-block { width: 45%; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 6px; font-size: 8pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        thead th { padding: 6px 10px; text-align: left; font-weight: normal; text-transform: uppercase; font-size: 7pt; color: #999; letter-spacing: 0.5px; border-bottom: 1px solid #ccc; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 8px 10px; }
+        tbody td.num { text-align: right; }
+        tbody tr:last-child td { border-bottom: 1px solid #ccc; }
+        
+.table-wrapper { margin-top: 0; }
+.table-wrapper table { width: 100%; }
+
+        .totals { width: 300px; margin-left: auto; border: 1px solid #999999; padding: 10px; }
+        .totals table { margin-bottom: 0; width: 100%; }
+        .totals td { padding: 4px 8px; border: none !important; }
+        .totals .total-row { font-weight: bold; font-size: 11pt; background-color: #1c2833; color: #ffffff; }
+        
+
+        .footer { margin-top: 40px; padding: 12px 15px; background-color: #f8f8f8; font-size: 8pt; color: #555; }
+        .footer .footer-title { font-weight: bold; margin-bottom: 5px; }
+        .footer p { margin-bottom: 3px; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="header-top">
+            <div class="invoice-title">Herzog Schwab GmbH</div>
+        </div>
+        <div class="header-bottom">
+            <span>Invoice INV-178619</span>
+            <span>Date: 13.07.2025</span>
+            <span>Due: 27.07.2025</span>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">Invoice To</div>
+            <p>Schäfer &amp; Söhne</p>
+            <p>Furrerstrasse 85</p>
+            <p>1063 Lausanne</p>
+            <p>Switzerland</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th>Position</th>
+                
+                <th class="num">Gesamtbetrag</th>
+                
+                <th>Produkt-Nr.</th>
+                
+                <th class="num">Pos.</th>
+                
+                <th class="num">E-Preis</th>
+                
+                <th class="num">Stück</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td>DisplayPort Cable 3m</td>
+                
+                <td class="num">9&#39;465.30</td>
+                
+                <td>ART-55973</td>
+                
+                <td class="num">1</td>
+                
+                <td class="num">242.70</td>
+                
+                <td class="num">39</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>HDMI Cable 2m</td>
+                
+                <td class="num">2&#39;218.44</td>
+                
+                <td>457468</td>
+                
+                <td class="num">2</td>
+                
+                <td class="num">52.82</td>
+                
+                <td class="num">42</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>Monitor 27&#34;</td>
+                
+                <td class="num">10&#39;381.92</td>
+                
+                <td>B21371</td>
+                
+                <td class="num">3</td>
+                
+                <td class="num">432.58</td>
+                
+                <td class="num">24</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>External HDD 4TB</td>
+                
+                <td class="num">721.50</td>
+                
+                <td>8138.163</td>
+                
+                <td class="num">4</td>
+                
+                <td class="num">72.15</td>
+                
+                <td class="num">10</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>Label Maker Tape 12mm</td>
+                
+                <td class="num">10&#39;028.19</td>
+                
+                <td>P50727</td>
+                
+                <td class="num">5</td>
+                
+                <td class="num">323.49</td>
+                
+                <td class="num">31</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <table>
+            <tr>
+                <td>Subtotal:</td>
+                <td class="num">CHF 32&#39;815.35</td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td class="num">CHF 2&#39;056.06</td>
+            </tr>
+            <tr class="total-row">
+                <td>Total:</td>
+                <td class="num">CHF 34&#39;871.41</td>
+            </tr>
+        </table>
+    </div>
+        
+
+    <div class="footer">
+        <div class="footer-title">Payment Information</div>
+        <p>JPMorgan Chase</p>
+        <p>IBAN: CH64 7892 3068 7200 4630</p>
+        <p>BIC: JERVCHQ7EX2</p>
+        <p style="margin-top: 8px;">Please transfer the total amount by the due date.</p>
+    </div>
+        
+</body>
+</html>

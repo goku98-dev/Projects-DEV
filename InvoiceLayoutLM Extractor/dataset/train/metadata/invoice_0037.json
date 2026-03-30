@@ -1,0 +1,77 @@
+{
+  "invoice_id": "invoice_0037",
+  "locale": "de_DE",
+  "template": "layout_004.html",
+  "columns": [
+    {
+      "field": "tax_rate",
+      "label": "USt.",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "line_total",
+      "label": "Gesamtpreis",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "description",
+      "label": "Artikel",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "unit_price",
+      "label": "EP",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "article_number",
+      "label": "Art.-Nr.",
+      "entity_label": "article_number",
+      "format": "text"
+    },
+    {
+      "field": "quantity",
+      "label": "Einheiten",
+      "entity_label": "quantity",
+      "format": "int"
+    }
+  ],
+  "line_items": [
+    {
+      "tax_rate": "7%",
+      "line_total": "3 631,68",
+      "description": "Compressed Air Duster (6-pack)",
+      "unit_price": "113,49",
+      "article_number": "ART-98830",
+      "quantity": "32"
+    },
+    {
+      "tax_rate": "7%",
+      "line_total": "3 365,32",
+      "description": "Ergonomic Mouse",
+      "unit_price": "68,68",
+      "article_number": "M36955",
+      "quantity": "49"
+    },
+    {
+      "tax_rate": "19%",
+      "line_total": "4 301,41",
+      "description": "Wireless Access Point",
+      "unit_price": "226,39",
+      "article_number": "6401.689",
+      "quantity": "19"
+    },
+    {
+      "tax_rate": "0%",
+      "line_total": "111,66",
+      "description": "Annual Software License Renewal",
+      "unit_price": "55,83",
+      "article_number": "ART-84219",
+      "quantity": "2"
+    }
+  ]
+}

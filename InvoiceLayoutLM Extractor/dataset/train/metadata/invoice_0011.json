@@ -1,0 +1,81 @@
+{
+  "invoice_id": "invoice_0011",
+  "locale": "fr_FR",
+  "template": "layout_019.html",
+  "columns": [
+    {
+      "field": "description",
+      "label": "Article",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "unit_price",
+      "label": "Prix/unité",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "position",
+      "label": "Réf.",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "quantity",
+      "label": "Nb",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "line_total",
+      "label": "Total HT",
+      "entity_label": "line_total",
+      "format": "currency"
+    }
+  ],
+  "line_items": [
+    {
+      "description": "Cable Management Kit",
+      "unit_price": "496.93",
+      "position": "1",
+      "quantity": "20",
+      "line_total": "9,938.60"
+    },
+    {
+      "description": "Ballpoint Pens (12-pack)",
+      "unit_price": "71.74",
+      "position": "2",
+      "quantity": "44",
+      "line_total": "3,156.56"
+    },
+    {
+      "description": "Ethernet Cable 5m",
+      "unit_price": "43.90",
+      "position": "3",
+      "quantity": "18",
+      "line_total": "790.20"
+    },
+    {
+      "description": "Screen Privacy Filter 24\"",
+      "unit_price": "483.40",
+      "position": "4",
+      "quantity": "31",
+      "line_total": "14,985.40"
+    },
+    {
+      "description": "Network Switch 8-Port",
+      "unit_price": "216.21",
+      "position": "5",
+      "quantity": "42",
+      "line_total": "9,080.82"
+    },
+    {
+      "description": "Mouse Pad XL",
+      "unit_price": "96.23",
+      "position": "6",
+      "quantity": "17",
+      "line_total": "1,635.91"
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Tahoma, Geneva, sans-serif;
+            font-size: 11pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { border-bottom: 2px solid #2874a6; padding-bottom: 15px; margin-bottom: 25px; display: flex; justify-content: space-between; align-items: flex-end; }
+        .invoice-title { font-size: 16.5pt; font-weight: bold; color: #2874a6; }
+        .invoice-meta { text-align: right; font-size: 10pt; }
+        .invoice-meta p { margin-bottom: 2px; }
+        
+
+        .addresses { display: flex; justify-content: space-between; margin-bottom: 30px; }
+        .address-block { width: 45%; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 6px; font-size: 10pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        .table-wrapper table { border: 2px solid #2874a6; }
+        thead th { padding: 10px; text-align: left; background-color: #2874a6; color: #ffffff; border-right: 1px solid rgba(255,255,255,0.2); }
+        thead th:last-child { border-right: none; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 8px 10px; border-right: 1px solid #eee; }
+        tbody td:last-child { border-right: none; }
+        tbody td.num { text-align: right; }
+        tbody tr:nth-child(even) { background-color: #eef2f7; }
+        
+.table-wrapper { margin-top: 40px; }
+.table-wrapper table { width: 90%; }
+
+        .totals { border-top: 1px solid #999999; padding-top: 10px; }
+        .totals table { width: 100%; margin-bottom: 0; }
+        .totals td { padding: 4px 10px; border: none !important; }
+        .totals td:first-child { text-align: right; width: 80%; }
+        .totals td:last-child { text-align: right; width: 20%; }
+        .totals .total-row { font-weight: bold; font-size: 13pt; }
+        .totals .total-row td { border-top: 2px solid #2874a6 !important; }
+        
+
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="invoice-title">Johann Hethur e.V.</div>
+        <div class="invoice-meta">
+            <p>INV-120112</p>
+            <p>14.02.2026</p>
+            <p>Due: 31.03.2026</p>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">From</div>
+            <p>Johann Hethur e.V.</p>
+            <p>Ludwig-Schuster-Gasse 98</p>
+            <p>11359 Hoyerswerda</p>
+            <p>Germany</p>
+        </div>
+        <div class="address-block">
+            <div class="label">Bill To</div>
+            <p>Sontag Barkholz GmbH</p>
+            <p>Speerallee 2-2</p>
+            <p>63877 Döbeln</p>
+            <p>Germany</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th class="num">Preis/Einheit</th>
+                
+                <th class="num">Menge</th>
+                
+                <th class="num">Gesamt</th>
+                
+                <th>Produkt</th>
+                
+                <th>Artikel-Nr.</th>
+                
+                <th class="num">Pos.</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td class="num">378,78</td>
+                
+                <td class="num">33</td>
+                
+                <td class="num">12 499,74</td>
+                
+                <td>Bluetooth Speaker Portable</td>
+                
+                <td>9552.548</td>
+                
+                <td class="num">1</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">285,39</td>
+                
+                <td class="num">21</td>
+                
+                <td class="num">5 993,19</td>
+                
+                <td>Desk Organizer</td>
+                
+                <td>492937</td>
+                
+                <td class="num">2</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">423,92</td>
+                
+                <td class="num">37</td>
+                
+                <td class="num">15 685,04</td>
+                
+                <td>Screen Privacy Filter 24&#34;</td>
+                
+                <td>631939</td>
+                
+                <td class="num">3</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">426,50</td>
+                
+                <td class="num">32</td>
+                
+                <td class="num">13 648,00</td>
+                
+                <td>Coat Rack</td>
+                
+                <td>1916.755</td>
+                
+                <td class="num">4</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">419,95</td>
+                
+                <td class="num">21</td>
+                
+                <td class="num">8 818,95</td>
+                
+                <td>Disinfecting Wipes (75-pack)</td>
+                
+                <td>314924</td>
+                
+                <td class="num">5</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <table>
+            <tr>
+                <td>Subtotal:</td>
+                <td>€ 56 644,92</td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td>€ 4 504,95</td>
+            </tr>
+            <tr class="total-row">
+                <td>Total:</td>
+                <td>€ 61 149,87</td>
+            </tr>
+        </table>
+    </div>
+        
+
+</body>
+</html>

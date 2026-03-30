@@ -1,0 +1,67 @@
+{
+  "invoice_id": "invoice_0050",
+  "locale": "de_DE",
+  "template": "layout_024.html",
+  "columns": [
+    {
+      "field": "line_total",
+      "label": "Gesamt",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "quantity",
+      "label": "Anzahl",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "tax_rate",
+      "label": "USt.",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "description",
+      "label": "Position",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "unit_price",
+      "label": "Einzelpreis",
+      "entity_label": "unit_price",
+      "format": "currency"
+    }
+  ],
+  "line_items": [
+    {
+      "line_total": "141,66",
+      "quantity": "3",
+      "tax_rate": "0%",
+      "description": "Bluetooth Speaker Portable",
+      "unit_price": "47,22"
+    },
+    {
+      "line_total": "5.715,20",
+      "quantity": "32",
+      "tax_rate": "0%",
+      "description": "Standing Desk",
+      "unit_price": "178,60"
+    },
+    {
+      "line_total": "6.884,40",
+      "quantity": "24",
+      "tax_rate": "19%",
+      "description": "Highlighter Set (5 colors)",
+      "unit_price": "286,85"
+    },
+    {
+      "line_total": "3.628,53",
+      "quantity": "9",
+      "tax_rate": "7%",
+      "description": "Correction Tape 6-pack",
+      "unit_price": "403,17"
+    }
+  ]
+}

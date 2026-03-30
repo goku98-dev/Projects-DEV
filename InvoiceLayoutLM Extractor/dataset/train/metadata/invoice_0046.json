@@ -1,0 +1,57 @@
+{
+  "invoice_id": "invoice_0046",
+  "locale": "en_US",
+  "template": "layout_023.html",
+  "columns": [
+    {
+      "field": "line_total",
+      "label": "Line Total",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "quantity",
+      "label": "Qty",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "description",
+      "label": "Item Description",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "unit_price",
+      "label": "Unit Cost",
+      "entity_label": "unit_price",
+      "format": "currency"
+    }
+  ],
+  "line_items": [
+    {
+      "line_total": "2,539.75",
+      "quantity": "25",
+      "description": "Correction Tape 6-pack",
+      "unit_price": "101.59"
+    },
+    {
+      "line_total": "9,933.44",
+      "quantity": "44",
+      "description": "Webcam HD",
+      "unit_price": "225.76"
+    },
+    {
+      "line_total": "1,609.35",
+      "quantity": "5",
+      "description": "IT Support Service (1 hour)",
+      "unit_price": "321.87"
+    },
+    {
+      "line_total": "5,924.49",
+      "quantity": "13",
+      "description": "Coat Rack",
+      "unit_price": "455.73"
+    }
+  ]
+}

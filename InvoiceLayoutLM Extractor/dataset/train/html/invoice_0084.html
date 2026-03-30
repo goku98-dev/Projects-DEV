@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: &#39;Lucida Sans&#39;, &#39;Lucida Grande&#39;, sans-serif;
+            font-size: 12pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { background-color: #0e6655; color: #ffffff; padding: 20px 25px; margin: -20mm -20mm 30px -20mm; display: flex; justify-content: space-between; align-items: center; }
+        .invoice-title { font-size: 24pt; font-weight: bold; }
+        .invoice-meta { text-align: right; }
+        .invoice-meta p { margin-bottom: 4px; }
+        
+
+        .addresses { display: flex; justify-content: space-between; margin-bottom: 30px; }
+        .address-block { width: 45%; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 6px; font-size: 11pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        thead th { background-color: #0e6655; color: #ffffff; padding: 8px 10px; text-align: left; border: 1px solid #0e6655; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 6px 10px; border: 1px solid #0e6655; }
+        tbody td.num { text-align: right; }
+        
+        
+.table-wrapper { margin-top: 0; }
+.table-wrapper table { width: 90%; }
+
+        .totals { border-top: 1px solid #0e6655; padding-top: 10px; }
+        .totals table { width: 100%; margin-bottom: 0; }
+        .totals td { padding: 4px 10px; border: none !important; }
+        .totals td:first-child { text-align: right; width: 80%; }
+        .totals td:last-child { text-align: right; width: 20%; }
+        .totals .total-row { font-weight: bold; font-size: 14pt; }
+        .totals .total-row td { border-top: 2px solid #0e6655 !important; }
+        
+
+        .footer { margin-top: 30px; font-size: 10pt; color: #999; text-align: center; }
+        .footer p { margin-bottom: 2px; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div>
+            <div class="invoice-title">INVOICE</div>
+            <p>Scheiber Artner OG</p>
+        </div>
+        <div class="invoice-meta">
+            <p>Invoice #: INV-800802</p>
+            <p>Date: 06.08.2025</p>
+            <p>Due: 20.09.2025</p>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">From</div>
+            <p>Scheiber Artner OG</p>
+            <p>Kristian-Ostermann-Straße 0</p>
+            <p>5752 Eferding</p>
+            <p>Austria</p>
+        </div>
+        <div class="address-block">
+            <div class="label">Bill To</div>
+            <p>Schulz &amp; Klocker AG</p>
+            <p>Bruno-Haiden-Platz 2/2</p>
+            <p>1559 Rattenberg</p>
+            <p>Austria</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th class="num">Stk.</th>
+                
+                <th class="num">Netto-EP</th>
+                
+                <th>Produkt</th>
+                
+                <th class="num">Gesamtbetrag</th>
+                
+                <th class="num">Lfd. Nr.</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td class="num">1</td>
+                
+                <td class="num">60,48</td>
+                
+                <td>Printer Maintenance Contract (quarterly)</td>
+                
+                <td class="num">60,48</td>
+                
+                <td class="num">1</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">11</td>
+                
+                <td class="num">15,71</td>
+                
+                <td>Laptop Charger Universal 65W</td>
+                
+                <td class="num">172,81</td>
+                
+                <td class="num">2</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">24</td>
+                
+                <td class="num">478,23</td>
+                
+                <td>Power Strip with USB</td>
+                
+                <td class="num">11.477,52</td>
+                
+                <td class="num">3</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">14</td>
+                
+                <td class="num">109,13</td>
+                
+                <td>Wireless Keyboard</td>
+                
+                <td class="num">1.527,82</td>
+                
+                <td class="num">4</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">15</td>
+                
+                <td class="num">371,95</td>
+                
+                <td>Professional Monitor Calibration</td>
+                
+                <td class="num">5.579,25</td>
+                
+                <td class="num">5</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">16</td>
+                
+                <td class="num">30,12</td>
+                
+                <td>Notebook A5 Ruled</td>
+                
+                <td class="num">481,92</td>
+                
+                <td class="num">6</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">39</td>
+                
+                <td class="num">214,42</td>
+                
+                <td>Network Switch 8-Port</td>
+                
+                <td class="num">8.362,38</td>
+                
+                <td class="num">7</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">2</td>
+                
+                <td class="num">252,76</td>
+                
+                <td>Monitor Arm Mount</td>
+                
+                <td class="num">505,52</td>
+                
+                <td class="num">8</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <table>
+            <tr>
+                <td>Subtotal:</td>
+                <td>28.167,70 EUR</td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td>2.166,58 EUR</td>
+            </tr>
+            <tr class="total-row">
+                <td>Total:</td>
+                <td>30.334,28 EUR</td>
+            </tr>
+        </table>
+    </div>
+        
+
+    <div class="footer">
+        <p>Scheiber Artner OG | Kristian-Ostermann-Straße 0, 5752 Eferding | Austria</p>
+        <p>Zürcher Kantonalbank | IBAN: AT54 8332 3433 6832 9765</p>
+    </div>
+        
+</body>
+</html>

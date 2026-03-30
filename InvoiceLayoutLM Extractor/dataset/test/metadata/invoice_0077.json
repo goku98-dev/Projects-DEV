@@ -1,0 +1,85 @@
+{
+  "invoice_id": "invoice_0077",
+  "locale": "en_GB",
+  "template": "layout_029.html",
+  "columns": [
+    {
+      "field": "position",
+      "label": "Pos.",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "unit_price",
+      "label": "Unit Price",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "quantity",
+      "label": "Pcs",
+      "entity_label": "quantity",
+      "format": "int"
+    },
+    {
+      "field": "description",
+      "label": "Item Description",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "line_total",
+      "label": "Extended",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "article_number",
+      "label": "SKU",
+      "entity_label": "article_number",
+      "format": "text"
+    }
+  ],
+  "line_items": [
+    {
+      "position": "1",
+      "unit_price": "452.70",
+      "quantity": "35",
+      "description": "Office Equipment Installation Service",
+      "line_total": "15,844.50",
+      "article_number": "C12710"
+    },
+    {
+      "position": "2",
+      "unit_price": "408.91",
+      "quantity": "49",
+      "description": "Monitor 27\"",
+      "line_total": "20,036.59",
+      "article_number": "3343.283"
+    },
+    {
+      "position": "3",
+      "unit_price": "38.46",
+      "quantity": "29",
+      "description": "Screen Privacy Filter 24\"",
+      "line_total": "1,115.34",
+      "article_number": "C41522"
+    },
+    {
+      "position": "4",
+      "unit_price": "481.22",
+      "quantity": "24",
+      "description": "Network Switch 8-Port",
+      "line_total": "11,549.28",
+      "article_number": "6739.852"
+    },
+    {
+      "position": "5",
+      "unit_price": "214.02",
+      "quantity": "27",
+      "description": "Mechanical Keyboard RGB",
+      "line_total": "5,778.54",
+      "article_number": "ART-60137"
+    }
+  ]
+}

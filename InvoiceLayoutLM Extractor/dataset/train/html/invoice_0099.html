@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, Geneva, sans-serif;
+            font-size: 11pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { text-align: center; margin-bottom: 30px; }
+        .invoice-title { font-size: 27.5pt; font-weight: bold; color: #4a4a4a; margin-bottom: 10px; }
+        .invoice-meta { margin-top: 10px; }
+        .invoice-meta span { margin: 0 15px; }
+        
+
+        .addresses { display: flex; justify-content: flex-end; margin-bottom: 30px; }
+        .address-block { width: 45%; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 6px; font-size: 10pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        .table-wrapper table { border: 2px solid #4a4a4a; }
+        thead th { padding: 10px; text-align: left; background-color: #4a4a4a; color: #ffffff; border-right: 1px solid rgba(255,255,255,0.2); }
+        thead th:last-child { border-right: none; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 8px 10px; border-right: 1px solid #eee; }
+        tbody td:last-child { border-right: none; }
+        tbody td.num { text-align: right; }
+        tbody tr:nth-child(even) { background-color: #f9f9f9; }
+        
+.table-wrapper { margin-top: 0; }
+.table-wrapper table { width: 100%; }
+
+        .totals { width: 280px; margin-left: auto; }
+        .totals table { margin-bottom: 0; }
+        .totals td { padding: 4px 10px; border: none !important; }
+        .totals .total-row { font-weight: bold; font-size: 13pt; }
+        .totals .total-row td { border-top: 2px solid #4a4a4a !important; }
+        
+
+        .footer { margin-top: 30px; padding-top: 10px; border-top: 1px solid #eee; font-size: 10pt; color: #666; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="invoice-title">INVOICE</div>
+        <p>Long-Steele</p>
+        <div class="invoice-meta">
+            <span><strong>Invoice #:</strong> INV-726088</span>
+            <span><strong>Date:</strong> 11/11/2024</span>
+            <span><strong>Due Date:</strong> 10/01/2025</span>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">Invoice To</div>
+            <p>Higgins, Davies and Taylor</p>
+            <p>Flat 6
+Paul Cliffs</p>
+            <p>W2 5PE Kellyton</p>
+            <p>United Kingdom</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th>Designation</th>
+                
+                <th class="num">Item</th>
+                
+                <th class="num">Price</th>
+                
+                <th class="num">Qty.</th>
+                
+                <th class="num">Total</th>
+                
+                <th>Product No.</th>
+                
+                <th class="num">VAT</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td>External HDD 4TB</td>
+                
+                <td class="num">1</td>
+                
+                <td class="num">418.95</td>
+                
+                <td class="num">37</td>
+                
+                <td class="num">15,501.15</td>
+                
+                <td>ART-76053</td>
+                
+                <td class="num">0%</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>Ergonomic Mouse</td>
+                
+                <td class="num">2</td>
+                
+                <td class="num">449.33</td>
+                
+                <td class="num">24</td>
+                
+                <td class="num">10,783.92</td>
+                
+                <td>A43570</td>
+                
+                <td class="num">0%</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td>Cloud Storage Plan 1TB (yearly)</td>
+                
+                <td class="num">3</td>
+                
+                <td class="num">215.64</td>
+                
+                <td class="num">2</td>
+                
+                <td class="num">431.28</td>
+                
+                <td>101531</td>
+                
+                <td class="num">0%</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <table>
+            <tr>
+                <td>Subtotal:</td>
+                <td class="num">£ 26,716.35</td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td class="num">£ 0.00</td>
+            </tr>
+            <tr class="total-row">
+                <td>Total:</td>
+                <td class="num">£ 26,716.35</td>
+            </tr>
+        </table>
+    </div>
+        
+
+    <div class="footer">
+        <p>Immediate payment required.</p>
+    </div>
+        
+</body>
+</html>

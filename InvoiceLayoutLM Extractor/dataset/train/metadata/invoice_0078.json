@@ -1,0 +1,114 @@
+{
+  "invoice_id": "invoice_0078",
+  "locale": "de_AT",
+  "template": "layout_010.html",
+  "columns": [
+    {
+      "field": "line_total",
+      "label": "Gesamt",
+      "entity_label": "line_total",
+      "format": "currency"
+    },
+    {
+      "field": "tax_rate",
+      "label": "MwSt.",
+      "entity_label": "tax",
+      "format": "percent"
+    },
+    {
+      "field": "position",
+      "label": "Nr.",
+      "entity_label": "position",
+      "format": "int"
+    },
+    {
+      "field": "unit_price",
+      "label": "EP",
+      "entity_label": "unit_price",
+      "format": "currency"
+    },
+    {
+      "field": "article_number",
+      "label": "Bestellnr.",
+      "entity_label": "article_number",
+      "format": "text"
+    },
+    {
+      "field": "description",
+      "label": "Produkt",
+      "entity_label": "item_description",
+      "format": "text"
+    },
+    {
+      "field": "quantity",
+      "label": "Anz.",
+      "entity_label": "quantity",
+      "format": "int"
+    }
+  ],
+  "line_items": [
+    {
+      "line_total": "1.370,74",
+      "tax_rate": "10%",
+      "position": "1",
+      "unit_price": "97,91",
+      "article_number": "3818.432",
+      "description": "Docking Station USB-C",
+      "quantity": "14"
+    },
+    {
+      "line_total": "11.448,00",
+      "tax_rate": "10%",
+      "position": "2",
+      "unit_price": "424,00",
+      "article_number": "474937",
+      "description": "Clipboard A4",
+      "quantity": "27"
+    },
+    {
+      "line_total": "750,15",
+      "tax_rate": "20%",
+      "position": "3",
+      "unit_price": "16,67",
+      "article_number": "ART-22246",
+      "description": "Ethernet Cable 5m",
+      "quantity": "45"
+    },
+    {
+      "line_total": "9.905,90",
+      "tax_rate": "10%",
+      "position": "4",
+      "unit_price": "291,35",
+      "article_number": "7936.112",
+      "description": "Laptop Charger Universal 65W",
+      "quantity": "34"
+    },
+    {
+      "line_total": "3.637,28",
+      "tax_rate": "10%",
+      "position": "5",
+      "unit_price": "454,66",
+      "article_number": "C98909",
+      "description": "Monitor 27\"",
+      "quantity": "8"
+    },
+    {
+      "line_total": "3.662,52",
+      "tax_rate": "0%",
+      "position": "6",
+      "unit_price": "305,21",
+      "article_number": "6038.214",
+      "description": "Bookshelf 5-Tier",
+      "quantity": "12"
+    },
+    {
+      "line_total": "10.184,16",
+      "tax_rate": "0%",
+      "position": "7",
+      "unit_price": "484,96",
+      "article_number": "9514.325",
+      "description": "Scissors 8\" Stainless",
+      "quantity": "21"
+    }
+  ]
+}

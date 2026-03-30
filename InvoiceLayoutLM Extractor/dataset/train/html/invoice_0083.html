@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: &#39;Courier New&#39;, Courier, monospace;
+            font-size: 12pt;
+            color: #333333;
+            width: 210mm;
+            min-height: 297mm;
+            padding: 20mm;
+        }
+
+        .header { text-align: center; margin-bottom: 30px; }
+        .invoice-title { font-size: 30.0pt; font-weight: bold; color: #2c3e50; margin-bottom: 10px; }
+        .invoice-meta { margin-top: 10px; }
+        .invoice-meta span { margin: 0 15px; }
+        
+
+        .addresses { display: flex; justify-content: space-between; margin-bottom: 30px; }
+        .address-block { width: 45%; }
+        .address-block .label { font-weight: bold; text-transform: uppercase; color: #777; margin-bottom: 6px; font-size: 11pt; }
+        .address-block p { margin-bottom: 2px; }
+        
+table { border-collapse: collapse; margin-bottom: 30px; }
+
+        thead th { background-color: #2c3e50; color: #ffffff; padding: 8px 10px; text-align: left; border: 1px solid #dddddd; }
+        thead th.num { text-align: right; }
+        tbody td { padding: 6px 10px; border: 1px solid #dddddd; }
+        tbody td.num { text-align: right; }
+        
+        tbody tr:nth-child(even) { background-color: #f2f2f2; }
+        
+        
+.table-wrapper { margin-top: 40px; }
+.table-wrapper table { width: 90%; }
+
+        .totals { text-align: right; margin-bottom: 20px; }
+        .totals .line { margin-bottom: 4px; }
+        .totals .total-line { font-weight: bold; font-size: 15pt; color: #2c3e50; border-top: 2px solid #2c3e50; padding-top: 6px; display: inline-block; }
+        
+
+        .footer { margin-top: 30px; padding-top: 10px; border-top: 1px solid #eee; font-size: 11pt; color: #666; }
+        
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="invoice-title">INVOICE</div>
+        <p>Knecht &amp; Partner</p>
+        <div class="invoice-meta">
+            <span><strong>Invoice #:</strong> INV-743752</span>
+            <span><strong>Date:</strong> 24.11.2025</span>
+            <span><strong>Due Date:</strong> 24.12.2025</span>
+        </div>
+    </div>
+        
+
+    <div class="addresses">
+        <div class="address-block">
+            <div class="label">Bill To</div>
+            <p>Gut Herzog GmbH</p>
+            <p>Vogtstrasse 86</p>
+            <p>9226 Brugg</p>
+            <p>Switzerland</p>
+        </div>
+        <div class="address-block">
+            <div class="label">From</div>
+            <p>Knecht &amp; Partner</p>
+            <p>Weberstrasse 6</p>
+            <p>3664 Buchs</p>
+            <p>Switzerland</p>
+        </div>
+    </div>
+        
+
+    <div class="table-wrapper">
+    <table>
+        <thead>
+            <tr>
+                
+                <th class="num">Summe</th>
+                
+                <th class="num">Pos</th>
+                
+                <th class="num">Stückpreis</th>
+                
+                <th>Artikel-Nr.</th>
+                
+                <th class="num">Anz.</th>
+                
+                <th class="num">MwSt.-Satz</th>
+                
+                <th>Bezeichnung</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                
+                <td class="num">514.44</td>
+                
+                <td class="num">1</td>
+                
+                <td class="num">85.74</td>
+                
+                <td>297698</td>
+                
+                <td class="num">6</td>
+                
+                <td class="num">2%</td>
+                
+                <td>Envelope C4 (50-pack)</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">8&#39;688.72</td>
+                
+                <td class="num">2</td>
+                
+                <td class="num">362.03</td>
+                
+                <td>7358.583</td>
+                
+                <td class="num">24</td>
+                
+                <td class="num">0%</td>
+                
+                <td>Bookshelf 5-Tier</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">2&#39;038.10</td>
+                
+                <td class="num">3</td>
+                
+                <td class="num">203.81</td>
+                
+                <td>ART-83536</td>
+                
+                <td class="num">10</td>
+                
+                <td class="num">8%</td>
+                
+                <td>Monitor Arm Mount</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">256.80</td>
+                
+                <td class="num">4</td>
+                
+                <td class="num">32.10</td>
+                
+                <td>7936.974</td>
+                
+                <td class="num">8</td>
+                
+                <td class="num">2%</td>
+                
+                <td>Wireless Keyboard</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">5&#39;245.50</td>
+                
+                <td class="num">5</td>
+                
+                <td class="num">201.75</td>
+                
+                <td>A83824</td>
+                
+                <td class="num">26</td>
+                
+                <td class="num">2%</td>
+                
+                <td>Ballpoint Pens (12-pack)</td>
+                
+            </tr>
+            
+            <tr>
+                
+                <td class="num">6&#39;709.64</td>
+                
+                <td class="num">6</td>
+                
+                <td class="num">479.26</td>
+                
+                <td>677210</td>
+                
+                <td class="num">14</td>
+                
+                <td class="num">2%</td>
+                
+                <td>Desk Organizer</td>
+                
+            </tr>
+            
+        </tbody>
+    </table>
+    </div>
+
+
+    <div class="totals">
+        <div class="line">Subtotal: CHF 23&#39;453.20</div>
+        <div class="line">Tax: CHF 483.25</div>
+        <div class="total-line">Total: CHF 23&#39;936.45</div>
+    </div>
+        
+
+    <div class="footer">
+        <p>30 days net. Skonto 2% within 10 days.</p>
+    </div>
+        
+</body>
+</html>
