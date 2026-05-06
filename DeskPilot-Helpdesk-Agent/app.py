@@ -3,8 +3,6 @@
 from __future__ import annotations
 
 import json
-import subprocess
-import sys
 from pathlib import Path
 
 import chromadb
@@ -13,6 +11,7 @@ import streamlit as st
 from deskpilot.config import CHROMA_DIR, DATA_DIR
 from deskpilot.observability import read_recent_traces, ticket_metrics
 from deskpilot.pipeline import process_ticket
+from scripts.ingest_kb import main as _ingest_kb
 
 
 @st.cache_resource
@@ -21,7 +20,7 @@ def _ensure_kb_ingested() -> None:
     client = chromadb.PersistentClient(path=str(CHROMA_DIR))
     kb = client.get_or_create_collection("kb_articles")
     if kb.count() == 0:
-        subprocess.run([sys.executable, "scripts/ingest_kb.py"], check=True)
+        _ingest_kb()
 
 
 def load_employee_emails() -> list[str]:
