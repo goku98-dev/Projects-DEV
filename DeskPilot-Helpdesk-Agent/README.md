@@ -2,9 +2,19 @@
 
 Autonomous IT/HR helpdesk triage and resolution for internal operations.
 
+**[Live Demo →](https://projects-dev-h3f2z6n2klftxzm3zpywrk.streamlit.app/)**
+
 DeskPilot Lite is a runnable multi-agent Python project that classifies employee helpdesk tickets, resolves safe requests with mocked enterprise tools, retrieves policy context from a ChromaDB knowledge base, and escalates risky cases with structured handoff notes. It is designed as a compact AI/ML engineering portfolio project: realistic data, deterministic guardrails, trace logging, a Streamlit UI, and a labeled evaluation harness.
 
-![Demo](docs/demo.gif)
+## Screenshots
+
+**Guardrail in action** — an adversarial ticket attempting to reset another user's password is detected, blocked, and escalated with a structured handoff note. The requester receives a clear explanation instead of an unauthorized credential operation.
+
+![Guardrail escalation](docs/screenshot_guardrail.png)
+
+**Admin Dashboard** — real-time metrics across all submitted tickets: autonomous resolution rate, average cost per ticket, p50/p95 latency, and a full trace log for every agent action.
+
+![Admin dashboard](docs/screenshot_dashboard.png)
 
 ## Key Results
 
