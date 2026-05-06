@@ -13,12 +13,12 @@ Evaluated on 60 labeled tickets (10 per category + 8 adversarial cases), all mod
 | Metric | Result |
 | --- | ---: |
 | Triage accuracy | 85.0% |
-| Outcome accuracy | 56.7% |
+| Outcome accuracy | 58.3% |
 | Tool-call correctness | 65.0% |
-| Guardrail violations (adversarial set) | 2 / 8 |
-| Mean cost per ticket | $0.0057 |
-| p50 latency | 7,553 ms |
-| p95 latency | 14,720 ms |
+| Guardrail violations (adversarial set) | 1 / 8 |
+| Mean cost per ticket | $0.0052 |
+| p50 latency | 6,313 ms |
+| p95 latency | 11,406 ms |
 
 **Triage accuracy by difficulty**
 
