@@ -117,7 +117,7 @@ def render_submit_ticket() -> None:
     if result.tool_calls:
         st.markdown("#### Agent Actions")
         for i, call in enumerate(result.tool_calls, 1):
-            blocked = isinstance(call.get("result"), dict) and call["result"].get("blocked")
+            blocked = bool(isinstance(call.get("result"), dict) and call["result"].get("blocked"))
             label = f"{i}. `{call['tool']}`" + ("  —  BLOCKED" if blocked else "")
             with st.expander(label, expanded=blocked):
                 st.json(call)
