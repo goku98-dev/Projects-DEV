@@ -140,41 +140,143 @@ def render_submit_ticket() -> None:
                 st.markdown(f"**Relevant KB articles**\n\n{articles}")
 
 
+DASHBOARD_CSS = """
+<style>
+.stat-card {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border: 1px solid #0f3460;
+    border-radius: 14px;
+    padding: 22px 26px;
+    margin-bottom: 4px;
+}
+.stat-label {
+    color: #7a8aaa;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+.stat-value {
+    color: #e2e8f0;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1;
+}
+.stat-sub {
+    color: #4a5a7a;
+    font-size: 12px;
+    margin-top: 6px;
+}
+.stat-accent { color: #4fc3f7; }
+.stat-green  { color: #4ade80; }
+.stat-yellow { color: #fbbf24; }
+.stat-red    { color: #f87171; }
+.section-header {
+    color: #94a3b8;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    margin: 28px 0 12px 0;
+    border-bottom: 1px solid #1e293b;
+    padding-bottom: 8px;
+}
+</style>
+"""
+
+
+def _stat_card(label: str, value: str, sub: str = "", accent: str = "stat-accent") -> str:
+    sub_html = f'<div class="stat-sub">{sub}</div>' if sub else ""
+    return f"""
+    <div class="stat-card">
+        <div class="stat-label">{label}</div>
+        <div class="stat-value {accent}">{value}</div>
+        {sub_html}
+    </div>"""
+
+
 def render_admin_dashboard() -> None:
+    import pandas as pd
+
+    st.markdown(DASHBOARD_CSS, unsafe_allow_html=True)
     st.title("Admin Dashboard")
     st.caption("Live metrics and trace log from the DeskPilot pipeline.")
 
     metrics = ticket_metrics()
+    rate = metrics["autonomous_resolution_rate"]
+    rate_accent = "stat-green" if rate >= 0.6 else "stat-yellow" if rate >= 0.4 else "stat-red"
+
     c1, c2, c3, c4 = st.columns(4)
-    c1.metric("Total tickets", metrics["total_tickets"])
-    c2.metric("Autonomous resolution", f"{metrics['autonomous_resolution_rate']:.0%}")
-    c3.metric("Avg cost / ticket", f"${metrics['avg_cost']:.4f}")
-    c4.metric("p95 latency", f"{metrics['p95_latency_ms']} ms")
+    c1.markdown(_stat_card("Total Tickets", str(metrics["total_tickets"]), "processed end-to-end"), unsafe_allow_html=True)
+    c2.markdown(_stat_card("Autonomous Resolution", f"{rate:.0%}", "no human needed", rate_accent), unsafe_allow_html=True)
+    c3.markdown(_stat_card("Avg Cost / Ticket", f"${metrics['avg_cost']:.4f}", "claude-haiku-4-5", "stat-accent"), unsafe_allow_html=True)
+    c4.markdown(_stat_card("p95 Latency", f"{metrics['p95_latency_ms']} ms", f"p50: {metrics['p50_latency_ms']} ms", "stat-yellow"), unsafe_allow_html=True)
 
-    st.divider()
-    st.markdown("#### Recent Tickets")
-
+    # Gather data from traces
     rows = []
+    outcome_counts: dict[str, int] = {"resolved": 0, "escalated": 0, "clarify": 0}
+    costs: list[float] = []
+    latencies: list[float] = []
+
     for event in read_recent_traces(2000):
         if event.get("agent") == "pipeline" and event.get("action") == "finish":
+            outcome = event.get("output", {}).get("outcome", "")
+            cost = float(event.get("cost_usd", 0.0))
+            latency = int(event.get("latency_ms", 0))
+            if outcome in outcome_counts:
+                outcome_counts[outcome] += 1
+            if cost > 0:
+                costs.append(cost)
+            if latency > 0:
+                latencies.append(latency)
             rows.append({
                 "Ticket ID": event["ticket_id"],
                 "Timestamp": event["timestamp"][:19].replace("T", " "),
-                "Outcome": event.get("output", {}).get("outcome", ""),
-                "Cost ($)": round(float(event.get("cost_usd", 0.0)), 4),
-                "Latency (ms)": event.get("latency_ms", 0),
+                "Outcome": outcome,
+                "Cost ($)": round(cost, 4),
+                "Latency (ms)": latency,
             })
         if len(rows) >= 50:
             break
 
+    # Charts row
+    st.markdown('<div class="section-header">Outcome Breakdown</div>', unsafe_allow_html=True)
+    ch1, ch2, ch3 = st.columns([2, 2, 1])
+
+    with ch1:
+        df_out = pd.DataFrame({
+            "Outcome": list(outcome_counts.keys()),
+            "Tickets": list(outcome_counts.values()),
+        }).set_index("Outcome")
+        st.bar_chart(df_out, color=["#4fc3f7"], height=220)
+
+    with ch2:
+        if costs:
+            df_cost = pd.DataFrame({"Cost ($)": costs})
+            st.line_chart(df_cost, color=["#4ade80"], height=220)
+        else:
+            st.info("Cost trend available after first tickets.")
+
+    with ch3:
+        total = sum(outcome_counts.values()) or 1
+        for outcome, count in outcome_counts.items():
+            pct = count / total * 100
+            color = {"resolved": "normal", "escalated": "inverse", "clarify": "off"}[outcome]
+            st.metric(outcome.title(), count, f"{pct:.0f}%", delta_color=color)
+
+    # Ticket table
+    st.markdown('<div class="section-header">Recent Tickets</div>', unsafe_allow_html=True)
     if rows:
         st.dataframe(
             rows,
             use_container_width=True,
             column_config={
+                "Outcome": st.column_config.TextColumn("Outcome"),
                 "Cost ($)": st.column_config.NumberColumn(format="$%.4f"),
                 "Latency (ms)": st.column_config.NumberColumn(format="%d ms"),
             },
+            hide_index=True,
         )
     else:
         st.info("No tickets yet. Submit one on the Submit Ticket page.")
