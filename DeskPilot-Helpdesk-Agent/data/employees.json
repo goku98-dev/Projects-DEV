@@ -1,0 +1,502 @@
+[
+  {
+    "id": "E0001",
+    "name": "Jane Doe",
+    "email": "jane.doe@acme.com",
+    "manager_id": null,
+    "department": "Engineering",
+    "start_date": "2018-07-22",
+    "pto_balance_days": 18,
+    "status": "active"
+  },
+  {
+    "id": "E0002",
+    "name": "Bob Smith",
+    "email": "bob.smith@acme.com",
+    "manager_id": null,
+    "department": "Sales",
+    "start_date": "2020-06-04",
+    "pto_balance_days": 12,
+    "status": "active"
+  },
+  {
+    "id": "E0003",
+    "name": "Priya Shah",
+    "email": "priya.shah@acme.com",
+    "manager_id": null,
+    "department": "HR",
+    "start_date": "2019-07-13",
+    "pto_balance_days": 16,
+    "status": "active"
+  },
+  {
+    "id": "E0004",
+    "name": "Miguel Garcia",
+    "email": "miguel.garcia@acme.com",
+    "manager_id": null,
+    "department": "Finance",
+    "start_date": "2022-12-25",
+    "pto_balance_days": 20,
+    "status": "active"
+  },
+  {
+    "id": "E0005",
+    "name": "Ava Chen",
+    "email": "ava.chen@acme.com",
+    "manager_id": null,
+    "department": "Operations",
+    "start_date": "2021-12-06",
+    "pto_balance_days": 9,
+    "status": "active"
+  },
+  {
+    "id": "E0006",
+    "name": "Liam Patel",
+    "email": "liam.patel@acme.com",
+    "manager_id": null,
+    "department": "Marketing",
+    "start_date": "2018-08-06",
+    "pto_balance_days": 15,
+    "status": "active"
+  },
+  {
+    "id": "E0007",
+    "name": "Noah Williams",
+    "email": "noah.williams@acme.com",
+    "manager_id": "E0001",
+    "department": "Engineering",
+    "start_date": "2022-02-20",
+    "pto_balance_days": 14,
+    "status": "active"
+  },
+  {
+    "id": "E0008",
+    "name": "Olivia Brown",
+    "email": "olivia.brown@acme.com",
+    "manager_id": "E0001",
+    "department": "Engineering",
+    "start_date": "2023-03-15",
+    "pto_balance_days": 8,
+    "status": "active"
+  },
+  {
+    "id": "E0009",
+    "name": "Emma Johnson",
+    "email": "emma.johnson@acme.com",
+    "manager_id": "E0002",
+    "department": "Sales",
+    "start_date": "2023-04-27",
+    "pto_balance_days": 11,
+    "status": "active"
+  },
+  {
+    "id": "E0010",
+    "name": "Lucas Miller",
+    "email": "lucas.miller@acme.com",
+    "manager_id": "E0002",
+    "department": "Sales",
+    "start_date": "2025-08-22",
+    "pto_balance_days": 6,
+    "status": "active"
+  },
+  {
+    "id": "E0011",
+    "name": "Sophia Davis",
+    "email": "sophia.davis@acme.com",
+    "manager_id": "E0003",
+    "department": "HR",
+    "start_date": "2021-07-26",
+    "pto_balance_days": 13,
+    "status": "active"
+  },
+  {
+    "id": "E0012",
+    "name": "Mason Wilson",
+    "email": "mason.wilson@acme.com",
+    "manager_id": "E0004",
+    "department": "Finance",
+    "start_date": "2026-02-11",
+    "pto_balance_days": 7,
+    "status": "active"
+  },
+  {
+    "id": "E0013",
+    "name": "Isabella Moore",
+    "email": "isabella.moore@acme.com",
+    "manager_id": "E0005",
+    "department": "Operations",
+    "start_date": "2023-01-12",
+    "pto_balance_days": 10,
+    "status": "active"
+  },
+  {
+    "id": "E0014",
+    "name": "Ethan Taylor",
+    "email": "ethan.taylor@acme.com",
+    "manager_id": "E0006",
+    "department": "Marketing",
+    "start_date": "2025-12-23",
+    "pto_balance_days": 5,
+    "status": "active"
+  },
+  {
+    "id": "E0015",
+    "name": "Mia Anderson",
+    "email": "mia.anderson@acme.com",
+    "manager_id": "E0007",
+    "department": "Engineering",
+    "start_date": "2024-11-28",
+    "pto_balance_days": 0,
+    "status": "on_leave"
+  },
+  {
+    "id": "E0016",
+    "name": "James Thomas",
+    "email": "james.thomas@acme.com",
+    "manager_id": "E0009",
+    "department": "Sales",
+    "start_date": "2023-03-20",
+    "pto_balance_days": 3,
+    "status": "active"
+  },
+  {
+    "id": "E0017",
+    "name": "Charlotte Lee",
+    "email": "charlotte.lee@acme.com",
+    "manager_id": "E0006",
+    "department": "Marketing",
+    "start_date": "2025-02-28",
+    "pto_balance_days": 17,
+    "status": "active"
+  },
+  {
+    "id": "E0018",
+    "name": "Benjamin Martin",
+    "email": "benjamin.martin@acme.com",
+    "manager_id": "E0005",
+    "department": "Operations",
+    "start_date": "2023-09-16",
+    "pto_balance_days": 0,
+    "status": "active"
+  },
+  {
+    "id": "E0019",
+    "name": "Amelia Clark",
+    "email": "amelia.clark@acme.com",
+    "manager_id": "E0004",
+    "department": "Finance",
+    "start_date": "2021-05-25",
+    "pto_balance_days": 4,
+    "status": "active"
+  },
+  {
+    "id": "E0020",
+    "name": "Henry Lewis",
+    "email": "henry.lewis@acme.com",
+    "manager_id": "E0007",
+    "department": "Engineering",
+    "start_date": "2022-09-13",
+    "pto_balance_days": 19,
+    "status": "active"
+  },
+  {
+    "id": "E0021",
+    "name": "Harper Walker",
+    "email": "harper.walker@acme.com",
+    "manager_id": "E0009",
+    "department": "Sales",
+    "start_date": "2024-12-08",
+    "pto_balance_days": 2,
+    "status": "active"
+  },
+  {
+    "id": "E0022",
+    "name": "Daniel Hall",
+    "email": "daniel.hall@acme.com",
+    "manager_id": "E0003",
+    "department": "HR",
+    "start_date": "2024-03-27",
+    "pto_balance_days": 21,
+    "status": "active"
+  },
+  {
+    "id": "E0023",
+    "name": "Evelyn Allen",
+    "email": "evelyn.allen@acme.com",
+    "manager_id": "E0005",
+    "department": "Operations",
+    "start_date": "2023-09-15",
+    "pto_balance_days": 6,
+    "status": "active"
+  },
+  {
+    "id": "E0024",
+    "name": "Michael Young",
+    "email": "michael.young@acme.com",
+    "manager_id": "E0008",
+    "department": "Engineering",
+    "start_date": "2022-08-31",
+    "pto_balance_days": 13,
+    "status": "active"
+  },
+  {
+    "id": "E0025",
+    "name": "Abigail King",
+    "email": "abigail.king@acme.com",
+    "manager_id": "E0006",
+    "department": "Marketing",
+    "start_date": "2023-03-04",
+    "pto_balance_days": 1,
+    "status": "on_leave"
+  },
+  {
+    "id": "E0026",
+    "name": "Sebastian Wright",
+    "email": "sebastian.wright@acme.com",
+    "manager_id": "E0004",
+    "department": "Finance",
+    "start_date": "2024-03-15",
+    "pto_balance_days": 9,
+    "status": "active"
+  },
+  {
+    "id": "E0027",
+    "name": "Ella Scott",
+    "email": "ella.scott@acme.com",
+    "manager_id": "E0002",
+    "department": "Sales",
+    "start_date": "2022-03-18",
+    "pto_balance_days": 12,
+    "status": "active"
+  },
+  {
+    "id": "E0028",
+    "name": "Alexander Green",
+    "email": "alexander.green@acme.com",
+    "manager_id": "E0001",
+    "department": "Engineering",
+    "start_date": "2022-02-17",
+    "pto_balance_days": 7,
+    "status": "active"
+  },
+  {
+    "id": "E0029",
+    "name": "Grace Adams",
+    "email": "grace.adams@acme.com",
+    "manager_id": "E0005",
+    "department": "Operations",
+    "start_date": "2024-07-28",
+    "pto_balance_days": 15,
+    "status": "active"
+  },
+  {
+    "id": "E0030",
+    "name": "William Baker",
+    "email": "william.baker@acme.com",
+    "manager_id": "E0017",
+    "department": "Marketing",
+    "start_date": "2022-03-01",
+    "pto_balance_days": 10,
+    "status": "active"
+  },
+  {
+    "id": "E0031",
+    "name": "Sofia Nelson",
+    "email": "sofia.nelson@acme.com",
+    "manager_id": "E0007",
+    "department": "Engineering",
+    "start_date": "2024-05-24",
+    "pto_balance_days": 5,
+    "status": "active"
+  },
+  {
+    "id": "E0032",
+    "name": "Jack Carter",
+    "email": "jack.carter@acme.com",
+    "manager_id": "E0009",
+    "department": "Sales",
+    "start_date": "2024-04-07",
+    "pto_balance_days": 0,
+    "status": "on_leave"
+  },
+  {
+    "id": "E0033",
+    "name": "Luna Mitchell",
+    "email": "luna.mitchell@acme.com",
+    "manager_id": "E0011",
+    "department": "HR",
+    "start_date": "2023-08-04",
+    "pto_balance_days": 8,
+    "status": "active"
+  },
+  {
+    "id": "E0034",
+    "name": "Owen Perez",
+    "email": "owen.perez@acme.com",
+    "manager_id": "E0012",
+    "department": "Finance",
+    "start_date": "2021-09-16",
+    "pto_balance_days": 11,
+    "status": "active"
+  },
+  {
+    "id": "E0035",
+    "name": "Avery Roberts",
+    "email": "avery.roberts@acme.com",
+    "manager_id": "E0013",
+    "department": "Operations",
+    "start_date": "2025-04-01",
+    "pto_balance_days": 4,
+    "status": "active"
+  },
+  {
+    "id": "E0036",
+    "name": "Logan Turner",
+    "email": "logan.turner@acme.com",
+    "manager_id": "E0020",
+    "department": "Engineering",
+    "start_date": "2025-11-26",
+    "pto_balance_days": 16,
+    "status": "active"
+  },
+  {
+    "id": "E0037",
+    "name": "Chloe Phillips",
+    "email": "chloe.phillips@acme.com",
+    "manager_id": "E0027",
+    "department": "Sales",
+    "start_date": "2022-05-27",
+    "pto_balance_days": 9,
+    "status": "active"
+  },
+  {
+    "id": "E0038",
+    "name": "Mateo Campbell",
+    "email": "mateo.campbell@acme.com",
+    "manager_id": "E0017",
+    "department": "Marketing",
+    "start_date": "2024-07-24",
+    "pto_balance_days": 13,
+    "status": "active"
+  },
+  {
+    "id": "E0039",
+    "name": "Scarlett Parker",
+    "email": "scarlett.parker@acme.com",
+    "manager_id": "E0012",
+    "department": "Finance",
+    "start_date": "2022-01-04",
+    "pto_balance_days": 6,
+    "status": "active"
+  },
+  {
+    "id": "E0040",
+    "name": "Levi Evans",
+    "email": "levi.evans@acme.com",
+    "manager_id": "E0013",
+    "department": "Operations",
+    "start_date": "2026-01-14",
+    "pto_balance_days": 0,
+    "status": "on_leave"
+  },
+  {
+    "id": "E0041",
+    "name": "Aria Edwards",
+    "email": "aria.edwards@acme.com",
+    "manager_id": "E0020",
+    "department": "Engineering",
+    "start_date": "2023-11-01",
+    "pto_balance_days": 20,
+    "status": "active"
+  },
+  {
+    "id": "E0042",
+    "name": "David Collins",
+    "email": "david.collins@acme.com",
+    "manager_id": "E0027",
+    "department": "Sales",
+    "start_date": "2024-06-01",
+    "pto_balance_days": 7,
+    "status": "active"
+  },
+  {
+    "id": "E0043",
+    "name": "Nora Stewart",
+    "email": "nora.stewart@acme.com",
+    "manager_id": "E0011",
+    "department": "HR",
+    "start_date": "2026-04-02",
+    "pto_balance_days": 14,
+    "status": "active"
+  },
+  {
+    "id": "E0044",
+    "name": "Samuel Morris",
+    "email": "samuel.morris@acme.com",
+    "manager_id": "E0012",
+    "department": "Finance",
+    "start_date": "2022-12-23",
+    "pto_balance_days": 2,
+    "status": "active"
+  },
+  {
+    "id": "E0045",
+    "name": "Riley Rogers",
+    "email": "riley.rogers@acme.com",
+    "manager_id": "E0013",
+    "department": "Operations",
+    "start_date": "2021-12-07",
+    "pto_balance_days": 18,
+    "status": "active"
+  },
+  {
+    "id": "E0046",
+    "name": "Zoey Reed",
+    "email": "zoey.reed@acme.com",
+    "manager_id": "E0028",
+    "department": "Engineering",
+    "start_date": "2021-09-24",
+    "pto_balance_days": 12,
+    "status": "active"
+  },
+  {
+    "id": "E0047",
+    "name": "Joseph Cook",
+    "email": "joseph.cook@acme.com",
+    "manager_id": "E0002",
+    "department": "Sales",
+    "start_date": "2023-04-13",
+    "pto_balance_days": 5,
+    "status": "active"
+  },
+  {
+    "id": "E0048",
+    "name": "Victoria Morgan",
+    "email": "victoria.morgan@acme.com",
+    "manager_id": "E0030",
+    "department": "Marketing",
+    "start_date": "2023-10-21",
+    "pto_balance_days": 9,
+    "status": "active"
+  },
+  {
+    "id": "E0049",
+    "name": "Gabriel Bell",
+    "email": "gabriel.bell@acme.com",
+    "manager_id": "E0019",
+    "department": "Finance",
+    "start_date": "2022-01-07",
+    "pto_balance_days": 0,
+    "status": "active"
+  },
+  {
+    "id": "E0050",
+    "name": "Layla Murphy",
+    "email": "layla.murphy@acme.com",
+    "manager_id": "E0029",
+    "department": "Operations",
+    "start_date": "2023-04-28",
+    "pto_balance_days": 11,
+    "status": "active"
+  }
+]

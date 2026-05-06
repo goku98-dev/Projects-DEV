@@ -1,0 +1,75 @@
+[
+  {
+    "name": "GitHub",
+    "auto_approve_departments": [
+      "Engineering"
+    ],
+    "requires_manager_approval": true,
+    "cost_per_seat_monthly": 44
+  },
+  {
+    "name": "Salesforce",
+    "auto_approve_departments": [
+      "Sales"
+    ],
+    "requires_manager_approval": true,
+    "cost_per_seat_monthly": 150
+  },
+  {
+    "name": "Figma",
+    "auto_approve_departments": [
+      "Marketing",
+      "Engineering"
+    ],
+    "requires_manager_approval": true,
+    "cost_per_seat_monthly": 15
+  },
+  {
+    "name": "Jira",
+    "auto_approve_departments": [
+      "Engineering",
+      "Operations"
+    ],
+    "requires_manager_approval": false,
+    "cost_per_seat_monthly": 8
+  },
+  {
+    "name": "Notion",
+    "auto_approve_departments": [
+      "Engineering",
+      "Marketing",
+      "HR",
+      "Operations"
+    ],
+    "requires_manager_approval": false,
+    "cost_per_seat_monthly": 12
+  },
+  {
+    "name": "AWS Console",
+    "auto_approve_departments": [],
+    "requires_manager_approval": true,
+    "cost_per_seat_monthly": 0
+  },
+  {
+    "name": "HubSpot",
+    "auto_approve_departments": [
+      "Sales",
+      "Marketing"
+    ],
+    "requires_manager_approval": true,
+    "cost_per_seat_monthly": 90
+  },
+  {
+    "name": "Slack",
+    "auto_approve_departments": [
+      "Engineering",
+      "Sales",
+      "Marketing",
+      "HR",
+      "Finance",
+      "Operations"
+    ],
+    "requires_manager_approval": false,
+    "cost_per_seat_monthly": 8
+  }
+]
