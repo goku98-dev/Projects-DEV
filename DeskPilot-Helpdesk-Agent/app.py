@@ -3,10 +3,16 @@
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
 
 import chromadb
 import streamlit as st
+
+# Inject Streamlit Cloud secrets into os.environ before deskpilot modules load
+for _k, _v in st.secrets.items():
+    if isinstance(_v, str):
+        os.environ.setdefault(_k, _v)
 
 from deskpilot.config import CHROMA_DIR, DATA_DIR
 from deskpilot.observability import read_recent_traces, ticket_metrics
