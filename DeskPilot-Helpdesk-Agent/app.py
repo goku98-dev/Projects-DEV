@@ -31,139 +31,211 @@ QUEUE_COLORS = {"IT": "blue", "HR": "green", "Security": "red", "Manager": "oran
 
 SUBMIT_CSS = """
 <style>
+@keyframes gradientShift {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+@keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 0 16px rgba(99,102,241,0.3); }
+    50%       { box-shadow: 0 0 32px rgba(99,102,241,0.7), 0 0 60px rgba(139,92,246,0.3); }
+}
+@keyframes shimmer {
+    0%   { background-position: -200% center; }
+    100% { background-position: 200% center; }
+}
+@keyframes badgePop {
+    0%   { opacity:0; transform: scale(0.85) translateY(6px); }
+    70%  { transform: scale(1.05); }
+    100% { opacity:1; transform: scale(1) translateY(0); }
+}
+
 .hero {
-    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-    border-radius: 16px;
-    padding: 40px 36px 32px 36px;
+    background: linear-gradient(270deg, #0f0c29, #302b63, #1a0533, #0d1b4b, #1b0e3d);
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite, pulseGlow 4s ease-in-out infinite;
+    border-radius: 20px;
+    padding: 44px 40px 36px 40px;
     margin-bottom: 28px;
+    border: 1px solid rgba(139,92,246,0.3);
+    position: relative;
+    overflow: hidden;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    top: -60%; left: -20%;
+    width: 60%; height: 200%;
+    background: linear-gradient(120deg, transparent 30%, rgba(139,92,246,0.08) 50%, transparent 70%);
+    animation: shimmer 6s linear infinite;
+    background-size: 200% auto;
 }
 .hero-title {
-    font-size: 42px;
-    font-weight: 800;
-    color: #ffffff;
-    margin: 0 0 8px 0;
-    letter-spacing: -0.5px;
+    font-size: 46px;
+    font-weight: 900;
+    background: linear-gradient(90deg, #ffffff 0%, #c4b5fd 50%, #818cf8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0 0 10px 0;
+    letter-spacing: -1px;
+    animation: fadeSlideUp 0.6s ease forwards;
 }
 .hero-sub {
     font-size: 16px;
-    color: #a0aec0;
+    color: #a5b4fc;
     margin: 0;
-    line-height: 1.6;
+    line-height: 1.7;
+    animation: fadeSlideUp 0.6s 0.1s ease both;
 }
 .hero-badges {
-    margin-top: 18px;
+    margin-top: 20px;
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
 }
 .badge {
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(139,92,246,0.15);
+    border: 1px solid rgba(139,92,246,0.4);
     border-radius: 20px;
-    padding: 4px 14px;
+    padding: 5px 16px;
     font-size: 12px;
-    color: #cbd5e0;
-    font-weight: 500;
+    color: #c4b5fd;
+    font-weight: 600;
+    transition: all 0.25s ease;
+    animation: badgePop 0.4s ease both;
+}
+.badge:hover {
+    background: rgba(139,92,246,0.35);
+    border-color: rgba(139,92,246,0.8);
+    transform: translateY(-2px);
 }
 .examples-label {
     font-size: 11px;
     font-weight: 700;
-    letter-spacing: 1.4px;
-    color: #718096;
+    letter-spacing: 1.6px;
+    color: #6366f1;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 .result-card {
-    border-radius: 12px;
-    padding: 20px 24px;
-    margin: 16px 0;
+    border-radius: 16px;
+    padding: 22px 26px;
+    margin: 18px 0;
+    animation: fadeSlideUp 0.5s ease forwards;
+    position: relative;
+    overflow: hidden;
+}
+.result-card::after {
+    content: "";
+    position: absolute;
+    top: 0; left: -100%;
+    width: 60%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.04), transparent);
+    animation: shimmer 3s linear infinite;
 }
 .result-resolved {
-    background: linear-gradient(135deg, #0d2b1a, #0f3d22);
-    border: 1px solid #2d6a4f;
+    background: linear-gradient(135deg, #052e16 0%, #064e3b 100%);
+    border: 1px solid #059669;
+    box-shadow: 0 0 24px rgba(5,150,105,0.2), inset 0 1px 0 rgba(255,255,255,0.05);
 }
 .result-escalated {
-    background: linear-gradient(135deg, #2b0d0d, #3d0f0f);
-    border: 1px solid #6a2d2d;
+    background: linear-gradient(135deg, #1c0a0a 0%, #450a0a 100%);
+    border: 1px solid #dc2626;
+    box-shadow: 0 0 24px rgba(220,38,38,0.2), inset 0 1px 0 rgba(255,255,255,0.05);
 }
 .result-clarify {
-    background: linear-gradient(135deg, #2b240d, #3d330f);
-    border: 1px solid #6a5a2d;
+    background: linear-gradient(135deg, #1c1507 0%, #451a03 100%);
+    border: 1px solid #d97706;
+    box-shadow: 0 0 24px rgba(217,119,6,0.2), inset 0 1px 0 rgba(255,255,255,0.05);
 }
 .result-title {
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 1px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
     text-transform: uppercase;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
 }
-.result-resolved .result-title { color: #68d391; }
-.result-escalated .result-title { color: #fc8181; }
-.result-clarify .result-title { color: #f6e05e; }
+.result-resolved  .result-title { color: #34d399; }
+.result-escalated .result-title { color: #f87171; }
+.result-clarify   .result-title { color: #fbbf24; }
 .result-message {
     font-size: 15px;
     color: #e2e8f0;
-    line-height: 1.6;
+    line-height: 1.7;
     margin: 0;
 }
 .meta-row {
     display: flex;
-    gap: 12px;
+    gap: 10px;
     flex-wrap: wrap;
     margin: 16px 0;
+    animation: fadeIn 0.4s 0.2s ease both;
 }
 .meta-chip {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 8px;
-    padding: 6px 14px;
+    background: linear-gradient(135deg, rgba(99,102,241,0.1), rgba(139,92,246,0.1));
+    border: 1px solid rgba(99,102,241,0.3);
+    border-radius: 10px;
+    padding: 7px 16px;
     font-size: 13px;
-    color: #a0aec0;
+    color: #a5b4fc;
+    transition: all 0.2s ease;
+}
+.meta-chip:hover {
+    background: linear-gradient(135deg, rgba(99,102,241,0.2), rgba(139,92,246,0.2));
+    border-color: rgba(99,102,241,0.6);
+    transform: translateY(-1px);
 }
 .meta-chip span {
     color: #e2e8f0;
-    font-weight: 600;
+    font-weight: 700;
 }
 .handoff-card {
-    background: linear-gradient(135deg, #1a1a2e, #16213e);
-    border: 1px solid #2d3748;
-    border-radius: 14px;
-    padding: 24px;
-    margin-top: 8px;
+    background: linear-gradient(135deg, #0f0c29 0%, #1e1b4b 50%, #0d1b4b 100%);
+    border: 1px solid rgba(99,102,241,0.4);
+    border-radius: 16px;
+    padding: 26px;
+    margin-top: 10px;
+    animation: fadeSlideUp 0.5s 0.1s ease both;
+    box-shadow: 0 4px 32px rgba(99,102,241,0.15);
 }
 .handoff-queue {
     display: inline-block;
-    padding: 4px 16px;
+    padding: 5px 18px;
     border-radius: 20px;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 1px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
+    transition: transform 0.2s ease;
 }
-.queue-IT       { background: #1a365d; color: #90cdf4; border: 1px solid #2b6cb0; }
-.queue-HR       { background: #1a3a2a; color: #9ae6b4; border: 1px solid #276749; }
-.queue-Security { background: #3a1a1a; color: #feb2b2; border: 1px solid #9b2c2c; }
-.queue-Manager  { background: #3a2a1a; color: #fbd38d; border: 1px solid #9c4221; }
-.handoff-field { margin-bottom: 14px; }
+.handoff-queue:hover { transform: scale(1.05); }
+.queue-IT       { background: linear-gradient(135deg,#1e3a5f,#1d4ed8); color:#bfdbfe; border:1px solid #3b82f6; box-shadow: 0 0 12px rgba(59,130,246,0.3); }
+.queue-HR       { background: linear-gradient(135deg,#14532d,#15803d); color:#bbf7d0; border:1px solid #22c55e; box-shadow: 0 0 12px rgba(34,197,94,0.3); }
+.queue-Security { background: linear-gradient(135deg,#450a0a,#991b1b); color:#fecaca; border:1px solid #ef4444; box-shadow: 0 0 12px rgba(239,68,68,0.3); }
+.queue-Manager  { background: linear-gradient(135deg,#431407,#92400e); color:#fed7aa; border:1px solid #f97316; box-shadow: 0 0 12px rgba(249,115,22,0.3); }
+.handoff-field { margin-bottom: 16px; }
 .handoff-field-label {
     font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1.2px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
     text-transform: uppercase;
-    color: #4a5568;
-    margin-bottom: 4px;
+    color: #6366f1;
+    margin-bottom: 5px;
 }
 .handoff-field-value {
     font-size: 14px;
     color: #cbd5e0;
-    line-height: 1.6;
-}
-.agent-action-blocked {
-    background: rgba(159,18,57,0.15);
-    border-left: 3px solid #e11d48;
-    border-radius: 0 8px 8px 0;
-    padding: 2px 0;
+    line-height: 1.7;
 }
 </style>
 """
