@@ -60,37 +60,49 @@ html, body, [class*="css"], .stApp {
 
 /* ── Inputs ─────────────────────────────────────── */
 div[data-baseweb="input"] input,
-div[data-baseweb="textarea"] textarea {
+div[data-baseweb="textarea"] textarea,
+.stTextArea textarea,
+.stTextInput input {
     background-color: var(--ground-1) !important;
     border: 1px solid var(--line-strong) !important;
     border-radius: 0 !important;
-    color: var(--ink-0) !important;
+    color: #ffffff !important;
     font-family: 'JetBrains Mono', monospace !important;
     font-size: 13px !important;
+    font-weight: 500 !important;
 }
 div[data-baseweb="input"] input:focus,
 div[data-baseweb="textarea"] textarea:focus {
     border-color: var(--signal) !important;
     box-shadow: none !important;
 }
-div[data-baseweb="select"] > div {
+div[data-baseweb="select"] > div,
+div[data-baseweb="select"] div[class*="ValueContainer"] {
     background-color: var(--ground-1) !important;
     border: 1px solid var(--line-strong) !important;
     border-radius: 0 !important;
-    color: var(--ink-0) !important;
+    color: #ffffff !important;
     font-family: 'JetBrains Mono', monospace !important;
     font-size: 13px !important;
+    font-weight: 500 !important;
 }
-.stTextInput label > div > p,
-.stTextArea label > div > p,
-.stSelectbox label > div > p,
-label[data-testid="stWidgetLabel"] > div > p {
+div[data-baseweb="select"] span,
+div[data-baseweb="select"] div {
+    color: #ffffff !important;
+}
+/* Labels */
+.stTextInput label, .stTextArea label, .stSelectbox label,
+.stTextInput label p, .stTextArea label p, .stSelectbox label p,
+label[data-testid="stWidgetLabel"] p,
+label[data-testid="stWidgetLabel"] > div > p,
+div[data-testid="stWidgetLabel"] p {
     font-family: 'JetBrains Mono', monospace !important;
-    font-size: 11px !important;
-    font-weight: 600 !important;
-    letter-spacing: 0.18em !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.15em !important;
     text-transform: uppercase !important;
-    color: var(--ink-2) !important;
+    color: var(--ink-0) !important;
+    opacity: 1 !important;
 }
 
 /* ── Buttons ─────────────────────────────────────── */
