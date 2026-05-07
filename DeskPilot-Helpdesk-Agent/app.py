@@ -281,11 +281,12 @@ section[data-testid="stSidebar"] * {
     gap: 8px;
 }
 .hero-meta-item .key {
-    color: var(--ink-3);
+    color: var(--ink-2);
     text-transform: uppercase;
     letter-spacing: 0.1em;
+    font-weight: 600;
 }
-.hero-meta-item strong { color: var(--ink-0); font-weight: 600; }
+.hero-meta-item strong { color: var(--ink-0); font-weight: 700; }
 
 /* ── Section label ──────────────────────────────── */
 .section-label {
@@ -528,12 +529,13 @@ section[data-testid="stSidebar"] * {
 .sb-footer {
     font-family: 'JetBrains Mono', monospace;
     font-size: 10px;
-    color: var(--ink-3);
+    font-weight: 600;
+    color: var(--ink-2);
     letter-spacing: 0.08em;
     text-transform: uppercase;
     margin-top: 32px;
     padding-top: 16px;
-    border-top: 1px solid var(--line);
+    border-top: 1px solid var(--line-strong);
 }
 
 /* ── Responsive ─────────────────────────────────── */
