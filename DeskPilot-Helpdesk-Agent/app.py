@@ -200,6 +200,9 @@ section[data-testid="stSidebar"] {
 section[data-testid="stSidebar"] * {
     font-family: 'JetBrains Mono', monospace !important;
 }
+button[data-testid="collapsedControl"],
+button[kind="header"][aria-label="Close sidebar"],
+div[data-testid="stSidebarCollapseButton"] { display: none !important; }
 
 /* ── Hero ───────────────────────────────────────── */
 .hero {
@@ -507,11 +510,11 @@ section[data-testid="stSidebar"] * {
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 0.2em;
-    color: var(--ink-3);
+    color: var(--ink-2);
     text-transform: uppercase;
     margin: 20px 0 8px 0;
     padding-bottom: 6px;
-    border-bottom: 1px solid var(--line);
+    border-bottom: 1px solid var(--line-strong);
 }
 .sb-item {
     font-family: 'JetBrains Mono', monospace;
@@ -811,6 +814,7 @@ def main() -> None:
         page_title="DeskPilot Lite",
         page_icon="DP",
         layout="wide",
+        initial_sidebar_state="expanded",
         menu_items={"About": "DeskPilot Lite — autonomous IT/HR helpdesk agent. Built with Claude + Streamlit."},
     )
     st.markdown(GLOBAL_CSS, unsafe_allow_html=True)
@@ -818,6 +822,7 @@ def main() -> None:
     with st.sidebar:
         st.markdown('<div class="sb-title">DeskPilot</div>', unsafe_allow_html=True)
         st.markdown('<div class="sb-eyebrow">Autonomous Helpdesk</div>', unsafe_allow_html=True)
+        st.markdown('<div class="sb-section">Navigate</div>', unsafe_allow_html=True)
         page = st.radio("Navigate", ["Submit Ticket", "Telemetry"], label_visibility="collapsed")
         st.markdown('<div class="sb-section">Stack</div>', unsafe_allow_html=True)
         st.markdown("""
