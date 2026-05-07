@@ -307,6 +307,9 @@ def main() -> None:
         st.divider()
         st.markdown("**Test cases**")
         st.caption("Try the Guardrail Test example to see the security layer block an unauthorized credential operation.")
+        st.divider()
+        st.caption("Built by **Gokul Venugopal**")
+        st.caption("© 2026 Gokul Venugopal. All rights reserved.")
 
     if page == "Submit Ticket":
         render_submit_ticket()
