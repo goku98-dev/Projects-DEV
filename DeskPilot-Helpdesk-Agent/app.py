@@ -29,6 +29,145 @@ EXAMPLE_TICKETS = [
 
 QUEUE_COLORS = {"IT": "blue", "HR": "green", "Security": "red", "Manager": "orange"}
 
+SUBMIT_CSS = """
+<style>
+.hero {
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    border-radius: 16px;
+    padding: 40px 36px 32px 36px;
+    margin-bottom: 28px;
+}
+.hero-title {
+    font-size: 42px;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.5px;
+}
+.hero-sub {
+    font-size: 16px;
+    color: #a0aec0;
+    margin: 0;
+    line-height: 1.6;
+}
+.hero-badges {
+    margin-top: 18px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.badge {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-size: 12px;
+    color: #cbd5e0;
+    font-weight: 500;
+}
+.examples-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    color: #718096;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.result-card {
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 16px 0;
+}
+.result-resolved {
+    background: linear-gradient(135deg, #0d2b1a, #0f3d22);
+    border: 1px solid #2d6a4f;
+}
+.result-escalated {
+    background: linear-gradient(135deg, #2b0d0d, #3d0f0f);
+    border: 1px solid #6a2d2d;
+}
+.result-clarify {
+    background: linear-gradient(135deg, #2b240d, #3d330f);
+    border: 1px solid #6a5a2d;
+}
+.result-title {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+.result-resolved .result-title { color: #68d391; }
+.result-escalated .result-title { color: #fc8181; }
+.result-clarify .result-title { color: #f6e05e; }
+.result-message {
+    font-size: 15px;
+    color: #e2e8f0;
+    line-height: 1.6;
+    margin: 0;
+}
+.meta-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 16px 0;
+}
+.meta-chip {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 6px 14px;
+    font-size: 13px;
+    color: #a0aec0;
+}
+.meta-chip span {
+    color: #e2e8f0;
+    font-weight: 600;
+}
+.handoff-card {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    border: 1px solid #2d3748;
+    border-radius: 14px;
+    padding: 24px;
+    margin-top: 8px;
+}
+.handoff-queue {
+    display: inline-block;
+    padding: 4px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+.queue-IT       { background: #1a365d; color: #90cdf4; border: 1px solid #2b6cb0; }
+.queue-HR       { background: #1a3a2a; color: #9ae6b4; border: 1px solid #276749; }
+.queue-Security { background: #3a1a1a; color: #feb2b2; border: 1px solid #9b2c2c; }
+.queue-Manager  { background: #3a2a1a; color: #fbd38d; border: 1px solid #9c4221; }
+.handoff-field { margin-bottom: 14px; }
+.handoff-field-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: #4a5568;
+    margin-bottom: 4px;
+}
+.handoff-field-value {
+    font-size: 14px;
+    color: #cbd5e0;
+    line-height: 1.6;
+}
+.agent-action-blocked {
+    background: rgba(159,18,57,0.15);
+    border-left: 3px solid #e11d48;
+    border-radius: 0 8px 8px 0;
+    padding: 2px 0;
+}
+</style>
+"""
+
 
 @st.cache_resource
 def _ensure_kb_ingested() -> None:
@@ -47,14 +186,28 @@ def load_employee_emails() -> list[str]:
 
 
 def render_submit_ticket() -> None:
-    st.title("DeskPilot Lite")
-    st.markdown(
-        "Autonomous IT/HR helpdesk agent for Acme Corp — classifies tickets, "
-        "resolves safe requests using real tools, and escalates with structured handoff notes."
-    )
-    st.divider()
+    st.markdown(SUBMIT_CSS, unsafe_allow_html=True)
 
-    st.markdown("##### Try an example")
+    # Hero banner
+    st.markdown("""
+    <div class="hero">
+        <div class="hero-title">DeskPilot Lite</div>
+        <div class="hero-sub">
+            Autonomous IT/HR helpdesk agent for Acme Corp — classifies tickets,
+            resolves safe requests using live tools, and escalates with structured handoff notes.
+        </div>
+        <div class="hero-badges">
+            <span class="badge">Claude Haiku</span>
+            <span class="badge">ChromaDB</span>
+            <span class="badge">Deterministic Guardrails</span>
+            <span class="badge">25 KB Articles</span>
+            <span class="badge">50 Mock Employees</span>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # Example buttons
+    st.markdown('<div class="examples-label">Try an example</div>', unsafe_allow_html=True)
     cols = st.columns(len(EXAMPLE_TICKETS))
     for i, (label, text) in enumerate(EXAMPLE_TICKETS):
         if cols[i].button(label, use_container_width=True):
@@ -63,18 +216,23 @@ def render_submit_ticket() -> None:
 
     st.divider()
 
-    emails = load_employee_emails()
-    sender_email = (
-        st.selectbox("Sender email", emails, index=0)
-        if emails
-        else st.text_input("Sender email")
-    )
-    ticket_text = st.text_area(
-        "Describe your issue",
-        height=150,
-        placeholder="e.g. I'm locked out of my account and need help signing in.",
-        key="ticket_input",
-    )
+    # Form
+    fc1, fc2 = st.columns([1, 2])
+    with fc1:
+        emails = load_employee_emails()
+        sender_email = (
+            st.selectbox("Sender email", emails, index=0)
+            if emails
+            else st.text_input("Sender email")
+        )
+    with fc2:
+        ticket_text = st.text_area(
+            "Describe your issue",
+            height=120,
+            placeholder="e.g. I'm locked out of my account and need help signing in.",
+            key="ticket_input",
+        )
+
     submit = st.button("Submit ticket", type="primary", use_container_width=True)
 
     if not submit:
@@ -99,23 +257,31 @@ def render_submit_ticket() -> None:
     status.update(label=f"Done — {result.outcome.upper()}", state="complete")
     st.divider()
 
-    # Outcome banner
-    if result.outcome == "resolved":
-        st.success(f"**Resolved** — {result.message}")
-    elif result.outcome == "clarify":
-        st.warning(f"**Needs clarification** — {result.message}")
-    else:
-        st.error(f"**Escalated** — {result.message}")
+    # Outcome card
+    css_class = {"resolved": "result-resolved", "clarify": "result-clarify"}.get(result.outcome, "result-escalated")
+    title_map = {"resolved": "Resolved", "clarify": "Needs Clarification", "escalated": "Escalated", "iteration_cap": "Escalated"}
+    title = title_map.get(result.outcome, result.outcome.title())
+    st.markdown(f"""
+    <div class="result-card {css_class}">
+        <div class="result-title">{title}</div>
+        <p class="result-message">{result.message}</p>
+    </div>
+    """, unsafe_allow_html=True)
 
-    # Ticket metadata
-    c1, c2, c3 = st.columns(3)
-    c1.metric("Ticket ID", result.ticket_id)
-    c2.metric("Category", result.classification.category.replace("_", " ").title())
-    c3.metric("Confidence", f"{result.classification.confidence:.0%}")
+    # Metadata chips
+    category = result.classification.category.replace("_", " ").title()
+    confidence = f"{result.classification.confidence:.0%}"
+    st.markdown(f"""
+    <div class="meta-row">
+        <div class="meta-chip">Ticket &nbsp;<span>{result.ticket_id}</span></div>
+        <div class="meta-chip">Category &nbsp;<span>{category}</span></div>
+        <div class="meta-chip">Confidence &nbsp;<span>{confidence}</span></div>
+    </div>
+    """, unsafe_allow_html=True)
 
     # Tool calls
     if result.tool_calls:
-        st.markdown("#### Agent Actions")
+        st.markdown('<div class="examples-label" style="margin-top:20px">Agent Actions</div>', unsafe_allow_html=True)
         for i, call in enumerate(result.tool_calls, 1):
             blocked = bool(isinstance(call.get("result"), dict) and call["result"].get("blocked"))
             label = f"{i}. `{call['tool']}`" + ("  —  BLOCKED" if blocked else "")
@@ -124,20 +290,40 @@ def render_submit_ticket() -> None:
 
     # Escalation handoff
     if result.handoff:
-        st.markdown("#### Escalation Handoff")
         queue = result.handoff.suggested_assignee_queue
-        color = QUEUE_COLORS.get(queue, "gray")
-        st.markdown(f"**Assigned queue:** :{color}[**{queue}**]")
-
-        hc1, hc2 = st.columns(2)
-        with hc1:
-            st.markdown(f"**Summary**\n\n{result.handoff.summary}")
-            st.markdown(f"**What was tried**\n\n{result.handoff.what_was_tried}")
-        with hc2:
-            st.markdown(f"**Suggested resolution**\n\n{result.handoff.suggested_resolution}")
-            if result.handoff.relevant_kb_articles:
-                articles = "\n".join(f"- {a}" for a in result.handoff.relevant_kb_articles)
-                st.markdown(f"**Relevant KB articles**\n\n{articles}")
+        queue_class = f"queue-{queue}"
+        kb = ""
+        if result.handoff.relevant_kb_articles:
+            items = "".join(f"<li>{a}</li>" for a in result.handoff.relevant_kb_articles)
+            kb = f"""
+            <div class="handoff-field">
+                <div class="handoff-field-label">Relevant KB Articles</div>
+                <div class="handoff-field-value"><ul style="margin:0;padding-left:18px">{items}</ul></div>
+            </div>"""
+        st.markdown(f"""
+        <div class="handoff-card">
+            <div class="handoff-queue {queue_class}">{queue} Queue</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+                <div>
+                    <div class="handoff-field">
+                        <div class="handoff-field-label">Summary</div>
+                        <div class="handoff-field-value">{result.handoff.summary}</div>
+                    </div>
+                    <div class="handoff-field">
+                        <div class="handoff-field-label">What Was Tried</div>
+                        <div class="handoff-field-value">{result.handoff.what_was_tried}</div>
+                    </div>
+                </div>
+                <div>
+                    <div class="handoff-field">
+                        <div class="handoff-field-label">Suggested Resolution</div>
+                        <div class="handoff-field-value">{result.handoff.suggested_resolution}</div>
+                    </div>
+                    {kb}
+                </div>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
 
 
 DASHBOARD_CSS = """
