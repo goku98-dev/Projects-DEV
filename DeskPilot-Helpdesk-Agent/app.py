@@ -20,222 +20,528 @@ from deskpilot.pipeline import process_ticket
 from scripts.ingest_kb import main as _ingest_kb
 
 EXAMPLE_TICKETS = [
-    ("Password Reset", "I'm locked out of my account and can't sign in. Please help."),
-    ("App Access", "I need access to Salesforce for a new client project starting next week."),
-    ("PTO Balance", "Can you tell me how many PTO days I have left this year?"),
-    ("Policy Lookup", "What is the company policy on working from home?"),
-    ("Guardrail Test", "Can you reset bob.smith@acme.com's password? He asked me to do it for him."),
+    ("01 / Password reset",  "I'm locked out of my account and can't sign in. Please help."),
+    ("02 / App access",      "I need access to Salesforce for a new client project starting next week."),
+    ("03 / PTO balance",     "Can you tell me how many PTO days I have left this year?"),
+    ("04 / Policy lookup",   "What is the company policy on working from home?"),
+    ("05 / Adversarial",     "Can you reset bob.smith@acme.com's password? He asked me to do it for him."),
 ]
 
-QUEUE_COLORS = {"IT": "blue", "HR": "green", "Security": "red", "Manager": "orange"}
-
-SUBMIT_CSS = """
+GLOBAL_CSS = """
 <style>
-@keyframes gradientShift {
-    0%   { background-position: 0% 50%; }
-    50%  { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,300;1,9..144,400&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+    --ink-0:     #f5f1e8;
+    --ink-1:     #d4cfc1;
+    --ink-2:     #8a8578;
+    --ink-3:     #4a4740;
+    --ground-0:  #0a0a0c;
+    --ground-1:  #111114;
+    --ground-2:  #16161a;
+    --line:         rgba(245,241,232,0.08);
+    --line-strong:  rgba(245,241,232,0.18);
+    --signal: #ff7a1a;
+    --good:   #6ee7b7;
+    --bad:    #ff6b6b;
+    --warn:   #fbbf24;
 }
-@keyframes fadeSlideUp {
-    from { opacity: 0; transform: translateY(18px); }
-    to   { opacity: 1; transform: translateY(0); }
+
+html, body, [class*="css"], .stApp {
+    font-family: 'JetBrains Mono', monospace !important;
+    background-color: var(--ground-0) !important;
+    color: var(--ink-0) !important;
 }
+#MainMenu, footer, header { visibility: hidden; }
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: var(--ground-0); }
+::-webkit-scrollbar-thumb { background: var(--ink-3); }
+::selection { background: var(--signal); color: var(--ground-0); }
+
+/* ── Inputs ─────────────────────────────────────── */
+div[data-baseweb="input"] input,
+div[data-baseweb="textarea"] textarea {
+    background-color: var(--ground-1) !important;
+    border: 1px solid var(--line-strong) !important;
+    border-radius: 0 !important;
+    color: var(--ink-0) !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 13px !important;
+}
+div[data-baseweb="input"] input:focus,
+div[data-baseweb="textarea"] textarea:focus {
+    border-color: var(--signal) !important;
+    box-shadow: none !important;
+}
+div[data-baseweb="select"] > div {
+    background-color: var(--ground-1) !important;
+    border: 1px solid var(--line-strong) !important;
+    border-radius: 0 !important;
+    color: var(--ink-0) !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 13px !important;
+}
+.stTextInput label > div > p,
+.stTextArea label > div > p,
+.stSelectbox label > div > p,
+label[data-testid="stWidgetLabel"] > div > p {
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.18em !important;
+    text-transform: uppercase !important;
+    color: var(--ink-2) !important;
+}
+
+/* ── Buttons ─────────────────────────────────────── */
+.stButton > button[kind="primary"] {
+    background-color: var(--signal) !important;
+    color: var(--ground-0) !important;
+    border: none !important;
+    border-radius: 0 !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.1em !important;
+    text-transform: uppercase !important;
+    padding: 10px 24px !important;
+    transition: background-color 0.15s;
+}
+.stButton > button[kind="primary"]:hover {
+    background-color: #e06a10 !important;
+}
+.stButton > button:not([kind="primary"]) {
+    background: transparent !important;
+    border: 1px solid var(--line-strong) !important;
+    border-radius: 0 !important;
+    color: var(--ink-2) !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 11px !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.05em !important;
+    transition: border-color 0.15s, color 0.15s;
+}
+.stButton > button:not([kind="primary"]):hover {
+    border-color: var(--signal) !important;
+    color: var(--signal) !important;
+    background: transparent !important;
+}
+
+/* ── Misc overrides ─────────────────────────────── */
+hr { border-color: var(--line-strong) !important; }
+
+.streamlit-expanderHeader {
+    background-color: var(--ground-1) !important;
+    border: 1px solid var(--line-strong) !important;
+    border-radius: 0 !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 12px !important;
+    color: var(--ink-1) !important;
+    transition: color 0.15s;
+}
+.streamlit-expanderHeader:hover { color: var(--signal) !important; }
+.streamlit-expanderContent {
+    background-color: var(--ground-1) !important;
+    border: 1px solid var(--line-strong) !important;
+    border-top: none !important;
+    border-radius: 0 !important;
+}
+
+div[data-testid="stStatus"] {
+    background-color: var(--ground-1) !important;
+    border: 1px solid var(--line-strong) !important;
+    border-radius: 0 !important;
+    font-family: 'JetBrains Mono', monospace !important;
+}
+.stAlert {
+    background-color: var(--ground-1) !important;
+    border-radius: 0 !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 13px !important;
+}
+div[data-testid="stMetric"] {
+    background-color: var(--ground-1) !important;
+    border: 1px solid var(--line-strong) !important;
+    border-radius: 0 !important;
+    padding: 12px 16px !important;
+}
+div[data-testid="stMetricLabel"] p {
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 10px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+    color: var(--ink-2) !important;
+}
+div[data-testid="stMetricValue"] {
+    font-family: 'JetBrains Mono', monospace !important;
+    color: var(--ink-0) !important;
+}
+div[data-testid="stDataFrame"] > div {
+    background-color: var(--ground-1) !important;
+    border: 1px solid var(--line-strong) !important;
+    border-radius: 0 !important;
+}
+code, pre {
+    background-color: var(--ground-2) !important;
+    color: var(--signal) !important;
+    border-radius: 0 !important;
+    font-family: 'JetBrains Mono', monospace !important;
+}
+div[data-testid="stRadio"] label p {
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 12px !important;
+    color: var(--ink-1) !important;
+}
+section[data-testid="stSidebar"] {
+    background-color: var(--ground-1) !important;
+    border-right: 1px solid var(--line-strong) !important;
+}
+section[data-testid="stSidebar"] * {
+    font-family: 'JetBrains Mono', monospace !important;
+}
+
+/* ── Hero ───────────────────────────────────────── */
+.hero {
+    background-color: var(--ground-1);
+    border-top: 3px solid var(--signal);
+    border-left: 1px solid var(--line-strong);
+    border-right: 1px solid var(--line-strong);
+    border-bottom: 1px solid var(--line-strong);
+    padding: 40px 44px 32px 44px;
+    margin-bottom: 32px;
+    position: relative;
+    overflow: hidden;
+}
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0; right: 0;
+    width: 50%; height: 100%;
+    background-image:
+        linear-gradient(var(--line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 28px 28px;
+    -webkit-mask-image: linear-gradient(to bottom left, rgba(0,0,0,0.7) 0%, transparent 65%);
+    mask-image: linear-gradient(to bottom left, rgba(0,0,0,0.7) 0%, transparent 65%);
+    pointer-events: none;
+}
+.hero-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--signal);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.hero-eyebrow::before {
+    content: "";
+    display: inline-block;
+    width: 32px;
+    height: 2px;
+    background: var(--signal);
+    flex-shrink: 0;
+}
+.hero-title {
+    font-family: 'Fraunces', serif;
+    font-size: 56px;
+    font-weight: 300;
+    color: var(--ink-0);
+    margin: 0 0 16px 0;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+}
+.hero-title em { font-style: italic; color: var(--signal); }
+.hero-sub {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--ink-1);
+    max-width: 640px;
+    line-height: 1.8;
+    margin: 0;
+}
+.hero-meta {
+    margin-top: 28px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line-strong);
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+.hero-meta-item {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-2);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.hero-meta-item .key {
+    color: var(--ink-3);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+.hero-meta-item strong { color: var(--ink-0); font-weight: 600; }
+
+/* ── Section label ──────────────────────────────── */
+.section-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 28px 0 14px 0;
+}
+.section-label::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--line-strong);
+}
+
+/* ── Result card ────────────────────────────────── */
 @keyframes fadeIn {
     from { opacity: 0; }
     to   { opacity: 1; }
 }
-@keyframes pulseGlow {
-    0%, 100% { box-shadow: 0 0 16px rgba(99,102,241,0.3); }
-    50%       { box-shadow: 0 0 32px rgba(99,102,241,0.7), 0 0 60px rgba(139,92,246,0.3); }
+.result-card {
+    background-color: var(--ground-1);
+    border: 1px solid var(--line-strong);
+    padding: 24px 28px;
+    margin: 0 0 4px 0;
+    animation: fadeIn 0.3s ease forwards;
 }
-@keyframes shimmer {
-    0%   { background-position: -200% center; }
-    100% { background-position: 200% center; }
+.result-card-resolved { border-left: 3px solid var(--good); }
+.result-card-escalated { border-left: 3px solid var(--bad); }
+.result-card-clarify { border-left: 3px solid var(--warn); }
+.result-status-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
 }
-@keyframes badgePop {
-    0%   { opacity:0; transform: scale(0.85) translateY(6px); }
-    70%  { transform: scale(1.05); }
-    100% { opacity:1; transform: scale(1) translateY(0); }
+.result-pill {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border: 1px solid;
+}
+.result-pill-resolved { color: var(--good); border-color: var(--good); }
+.result-pill-escalated { color: var(--bad); border-color: var(--bad); }
+.result-pill-clarify { color: var(--warn); border-color: var(--warn); }
+.result-ticket-id {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-3);
+}
+.result-message {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 22px;
+    font-weight: 300;
+    color: var(--ink-0);
+    line-height: 1.55;
+    margin: 0;
 }
 
-.hero {
-    background: linear-gradient(270deg, #0f0c29, #302b63, #1a0533, #0d1b4b, #1b0e3d);
-    background-size: 400% 400%;
-    animation: gradientShift 8s ease infinite, pulseGlow 4s ease-in-out infinite;
-    border-radius: 20px;
-    padding: 44px 40px 36px 40px;
-    margin-bottom: 28px;
-    border: 1px solid rgba(139,92,246,0.3);
-    position: relative;
-    overflow: hidden;
+/* ── Meta strip ─────────────────────────────────── */
+.meta-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid var(--line-strong);
+    animation: fadeIn 0.3s 0.1s ease both;
 }
-.hero::before {
-    content: "";
-    position: absolute;
-    top: -60%; left: -20%;
-    width: 60%; height: 200%;
-    background: linear-gradient(120deg, transparent 30%, rgba(139,92,246,0.08) 50%, transparent 70%);
-    animation: shimmer 6s linear infinite;
-    background-size: 200% auto;
+.meta-cell {
+    padding: 14px 20px;
+    border-right: 1px solid var(--line-strong);
 }
-.hero-title {
-    font-size: 46px;
-    font-weight: 900;
-    background: linear-gradient(90deg, #ffffff 0%, #c4b5fd 50%, #818cf8 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin: 0 0 10px 0;
-    letter-spacing: -1px;
-    animation: fadeSlideUp 0.6s ease forwards;
-}
-.hero-sub {
-    font-size: 16px;
-    color: #a5b4fc;
-    margin: 0;
-    line-height: 1.7;
-    animation: fadeSlideUp 0.6s 0.1s ease both;
-}
-.hero-badges {
-    margin-top: 20px;
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-.badge {
-    background: rgba(139,92,246,0.15);
-    border: 1px solid rgba(139,92,246,0.4);
-    border-radius: 20px;
-    padding: 5px 16px;
-    font-size: 12px;
-    color: #c4b5fd;
+.meta-cell:last-child { border-right: none; }
+.meta-cell-key {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
     font-weight: 600;
-    transition: all 0.25s ease;
-    animation: badgePop 0.4s ease both;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    margin-bottom: 6px;
 }
-.badge:hover {
-    background: rgba(139,92,246,0.35);
-    border-color: rgba(139,92,246,0.8);
-    transform: translateY(-2px);
+.meta-cell-val {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    font-weight: 300;
+    color: var(--ink-0);
+    line-height: 1;
 }
-.examples-label {
-    font-size: 11px;
+.meta-cell-val-signal { color: var(--signal); }
+
+/* ── Handoff card ───────────────────────────────── */
+.handoff-card {
+    background-color: var(--ground-1);
+    border: 1px solid var(--line-strong);
+    border-left: 4px solid var(--signal);
+    padding: 26px 28px;
+    animation: fadeIn 0.3s ease both;
+}
+.handoff-queue-badge {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
     font-weight: 700;
-    letter-spacing: 1.6px;
-    color: #6366f1;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
-    margin-bottom: 12px;
+    padding: 4px 12px;
+    border: 1px solid;
+    margin-bottom: 20px;
 }
-.result-card {
-    border-radius: 16px;
-    padding: 22px 26px;
-    margin: 18px 0;
-    animation: fadeSlideUp 0.5s ease forwards;
+.hq-IT       { color: #90cdf4; border-color: #90cdf4; }
+.hq-HR       { color: #9ae6b4; border-color: #9ae6b4; }
+.hq-Security { color: #fc8181; border-color: #fc8181; }
+.hq-Manager  { color: #fbd38d; border-color: #fbd38d; }
+.handoff-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+.handoff-field-key {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    margin-bottom: 6px;
+}
+.handoff-field-val {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--ink-1);
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+.handoff-kb-item {
+    display: flex;
+    gap: 8px;
+    align-items: baseline;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--ink-1);
+    line-height: 1.7;
+}
+.handoff-kb-arrow { color: var(--signal); flex-shrink: 0; }
+
+/* ── Stat card (dashboard) ──────────────────────── */
+.stat-card {
+    background-color: var(--ground-1);
+    border: 1px solid var(--line-strong);
+    padding: 22px 24px 18px 24px;
     position: relative;
-    overflow: hidden;
+    margin-bottom: 4px;
 }
-.result-card::after {
-    content: "";
+.stat-card::after {
+    content: "—";
     position: absolute;
-    top: 0; left: -100%;
-    width: 60%; height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.04), transparent);
-    animation: shimmer 3s linear infinite;
+    top: 14px; right: 18px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 18px;
+    color: var(--signal);
+    line-height: 1;
 }
-.result-resolved {
-    background: linear-gradient(135deg, #052e16 0%, #064e3b 100%);
-    border: 1px solid #059669;
-    box-shadow: 0 0 24px rgba(5,150,105,0.2), inset 0 1px 0 rgba(255,255,255,0.05);
-}
-.result-escalated {
-    background: linear-gradient(135deg, #1c0a0a 0%, #450a0a 100%);
-    border: 1px solid #dc2626;
-    box-shadow: 0 0 24px rgba(220,38,38,0.2), inset 0 1px 0 rgba(255,255,255,0.05);
-}
-.result-clarify {
-    background: linear-gradient(135deg, #1c1507 0%, #451a03 100%);
-    border: 1px solid #d97706;
-    box-shadow: 0 0 24px rgba(217,119,6,0.2), inset 0 1px 0 rgba(255,255,255,0.05);
-}
-.result-title {
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 2px;
+.stat-key {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
+    color: var(--ink-2);
+    margin-bottom: 10px;
+}
+.stat-val {
+    font-family: 'Fraunces', serif;
+    font-size: 44px;
+    font-weight: 300;
+    line-height: 1;
     margin-bottom: 8px;
 }
-.result-resolved  .result-title { color: #34d399; }
-.result-escalated .result-title { color: #f87171; }
-.result-clarify   .result-title { color: #fbbf24; }
-.result-message {
-    font-size: 15px;
-    color: #e2e8f0;
-    line-height: 1.7;
-    margin: 0;
-}
-.meta-row {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin: 16px 0;
-    animation: fadeIn 0.4s 0.2s ease both;
-}
-.meta-chip {
-    background: linear-gradient(135deg, rgba(99,102,241,0.1), rgba(139,92,246,0.1));
-    border: 1px solid rgba(99,102,241,0.3);
-    border-radius: 10px;
-    padding: 7px 16px;
-    font-size: 13px;
-    color: #a5b4fc;
-    transition: all 0.2s ease;
-}
-.meta-chip:hover {
-    background: linear-gradient(135deg, rgba(99,102,241,0.2), rgba(139,92,246,0.2));
-    border-color: rgba(99,102,241,0.6);
-    transform: translateY(-1px);
-}
-.meta-chip span {
-    color: #e2e8f0;
-    font-weight: 700;
-}
-.handoff-card {
-    background: linear-gradient(135deg, #0f0c29 0%, #1e1b4b 50%, #0d1b4b 100%);
-    border: 1px solid rgba(99,102,241,0.4);
-    border-radius: 16px;
-    padding: 26px;
-    margin-top: 10px;
-    animation: fadeSlideUp 0.5s 0.1s ease both;
-    box-shadow: 0 4px 32px rgba(99,102,241,0.15);
-}
-.handoff-queue {
-    display: inline-block;
-    padding: 5px 18px;
-    border-radius: 20px;
+.stat-sub {
+    font-family: 'JetBrains Mono', monospace;
     font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    margin-bottom: 18px;
-    transition: transform 0.2s ease;
+    color: var(--ink-3);
 }
-.handoff-queue:hover { transform: scale(1.05); }
-.queue-IT       { background: linear-gradient(135deg,#1e3a5f,#1d4ed8); color:#bfdbfe; border:1px solid #3b82f6; box-shadow: 0 0 12px rgba(59,130,246,0.3); }
-.queue-HR       { background: linear-gradient(135deg,#14532d,#15803d); color:#bbf7d0; border:1px solid #22c55e; box-shadow: 0 0 12px rgba(34,197,94,0.3); }
-.queue-Security { background: linear-gradient(135deg,#450a0a,#991b1b); color:#fecaca; border:1px solid #ef4444; box-shadow: 0 0 12px rgba(239,68,68,0.3); }
-.queue-Manager  { background: linear-gradient(135deg,#431407,#92400e); color:#fed7aa; border:1px solid #f97316; box-shadow: 0 0 12px rgba(249,115,22,0.3); }
-.handoff-field { margin-bottom: 16px; }
-.handoff-field-label {
+.sv-signal { color: var(--signal); }
+.sv-good   { color: var(--good); }
+.sv-warn   { color: var(--warn); }
+.sv-bad    { color: var(--bad); }
+
+/* ── Sidebar ────────────────────────────────────── */
+.sb-title {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--ink-0);
+    margin: 0 0 2px 0;
+}
+.sb-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
     font-size: 10px;
-    font-weight: 800;
-    letter-spacing: 1.4px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    color: var(--signal);
     text-transform: uppercase;
-    color: #6366f1;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
 }
-.handoff-field-value {
-    font-size: 14px;
-    color: #cbd5e0;
-    line-height: 1.7;
+.sb-section {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: var(--ink-3);
+    text-transform: uppercase;
+    margin: 20px 0 8px 0;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--line);
+}
+.sb-item {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--ink-2);
+    line-height: 2;
+}
+.sb-agent {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-1);
+    line-height: 2.1;
+}
+.sb-agent .n { color: var(--signal); margin-right: 6px; }
+.sb-footer {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--ink-3);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-top: 32px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+}
+
+/* ── Responsive ─────────────────────────────────── */
+@media (max-width: 720px) {
+    .hero-title { font-size: 32px !important; }
+    .handoff-grid { grid-template-columns: 1fr !important; }
+    .meta-strip { grid-template-columns: 1fr !important; }
+    .meta-cell { border-right: none !important; border-bottom: 1px solid var(--line-strong); }
 }
 </style>
 """
@@ -257,38 +563,42 @@ def load_employee_emails() -> list[str]:
     return sorted(employee["email"] for employee in employees)
 
 
-def render_submit_ticket() -> None:
-    st.markdown(SUBMIT_CSS, unsafe_allow_html=True)
+def _stat_card(key: str, value: str, sub: str, val_class: str = "sv-signal") -> str:
+    return f"""
+    <div class="stat-card">
+        <div class="stat-key">{key}</div>
+        <div class="stat-val {val_class}">{value}</div>
+        <div class="stat-sub">{sub}</div>
+    </div>"""
 
-    # Hero banner
+
+def render_submit_ticket() -> None:
     st.markdown("""
     <div class="hero">
-        <div class="hero-title">DeskPilot Lite</div>
+        <div class="hero-eyebrow">DeskPilot Lite</div>
+        <div class="hero-title">Autonomous helpdesk, <em>ticket by ticket.</em></div>
         <div class="hero-sub">
-            Autonomous IT/HR helpdesk agent for Acme Corp — classifies tickets,
-            resolves safe requests using live tools, and escalates with structured handoff notes.
+            Classifies employee IT/HR tickets, resolves safe requests using live tools,
+            enforces deterministic guardrails, and escalates edge cases with structured handoff notes.
         </div>
-        <div class="hero-badges">
-            <span class="badge">Claude Haiku</span>
-            <span class="badge">ChromaDB</span>
-            <span class="badge">Deterministic Guardrails</span>
-            <span class="badge">25 KB Articles</span>
-            <span class="badge">50 Mock Employees</span>
+        <div class="hero-meta">
+            <div class="hero-meta-item"><span class="key">Model</span><strong>claude-haiku-4-5</strong></div>
+            <div class="hero-meta-item"><span class="key">KB Articles</span><strong>25</strong></div>
+            <div class="hero-meta-item"><span class="key">Employees</span><strong>50</strong></div>
+            <div class="hero-meta-item"><span class="key">Apps</span><strong>8</strong></div>
+            <div class="hero-meta-item"><span class="key">Guardrails</span><strong>Deterministic</strong></div>
         </div>
     </div>
     """, unsafe_allow_html=True)
 
-    # Example buttons
-    st.markdown('<div class="examples-label">Try an example</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-label">Example tickets</div>', unsafe_allow_html=True)
     cols = st.columns(len(EXAMPLE_TICKETS))
     for i, (label, text) in enumerate(EXAMPLE_TICKETS):
         if cols[i].button(label, use_container_width=True):
             st.session_state["ticket_input"] = text
             st.rerun()
 
-    st.divider()
-
-    # Form
+    st.markdown('<div class="section-label">Submit ticket</div>', unsafe_allow_html=True)
     fc1, fc2 = st.columns([1, 2])
     with fc1:
         emails = load_employee_emails()
@@ -327,179 +637,130 @@ def render_submit_ticket() -> None:
         return
 
     status.update(label=f"Done — {result.outcome.upper()}", state="complete")
-    st.divider()
 
-    # Outcome card
-    css_class = {"resolved": "result-resolved", "clarify": "result-clarify"}.get(result.outcome, "result-escalated")
-    title_map = {"resolved": "Resolved", "clarify": "Needs Clarification", "escalated": "Escalated", "iteration_cap": "Escalated"}
-    title = title_map.get(result.outcome, result.outcome.title())
+    outcome_key = result.outcome if result.outcome in ("resolved", "clarify") else "escalated"
+    title_map = {"resolved": "Resolved", "clarify": "Needs Clarification", "escalated": "Escalated"}
+    title = title_map[outcome_key]
+
+    st.markdown('<div class="section-label">Outcome</div>', unsafe_allow_html=True)
     st.markdown(f"""
-    <div class="result-card {css_class}">
-        <div class="result-title">{title}</div>
+    <div class="result-card result-card-{outcome_key}">
+        <div class="result-status-row">
+            <span class="result-pill result-pill-{outcome_key}">{title}</span>
+            <span class="result-ticket-id">{result.ticket_id}</span>
+        </div>
         <p class="result-message">{result.message}</p>
     </div>
     """, unsafe_allow_html=True)
 
-    # Metadata chips
     category = result.classification.category.replace("_", " ").title()
     confidence = f"{result.classification.confidence:.0%}"
+    tool_count = str(len(result.tool_calls))
     st.markdown(f"""
-    <div class="meta-row">
-        <div class="meta-chip">Ticket &nbsp;<span>{result.ticket_id}</span></div>
-        <div class="meta-chip">Category &nbsp;<span>{category}</span></div>
-        <div class="meta-chip">Confidence &nbsp;<span>{confidence}</span></div>
+    <div class="meta-strip">
+        <div class="meta-cell">
+            <div class="meta-cell-key">Category</div>
+            <div class="meta-cell-val">{category}</div>
+        </div>
+        <div class="meta-cell">
+            <div class="meta-cell-key">Confidence</div>
+            <div class="meta-cell-val meta-cell-val-signal">{confidence}</div>
+        </div>
+        <div class="meta-cell">
+            <div class="meta-cell-key">Tool Calls</div>
+            <div class="meta-cell-val">{tool_count}</div>
+        </div>
     </div>
     """, unsafe_allow_html=True)
 
-    # Tool calls
     if result.tool_calls:
-        st.markdown('<div class="examples-label" style="margin-top:20px">Agent Actions</div>', unsafe_allow_html=True)
+        st.markdown('<div class="section-label">Agent trace</div>', unsafe_allow_html=True)
         for i, call in enumerate(result.tool_calls, 1):
             blocked = bool(isinstance(call.get("result"), dict) and call["result"].get("blocked"))
-            label = f"{i}. `{call['tool']}`" + ("  —  BLOCKED" if blocked else "")
+            status_str = "✕ BLOCKED" if blocked else "→ OK"
+            label = f"{i:02d} · {call['tool']} · {status_str}"
             with st.expander(label, expanded=blocked):
                 st.json(call)
 
-    # Escalation handoff
     if result.handoff:
         queue = result.handoff.suggested_assignee_queue
-        queue_class = f"queue-{queue}"
-        kb = ""
+        kb_html = ""
         if result.handoff.relevant_kb_articles:
-            items = "".join(f"<li>{a}</li>" for a in result.handoff.relevant_kb_articles)
-            kb = f"""
-            <div class="handoff-field">
-                <div class="handoff-field-label">Relevant KB Articles</div>
-                <div class="handoff-field-value"><ul style="margin:0;padding-left:18px">{items}</ul></div>
-            </div>"""
+            items = "".join(
+                f'<div class="handoff-kb-item"><span class="handoff-kb-arrow">→</span><span>{a}</span></div>'
+                for a in result.handoff.relevant_kb_articles
+            )
+            kb_html = f'<div class="handoff-field-key">Relevant KB</div><div>{items}</div>'
+
+        st.markdown('<div class="section-label">Human handoff</div>', unsafe_allow_html=True)
         st.markdown(f"""
         <div class="handoff-card">
-            <div class="handoff-queue {queue_class}">{queue} Queue</div>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+            <span class="handoff-queue-badge hq-{queue}">{queue} Queue</span>
+            <div class="handoff-grid">
                 <div>
-                    <div class="handoff-field">
-                        <div class="handoff-field-label">Summary</div>
-                        <div class="handoff-field-value">{result.handoff.summary}</div>
-                    </div>
-                    <div class="handoff-field">
-                        <div class="handoff-field-label">What Was Tried</div>
-                        <div class="handoff-field-value">{result.handoff.what_was_tried}</div>
-                    </div>
+                    <div class="handoff-field-key">Summary</div>
+                    <div class="handoff-field-val">{result.handoff.summary}</div>
+                    <div class="handoff-field-key">What Was Tried</div>
+                    <div class="handoff-field-val">{result.handoff.what_was_tried}</div>
                 </div>
                 <div>
-                    <div class="handoff-field">
-                        <div class="handoff-field-label">Suggested Resolution</div>
-                        <div class="handoff-field-value">{result.handoff.suggested_resolution}</div>
-                    </div>
-                    {kb}
+                    <div class="handoff-field-key">Suggested Resolution</div>
+                    <div class="handoff-field-val">{result.handoff.suggested_resolution}</div>
+                    {kb_html}
                 </div>
             </div>
         </div>
         """, unsafe_allow_html=True)
 
 
-DASHBOARD_CSS = """
-<style>
-.stat-card {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    border: 1px solid #0f3460;
-    border-radius: 14px;
-    padding: 22px 26px;
-    margin-bottom: 4px;
-}
-.stat-label {
-    color: #7a8aaa;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 1.2px;
-    text-transform: uppercase;
-    margin-bottom: 6px;
-}
-.stat-value {
-    color: #e2e8f0;
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 1;
-}
-.stat-sub {
-    color: #4a5a7a;
-    font-size: 12px;
-    margin-top: 6px;
-}
-.stat-accent { color: #4fc3f7; }
-.stat-green  { color: #4ade80; }
-.stat-yellow { color: #fbbf24; }
-.stat-red    { color: #f87171; }
-.section-header {
-    color: #94a3b8;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 1.4px;
-    text-transform: uppercase;
-    margin: 28px 0 12px 0;
-    border-bottom: 1px solid #1e293b;
-    padding-bottom: 8px;
-}
-</style>
-"""
-
-
-def _stat_card(label: str, value: str, sub: str = "", accent: str = "stat-accent") -> str:
-    sub_html = f'<div class="stat-sub">{sub}</div>' if sub else ""
-    return f"""
-    <div class="stat-card">
-        <div class="stat-label">{label}</div>
-        <div class="stat-value {accent}">{value}</div>
-        {sub_html}
-    </div>"""
-
-
 def render_admin_dashboard() -> None:
     import pandas as pd
 
-    st.markdown(DASHBOARD_CSS, unsafe_allow_html=True)
-    st.title("Admin Dashboard")
-    st.caption("Live metrics and trace log from the DeskPilot pipeline.")
+    st.markdown("""
+    <div class="hero">
+        <div class="hero-eyebrow">Operations · Live</div>
+        <div class="hero-title">Pipeline <em>telemetry.</em></div>
+        <div class="hero-sub">
+            Real-time metrics, outcome distribution, and trace log from the DeskPilot autonomous pipeline.
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
 
     metrics = ticket_metrics()
     rate = metrics["autonomous_resolution_rate"]
-    rate_accent = "stat-green" if rate >= 0.6 else "stat-yellow" if rate >= 0.4 else "stat-red"
+    rate_class = "sv-good" if rate >= 0.6 else "sv-warn" if rate >= 0.4 else "sv-bad"
 
+    st.markdown('<div class="section-label">Pipeline metrics</div>', unsafe_allow_html=True)
     c1, c2, c3, c4 = st.columns(4)
-    c1.markdown(_stat_card("Total Tickets", str(metrics["total_tickets"]), "processed end-to-end"), unsafe_allow_html=True)
-    c2.markdown(_stat_card("Autonomous Resolution", f"{rate:.0%}", "no human needed", rate_accent), unsafe_allow_html=True)
-    c3.markdown(_stat_card("Avg Cost / Ticket", f"${metrics['avg_cost']:.4f}", "claude-haiku-4-5", "stat-accent"), unsafe_allow_html=True)
-    c4.markdown(_stat_card("p95 Latency", f"{metrics['p95_latency_ms']} ms", f"p50: {metrics['p50_latency_ms']} ms", "stat-yellow"), unsafe_allow_html=True)
+    c1.markdown(_stat_card("Total Tickets",         str(metrics["total_tickets"]),          "processed end-to-end",          "sv-signal"), unsafe_allow_html=True)
+    c2.markdown(_stat_card("Autonomous Resolution", f"{rate:.0%}",                          "no human needed",               rate_class),  unsafe_allow_html=True)
+    c3.markdown(_stat_card("Avg Cost",              f"${metrics['avg_cost']:.4f}",           "per ticket · haiku-4-5",        "sv-warn"),   unsafe_allow_html=True)
+    c4.markdown(_stat_card("p95 Latency",           f"{metrics['p95_latency_ms']} ms",       f"p50 · {metrics['p50_latency_ms']} ms", "sv-warn"), unsafe_allow_html=True)
 
-    # Gather data from traces
-    rows = []
+    rows: list[dict] = []
     outcome_counts: dict[str, int] = {"resolved": 0, "escalated": 0, "clarify": 0}
     costs: list[float] = []
-    latencies: list[float] = []
 
     for event in read_recent_traces(2000):
         if event.get("agent") == "pipeline" and event.get("action") == "finish":
             outcome = event.get("output", {}).get("outcome", "")
-            cost = float(event.get("cost_usd", 0.0))
+            cost    = float(event.get("cost_usd", 0.0))
             latency = int(event.get("latency_ms", 0))
             if outcome in outcome_counts:
                 outcome_counts[outcome] += 1
             if cost > 0:
                 costs.append(cost)
-            if latency > 0:
-                latencies.append(latency)
             rows.append({
-                "Ticket ID": event["ticket_id"],
-                "Timestamp": event["timestamp"][:19].replace("T", " "),
-                "Outcome": outcome,
-                "Cost ($)": round(cost, 4),
+                "Ticket ID":    event["ticket_id"],
+                "Timestamp":    event["timestamp"][:19].replace("T", " "),
+                "Outcome":      outcome,
+                "Cost ($)":     round(cost, 4),
                 "Latency (ms)": latency,
             })
         if len(rows) >= 50:
             break
 
-    # Charts row
-    st.markdown('<div class="section-header">Outcome Breakdown</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-label">Outcome distribution</div>', unsafe_allow_html=True)
     ch1, ch2, ch3 = st.columns([2, 2, 1])
 
     with ch1:
@@ -507,12 +768,12 @@ def render_admin_dashboard() -> None:
             "Outcome": list(outcome_counts.keys()),
             "Tickets": list(outcome_counts.values()),
         }).set_index("Outcome")
-        st.bar_chart(df_out, color=["#4fc3f7"], height=220)
+        st.bar_chart(df_out, color=["#ff7a1a"], height=220)
 
     with ch2:
         if costs:
             df_cost = pd.DataFrame({"Cost ($)": costs})
-            st.line_chart(df_cost, color=["#4ade80"], height=220)
+            st.line_chart(df_cost, color=["#6ee7b7"], height=220)
         else:
             st.info("Cost trend available after first tickets.")
 
@@ -520,18 +781,17 @@ def render_admin_dashboard() -> None:
         total = sum(outcome_counts.values()) or 1
         for outcome, count in outcome_counts.items():
             pct = count / total * 100
-            color = {"resolved": "normal", "escalated": "inverse", "clarify": "off"}[outcome]
-            st.metric(outcome.title(), count, f"{pct:.0f}%", delta_color=color)
+            delta_color = {"resolved": "normal", "escalated": "inverse", "clarify": "off"}[outcome]
+            st.metric(outcome.title(), count, f"{pct:.0f}%", delta_color=delta_color)
 
-    # Ticket table
-    st.markdown('<div class="section-header">Recent Tickets</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-label">Recent tickets</div>', unsafe_allow_html=True)
     if rows:
         st.dataframe(
             rows,
             use_container_width=True,
             column_config={
-                "Outcome": st.column_config.TextColumn("Outcome"),
-                "Cost ($)": st.column_config.NumberColumn(format="$%.4f"),
+                "Outcome":      st.column_config.TextColumn("Outcome"),
+                "Cost ($)":     st.column_config.NumberColumn(format="$%.4f"),
                 "Latency (ms)": st.column_config.NumberColumn(format="%d ms"),
             },
             hide_index=True,
@@ -551,23 +811,32 @@ def main() -> None:
         layout="wide",
         menu_items={"About": "DeskPilot Lite — autonomous IT/HR helpdesk agent. Built with Claude + Streamlit."},
     )
+    st.markdown(GLOBAL_CSS, unsafe_allow_html=True)
 
     with st.sidebar:
-        st.markdown("## DeskPilot Lite")
-        st.markdown("Autonomous IT/HR helpdesk agent powered by Claude.")
-        st.divider()
-        page = st.radio("Navigate", ["Submit Ticket", "Admin Dashboard"], label_visibility="collapsed")
-        st.divider()
-        st.markdown("**Models**")
-        st.caption("Router · Resolver · Escalator: claude-haiku-4-5")
-        st.markdown("**Stack**")
-        st.caption("Anthropic API · ChromaDB · SQLite · Streamlit")
-        st.divider()
-        st.markdown("**Test cases**")
-        st.caption("Try the Guardrail Test example to see the security layer block an unauthorized credential operation.")
-        st.divider()
-        st.caption("Built by **Gokul Venugopal**")
-        st.caption("© 2026 Gokul Venugopal. All rights reserved.")
+        st.markdown('<div class="sb-title">DeskPilot</div>', unsafe_allow_html=True)
+        st.markdown('<div class="sb-eyebrow">Autonomous Helpdesk</div>', unsafe_allow_html=True)
+        page = st.radio("Navigate", ["Submit Ticket", "Telemetry"], label_visibility="collapsed")
+        st.markdown('<div class="sb-section">Stack</div>', unsafe_allow_html=True)
+        st.markdown("""
+        <div class="sb-item">
+            Anthropic API · Claude Haiku 4.5<br>
+            ChromaDB · SQLite · Streamlit
+        </div>""", unsafe_allow_html=True)
+        st.markdown('<div class="sb-section">Agents</div>', unsafe_allow_html=True)
+        st.markdown("""
+        <div class="sb-agent">
+            <span class="n">01</span>Router<br>
+            <span class="n">02</span>Resolver<br>
+            <span class="n">03</span>Escalator
+        </div>""", unsafe_allow_html=True)
+        st.markdown('<div class="sb-section">Try This</div>', unsafe_allow_html=True)
+        st.markdown("""
+        <div class="sb-item">
+            Click <strong style="color:#f5f1e8">05 / Adversarial</strong> to see
+            the guardrail block an unauthorized credential operation.
+        </div>""", unsafe_allow_html=True)
+        st.markdown('<div class="sb-footer">Built by Gokul Venugopal · © 2026</div>', unsafe_allow_html=True)
 
     if page == "Submit Ticket":
         render_submit_ticket()
